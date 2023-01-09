@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/kaycee/n7/cours/1A/s1/programmation/projet/projet_sgf.gpr
+20230103132357 8c94b193793032dadf1fb91c5e342ba0
+[BOUND OBJECT FILES]
+/home/kaycee/n7/cours/1A/s1/programmation/projet/obj/liste_gen.o
+/home/kaycee/n7/cours/1A/s1/programmation/projet/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/kaycee/n7/cours/1A/s1/programmation/projet/obj/
+-L/home/kaycee/n7/cours/1A/s1/programmation/projet/obj/
+-L/home/kaycee/opt/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/
+-static
+-static-libgcc
+/home/kaycee/opt/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/libgnat.a
+-ldl

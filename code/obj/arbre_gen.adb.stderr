@@ -1,0 +1,13 @@
+arbre_gen.adb:25:43: error: not type conformant with declaration at arbre_gen.ads:9
+arbre_gen.adb:25:43: error: type of "Donnee" does not match
+arbre_gen.adb:25:55: error: "un_type" is undefined (more references follow)
+arbre_gen.adb:43:36: error: not type conformant with declaration at arbre_gen.ads:11
+arbre_gen.adb:43:36: error: type of "Donnee" does not match
+arbre_gen.adb:59:44: error: not type conformant with declaration at arbre_gen.ads:13
+arbre_gen.adb:59:44: error: type of "src_donnee" does not match
+arbre_gen.adb:77:44: error: not type conformant with declaration at arbre_gen.ads:15
+arbre_gen.adb:77:44: error: type of "donnee" does not match
+arbre_gen.adb:133:13: error: not type conformant with declaration at arbre_gen.ads:19
+arbre_gen.adb:133:13: error: return type does not match
+arbre_gen.adb:139:20: error: no candidate interpretations match the actuals:
+arbre_gen.adb:139:20: error: context requires function call, found procedure name
