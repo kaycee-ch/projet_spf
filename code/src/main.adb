@@ -1,24 +1,28 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
-with liste_gen; use liste_gen;
-
+with file_gen;
 
 procedure Main is
-   --  procedure print_int(n : in Integer) is
-   --  Begin
-   --     Put_Line(Integer'Image(n));
-   --  end print_int;
+   package file_int is new file_gen(T_element => Integer);
+   use file_int;
 
-   --procedure afficher_int is new afficher_liste(print_int);
-
-   la_liste : liste;
-   cell : cellule;
-   le_noeud : T_noeud;
+   la_file : T_file;
+   resultat : T_file;
+     empty : Boolean := false;
 Begin
-   la_liste := creer_liste_vide;
-   le_noeud := creer_noeud(true, 't');
-   cell := creer_cellule(le_noeud);
-   inserer_en_tete(la_liste, cell);
-   afficher_liste(la_liste);
+   initialiser(la_file);
+   enfiler(la_file, 1);
+
+   Put(Integer'Image(get_contenu(la_file)));
+   enfiler(la_file, 2);
+
+   Put(Integer'Image(get_contenu(la_file)));
+   --Put(Integer'Image(taille(la_file)));
+   defiler(la_file, resultat);
+   Put(Integer'Image(get_contenu(resultat)));
+   defiler(la_file, resultat);
+   Put(Integer'Image(get_contenu(resultat)));
+   --defiler(la_file, resultat);
+
 
 end Main;

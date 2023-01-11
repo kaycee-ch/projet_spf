@@ -1,8 +1,14 @@
-with liste_gen; use liste_gen;
+with liste_gen;
 
+generic
+   Type un_type is private;
 package arbre is
 
-function cd_comm(une_liste : in liste; path : in String) return liste;
+
+private
+
+
+
 
 
 

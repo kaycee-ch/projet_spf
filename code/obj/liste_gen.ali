@@ -15,27 +15,21 @@ RV NO_UNCHECKED_DEALLOCATION
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
-RV NO_IMPLICIT_LOOPS
-RV NO_ELABORATION_CODE
 
-U liste_gen%b		liste_gen.adb		dea921af NE OO PK IL
+U liste_gen%b		liste_gen.adb		7ada49d0 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
-Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W ada.unchecked_deallocation%s
 
-U liste_gen%s		liste_gen.ads		75cf11af EE OO PK IL
+U liste_gen%s		liste_gen.ads		95e15d70 BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-Z system%s		system.ads		system.ali
-Z system.exception_table%s  s-exctab.adb	s-exctab.ali
-Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
 D ada.ads		20210520051130 76789da1 ada%s
 D a-except.ads		20210520051127 946f3014 ada.exceptions%s
@@ -54,8 +48,8 @@ D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D liste_gen.ads		20230109102227 ccfa0ac6 liste_gen%s
-D liste_gen.adb		20230109102227 68ce9c65 liste_gen%b
+D liste_gen.ads		20230111161300 2cd44619 liste_gen%s
+D liste_gen.adb		20230111155917 2c93b8c5 liste_gen%b
 D system.ads		20210520051134 a2da961d system%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051131 54135002 system.exception_table%s
@@ -73,17 +67,7 @@ D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z s b [creer_liste_vide liste_gen 17 13 none]
-G c Z s b [creer_noeud liste_gen 22 13 none]
-G c Z s b [creer_cellule liste_gen 23 13 none]
-G c Z s b [est_vide liste_gen 24 13 none]
-G c Z s b [inserer_en_tete liste_gen 31 14 none]
-G c Z s b [afficher_liste liste_gen 37 14 none]
-G c Z s s [t_noeudIP liste_gen 59 9 none]
-G c Z s s [celluleIP liste_gen 74 9 none]
-G c Z s s [TtabBIP liste_gen 68 4 none]
-G c Z s s [t_tabIP liste_gen 69 9 none]
-G c Z b b [free liste_gen 9 14 none]
+G c Z s b [liste_gen standard 9 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 18|1r6 1r23 2r6 2r29 3r6 3r31 19|1r6 1r23 2r6 2r29 3r6 3r31
 . 4r6 9r26
@@ -93,48 +77,62 @@ X 4 a-inteio.ads
 18K13*Integer_Text_IO[13|46] 18|3w10 3r35 19|3w10 3r35
 X 11 a-textio.ads
 58K13*Text_IO 725e16 18|1w10 1r27 19|1w10 1r27
-390U14*Put 19|66s13
 X 15 a-uncdea.ads
 17+9 Object 19|9r53
-18P9 Name(17+9) 19|9r70
+18P9 Name(17+9) 19|9r72
 20u15*Unchecked_Deallocation 19|4w10 9r30
 X 18 liste_gen.ads
-7K9*liste_gen 59E9 79l5 79e14 19|7b14 119l5 119t14
-8A6*chaine_char<string>(character)<integer>
-9P9*liste 17r37 24r38 31r50 37r45 67c9 76r17 19|9r78 28r37 29r19 37r38 47r50
-. 48r11 61r45
-10A9*TAB(11R9) 68c9 70r16
-11R9*cellule 23r51 31r64 68r34 74c9 77e14 19|19r51 20r18 47r64
-12R9*T_noeud 22r77 23r35 59c9 64e14 75r16 19|11r77 12r18 19r35
-14X4*liste_vide 19|56r16 70r16
-15X4*element_absent
-17V13*creer_liste_vide{9P9} 19|28b13 34l8 34t24
-22V13*creer_noeud{12R9} 22>25 22>46 19|11b13 17l8 17t19
-22b25 file_bool{boolean} 19|11b25 14r26
-22e46 noeud_name{character} 19|11b46 15r24
-23V13*creer_cellule{11R9} 23>27 19|19b13 25l8 25t21
-23r27 noeud{12R9} 19|19b27 22r26
-24V13*est_vide{boolean} 24>23 19|37b13 44l8 44t16
-24p23 une_liste{9P9} 19|37b23 39r10
-31U14*inserer_en_tete 31=31 31>57 19|47b14 58l8 58t23
-31p31 une_liste{9P9} 19|47b31 50r10 53r37 54m10
-31r57 c{11R9} 19|47b57 52r36
-37U14*afficher_liste 37>30 19|61b14 67s13 72l8 72t22
-37p30 une_liste{9P9} 19|61b30 64r10 66r17 67r28
-60b7*isFile{boolean} 19|14m16
-61e7*name{character} 19|15m16 66r52
-63i7*taille{integer}
-65i4 NMAX{integer} 68r25
-66R9 T_TAB 67r25 69c9 72e14 19|9r63 31r24 51r19
-70a7*le_tab{10A9} 19|52m16 53m16 66m31 67r42
-71i7*nb_elem{integer}
-75r7*valeur{12R9} 19|22m16 52m26 52r38 66m45
-76p7*suivant{9P9} 19|23m16 53m26 67r60
+6+9 un_type 28r64 35r48 43r54 50r62 50r81 57r62 57r81 64r55 70r55 80r16 19|30r64
+. 49r54 69r62 69r81 84r62 84r81 106r55 129r55
+9k9*liste_gen 6z9 77E9 83l5 83e14 19|7b14 140l5 140t14
+11P9*liste 15r37 21r38 28r50 36r45 43r40 43r70 50r48 57r48 64r41 70r41 73r38
+. 73r52 78c9 81r17 19|9r80 11r37 12r19 20r38 30r50 31r11 40r45 49r40 49r70
+. 50r17 51r20 69r48 70r22 84r48 85r46 106r41 107r32 129r41 134r38 134r52
+12X4*liste_vide 19|73r16 88r16
+13X4*element_absent 19|77r16 99r16
+15V13*creer_liste_vide{11P9} 19|11b13 17l8 17t24
+21V13*est_vide{boolean} 21>23 19|20b13 27l8 27t16
+21p23 une_liste{11P9} 19|20b23 22r10
+28U14*inserer_en_tete 28=31 28>57 19|30b14 37l8 37t23 97s10
+28p31 une_liste{11P9} 19|30b31 35r24 36m7
+28*57 n{6+9} 19|30b57 34r23
+35U22 afficher_gen 35>35 19|43s10
+35*35 le_type{6+9}
+36u14*afficher_liste 36>30 19|40b14 44s10 46l8 46t22
+36p30 une_liste{11P9} 19|40b30 42r10 43r23 44r25
+43V13*rechercher{11P9} 43>25 43>47 19|49b13 66l8 66t18 75s23
+43p25 une_liste{11P9} 19|49b25 53r10 56r24
+43*47 e{6+9} 19|49b47 58r40
+50U14*inserer_apres 50=29 50>55 50>71 19|69b14 80l8 80t21
+50p29 une_liste{11P9} 19|69b29 72r10 75r34
+50*55 n{6+9} 19|69b55 79r44
+50*71 data{6+9} 19|69b71 75r45
+57U14*inserer_avant 57=29 57>55 57>71 19|84b14 103l8 103t21
+57p29 une_liste{11P9} 19|84b29 87r10 90r21 97m26
+57*55 n{6+9} 19|84b55 97r37 101r39
+57*71 data{6+9} 19|84b71 92r38
+64U14*enlever 64=22 64>48 19|106b14 127l8 127t15
+64p22 une_liste{11P9} 19|106b22 109r10 112r24 120m16
+64*48 e{6+9} 19|106b48 114r69 122r40
+70V13*get_contenu{6+9} 70>26 19|129b13 132l8 132t19
+70p26 une_liste{11P9} 19|129b26 131r14
+73V13*get_next{11P9} 73>23 19|134b13 137l8 137t16
+73p23 une_liste{11P9} 19|134b23 136r14
+77R9 cellule 78r25 79c9 82e14 19|9r63 14r24 33r16 79r35 101r30
+80*7 valeur{6+9} 19|34m13 43r37 58r31 92r28 114r59 122r31 131r28
+81p7 suivant{11P9} 19|35m13 44r39 62r38 79m20 79r64 94r35 101r57 116r38 120r44
+. 123m28 123r54 136r28
 X 19 liste_gen.adb
-9U14 free[15|20]
-12r7 un_noeud{18|12R9} 14m7 15m7 16r14
-20r7 une_cell{18|11R9} 22m7 23m7 24r14
-29p7 une_liste{18|9P9} 31m7 32m7 33r14
-48p7 t{18|9P9} 51m10 52r10 53r10 54r23
-62i7 index{integer} 65r13 66r38 67r49
+9U14 free[15|20] 124s13
+12p7 une_liste{18|11P9} 14m7 15m7 16r14
+31p7 p{18|11P9} 33m7 34r7 35r7 36r20
+50p7 address{18|11P9} 59m16 60r23
+51p7 temp_liste{18|11P9} 56m10 57r16 58r16 59r27 62m13 62r27
+70p7 address_data{18|11P9} 75m7 76r10 79r7 79r47
+85p7 address_data{18|11P9} 101m10
+85p21 temp_liste{18|11P9} 90m7 92r13 93r24 94m10 94r24 98r13
+85p33 prec_liste{18|11P9} 91m7 93m10 96r10 101r42
+107p7 temp_liste{18|11P9} 112m10 114r16 114r44 115r27 116m13 116r27 119r16
+. 120r29 122r16 123r39 124m18 124r18
+107p19 prec_liste{18|11P9} 113m10 115m13 118r13 123r13
 

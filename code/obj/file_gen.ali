@@ -1,5 +1,4 @@
 V "GNAT Lib v2021"
-M P W=b
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -8,30 +7,25 @@ P ZX
 RN
 RV NO_ALLOCATORS
 RV NO_EXCEPTIONS
-RV NO_IO
-RV NO_IMPLICIT_CONDITIONALS
 RV NO_LOCAL_ALLOCATORS
 RV NO_RECURSION
-RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		8486c618 NE OO SU
+U file_gen%b		file_gen.adb		3fa2481d NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
-Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.float_text_io%s	a-flteio.ads		a-flteio.ali
-W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
-W ada.text_io%s		a-textio.adb		a-textio.ali
-Z ada.unchecked_deallocation%s
-W file_gen%s		file_gen.adb		file_gen.ali
-Z liste_gen%s		liste_gen.adb		liste_gen.ali
-Z system%s		system.ads		system.ali
-Z system.exception_table%s  s-exctab.adb	s-exctab.ali
-Z system.img_int%s	s-imgint.ads		s-imgint.ali
-Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+W liste_gen%s		liste_gen.adb		liste_gen.ali
+
+U file_gen%s		file_gen.ads		50e14d90 BN EE NE OO PK GE IL
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 
 D ada.ads		20210520051130 76789da1 ada%s
 D a-except.ads		20210520051127 946f3014 ada.exceptions%s
@@ -54,13 +48,10 @@ D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
 D liste_gen.ads		20230111161300 2cd44619 liste_gen%s
 D liste_gen.adb		20230111155917 2c93b8c5 liste_gen%b
-D main.adb		20230111161316 8cd8d741 main%b
 D system.ads		20210520051134 a2da961d system%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051131 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
-D s-imagei.ads		20210520051132 0d3f86a7 system.image_i%s
-D s-imgint.ads		20210520051132 bdb6f5ec system.img_int%s
 D s-parame.ads		20210520051133 4752c4cb system.parameters%s
 D s-putima.ads		20210520051133 4e095881 system.put_images%s
 D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
@@ -74,29 +65,50 @@ D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [main standard 5 11 none]
-G r i none [main standard 5 11 none] [liste_gen standard 9 9 none]
-G r i none [main standard 5 11 none] [file_gen standard 4 9 none]
+G c Z s b [file_gen standard 4 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 22|1r6 1r23 2r6 2r31
-X 4 a-inteio.ads
-18K13*Integer_Text_IO[13|46] 22|2w10 2r35
-X 11 a-textio.ads
-58K13*Text_IO 725e16 22|1w10 1r27
-463U14*Put 22|16s4 19s4 22s4 24s4
+16K9*Ada 20e8 17|2r6 6r26
+X 15 a-uncdea.ads
+17+9 Object 17|6r53
+18P9 Name(17+9) 17|6r74
+20u15*Unchecked_Deallocation 17|2w10 6r30
 X 16 file_gen.ads
-3+9 T_element 22|6r37
-4k9*file_gen 24e16 22|3w6 6r28
-5P9 T_file 22|9r14[6] 10r15[6]
-7U14 initialiser 22|13s4[6]
-8U14 enfiler 22|14s4[6] 17s4[6]
-9U14 defiler 22|21s4[6] 23s4[6]
-12V13 get_contenu{integer} 22|16s22[6] 19s22[6] 22s22[6] 24s22[6]
-X 22 main.adb
-5U11*Main 5b11 28l5 28t9
-6K12 file_int[16|4] 7r8
-9p4 la_file{16|5P9[6]} 13m16 13r16 14m12 14r12 16r34 17m12 17r12 19r34 21m12
-. 21r12 23m12 23r12
-10p4 resultat{16|5P9[6]} 21m21 21r21 22r34 23m21 23r21 24r34
-11b6 empty{boolean}
+3+9 T_element 8r59 12r55 20r16 17|19r59 24r51 69r55
+4k9*file_gen 3z9 16E9 24l8 24e16 17|4b14 74l5 74t13
+5P9*T_file 7r41 8r41 9r41 9r59 10r36 11r34 12r40 17c9 21r17 17|6r82 8r41
+. 14r36 19r41 26r47 38r34 47r41 47r59 48r20 69r40
+7U14*initialiser 7<26 17|8b14 12l8 12t19
+7p26 une_file{5P9} 17|8b26 10m7 11m7
+8U14*enfiler 8=23 8>49 17|19b14 22l8 22t15 31s10
+8p23 une_file{5P9} 17|19b23 21m7 21r40
+8*49 elem{3+9} 17|19b49 21r34
+9U14*defiler 9=23 9<49 17|47b14 67l8 67t15
+9p23 une_file{5P9} 17|47b23 50r10 51r13 52r20 53m13 55r24 56r18
+9p49 res{5P9} 17|47b49 52m13 61m13 65m10
+10V13*is_empty{boolean} 10>22 17|14b13 17l8 17t16
+10p22 une_file{5P9} 17|14b22 16r14
+11V13*taille{integer} 11>20 17|38b13 43s17 45l8 45t14
+11p20 une_file{5P9} 17|38b20 40r10 43r24
+12V13*get_contenu{3+9} 12>26 17|69b13 72l8 72t19
+12p26 une_file{5P9} 17|69b26 71r14
+16R9 T_cellule 17r26 18r25 19c9 22e14 17|6r63 10r23 21r23
+18P9 liste(16R9)
+20*7 valeur{3+9} 17|71r27
+21p7 suivant{5P9} 17|43r37 51r26 56r31 57r25 59r27 62m25
+X 17 file_gen.adb
+6U14 free[15|20]
+24K12 liste_elem[20|9] 26r65 27r17 30r13 31r28 32r21
+26U14 enfiler_liste 26b14 26=29 26>55 34l8 34t21
+26p29 une_file{16|5P9} 31m18
+26p55 elem{20|11P9[24]} 29r18
+27p7 curseur{20|11P9[24]} 29m7 30r33 31r51 32m10 32r41
+48p7 avant_d{16|5P9} 55m13 58m16 62r13
+48p16 d{16|5P9} 56m13 57r19 58r27 59m16 59r21 61r20
+X 20 liste_gen.ads
+6+9 un_type 17|24r40
+9k9*liste_gen 17|1w6 24r30 20|83e14
+11P9 liste 17|26r76[24] 27r28[24]
+21V13 est_vide{boolean} 17|30s24[24]
+70V13 get_contenu{16|3+9} 17|31s39[24]
+73V13 get_next{11P9[17|24]} 17|32s32[24]
 

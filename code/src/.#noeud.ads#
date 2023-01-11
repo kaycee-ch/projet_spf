@@ -1,0 +1,24 @@
+with liste_gen;
+
+generic
+   Type T_contenu is private;
+package P_arbre is
+  package P_noeud is new liste_gen(un_type => Ptr_noeud); use P_noeud;
+   TYPE Ptr_noeud is private;
+
+   function creer_noeud_vide return Ptr_noeud;
+
+   procedure modifier_noeud (
+
+private
+   TYPE T_noeud;
+   TYPE Ptr_noeud is access T_noeud;
+
+
+   TYPE T_noeud is record
+      f_info : T_contenu;
+      parent : Ptr_noeud;
+      enfants : liste;
+   end record;
+
+end P_arbre;

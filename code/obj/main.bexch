@@ -1,18 +1,19 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-/home/kaycee/n7/cours/1A/s1/programmation/projet/projet_sgf.gpr
-20230103132357 8c94b193793032dadf1fb91c5e342ba0
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr
+20230103132357 9c7de6af2f0e82a1fa31d0b8cfe5d3d8
 [BOUND OBJECT FILES]
-/home/kaycee/n7/cours/1A/s1/programmation/projet/obj/liste_gen.o
-/home/kaycee/n7/cours/1A/s1/programmation/projet/obj/main.o
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/liste_gen.o
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/file_gen.o
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--L/home/kaycee/n7/cours/1A/s1/programmation/projet/obj/
--L/home/kaycee/n7/cours/1A/s1/programmation/projet/obj/
+-L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/
+-L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/
 -L/home/kaycee/opt/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/
 -static
 -static-libgcc

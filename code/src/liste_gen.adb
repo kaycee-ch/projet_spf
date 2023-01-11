@@ -6,29 +6,12 @@ with Ada.Unchecked_Deallocation;
 
 package body liste_gen is
 
-   procedure free is new Ada.Unchecked_Deallocation(Object => T_TAB, Name => liste);
-
-   function creer_noeud(file_bool : BOOLEAN; noeud_name : Character) return T_noeud is
-      un_noeud : T_NOEUD;
-   Begin
-      un_noeud.isFile := file_bool;
-      un_noeud.name := noeud_name;
-      return un_noeud;
-   end creer_noeud;
-
-   function creer_cellule(noeud : T_noeud) return cellule is
-      une_cell : cellule;
-   Begin
-      une_cell.valeur := noeud;
-      une_cell.suivant := null;
-      return une_cell;
-   end creer_cellule;
-
+   procedure free is new Ada.Unchecked_Deallocation(Object => cellule, Name => liste);
 
    function creer_liste_vide return liste is
       une_liste : liste;
    Begin
-      une_liste := new T_TAB;
+      une_liste := new cellule;
       une_liste := null;
       return une_liste;
    end creer_liste_vide;
@@ -44,76 +27,114 @@ package body liste_gen is
    end est_vide;
 
 
-   procedure inserer_en_tete (une_liste : in out liste; c : in cellule) is
-      t : liste;
+   procedure inserer_en_tete (une_liste : in out liste; n : in un_type) is
+      p : liste;
    Begin
-      if une_liste = null then
-         t := new T_TAB;
-         t.all.le_tab(0).valeur := c.valeur;
-         t.all.le_tab(0).suivant := une_liste;
-         une_liste := t;
-      else
-         raise liste_vide;
-      end if;
+      p := new cellule;
+      p.all.valeur := n;
+      p.all.suivant := une_liste;
+      une_liste := p;
    end inserer_en_tete;
 
 
    procedure afficher_liste (une_liste : in liste) is
-      index : INTEGER := 0;
    Begin
       if une_liste /= null then
-         if index < 1 then
-            Put(une_liste.all.le_tab(index).valeur.name);
-            afficher_liste(une_liste.all.le_tab(index + 1).suivant);
-         end if;
-      else
-         raise liste_vide;
+         afficher_gen(une_liste.all.valeur);
+         afficher_liste(une_liste.all.suivant);
       end if;
    end afficher_liste;
 
 
-   --  function rechercher (une_liste : in liste; e : in String) return liste is
-   --     address : liste;
-   --     temp_liste : liste;
-   --  Begin
-   --     if une_liste = null then
-   --        return null; --la liste est vide
-   --     else
-   --        temp_liste := une_liste;
-   --        while temp_liste /= null loop
-   --           if temp_liste.all.valeur.name = e then
-   --              address := temp_liste;
-   --              return address; --la valeur est présente on renvoie l'adresse
-   --           end if;
-   --           temp_liste := temp_liste.suivant;
-   --        end loop;
-   --        return null;
-   --     end if;
-   --  end rechercher;
-   --
-   --
-   --  procedure enlever(une_liste : in out liste; e : in String) is
-   --     temp_liste, prec_liste : liste;
-   --  Begin
-   --     if une_liste = null then
-   --        null;
-   --     else
-   --        temp_liste := une_liste;
-   --        prec_liste := null;
-   --        while temp_liste /= null and then temp_liste.all.valeur.name /= e loop
-   --           prec_liste := temp_liste;
-   --           temp_liste := temp_liste.suivant;
-   --        end loop;
-   --        if prec_liste = null then
-   --           if temp_liste /= null then
-   --              une_liste := temp_liste.all.suivant;
-   --           end if;
-   --        elsif temp_liste.all.valeur.name = e then
-   --           prec_liste.all.suivant := temp_liste.all.suivant;
-   --           free(temp_liste);
-   --        end if;
-   --     end if;
-   --  end enlever;
+   function rechercher (une_liste : in liste; e : in un_type) return liste is
+      address : liste;
+      temp_liste : liste;
+   Begin
+      if une_liste = null then
+         return null; --la liste est vide
+      else
+         temp_liste := une_liste;
+         while temp_liste /= null loop
+            if temp_liste.all.valeur = e then
+               address := temp_liste;
+               return address; --la valeur est présente on renvoie l'adresse
+            end if;
+            temp_liste := temp_liste.suivant;
+         end loop;
+         return null;
+      end if;
+   end rechercher;
+
+
+   procedure inserer_apres (une_liste : in out liste; n : in un_type; data : in un_type) is
+      address_data : liste;
+   Begin
+      if une_liste = null then
+         raise liste_vide;
+      end if;
+      address_data := rechercher(une_liste, data);
+      if address_data = null then
+         raise element_absent;
+      end if;
+      address_data.suivant := new cellule'(n, address_data.all.suivant);
+   end inserer_apres;
+
+
+
+   procedure inserer_avant (une_liste : in out liste; n : in un_type; data : in un_type) is
+      address_data, temp_liste, prec_liste : liste;
+   Begin
+      if une_liste = null then
+         raise liste_vide;
+      end if;
+      temp_liste := une_liste;
+      prec_liste := null;
+      while temp_liste.all.valeur /= data loop
+         prec_liste := temp_liste;
+         temp_liste := temp_liste.suivant;
+      end loop;
+      if prec_liste = null then
+         inserer_en_tete(une_liste, n);
+      elsif temp_liste = null then
+         raise element_absent;
+      else
+         address_data := new cellule'(n, prec_liste.all.suivant);
+      end if;
+   end inserer_avant;
+
+
+   procedure enlever(une_liste : in out liste; e : in un_type) is
+      temp_liste, prec_liste : liste;
+   Begin
+      if une_liste = null then
+         null;
+      else
+         temp_liste := une_liste;
+         prec_liste := null;
+         while temp_liste /= null and then temp_liste.all.valeur /= e loop
+            prec_liste := temp_liste;
+            temp_liste := temp_liste.suivant;
+         end loop;
+         if prec_liste = null then
+            if temp_liste /= null then
+               une_liste := temp_liste.all.suivant;
+            end if;
+         elsif temp_liste.all.valeur = e then
+            prec_liste.all.suivant := temp_liste.all.suivant;
+            free(temp_liste);
+         end if;
+      end if;
+   end enlever;
+
+   function get_contenu (une_liste : in liste) return un_type is
+   Begin
+      return une_liste.all.valeur;
+   end get_contenu;
+
+   function get_next (une_liste : in liste) return liste is
+   Begin
+      return une_liste.all.suivant;
+   end get_next;
 
 
 end liste_gen;

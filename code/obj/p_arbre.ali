@@ -1,5 +1,4 @@
 V "GNAT Lib v2021"
-M P W=b
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -8,30 +7,27 @@ P ZX
 RN
 RV NO_ALLOCATORS
 RV NO_EXCEPTIONS
-RV NO_IO
-RV NO_IMPLICIT_CONDITIONALS
 RV NO_LOCAL_ALLOCATORS
 RV NO_RECURSION
-RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		8486c618 NE OO SU
+U p_arbre%b		p_arbre.adb		098bdfea NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
-Z ada.exceptions%s	a-except.adb		a-except.ali
-Z ada.float_text_io%s	a-flteio.ads		a-flteio.ali
-W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
-W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.unchecked_deallocation%s
 W file_gen%s		file_gen.adb		file_gen.ali
-Z liste_gen%s		liste_gen.adb		liste_gen.ali
-Z system%s		system.ads		system.ali
-Z system.exception_table%s  s-exctab.adb	s-exctab.ali
-Z system.img_int%s	s-imgint.ads		s-imgint.ali
-Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U p_arbre%s		p_arbre.ads		cdeb71eb BN EE NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+Z ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+W liste_gen%s		liste_gen.adb		liste_gen.ali
 
 D ada.ads		20210520051130 76789da1 ada%s
 D a-except.ads		20210520051127 946f3014 ada.exceptions%s
@@ -48,19 +44,18 @@ D a-tiflio.ads		20210520051129 fcca4daa ada.text_io.float_io%s
 D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
-D file_gen.ads		20230111162427 50e14d90 file_gen%s
-D file_gen.adb		20230111162001 803feff1 file_gen%b
+D file_gen.ads		20230111141012 50e14d90 file_gen%s
+D file_gen.adb		20230111152519 6186f47e file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D liste_gen.ads		20230111161300 2cd44619 liste_gen%s
-D liste_gen.adb		20230111155917 2c93b8c5 liste_gen%b
-D main.adb		20230111161316 8cd8d741 main%b
+D liste_gen.ads		20221213083659 6bd1d917 liste_gen%s
+D liste_gen.adb		20221213083744 29c2572a liste_gen%b
+D p_arbre.ads		20230110182559 a63aa8fc p_arbre%s
+D p_arbre.adb		20230111152852 ff503a86 p_arbre%b
 D system.ads		20210520051134 a2da961d system%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051131 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
-D s-imagei.ads		20210520051132 0d3f86a7 system.image_i%s
-D s-imgint.ads		20210520051132 bdb6f5ec system.img_int%s
 D s-parame.ads		20210520051133 4752c4cb system.parameters%s
 D s-putima.ads		20210520051133 4e095881 system.put_images%s
 D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
@@ -74,29 +69,43 @@ D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [main standard 5 11 none]
-G r i none [main standard 5 11 none] [liste_gen standard 9 9 none]
-G r i none [main standard 5 11 none] [file_gen standard 4 9 none]
-X 1 ada.ads
-16K9*Ada 20e8 22|1r6 1r23 2r6 2r31
-X 4 a-inteio.ads
-18K13*Integer_Text_IO[13|46] 22|2w10 2r35
-X 11 a-textio.ads
-58K13*Text_IO 725e16 22|1w10 1r27
-463U14*Put 22|16s4 19s4 22s4 24s4
+G c Z s b [p_arbre standard 6 9 none]
 X 16 file_gen.ads
-3+9 T_element 22|6r37
-4k9*file_gen 24e16 22|3w6 6r28
-5P9 T_file 22|9r14[6] 10r15[6]
-7U14 initialiser 22|13s4[6]
-8U14 enfiler 22|14s4[6] 17s4[6]
-9U14 defiler 22|21s4[6] 23s4[6]
-12V13 get_contenu{integer} 22|16s22[6] 19s22[6] 22s22[6] 24s22[6]
-X 22 main.adb
-5U11*Main 5b11 28l5 28t9
-6K12 file_int[16|4] 7r8
-9p4 la_file{16|5P9[6]} 13m16 13r16 14m12 14r12 16r34 17m12 17r12 19r34 21m12
-. 21r12 23m12 23r12
-10p4 resultat{16|5P9[6]} 21m21 21r21 22r34 23m21 23r21 24r34
-11b6 empty{boolean}
+3+9 T_element 23|4r33
+4k9*file_gen 24e16 23|1w6 4r24
+X 20 liste_gen.ads
+6+9 un_type 22|26r37
+9k9*liste_gen 78e14 22|1w6 26r27
+11P9 liste 22|31r25[26] 23|52r14[22|26]
+21V13 est_vide{boolean} 23|57s17[22|26]
+28U14 inserer_en_tete 23|36s18[22|26]
+43V13 rechercher{11P9[22|26]} 23|58s29[22|26]
+64U14 enlever 23|46s18[22|26]
+X 22 p_arbre.ads
+4+9 T_contenu 15r52 16r57 18r62 18r87 26r48 29r16 23|4r46 31r55 41r57 51r62
+. 51r87
+6k9*p_arbre 4z9 23E9 35l5 35e12 23|2b14 64l5 64t12
+8X4*arbre_vide 23|34r16 44r16 55r16
+10P9*Ptr_noeud 14r25 15r34 16r36 18r37 24c9 30r16 23|8r25 9r11 31r34 41r36
+. 51r37
+14V13*init{10P9} 23|8b13 14l8 14t12
+15U14*ajouter 15=22 15>45 23|31b14 38l8 38t15
+15p22 ab{10P9} 23|31b22 33r10 36r34
+15*45 data{4+9} 23|31b45 36r50
+16U14*supprimer 16=24 16>47 23|41b14 48l8 48t17
+16p24 ab{10P9} 23|41b24 43r10 46r26
+16*47 data{4+9} 23|41b47 46r42
+18U14*rechercher 18=25 18>48 18>73 23|51b14 61l8 61t18
+18p25 ab{10P9} 23|51b25 54r10 57r26 58r40
+18*48 old_data{4+9} 23|51b48 58r56
+18*73 new_data{4+9} 23|51b73
+23R9 T_noeud 24r29 28c9 32e14 23|11r16
+26K12 P_noeud[20|9] 26r64 31r17 23|36r10 46r10 58r21
+29*7 f_info{4+9}
+30p7 parent{10P9}
+31p7 enfants{20|11P9[26]} 23|36m41 46m33 57r33 58r47
+X 23 p_arbre.adb
+4K12 file[16|4] 5r8
+9p7 p{22|10P9} 11m7 12m7 13r14
+52p7 addr{20|11P9[22|26]} 58m13
 
