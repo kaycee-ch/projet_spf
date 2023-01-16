@@ -1,4 +1,4 @@
-with liste_gen;
+with p_liste_gen;
 with Ada.Unchecked_Deallocation;
 
 package body file_gen is
@@ -21,10 +21,9 @@ package body file_gen is
       une_file := new T_cellule'(elem, une_file);
    end enfiler;
 
-   package liste_elem is new liste_gen(un_type => T_element);
 
-   procedure enfiler_liste (une_file : in out T_file; elem : in liste_elem.liste) is
-      curseur : liste_elem.liste;
+   procedure enfiler_liste (une_file : in out T_file; elem : in liste_elem.T_liste) is
+      curseur : liste_elem.T_liste;
    Begin
       curseur := elem;
       while liste_elem.est_vide(curseur)  loop
@@ -32,7 +31,6 @@ package body file_gen is
          curseur := liste_elem.get_next(curseur);
       end loop;
    end enfiler_liste;
-
 
 
    function taille(une_file : in T_file) return Integer is

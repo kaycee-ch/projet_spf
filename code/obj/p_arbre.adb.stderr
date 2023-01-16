@@ -1,2 +1,0 @@
-p_arbre.adb:29:44: error: expected type "Ptr_noeud" defined at p_arbre.ads:26
-p_arbre.adb:29:44: error: found private type "liste" defined at liste_gen.ads:11, instance at p_arbre.ads:28

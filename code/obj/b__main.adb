@@ -30,9 +30,13 @@ package body ada_main is
    E121 : Short_Integer; pragma Import (Ada, E121, "system__finalization_root_E");
    E119 : Short_Integer; pragma Import (Ada, E119, "ada__finalization_E");
    E118 : Short_Integer; pragma Import (Ada, E118, "system__file_io_E");
+   E146 : Short_Integer; pragma Import (Ada, E146, "system__storage_pools_E");
+   E144 : Short_Integer; pragma Import (Ada, E144, "system__finalization_masters_E");
    E094 : Short_Integer; pragma Import (Ada, E094, "ada__text_io_E");
-   E162 : Short_Integer; pragma Import (Ada, E162, "liste_gen_E");
-   E160 : Short_Integer; pragma Import (Ada, E160, "file_gen_E");
+   E148 : Short_Integer; pragma Import (Ada, E148, "system__pool_global_E");
+   E140 : Short_Integer; pragma Import (Ada, E140, "p_liste_gen_E");
+   E138 : Short_Integer; pragma Import (Ada, E138, "file_gen_E");
+   E142 : Short_Integer; pragma Import (Ada, E142, "p_arbre_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -43,19 +47,33 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E094 := E094 - 1;
+      E148 := E148 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F1, "system__pool_global__finalize_spec");
       begin
          F1;
       end;
+      E094 := E094 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "system__file_io__finalize_body");
+         pragma Import (Ada, F2, "ada__text_io__finalize_spec");
+      begin
+         F2;
+      end;
+      E144 := E144 - 1;
+      declare
+         procedure F3;
+         pragma Import (Ada, F3, "system__finalization_masters__finalize_spec");
+      begin
+         F3;
+      end;
+      declare
+         procedure F4;
+         pragma Import (Ada, F4, "system__file_io__finalize_body");
       begin
          E118 := E118 - 1;
-         F2;
+         F4;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -207,11 +225,20 @@ package body ada_main is
       E119 := E119 + 1;
       System.File_Io'Elab_Body;
       E118 := E118 + 1;
+      System.Storage_Pools'Elab_Spec;
+      E146 := E146 + 1;
+      System.Finalization_Masters'Elab_Spec;
+      System.Finalization_Masters'Elab_Body;
+      E144 := E144 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E094 := E094 + 1;
-      E162 := E162 + 1;
-      E160 := E160 + 1;
+      System.Pool_Global'Elab_Spec;
+      System.Pool_Global'Elab_Body;
+      E148 := E148 + 1;
+      E140 := E140 + 1;
+      E138 := E138 + 1;
+      E142 := E142 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -249,8 +276,9 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/liste_gen.o
+   --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/p_liste_gen.o
    --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/file_gen.o
+   --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/p_arbre.o
    --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/main.o
    --   -L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/
    --   -L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/
