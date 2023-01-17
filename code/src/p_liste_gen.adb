@@ -50,7 +50,7 @@ package body P_liste_gen is
       else
          temp_liste := une_liste;
          while temp_liste /= null loop
-            if temp_liste.all.valeur = e then
+            if isEqual(temp_liste.all.valeur, e) then
                address := temp_liste;
                return address; --la valeur est présente on renvoie l'adresse
             end if;
@@ -132,11 +132,17 @@ package body P_liste_gen is
       end if;
    end get_contenu;
 
+
    function get_next (une_liste : in T_liste) return T_liste is
    Begin
       return une_liste.all.suivant;
    end get_next;
 
+
+   function get_liste (une_liste : in T_liste) return T_liste is
+   Begin
+      return une_liste;
+   end get_liste;
 
 
 end P_liste_gen;

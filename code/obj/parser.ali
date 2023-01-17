@@ -1,5 +1,4 @@
 V "GNAT Lib v2021"
-M P W=b
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -7,20 +6,21 @@ P ZX
 
 RN
 RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		444ae1b9 NE OO SU
+U parser%b		parser.adb		f80e0e59 NE OO PK IL
 W ada%s			ada.ads			ada.ali
-W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W cli%s			cli.adb			cli.ali
-W file_gen%s		file_gen.adb		file_gen.ali
-W parser%s		parser.adb		parser.ali
+
+U parser%s		parser.ads		ed83038b EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
 
 D ada.ads		20210520051130 76789da1 ada%s
 D a-except.ads		20210520051127 946f3014 ada.exceptions%s
-D a-inteio.ads		20210520051127 f64b89a4 ada.integer_text_io%s
 D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
 D a-string.ads		20210520051128 90ac6797 ada.strings%s
@@ -28,17 +28,11 @@ D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
 D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
-D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
-D cli.ads		20230116201152 624e9493 cli%s
-D file_gen.ads		20230116162758 c9fb1330 file_gen%s
-D file_gen.adb		20230116134109 60fd8196 file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D main.adb		20230116191502 f437ec35 main%b
-D p_liste_gen.ads	20230116165823 48b01ea2 p_liste_gen%s
 D parser.ads		20230116191319 4377d6e6 parser%s
+D parser.adb		20230116192739 158d0dd2 parser%b
 D system.ads		20210520051134 a2da961d system%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051131 54135002 system.exception_table%s
@@ -56,28 +50,32 @@ D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [main standard 9 11 none]
-G r c none [main standard 9 11 none] [parse_cmd parser 12 14 none]
+G c Z s b [parse_cmd parser 12 14 none]
+G c Z s b [parse_path parser 14 14 none]
+G c Z s s [Ttab_motBIP parser 6 4 none]
+G c Z s s [motIP parser 7 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 19|1r6 1r23 2r6 2r31
-X 3 a-inteio.ads
-18K13*Integer_Text_IO[11|46] 19|2w10 2r35
-X 10 a-textio.ads
-58K13*Text_IO 725e16 19|1w10 1r27
-463U14*Put 19|30s4
-479U14*Get_Line 19|31s4
-X 14 cli.ads
-1K9*CLI 5e8 19|5w6 5r15
-X 15 file_gen.ads
-8k9*file_gen 39e13 19|3w6
-X 19 main.adb
-9U11*Main 9b11 34l5 34t9
-25b4 menu{boolean}
-26a4 phrase{string} 31m13 32r14
-27r4 tab{21|7R9} 32m30
-28i4 taille{integer} 31m21 32m22 32r22
-X 21 parser.ads
-3K9*parser 19|6w6 6r18 21|18e11
-7R9*MOT 19|27r10 21|10e14
-12U14*parse_cmd 19|32s4
+16K9*Ada 20e8 13|1r6 1r23 14|1r6 1r23
+X 9 a-textio.ads
+58K13*Text_IO 725e16 13|1w10 1r27 14|1w10 1r27
+X 13 parser.ads
+3K9*parser 18l5 18e11 14|3b14 36l5 36t11
+5i4*NMAX{integer} 6r29 6r48
+6A9*TAB_MOT(string)<integer> 8r13
+7R9*MOT 10e14 12r85 14r84 14|5r85 20r84
+8a7*tab{6A9} 14|14m20 28m20
+9i7*longueur{integer} 14|8m17 15m20 15r42 29m20 29r42
+12U14*parse_cmd 12>24 12=44 12<69 14|5b14 18l8 18t17
+12a24 phrase{string} 14|5b24 11r30 14r30
+12i44 taille{integer} 14|5b44 10r19 11r61
+12r69 liste_mot{7R9} 14|5b69 8m7 14m10 15m10 15r32
+14U14*parse_path 14>25 14=43 14<68 14|20b14 31l8 31t18
+14a25 path{string} 14|20b25 25r30 28r30
+14i43 taille{integer} 14|20b43 23r19
+14r68 liste_mot{7R9} 14|20b68 28m10 29m10 29r32
+X 14 parser.adb
+6i7 j{integer} 9m7 11r37 11r56 12m13 12r18 14r41 16m10 16r15
+10i11 i{integer} 14r24 14r37
+21i7 j{integer} 24m10 25r35 26m13 26r18 28r38
+23i11 i{integer} 24r15 28r24 28r35
 

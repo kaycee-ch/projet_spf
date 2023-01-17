@@ -14,12 +14,12 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U file_gen%b		file_gen.adb		3011af26 NE OO PK GE IL
+U file_gen%b		file_gen.adb		221e2061 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.unchecked_deallocation%s
 W p_liste_gen%s		p_liste_gen.adb		p_liste_gen.ali
 
-U file_gen%s		file_gen.ads		4991f3bf BN EE NE OO PK GE IL
+U file_gen%s		file_gen.ads		814b0d92 BN EE NE OO PK GE
 W ada%s			ada.ads			ada.ali
 Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -40,12 +40,12 @@ D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
 D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
-D file_gen.ads		20230115171742 feb04498 file_gen%s
-D file_gen.adb		20230115172112 ba28f0fc file_gen%b
+D file_gen.ads		20230116162758 c9fb1330 file_gen%s
+D file_gen.adb		20230116134109 60fd8196 file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_liste_gen.ads	20230115171123 b721b727 p_liste_gen%s
-D p_liste_gen.adb	20230115171145 b83a3954 p_liste_gen%b
+D p_liste_gen.ads	20230116165823 48b01ea2 p_liste_gen%s
+D p_liste_gen.adb	20230116165823 7629eaed p_liste_gen%b
 D system.ads		20210520051134 a2da961d system%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051131 54135002 system.exception_table%s
@@ -63,7 +63,7 @@ D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z s b [file_gen standard 6 9 none]
+G c Z s b [file_gen standard 8 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 15|2r6 6r26
 X 13 a-uncdea.ads
@@ -71,42 +71,46 @@ X 13 a-uncdea.ads
 18P9 Name(17+9) 15|6r74
 20u15*Unchecked_Deallocation 15|2w10 6r30
 X 14 file_gen.ads
-4+9 T_element 9r52 13r59 23r55 32r16 15|19r59 67r55
-6k9*file_gen 4z9 27E9 36l8 36e16 15|4b14 72l5 72t13
-7P9*T_file 11r41 13r41 15r47 17r41 17r59 19r36 21r34 23r40 29c9 33r17 15|6r82
+4+9 T_element 5r25 5r40 11r52 16r59 26r55 35r16 15|19r59 67r55
+5V15 Equal{boolean} 5>21 5>36 11r74
+5*21 x{4+9}
+5*36 y{4+9}
+8k9*file_gen 4z9 5z15 30E9 39l5 39e13 15|4b14 72l5 72t13
+9P9*T_file 14r41 16r41 18r47 20r41 20r59 22r36 24r34 26r40 32c9 36r17 15|6r82
 . 8r41 14r36 19r41 25r47 36r34 45r41 45r59 46r20 67r40
-9K12*liste_elem[18|5] 15r65 15|25r65 26r17 29r13 30r28 31r21
-11U14*initialiser 11<26 15|8b14 12l8 12t19
-11p26 une_file{7P9} 15|8b26 10m7 11m7
-13U14*enfiler 13=23 13>49 15|19b14 22l8 22t15 30s10
-13p23 une_file{7P9} 15|19b23 21m7 21r40
-13*49 elem{4+9} 15|19b49 21r34
-15U14*enfiler_liste 15=29 15>55 15|25b14 33l8 33t21
-15p29 une_file{7P9} 15|25b29 30m18
-15p55 elem{18|7P9[9]} 15|25b55 28r18
-17U14*defiler 17=23 17<49 15|45b14 65l8 65t15
-17p23 une_file{7P9} 15|45b23 48r10 49r13 50r20 51m13 53r24 54r18
-17p49 res{7P9} 15|45b49 50m13 59m13 63m10
-19V13*is_empty{boolean} 19>22 15|14b13 17l8 17t16
-19p22 une_file{7P9} 15|14b22 16r14
-21V13*taille{integer} 21>20 15|36b13 41s17 43l8 43t14
-21p20 une_file{7P9} 15|36b20 38r10 41r24
-23V13*get_contenu{4+9} 23>26 15|67b13 70l8 70t19
-23p26 une_file{7P9} 15|67b26 69r14
-27R9 T_cellule 29r26 30r27 31c9 34e14 15|6r63 10r23 21r23
-30P9 T_liste(27R9)
-32*7 valeur{4+9} 15|69r27
-33p7 suivant{7P9} 15|41r37 49r26 54r31 55r25 57r27 60m25
+11K12*liste_elem[18|6] 12r8 15|25r65 26r17
+14U14*initialiser 14<26 15|8b14 12l8 12t19
+14p26 une_file{9P9} 15|8b26 10m7 11m7
+16U14*enfiler 16=23 16>49 15|19b14 22l8 22t15 30s10
+16p23 une_file{9P9} 15|19b23 21m7 21r40
+16*49 elem{4+9} 15|19b49 21r34
+18U14*enfiler_liste 18=29 18>55 15|25b14 33l8 33t21
+18p29 une_file{9P9} 15|25b29 30m18
+18p55 elem{18|8P9[11]} 15|25b55 28r18
+20U14*defiler 20=23 20<49 15|45b14 65l8 65t15
+20p23 une_file{9P9} 15|45b23 48r10 49r13 50r20 51m13 53r24 54r18
+20p49 res{9P9} 15|45b49 50m13 59m13 63m10
+22V13*is_empty{boolean} 22>22 15|14b13 17l8 17t16
+22p22 une_file{9P9} 15|14b22 16r14
+24V13*taille{integer} 24>20 15|36b13 41s17 43l8 43t14
+24p20 une_file{9P9} 15|36b20 38r10 41r24
+26V13*get_contenu{4+9} 26>26 15|67b13 70l8 70t19
+26p26 une_file{9P9} 15|67b26 69r14
+30R9 T_cellule 32r26 33r27 34c9 37e14 15|6r63 10r23 21r23
+33P9 T_liste(30R9)
+35*7 valeur{4+9} 15|69r27
+36p7 suivant{9P9} 15|41r37 49r26 54r31 55r25 57r27 60m25
 X 15 file_gen.adb
 6U14 free[13|20]
-26p7 curseur{18|7P9[14|9]} 28m7 29r33 30r51 31m10 31r41
-46p7 avant_d{14|7P9} 53m13 56m16 60r13
-46p16 d{14|7P9} 54m13 55r19 56r27 57m16 57r21 59r20
+26p7 curseur{18|8P9[14|11]} 28m7 29r26 30r40 31m10 31r30
+46p7 avant_d{14|9P9} 53m13 56m16 60r13
+46p16 d{14|9P9} 54m13 55r19 56r27 57m16 57r21 59r20
 X 18 p_liste_gen.ads
-2+9 T_type 14|9r42
-5k9*P_liste_gen 14|1w6 9r30 15|1w6 18|81e16
-7P9 T_liste 14|15r76[9] 15|25r76[14|9] 26r28[14|9]
-15V13 est_vide{boolean} 15|29s24[14|9]
-64V13 get_contenu{14|4+9} 15|30s39[14|9]
-67V13 get_next{7P9[14|9]} 15|31s32[14|9]
+2+9 T_type 14|11r42
+3V18 isEqual{boolean} 14|11r63
+6k9*P_liste_gen 14|1w6 11r30 15|1w6 18|83e16
+8P9 T_liste 14|18r65[11] 15|25r76[14|11] 26r28[14|11]
+16V13 est_vide{boolean} 15|29s17[14|11]
+65V13 get_contenu{14|4+9} 15|30s28[14|11]
+67V13 get_next{8P9[14|11]} 15|31s21[14|11]
 

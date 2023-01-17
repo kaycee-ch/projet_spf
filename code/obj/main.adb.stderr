@@ -1,0 +1,1 @@
+main.adb:25:04: warning: variable "menu" is never read and never assigned [-gnatwv]

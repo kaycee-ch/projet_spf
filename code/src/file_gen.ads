@@ -2,17 +2,20 @@ with p_liste_gen;
 
 generic
    TYPE T_element is private;
+with function Equal(x : T_element; y : T_element) return Boolean;
+
 
 package file_gen is
    TYPE T_file is limited private;
 
-   package liste_elem is new p_liste_gen(T_type => T_element);
+   package liste_elem is new p_liste_gen(T_type => T_element, isEqual => Equal);
+   use liste_elem;
 
    procedure initialiser(une_file : out T_file);
 
    procedure enfiler (une_file : in out T_file; elem : in T_element);
 
-   procedure enfiler_liste (une_file : in out T_file; elem : in liste_elem.T_liste);
+   procedure enfiler_liste (une_file : in out T_file; elem : in T_liste);
 
    procedure defiler (une_file : in out T_file; res : out T_file);
 
@@ -33,4 +36,4 @@ private
       suivant : T_file;
    end record;
 
-   end file_gen;
+end file_gen;

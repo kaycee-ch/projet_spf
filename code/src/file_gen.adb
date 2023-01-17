@@ -26,9 +26,9 @@ package body file_gen is
       curseur : liste_elem.T_liste;
    Begin
       curseur := elem;
-      while liste_elem.est_vide(curseur)  loop
-         enfiler(une_file, liste_elem.get_contenu(curseur));
-         curseur := liste_elem.get_next(curseur);
+      while not est_vide(curseur) loop
+         enfiler(une_file, get_contenu(curseur));
+         curseur := get_next(curseur);
       end loop;
    end enfiler_liste;
 
