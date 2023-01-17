@@ -1,3 +1,4 @@
+with Ada.Text_IO; use Ada.Text_IO;
 with file_gen;
 with p_liste_gen;
 with Ada.Unchecked_Deallocation;
@@ -41,7 +42,10 @@ package body p_arbre is
       if curseur /= null then
          afficher_noeud(curseur.all.f_info);
          file.enfiler_liste(une_file, curseur.all.enfants);
-         defiler(une_file, tmp);
+         if file.taille(une_file) > 0 then
+            defiler(une_file, tmp);
+            print(file.get_contenu(tmp));
+         end if;
       else
          raise arbre_vide;
       end if;
@@ -50,11 +54,31 @@ package body p_arbre is
 
    procedure remove (ab : in out T_arbre; data : in T_contenu) is
       addr : T_arbre;
+      l_addr : liste_elem.T_liste;
    Begin
-      addr := ab; -- find(ab, data);
-      --liste_elem.enlever(addr.all.parent.all.enfants, addr);
-      free(addr);
+      addr := find(ab, data);
+      if addr /= null and then (not liste_elem.est_vide(addr.all.parent.all.enfants)) then
+         l_addr := liste_elem.rechercher(addr.all.parent.all.enfants, addr);
+         liste_elem.enlever(addr.all.parent.all.enfants, liste_elem.get_contenu(l_addr));
+         free(addr);
+      end if;
    end remove;
+
+
+   procedure remove_sa (ab : in out T_arbre) is
+      tmp : liste_elem.T_liste;
+      abr_tmp : T_arbre;
+   Begin
+      if ab /= null then
+         tmp := ab.all.enfants;
+         abr_tmp := liste_elem.get_contenu(tmp);
+         while not liste_elem.est_vide(tmp) loop
+            remove(abr_tmp, abr_tmp.all.f_info);
+            tmp := liste_elem.get_next(tmp);
+         end loop;
+         free(ab);
+      end if;
+   end remove_sa;
 
 
    procedure move (ab : in out T_arbre; dest : in T_arbre; data : in T_contenu) is
@@ -62,37 +86,42 @@ package body p_arbre is
       null;
    end move;
 
-   function get_parent (ab : in T_arbre) return T_arbre is
-   Begin
-      return null;
-   end get_parent;
-
 
    function find(ab : in T_arbre; data : in T_contenu) return T_arbre is
-      addr, curseur : T_arbre;
+      addr : T_arbre;
       tmp : liste_elem.T_liste;
    Begin
+      tmp := ab.all.enfants;
       if ab.all.f_info = data then
-         addr := ab;
+         return ab;
       else
-         curseur : new T_noeud;
-         curseur.all.f_info := data;
-         if isEqual(liste_elem.rechercher(ab.all.enfants, curseur)) then
-            return liste_elem.rechercher(ab.all.enfants);
-         end if;
+         while not liste_elem.est_vide(tmp) loop
+            if liste_elem.get_contenu(tmp).all.f_info = data then
+               return liste_elem.get_contenu(tmp);
+            else
+               addr := find(liste_elem.get_contenu(tmp), data);
+               tmp := liste_elem.get_next(tmp);
+            end if;
+         end loop;
       end if;
       return addr;
    end find;
 
 
-   function equal_ptr(a : in T_arbre; b : T_arbre) return boolean is
+   function get_root(ab : in T_arbre) return T_arbre is
    Begin
-      return isEqual(a.all.f_info, b.all.f_info);
-   end equal_ptr;
+      if ab.all.parent /= null then
+         return get_root(ab.all.parent);
+      else
+         return ab;
+      end if;
+   end get_root;
 
-   function get_info (ab : in T_arbre) return T_contenu is
+
+   function get_contenu (ab : in T_arbre) return T_contenu is
    Begin
       return ab.all.f_info;
-   end get_info;
+   end get_contenu;
+
 
 end p_arbre;

@@ -1,5 +1,8 @@
+
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 package CLI is
 
-   procedure afficher_menu (commande : out String; longueur : out Integer);
+   function afficher_menu return Character;
+   procedure traiter_choix (choix : in Character);
 
 end CLI;

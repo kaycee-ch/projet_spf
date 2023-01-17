@@ -1,21 +1,23 @@
-with parser; user parser;
-with sgf; use sgf;
+with Ada.Text_IO; use Ada.Text_IO;
+with parser; use parser;
 
 package body IHM is
 
    procedure traiter(liste_mot : in MOT) is
-
-      case liste_mot.tab(1) is
-
+   x : String := "test";
+   Begin
+      case x is
          when "ls" =>
             if liste_mot.longueur > 3 then
                Put_Line("nombre d'arguments invalide");
             else
                if liste_mot.longueur = 1 then
-                  liste_contenu_dir();
+                  Put("liste contenu dir");
+                  --liste_contenu_dir();
                else
                   if liste_mot(2) = "-r" then
-                     liste_contenu_all();
+                     Put("liste contenu all");
+                     --liste_contenu_all();
                   elsif liste_mot(2) = "--help" then
                      Put("help ls");
                   else
@@ -24,92 +26,92 @@ package body IHM is
                end if;
             end if;
 
-         when "pwd" =>
-            if liste_mot.longueur > 1 then
-               Put_Line("nombre d'arguments invalide");
+      when "pwd" =>
+         if liste_mot.longueur > 1 then
+            Put_Line("nombre d'arguments invalide");
+         else
+            repo_courant();
+         end if;
+
+
+      when "nano" =>
+         if liste_mot.longueur > 2 then
+            Put_Line("nombre d'arguments invalide");
+         else
+            if file_exists(liste_mot.tab(2)) then
+               modifier_fichier();
             else
-               repo_courant();
+               creer_fichier(); --name = liste_mot.tab(2)
             end if;
+         end if;
 
 
-         when "nano" =>
-            if liste_mot.longueur > 2 then
-               Put_Line("nombre d'arguments invalide");
+      when "mkdir" =>
+         if liste_mot.longueur > 2 then
+            Put_Line("nombre d'arguments invalide");
+         else
+            creer_dossier(); --name = liste_mot.tab(2)
+         end if;
+
+
+      when "cd" =>
+         if liste_mot.longueur > 2 then
+            Put_Line("nombre d'arguments invalide");
+         else
+            change_dir(); -- new_path = liste_mot.tab(2)
+
+            when "rm" =>
+            if liste_mot.longueur = 1 then
+               suppr_fichier();
             else
-               if file_exists(liste_mot.tab(2)) then
-                  modifier_fichier();
+               if liste_mot(2) = "-r" then
+                  suppr_dir();
+               elsif liste_mot(2) = "--help" then
+                  Put("help ls");
                else
-                  creer_fichier(); --name = liste_mot.tab(2)
+                  Put("commande invalide");
                end if;
             end if;
+         end if;
 
-
-         when "mkdir" =>
-            if liste_mot.longueur > 2 then
-               Put_Line("nombre d'arguments invalide");
+      when "tar" =>
+         if liste_mot.longueur > 2 then
+            Put_Line("arguments invalides");
+         else
+            if liste_mot(2) = "--help" then
+               Put("help tar");
             else
-               creer_dossier(); --name = liste_mot.tab(2)
+               archive_dir();
             end if;
+         end if;
 
 
-         when "cd" =>
-            if liste_mot.longueur > 2 then
-               Put_Line("nombre d'arguments invalide");
+      when "mv" =>
+         if liste_mot.longueur > 3 then
+            Put_LIne("arguments invalides");
+         else
+            if liste_mot.longueur(2) = "--help" then
+               Put_Line("help mv");
             else
-               change_dir(); -- new_path = liste_mot.tab(2)
-
-               when "rm" =>
-               if liste_mot.longueur = 1 then
-                  suppr_fichier();
-               else
-                  if liste_mot(2) = "-r" then
-                     suppr_dir();
-                  elsif liste_mot(2) = "--help" then
-                     Put("help ls");
-                  else
-                     Put("commande invalide");
-                  end if;
-               end if;
+               move_fichier(); -- fichier a deplacer = liste_mot.tab(2) destination = liste_mot.tab(3)
             end if;
+         end if;
 
-         when "tar" =>
-            if liste_mot.longueur > 2 then
-               Put_Line("arguments invalides");
+
+      when "cp" =>
+         if liste_mot.longueur > 3 then
+            Put_LIne("arguments invalides");
+         else
+            if liste_mot.longueur(2) = "--help" then
+               Put_Line("help cp");
             else
-               if liste_mot(2) = "--help" then
-                  Put("help tar");
-               else
-                  archive_dir();
-               end if;
+               copy_fichier-- a copiermot.tab(2) destination = liste_mot.tab(3)
             end if;
+         end if;
 
-
-         when "mv" =>
-            if liste_mot.longueur > 3 then
-               Put_LIne("arguments invalides");
-            else
-               if liste_mot.longueur(2) = "--help" then
-                  Put_Line("help mv");
-               else
-                  move_fichier(); -- fichier a deplacer = liste_mot.tab(2) destination = liste_mot.tab(3)
-               end if;
-            end if;
-
-
-         when "cp" =>
-            if liste_mot.longueur > 3 then
-               Put_LIne("arguments invalides");
-            else
-               if liste_mot.longueur(2) = "--help" then
-                  Put_Line("help cp");
-               else
-                  copy_fichier-- a copiermot.tab(2) destination = liste_mot.tab(3)
-               end if;
-            end if;
-
-         when others =>
+       when others =>
             Put_Line("commande inconnue");
-      end case;
+      --end case;
 
    end traiter;
 

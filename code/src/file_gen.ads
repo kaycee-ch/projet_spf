@@ -2,13 +2,12 @@ with p_liste_gen;
 
 generic
    TYPE T_element is private;
-with function Equal(x : T_element; y : T_element) return Boolean;
 
 
 package file_gen is
    TYPE T_file is limited private;
 
-   package liste_elem is new p_liste_gen(T_type => T_element, isEqual => Equal);
+   package liste_elem is new p_liste_gen(T_type => T_element);
    use liste_elem;
 
    procedure initialiser(une_file : out T_file);

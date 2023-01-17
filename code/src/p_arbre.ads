@@ -23,9 +23,12 @@ package p_arbre is
 
    procedure remove (ab : in out T_arbre; data : in T_contenu);
 
-   function get_info (ab : in T_arbre) return T_contenu;
+   procedure remove_sa (ab : in out T_arbre);
 
-   -- function get_parent (ab : in T_arbre) return T_arbre;
+   function get_root(ab : in T_arbre) return T_arbre;
+
+   function get_contenu (ab : in T_arbre) return T_contenu;
+
 
    generic
       with procedure afficher_noeud(n : in T_contenu);
@@ -36,9 +39,7 @@ private
    TYPE T_arbre is access T_noeud;
 
 
-   function equal_ptr(a : in T_arbre; b : T_arbre) return boolean;
-
-   package file is new file_gen(T_element => T_arbre, Equal => equal_ptr);
+   package file is new file_gen(T_element => T_arbre);
    use file;
 
    TYPE T_noeud is record

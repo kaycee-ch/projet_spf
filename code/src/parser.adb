@@ -1,33 +1,74 @@
-with Ada.Text_IO; use Ada.Text_IO;
+with Text_IO.Unbounded_IO; use Text_IO.Unbounded_IO;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Integer_Text_IO;
 
 package body parser is
 
-   procedure parse_cmd(phrase : in String; taille : in out Integer; liste_mot : out MOT) is
-      j : Integer;
+   function isValid (la_cmd : in T_COMMAND) return Boolean is
    Begin
-      liste_mot.longueur := 0;
-      j := 1;
-      for i in 1..taille loop
-         while character'pos(phrase(j)) /= 32 and then j <= taille loop
-            j := j + 1;
-         end loop;
-         liste_mot.tab(i) := phrase(i..(j - 1));
-         liste_mot.longueur := liste_mot.longueur + 1;
-         j := j + 1;
+      return false;
+   end isValid;
+
+   function i_char (phrase : in Unbounded_String; index : in out Integer; char_pos : in Integer) return Integer is
+   Begin
+      while character'pos(element(phrase, index)) /= char_pos and then index < length(phrase) loop
+         index := index + 1;
       end loop;
+      return index;
+   end i_char;
+
+
+   function parse_cmd(phrase : in Unbounded_String) return T_COMMAND is
+      la_cmd : T_COMMAND;
+      debut_cmd, fin_cmd, fin_arg, debut_arg, long : Integer;
+   Begin
+
+      la_cmd.arguments := creer_liste_vide;
+      la_cmd.options := creer_liste_vide;
+      long := length(phrase);
+
+      debut_cmd := 1;
+      fin_cmd := i_char(phrase, debut_cmd, 32) + 1;
+      la_cmd.commande := Unbounded_Slice(phrase, debut_cmd, fin_cmd - 2);
+
+
+      debut_arg := fin_cmd;
+      fin_arg := i_char(phrase, fin_cmd, 32) + 1;
+      if character'pos(element(phrase, debut_arg)) = 45 then
+         debut_arg := debut_arg + 1;
+      end if;
+      inserer_en_tete(la_cmd.arguments, Unbounded_Slice(phrase, debut_arg, fin_arg - 2));
+
+
+      inserer_en_tete(la_cmd.options, Unbounded_Slice(phrase, fin_arg, long));
+
+
+      return  la_cmd;
+
    end parse_cmd;
 
-   procedure parse_path(path : in String; taille : in out Integer; liste_mot : out MOT) is
-      j : Integer;
+
+   function parse_path(phrase : in Unbounded_String) return T_PATH is
+      le_path : T_PATH;
+      i, long, a, b : Integer;
    Begin
-      for i in 1..taille loop
-         j := i;
-         while character'pos(path(j)) /= 47 loop
-            j := j + 1;
-         end loop;
-         liste_mot.tab(i) := path(i..j);
-         liste_mot.longueur := liste_mot.longueur + 1;
+      long := length(phrase);
+      if element(phrase, 1) = '.' then
+         le_path.isAbsolute := True;
+         a := 3;
+      else
+         le_path.isAbsolute := False;
+         a := 2;
+      end if;
+      i := a;
+      while a <= long loop
+         b := a;
+         i := i_char(phrase, a, 47);
+         inserer_en_tete(le_path.chemin, Unbounded_Slice(phrase, b, i - 1));
+         a := i + 1;
       end loop;
+      return le_path;
    end parse_path;
+
 
 end parser;

@@ -1,8 +1,4 @@
-sgf.ads:18:12: error: missing body for "ajouter" declared at p_arbre.ads:15, instance at line 18
-sgf.ads:18:12: error: missing body for "supprimer" declared at p_arbre.ads:16, instance at line 18
-sgf.ads:18:12: error: missing body for "rechercher" declared at p_arbre.ads:18, instance at line 18
-p_arbre.adb:3:14: error: missing body for "ajouter" declared at p_arbre.ads:15
-p_arbre.adb:3:14: error: missing body for "supprimer" declared at p_arbre.ads:16
-p_arbre.adb:3:14: error: missing body for "rechercher" declared at p_arbre.ads:18
-p_arbre.adb:28:10: error: "afficher_noeud" is undefined
-p_arbre.adb:29:10: error: "enfiler_liste" is undefined
+sgf.adb:10:07: error: left hand of assignment must not be limited type
+sgf.adb:12:07: error: left hand of assignment must not be limited type
+sgf.adb:19:14: error: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+sgf.adb:19:14: error: consider switching to return of access type

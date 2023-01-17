@@ -1,0 +1,76 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ihm%b			ihm.adb			9271e203 NE OO PK IU
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W parser%s		parser.adb		parser.ali
+
+U ihm%s			ihm.ads			02b88f09 EE NE OO PK IU
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W parser%s		parser.adb		parser.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051127 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051128 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051128 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D ihm.ads		20230117123944 286e5017 ihm%s
+D ihm.adb		20230117125005 3e3db867 ihm%b
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D parser.ads		20230117073155 2ad6df1e parser%s
+D system.ads		20210520051134 a2da961d system%s
+D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [traiter ihm 4 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 17|1r6 1r23
+X 14 a-textio.ads
+58K13*Text_IO 725e16 17|1w10 1r27
+506U14*Put_Line 17|113s13
+X 16 ihm.ads
+2K9*IHM 7l5 7e8 17|4b14 118l5 118t8
+4U14*traiter 4>22 17|6b14 116l8 116t15
+4r22 liste_mot{20|8R9} 17|6b22
+X 17 ihm.adb
+7a4 x{string}
+X 20 parser.ads
+4K9*parser 16|1w6 1r18 17|2w6 2r18 20|19e11
+8R9*MOT 16|4r37 17|6r37 20|11e14
+

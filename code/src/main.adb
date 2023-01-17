@@ -1,9 +1,10 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with file_gen;
 -- with p_arbre;
-with cli; use cli;
-with parser; use parser;
+
+
 
 
 procedure Main is
@@ -22,12 +23,11 @@ procedure Main is
    --  procedure afficher_int is new print(print_int);
 
    -- arb : T_arbre;
-   menu : BOOLEAN;
-   phrase : String(1..50);
-   tab : MOT;
+   --menu : BOOLEAN;
+   phrase : Unbounded_String;
+   --tab : MOT;
    taille : INTEGER;
 Begin
-   Put("entrez phrase ");
-   Get_Line(phrase, taille);
+   null;
 
 end Main;

@@ -1,4 +1,1 @@
-cli.adb:20:07: warning: unreachable code [enabled by default]
-cli.adb:36:07: error: too many arguments in call to "traiter"
-ihm.ads:3:37: error: "MOT" is undefined
-ihm.ads:3:41: error: missing ";"
+cli.adb:43:07: warning: variable "f" is never read and never assigned [-gnatwv]

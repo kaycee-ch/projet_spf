@@ -1,6 +1,5 @@
 generic
    Type T_type is private;
-   with function isEqual(x : T_type; y : T_type) return Boolean;
 
 
 package P_liste_gen is
@@ -66,7 +65,7 @@ package P_liste_gen is
 
    function get_next (une_liste : in T_liste) return T_liste;
 
-   function get_liste (une_liste : in T_liste) return T_liste;
+   function get_last (une_liste : in T_liste) return T_type;
 
 
 private

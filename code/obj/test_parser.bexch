@@ -1,0 +1,21 @@
+[GENERATED OBJECT FILE]
+b__test_parser.o
+[PROJECT FILES]
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr
+20230117204313 671423306b62010817550c3cc452da5d
+[BOUND OBJECT FILES]
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/p_liste_gen.o
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/parser.o
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/test_parser.o
+[GENERATED SOURCE FILES]
+b__test_parser.ads
+b__test_parser.adb
+b__test_parser.ali
+[RESULTING OPTIONS]
+-L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/
+-L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/
+-L/home/kaycee/opt/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/
+-static
+-static-libgcc
+/home/kaycee/opt/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/libgnat.a
+-ldl
