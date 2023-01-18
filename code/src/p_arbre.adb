@@ -30,11 +30,13 @@ package body p_arbre is
       tmp.all.parent := ab;
       tmp.all.enfants := liste_elem.creer_liste_vide;
       curseur := ab.all.enfants;
-      liste_elem.inserer_apres(ab.all.enfants, liste_elem.get_contenu(curseur), tmp);
+      if not file.liste_elem.est_vide(curseur) then
+         liste_elem.inserer_apres(ab.all.enfants, liste_elem.get_contenu(curseur), tmp);
+      end if;
    end ajouter_enfants;
 
 
-  procedure print (ab : in T_arbre) is
+   procedure print (ab : in T_arbre) is
       arbre_vide : exception;
       une_file : file.T_file;
       curseur : T_arbre;
@@ -43,16 +45,16 @@ package body p_arbre is
       curseur := ab;
       if curseur /= null then
          afficher_noeud(curseur.all.f_info);
-         file.enfiler_liste(une_file, curseur.all.enfants);
-         if file.taille(une_file) > 0 then
-            defiler(une_file, tmp);
-            print(file.get_contenu(tmp));
+         file.enfiler_liste(une_file,  curseur.all.enfants);
+         file.defiler(une_file, tmp);
+         if curseur /= null then
+            curseur := file.get_contenu(tmp);
+            print(curseur);
          end if;
       else
          raise arbre_vide;
       end if;
    end print;
-
 
 
    procedure remove (ab : in out T_arbre; data : in T_contenu) is
@@ -127,5 +129,10 @@ package body p_arbre is
       return ab.all.f_info;
    end get_contenu;
 
+   --  function etage (ab : in T_arbre) return Integer is
+   --     n : Integer;
+   --     tmp : T_arbre := ab;
+   --  Begin
+   --     if tmp /= null then
 
 end p_arbre;

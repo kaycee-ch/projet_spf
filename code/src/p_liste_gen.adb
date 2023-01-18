@@ -32,11 +32,6 @@ package body P_liste_gen is
    end inserer_en_tete;
 
 
-   procedure inf_liste(x : in T_Type; y : in T_type; z : out Boolean) is
-   Begin
-      inf_gen(x, y, z);
-   end inf_liste;
-
 
    procedure afficher_liste (une_liste : in T_liste) is
    Begin
@@ -141,7 +136,11 @@ package body P_liste_gen is
 
    function get_next (une_liste : in T_liste) return T_liste is
    Begin
-      return une_liste.all.suivant;
+      if une_liste.all.suivant /= null then
+         return une_liste.all.suivant;
+      else
+         return null;
+      end if;
    end get_next;
 
 
@@ -154,6 +153,7 @@ package body P_liste_gen is
    function get_last (une_liste : in T_liste) return T_type is
       tmp : T_liste;
    Begin
+      tmp := une_liste;
       if tmp.all.suivant = null then
          return tmp.all.valeur;
       else
@@ -161,5 +161,14 @@ package body P_liste_gen is
       end if;
    end get_last;
 
+   function taille (une_liste : in T_liste) return Integer is
+      tmp : T_liste := une_liste;
+   Begin
+      if tmp.all.suivant /= null then
+         return taille(tmp.all.suivant) + 1;
+      else
+         return 0;
+      end if;
+   end taille;
 
 end P_liste_gen;

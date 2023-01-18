@@ -24,11 +24,14 @@ package parser is
    end record;
 
 
-   function i_char (phrase : in Unbounded_String; index : in out Integer; char_pos : in Integer) return Integer;
+   function i_char (phrase : in Unbounded_String; index : in out Integer; char : in Character) return Integer;
 
-   function parse_cmd(phrase : in Unbounded_String) return T_COMMAND;
+   function parse_cmd(liste_mot : in out T_liste) return T_COMMAND;
 
-   function parse_path(phrase : in Unbounded_String) return T_PATH;
+   function split(phrase : in Unbounded_String; separateur : in Character) return T_liste;
 
+   function parse_path(liste_mot : in out T_liste) return T_PATH;
+   procedure test_cmd;
+   procedure test_path;
 
 end parser;

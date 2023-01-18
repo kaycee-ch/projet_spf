@@ -3,12 +3,11 @@ with parser; use parser;
 
 package body IHM is
 
-   procedure traiter(liste_mot : in MOT) is
-   x : String := "test";
+   procedure traiter_cmd(liste_cmd : in T_COMMAND) is
    Begin
-      case x is
+      case liste_cmd.commande is
          when "ls" =>
-            if liste_mot.longueur > 3 then
+            if taille(liste_cmd.arguments) > 1 then
                Put_Line("nombre d'arguments invalide");
             else
                if liste_mot.longueur = 1 then

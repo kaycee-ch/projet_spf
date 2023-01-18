@@ -18,16 +18,13 @@ package P_liste_gen is
    -- post : none
    -- exception : none
 
+   function taille (une_liste : in T_liste) return Integer;
 
    procedure inserer_en_tete (une_liste : in out T_liste; n : in T_type);
    -- semantique : insere l'element nouveau en tete de la liste 1
    -- pre : none
    -- post : n appartient à la liste
    -- exception : aucune
-
-   generic
-      with procedure inf_gen(x : in T_type; y : in T_type; z : in Boolean);
-   procedure inf_liste(x : in T_Type; y : in T_type; z : out Boolean);
 
    generic
       with procedure afficher_gen(le_type : in T_type);

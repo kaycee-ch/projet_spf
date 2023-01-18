@@ -9,66 +9,105 @@ package body parser is
       return false;
    end isValid;
 
-   function i_char (phrase : in Unbounded_String; index : in out Integer; char_pos : in Integer) return Integer is
+   function i_char (phrase : in Unbounded_String; index : in out Integer; char : in Character) return Integer is
    Begin
-      while character'pos(element(phrase, index)) /= char_pos and then index < length(phrase) loop
+      while element(phrase, index) /= char and then index < length(phrase) loop
          index := index + 1;
       end loop;
       return index;
    end i_char;
 
 
-   function parse_cmd(phrase : in Unbounded_String) return T_COMMAND is
-      la_cmd : T_COMMAND;
-      debut_cmd, fin_cmd, fin_arg, debut_arg, long : Integer;
+   function split(phrase : in Unbounded_String; separateur : in Character) return T_liste is
+      liste_split : T_liste;
+      deb, fin, long, tmp : Integer;
+      new_phrase : Unbounded_String := phrase;
    Begin
-
-      la_cmd.arguments := creer_liste_vide;
-      la_cmd.options := creer_liste_vide;
+      liste_split := creer_liste_vide;
       long := length(phrase);
-
-      debut_cmd := 1;
-      fin_cmd := i_char(phrase, debut_cmd, 32) + 1;
-      la_cmd.commande := Unbounded_Slice(phrase, debut_cmd, fin_cmd - 2);
-
-
-      debut_arg := fin_cmd;
-      fin_arg := i_char(phrase, fin_cmd, 32) + 1;
-      if character'pos(element(phrase, debut_arg)) = 45 then
-         debut_arg := debut_arg + 1;
+      if element(phrase, long) /= separateur then
+         append(new_phrase, separateur);
       end if;
-      inserer_en_tete(la_cmd.arguments, Unbounded_Slice(phrase, debut_arg, fin_arg - 2));
+      deb := 1;
+      while deb <= long loop
+         tmp := deb;
+         fin := i_char(new_phrase, tmp, separateur);
+         inserer_en_tete(liste_split, Unbounded_Slice(new_phrase, deb, fin - 1));
+         deb := fin + 1;
+      end loop;
+      return liste_split;
+   end split;
 
 
-      inserer_en_tete(la_cmd.options, Unbounded_Slice(phrase, fin_arg, long));
+   function parse_cmd(liste_mot : in out T_liste) return T_COMMAND is
+      la_cmd : T_COMMAND;
+   Begin
+      la_cmd.commande := get_last(liste_mot);
+      enlever(liste_mot, get_last(liste_mot));
 
+      la_cmd.options := creer_liste_vide;
+      la_cmd.arguments := creer_liste_vide;
 
-      return  la_cmd;
+      while not est_vide(liste_mot) loop
+         if element(get_contenu(liste_mot), 1) = '-' then
+            inserer_en_tete(la_cmd.options, get_contenu(liste_mot));
+         else
+            inserer_en_tete(la_cmd.arguments, get_contenu(liste_mot));
+         end if;
+         enlever(liste_mot, get_contenu(liste_mot));
 
+      end loop;
+      return la_cmd;
    end parse_cmd;
 
 
-   function parse_path(phrase : in Unbounded_String) return T_PATH is
+   function parse_path(liste_mot : in out T_liste) return T_PATH is
       le_path : T_PATH;
-      i, long, a, b : Integer;
+      long : Integer;
+      new_phrase : Unbounded_String;
    Begin
-      long := length(phrase);
-      if element(phrase, 1) = '.' then
-         le_path.isAbsolute := True;
-         a := 3;
-      else
-         le_path.isAbsolute := False;
-         a := 2;
-      end if;
-      i := a;
-      while a <= long loop
-         b := a;
-         i := i_char(phrase, a, 47);
-         inserer_en_tete(le_path.chemin, Unbounded_Slice(phrase, b, i - 1));
-         a := i + 1;
+      while not est_vide(liste_mot) loop
+         new_phrase := get_contenu(liste_mot);
+         long := length(new_phrase);
+         Put(new_phrase);
+         if element(new_phrase, 1) = '.' then
+            le_path.isAbsolute := True;
+         else
+            le_path.isAbsolute := False;
+         end if;
+         if element(new_phrase, long) /= '/' then
+            append(new_phrase, '/');
+         end if;
+         inserer_en_tete(le_path.chemin, new_phrase);
+         enlever(liste_mot, new_phrase);
+         liste_mot := get_next(liste_mot);
       end loop;
       return le_path;
    end parse_path;
 
+   procedure test_cmd is
+      phrase : Unbounded_String;
+      cmd : T_COMMAND;
+      l : T_liste;
+   Begin
+      -- Get_Line();
+      phrase := To_Unbounded_String("ls -l -a test.adb test.ads test.ali");
+      l := split(phrase, ' ');
+      cmd := parse_cmd(l);
+      -- put(cmd.commande);
+      -- print(cmd.arguments);
+      print(cmd.options);
+   end test_cmd;
+
+   procedure test_path is
+      phrase : Unbounded_String;
+      path : T_PATH;
+      l : T_liste;
+   Begin
+      Get_Line(phrase);
+      l := split(phrase, '/');
+      path := parse_path(l);
+      -- print(path.chemin);
+   end test_path;
 
 end parser;

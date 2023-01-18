@@ -1,2 +1,0 @@
-p_liste_gen.adb:157:10: warning: "tmp" may be null [enabled by default]
-p_liste_gen.ads:30:54: warning: formal parameter "z" is read but never assigned [-gnatwf]

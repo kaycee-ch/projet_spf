@@ -40,7 +40,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#6d2f56fe#;
+   u00001 : constant Version_32 := 16#feea9f54#;
    pragma Export (C, u00001, "test_parserB");
    u00002 : constant Version_32 := 16#2e11c0b1#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -320,9 +320,9 @@ package ada_main is
    pragma Export (C, u00139, "ada__strings__unbounded__text_ioB");
    u00140 : constant Version_32 := 16#8b1e6ee0#;
    pragma Export (C, u00140, "ada__strings__unbounded__text_ioS");
-   u00141 : constant Version_32 := 16#db7eb9d9#;
+   u00141 : constant Version_32 := 16#c8d27c2f#;
    pragma Export (C, u00141, "parserB");
-   u00142 : constant Version_32 := 16#2fc05fa0#;
+   u00142 : constant Version_32 := 16#f2433853#;
    pragma Export (C, u00142, "parserS");
    u00143 : constant Version_32 := 16#f64b89a4#;
    pragma Export (C, u00143, "ada__integer_text_ioB");
@@ -356,9 +356,9 @@ package ada_main is
    pragma Export (C, u00157, "system__val_llliS");
    u00158 : constant Version_32 := 16#750441df#;
    pragma Export (C, u00158, "system__val_llluS");
-   u00159 : constant Version_32 := 16#8d0aae22#;
+   u00159 : constant Version_32 := 16#fa206bb4#;
    pragma Export (C, u00159, "p_liste_genB");
-   u00160 : constant Version_32 := 16#089f40f6#;
+   u00160 : constant Version_32 := 16#2d7aea71#;
    pragma Export (C, u00160, "p_liste_genS");
    u00161 : constant Version_32 := 16#8f461df5#;
    pragma Export (C, u00161, "text_ioS");
