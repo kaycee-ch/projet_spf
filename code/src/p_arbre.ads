@@ -19,7 +19,7 @@ package p_arbre is
    function find(ab : in T_arbre; data : in T_contenu) return T_arbre;
    -- pre : ab /= null
 
-   procedure move (ab : in out T_arbre; dest : in T_arbre; data : in T_contenu);
+   procedure move (ab : in out T_arbre; dest : in out T_arbre; data : in T_contenu);
 
    procedure remove (ab : in out T_arbre; data : in T_contenu);
 
@@ -48,6 +48,6 @@ private
       enfants : file.liste_elem.T_liste;
    end record;
 
-   TYPE Ptr_int is access Integer;
+
 
 end p_arbre;

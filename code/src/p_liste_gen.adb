@@ -23,13 +23,19 @@ package body P_liste_gen is
 
 
    procedure inserer_en_tete (une_liste : in out T_liste; n : in T_type) is
-      p : T_liste;
+      p: T_liste;
    Begin
       p := new T_cellule;
       p.all.valeur := n;
       p.all.suivant := une_liste;
       une_liste := p;
    end inserer_en_tete;
+
+
+   procedure inf_liste(x : in T_Type; y : in T_type; z : out Boolean) is
+   Begin
+      inf_gen(x, y, z);
+   end inf_liste;
 
 
    procedure afficher_liste (une_liste : in T_liste) is

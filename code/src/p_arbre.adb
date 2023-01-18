@@ -23,16 +23,18 @@ package body p_arbre is
 
    procedure ajouter_enfants(ab : in out T_arbre; data : T_contenu) is
       tmp : T_arbre;
+      curseur : file.liste_elem.T_liste;
    Begin
       tmp := new T_noeud;
       tmp.all.f_info := data;
       tmp.all.parent := ab;
       tmp.all.enfants := liste_elem.creer_liste_vide;
-      liste_elem.inserer_en_tete(ab.all.enfants, tmp);
+      curseur := ab.all.enfants;
+      liste_elem.inserer_apres(ab.all.enfants, liste_elem.get_contenu(curseur), tmp);
    end ajouter_enfants;
 
 
-   procedure print (ab : in T_arbre) is
+  procedure print (ab : in T_arbre) is
       arbre_vide : exception;
       une_file : file.T_file;
       curseur : T_arbre;
@@ -50,6 +52,7 @@ package body p_arbre is
          raise arbre_vide;
       end if;
    end print;
+
 
 
    procedure remove (ab : in out T_arbre; data : in T_contenu) is
@@ -81,9 +84,10 @@ package body p_arbre is
    end remove_sa;
 
 
-   procedure move (ab : in out T_arbre; dest : in T_arbre; data : in T_contenu) is
+   procedure move (ab : in out T_arbre; dest : in out T_arbre; data : in T_contenu) is
    Begin
-      null;
+      remove(ab, data);
+      ajouter_enfants(dest, data);
    end move;
 
 

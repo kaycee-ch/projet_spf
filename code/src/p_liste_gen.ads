@@ -26,6 +26,10 @@ package P_liste_gen is
    -- exception : aucune
 
    generic
+      with procedure inf_gen(x : in T_type; y : in T_type; z : in Boolean);
+   procedure inf_liste(x : in T_Type; y : in T_type; z : out Boolean);
+
+   generic
       with procedure afficher_gen(le_type : in T_type);
    procedure afficher_liste (une_liste : in T_liste);
    -- semantique : afficher les elements de la liste 1

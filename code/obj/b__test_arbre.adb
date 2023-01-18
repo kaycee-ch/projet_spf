@@ -30,13 +30,14 @@ package body ada_main is
    E121 : Short_Integer; pragma Import (Ada, E121, "system__finalization_root_E");
    E119 : Short_Integer; pragma Import (Ada, E119, "ada__finalization_E");
    E118 : Short_Integer; pragma Import (Ada, E118, "system__file_io_E");
-   E146 : Short_Integer; pragma Import (Ada, E146, "system__storage_pools_E");
-   E144 : Short_Integer; pragma Import (Ada, E144, "system__finalization_masters_E");
+   E166 : Short_Integer; pragma Import (Ada, E166, "system__storage_pools_E");
+   E164 : Short_Integer; pragma Import (Ada, E164, "system__finalization_masters_E");
+   E138 : Short_Integer; pragma Import (Ada, E138, "ada__strings__unbounded_E");
    E094 : Short_Integer; pragma Import (Ada, E094, "ada__text_io_E");
-   E148 : Short_Integer; pragma Import (Ada, E148, "system__pool_global_E");
-   E140 : Short_Integer; pragma Import (Ada, E140, "p_liste_gen_E");
-   E138 : Short_Integer; pragma Import (Ada, E138, "file_gen_E");
-   E142 : Short_Integer; pragma Import (Ada, E142, "p_arbre_E");
+   E168 : Short_Integer; pragma Import (Ada, E168, "system__pool_global_E");
+   E160 : Short_Integer; pragma Import (Ada, E160, "p_liste_gen_E");
+   E158 : Short_Integer; pragma Import (Ada, E158, "file_gen_E");
+   E162 : Short_Integer; pragma Import (Ada, E162, "p_arbre_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -47,7 +48,7 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E148 := E148 - 1;
+      E168 := E168 - 1;
       declare
          procedure F1;
          pragma Import (Ada, F1, "system__pool_global__finalize_spec");
@@ -61,19 +62,26 @@ package body ada_main is
       begin
          F2;
       end;
-      E144 := E144 - 1;
+      E138 := E138 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "system__finalization_masters__finalize_spec");
+         pragma Import (Ada, F3, "ada__strings__unbounded__finalize_spec");
       begin
          F3;
       end;
+      E164 := E164 - 1;
       declare
          procedure F4;
-         pragma Import (Ada, F4, "system__file_io__finalize_body");
+         pragma Import (Ada, F4, "system__finalization_masters__finalize_spec");
+      begin
+         F4;
+      end;
+      declare
+         procedure F5;
+         pragma Import (Ada, F5, "system__file_io__finalize_body");
       begin
          E118 := E118 - 1;
-         F4;
+         F5;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -226,19 +234,22 @@ package body ada_main is
       System.File_Io'Elab_Body;
       E118 := E118 + 1;
       System.Storage_Pools'Elab_Spec;
-      E146 := E146 + 1;
+      E166 := E166 + 1;
       System.Finalization_Masters'Elab_Spec;
       System.Finalization_Masters'Elab_Body;
-      E144 := E144 + 1;
+      E164 := E164 + 1;
+      Ada.Strings.Unbounded'Elab_Spec;
+      Ada.Strings.Unbounded'Elab_Body;
+      E138 := E138 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E094 := E094 + 1;
       System.Pool_Global'Elab_Spec;
       System.Pool_Global'Elab_Body;
-      E148 := E148 + 1;
-      E140 := E140 + 1;
-      E138 := E138 + 1;
-      E142 := E142 + 1;
+      E168 := E168 + 1;
+      E160 := E160 + 1;
+      E158 := E158 + 1;
+      E162 := E162 + 1;
    end adainit;
 
    procedure Ada_Main_Program;

@@ -3,7 +3,7 @@ M P W=b
 A -gnatA
 A -mtune=generic
 A -march=x86-64
-P ZX
+P SS ZX
 
 RN
 RV NO_ALLOCATORS
@@ -19,12 +19,15 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_arbre%b		test_arbre.adb		905c2a57 NE OO SU IL
+U test_arbre%b		test_arbre.adb		2359e129 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.unbounded_io%s  a-tiunio.ads	a-tiunio.ali
 Z ada.unchecked_deallocation%s
 W file_gen%s		file_gen.adb		file_gen.ali
 W p_arbre%s		p_arbre.adb		p_arbre.ali
@@ -36,30 +39,38 @@ Z system.img_int%s	s-imgint.ads		s-imgint.ali
 Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+W text_io%s		text_io.ads		text_io.ali
 
 D ada.ads		20210520051130 76789da1 ada%s
+D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051127 66457d31 ada.characters.latin_1%s
 D a-except.ads		20210520051127 946f3014 ada.exceptions%s
 D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
 D a-inteio.ads		20210520051127 f64b89a4 ada.integer_text_io%s
 D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
 D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051128 5a88892a ada.strings.maps%s
 D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051128 03325227 ada.strings.unbounded%s
+D a-suteio.ads		20210520051129 26d8e9aa ada.strings.unbounded.text_io%s
 D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
 D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
+D a-tiunio.ads		20210520051129 759c6b0c ada.text_io.unbounded_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
-D file_gen.ads		20230117073004 7fb869e8 file_gen%s
+D file_gen.ads		20230118020043 7fb869e8 file_gen%s
 D file_gen.adb		20230117210320 60fd8196 file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230117205508 324280b6 p_arbre%s
-D p_arbre.adb		20230117210812 06f690c6 p_arbre%b
-D p_liste_gen.ads	20230117182813 c938ea11 p_liste_gen%s
-D p_liste_gen.adb	20230117143956 27c1976a p_liste_gen%b
+D p_arbre.ads		20230118012505 58cf2d38 p_arbre%s
+D p_arbre.adb		20230118151440 5ccba42c p_arbre%b
+D p_liste_gen.ads	20230118020739 089f40f6 p_liste_gen%s
+D p_liste_gen.adb	20230118020615 1e821e78 p_liste_gen%b
 D system.ads		20210520051134 a2da961d system%s
+D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051131 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
@@ -79,51 +90,59 @@ D s-stalib.adb		20210520051133 977290bf system.standard_library%b
 D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
-D test_arbre.adb	20230117210611 85199fc0 test_arbre%b
+D test_arbre.adb	20230118101047 0b8d0883 test_arbre%b
+D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [test_arbre standard 7 11 none]
-G r i none [test_arbre standard 7 11 none] [p_liste_gen standard 5 9 none]
-G r i none [test_arbre standard 7 11 none] [file_gen standard 7 9 none]
-G r i none [test_arbre standard 7 11 none] [p_arbre standard 7 9 none]
+G c Z b b [test_arbre standard 9 11 none]
+G r i none [test_arbre standard 9 11 none] [p_liste_gen standard 5 9 none]
+G r i none [test_arbre standard 9 11 none] [file_gen standard 7 9 none]
+G r i none [test_arbre standard 9 11 none] [p_arbre standard 7 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 46|1r6 1r23 2r6 2r31
-X 4 a-inteio.ads
-18K13*Integer_Text_IO[12|46] 46|2w10 2r35
-X 11 a-textio.ads
-58K13*Text_IO 725e16 46|1w10 1r27
-506U14*Put_Line 46|14s7
-X 15 file_gen.ads
-4+9 T_element 46|9r37
-7k9*file_gen 38e13 46|5w6 9r28
-X 19 p_arbre.ads
-5+9 T_contenu 46|17r37
-7k9*p_arbre 53e12 46|3w6 17r29
-11P9 T_arbre 46|22r16[17]
-13U14 init 46|25s4[17]
-15U14 creer_racine 46|26s4[17]
-17U14 ajouter_enfants 46|28s4[17] 29s4[17] 30s4[17]
-24U14 remove 46|32s4[17] 33s4[17]
-35u14 print 46|20r34[17]
-X 23 system.ads
+16K9*Ada 20e8 54|1r6 1r23 2r6 2r31 3r6 3r33
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[17|46] 54|2w10 2r35
+X 9 a-string.ads
+16K13*Strings 35e16 54|3r10 3r37
+X 12 a-strunb.ads
+83K21*Unbounded 765e26 54|3w18 3r45
+X 16 a-textio.ads
+58K13*Text_IO 725e16 54|1w10 1r27
+506U14*Put_Line 54|16s7
+X 18 a-tiunio.ads
+25K21*Unbounded_IO 61e29 54|4w14
+X 21 file_gen.ads
+4+9 T_element 54|11r37
+7k9*file_gen 39e13 54|7w6 11r28
+X 25 p_arbre.ads
+5+9 T_contenu 54|30r37
+7k9*p_arbre 53e12 54|5w6 30r29
+11P9 T_arbre 54|37r16[30]
+13U14 init 54|40s4[30]
+15U14 creer_racine 54|41s4[30]
+17U14 ajouter_enfants 54|43s4[30] 44s4[30]
+35u14 print 54|33r34[30]
+X 29 system.ads
 67M9*Address
-X 31 s-memory.ads
-53V13*Alloc{23|67M9} 103i<c,__gnat_malloc>22
+X 38 s-memory.ads
+53V13*Alloc{29|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{23|67M9} 105i<c,__gnat_realloc>22
-X 39 s-stalib.adb
+76V13*Realloc{29|67M9} 105i<c,__gnat_realloc>22
+X 46 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
-X 46 test_arbre.adb
-7U11*test_arbre 7b11 36l5 36t15
-9K12 file_int[15|7] 10r8
-12U14 print_int 12b14 12>24 15l8 15t17 20r40
-12i24 n{integer} 14r30
-17K12 arbre_int[19|7] 18r8
-20U14 afficher_int[19|35] 34s4
-22p4 arb{19|11P9[17]} 25m9 25r9 26m17 26r17 28m20 28r20 29m20 29r20 30m20
-. 30r20 32m11 32r11 33m11 33r11 34r17
-22p9 test{19|11P9[17]}
+X 54 test_arbre.adb
+9U11*test_arbre 9b11 51l5 51t15
+11K12 file_int[21|7] 12r8
+14U14 print_int 14b14 14>24 17l8 17t17 33r40
+14i24 n{integer} 16r30
+30K12 arbre_int[25|7] 31r8
+33U14 afficher_int[25|35] 46s4
+37p4 arb{25|11P9[30]} 40m9 40r9 41m17 41r17 43m20 43r20 44m20 44r20 46r17
+37p9 test{25|11P9[30]}
+X 55 text_io.ads
+24K9*Text_IO=24:29 54|4w6
 

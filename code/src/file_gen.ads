@@ -7,6 +7,7 @@ generic
 package file_gen is
    TYPE T_file is limited private;
 
+
    package liste_elem is new p_liste_gen(T_type => T_element);
    use liste_elem;
 

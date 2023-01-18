@@ -19,6 +19,11 @@ package body sgf is
       return noeud_courant;
    end repo_courant;
 
+   procedure change_dir(noeud_courant : in out T_arbre; arbre : in out T_arbre; old_path : in String; new_path : in String) is
+   Begin
+      null;
+   end change_dir;
+
 
 
    procedure creer_fichier(noeud_courant : in T_arbre; arbre : in out T_arbre; path : in String; name : in String) is
