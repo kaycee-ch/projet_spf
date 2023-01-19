@@ -1,6 +1,7 @@
 with Text_IO.Unbounded_IO; use Text_IO.Unbounded_IO;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Ada.Integer_Text_IO;
+with Text_Io;
 
 package body parser is
 
@@ -41,47 +42,40 @@ package body parser is
 
    function parse_cmd(liste_mot : in out T_liste) return T_COMMAND is
       la_cmd : T_COMMAND;
+      tmp, tmp1 : Unbounded_String;
    Begin
-      la_cmd.commande := get_last(liste_mot);
-      enlever(liste_mot, get_last(liste_mot));
+      la_cmd.commande := get_contenu(get_last(liste_mot));
+      enlever(liste_mot, get_contenu(get_last(liste_mot)));
 
       la_cmd.options := creer_liste_vide;
       la_cmd.arguments := creer_liste_vide;
 
       while not est_vide(liste_mot) loop
          if element(get_contenu(liste_mot), 1) = '-' then
-            inserer_en_tete(la_cmd.options, get_contenu(liste_mot));
+            tmp := get_contenu(liste_mot);
+            tmp1 := unbounded_slice(tmp, 2, length(tmp));
+            inserer_en_tete(la_cmd.options, tmp1);
+            enlever(liste_mot, tmp);
          else
             inserer_en_tete(la_cmd.arguments, get_contenu(liste_mot));
+            enlever(liste_mot, get_contenu(liste_mot));
          end if;
-         enlever(liste_mot, get_contenu(liste_mot));
-
       end loop;
       return la_cmd;
    end parse_cmd;
 
 
-   function parse_path(liste_mot : in out T_liste) return T_PATH is
+   function parse_path(liste_mot : in T_liste) return T_PATH is
       le_path : T_PATH;
-      long : Integer;
-      new_phrase : Unbounded_String;
+      tmp : T_liste;
    Begin
-      while not est_vide(liste_mot) loop
-         new_phrase := get_contenu(liste_mot);
-         long := length(new_phrase);
-         Put(new_phrase);
-         if element(new_phrase, 1) = '.' then
-            le_path.isAbsolute := True;
-         else
-            le_path.isAbsolute := False;
-         end if;
-         if element(new_phrase, long) /= '/' then
-            append(new_phrase, '/');
-         end if;
-         inserer_en_tete(le_path.chemin, new_phrase);
-         enlever(liste_mot, new_phrase);
-         liste_mot := get_next(liste_mot);
-      end loop;
+      tmp := liste_mot;
+      if element(get_contenu(get_last(tmp)), 1) = '.' then
+         le_path.isAbsolute := True;
+      else
+         le_path.isAbsolute := False;
+      end if;
+      le_path.chemin := liste_mot;
       return le_path;
    end parse_path;
 
@@ -94,8 +88,10 @@ package body parser is
       phrase := To_Unbounded_String("ls -l -a test.adb test.ads test.ali");
       l := split(phrase, ' ');
       cmd := parse_cmd(l);
-      -- put(cmd.commande);
-      -- print(cmd.arguments);
+      put_line(cmd.commande);
+      text_io.New_line;
+      print(cmd.arguments);
+      text_io.new_line;
       print(cmd.options);
    end test_cmd;
 
@@ -104,10 +100,12 @@ package body parser is
       path : T_PATH;
       l : T_liste;
    Begin
-      Get_Line(phrase);
+      -- Get_Line(phrase);
+      phrase := to_unbounded_string("/home/kaycee/./n7/../prog/");
       l := split(phrase, '/');
+      -- print(l);
       path := parse_path(l);
-      -- print(path.chemin);
+      print(path.chemin);
    end test_path;
 
 end parser;

@@ -14,7 +14,7 @@ RV NO_NESTED_FINALIZATION
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_parser%b		test_parser.adb		feea9f54 NE OO SU IL
+U test_parser%b		test_parser.adb		7ba79367 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -46,8 +46,8 @@ D a-tiunio.ads		20210520051129 759c6b0c ada.text_io.unbounded_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_liste_gen.ads	20230118212904 2d7aea71 p_liste_gen%s
-D parser.ads		20230118215350 88252391 parser%s
+D p_liste_gen.ads	20230118234907 fc8fa0c8 p_liste_gen%s
+D parser.ads		20230118234411 4e5ac2c9 parser%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -71,7 +71,7 @@ D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
-D test_parser.adb	20230118221141 8f27981b test_parser%b
+D test_parser.adb	20230118232826 cc157570 test_parser%b
 D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
@@ -79,7 +79,7 @@ G c Z b b [test_parser standard 6 11 none]
 G r s t_command [test_parser standard 6 11 none] [t_commandIP parser 20 9 none]
 G r l t_command [test_parser standard 6 11 none] [t_commandDI parser 20 9 none]
 G r k t_command [test_parser standard 6 11 none] [t_commandDF parser 20 9 none]
-G r c none [test_parser standard 6 11 none] [test_cmd parser 34 14 none]
+G r c none [test_parser standard 6 11 none] [test_path parser 35 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 45|1r6 1r33 4r6
 X 8 a-string.ads
@@ -94,7 +94,7 @@ X 16 a-tiunio.ads
 X 21 parser.ads
 6K9*parser 37e11 45|3w6 3r18
 20R9*T_COMMAND 24e14 45|8r10
-34U14*test_cmd 45|12s4
+35U14*test_path 45|13s4
 X 22 system.ads
 67M9*Address
 X 29 s-memory.ads
@@ -104,7 +104,7 @@ X 29 s-memory.ads
 X 37 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
 X 45 test_parser.adb
-6U11*test_parser 6b11 14l8 14t19
+6U11*test_parser 6b11 14l5 14t16
 7r4 phrase{11|88R9}
 8r4 cmd{21|20R9}
 X 46 text_io.ads

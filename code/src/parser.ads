@@ -30,7 +30,7 @@ package parser is
 
    function split(phrase : in Unbounded_String; separateur : in Character) return T_liste;
 
-   function parse_path(liste_mot : in out T_liste) return T_PATH;
+   function parse_path(liste_mot : in T_liste) return T_PATH;
    procedure test_cmd;
    procedure test_path;
 

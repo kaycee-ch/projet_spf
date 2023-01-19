@@ -16,14 +16,14 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U p_liste_gen%b		p_liste_gen.adb		fa206bb4 NE OO PK GE IL
+U p_liste_gen%b		p_liste_gen.adb		866a48e3 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W ada.unchecked_deallocation%s
 
-U p_liste_gen%s		p_liste_gen.ads		2d7aea71 BN EE NE OO PK GE IL
+U p_liste_gen%s		p_liste_gen.ads		fc8fa0c8 BN EE NE OO PK GE IL
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 
 D ada.ads		20210520051130 76789da1 ada%s
@@ -41,8 +41,8 @@ D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_liste_gen.ads	20230118212904 2d7aea71 p_liste_gen%s
-D p_liste_gen.adb	20230118222214 4c4d7169 p_liste_gen%b
+D p_liste_gen.ads	20230118234907 fc8fa0c8 p_liste_gen%s
+D p_liste_gen.adb	20230119000150 e1f21887 p_liste_gen%b
 D system.ads		20210520051134 a2da961d system%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051131 54135002 system.exception_table%s
@@ -72,51 +72,49 @@ X 13 a-uncdea.ads
 18P9 Name(17+9) 17|8r74
 20u15*Unchecked_Deallocation 17|3w10 8r30
 X 16 p_liste_gen.ads
-2+9 T_type 23r66 30r48 38r56 45r64 45r82 52r64 52r82 59r57 65r57 69r54 76r16
-. 17|25r66 45r56 65r64 65r82 80r64 80r82 102r57 126r57 153r54
-5k9*P_liste_gen 2z9 73E9 83l5 83e16 17|6b14 174l5 174t16
-7P9*T_liste 9r37 15r38 21r36 23r50 31r45 38r40 38r71 45r48 52r48 59r41 65r41
-. 67r38 67r54 69r38 74c9 77r17 17|8r82 10r37 11r19 19r38 25r50 26r10 36r45
+2+9 T_type 22r66 29r48 37r56 44r64 44r82 51r64 51r82 58r57 64r57 75r16 17|25r66
+. 45r56 65r64 65r82 80r64 80r82 102r57 126r57
+5k9*P_liste_gen 2z9 72E9 82l5 82e16 17|6b14 160l5 160t16
+7P9*T_liste 9r37 15r38 22r50 30r45 37r40 37r71 44r48 51r48 58r41 64r41 66r38
+. 66r54 68r38 68r54 73c9 76r17 17|8r82 10r37 11r19 19r38 25r50 26r10 36r45
 . 45r40 45r71 46r17 47r20 65r48 66r22 80r48 81r46 102r41 103r32 126r41 137r38
-. 137r54 147r39 147r55 153r38 154r13 164r36 165r13
+. 137r54 148r38 148r54 149r13
 9V13*creer_liste_vide{7P9} 17|10b13 16l8 16t24
-15V13*est_vide{boolean} 15>23 17|19b13 22l8 22t16
+15V13*est_vide{boolean} 15>23 17|19b13 22l8 22t16 152s17
 15p23 une_liste{7P9} 17|19b23 21r14
-21V13*taille{integer} 21>21 17|164b13 168s17 172l8 172t14
-21p21 une_liste{7P9} 17|164b21 165r24
-23U14*inserer_en_tete 23=31 23>59 17|25b14 32l8 32t23 93s10
-23p31 une_liste{7P9} 17|25b31 30r24 31m7
-23*59 n{2+9} 17|25b59 29r23
-30U22 afficher_gen 30>35 17|39s10
-30*35 le_type{2+9}
-31u14*afficher_liste 31>30 17|36b14 40s10 42l8 42t22
-31p30 une_liste{7P9} 17|36b30 38r10 39r23 40r25
-38V13*rechercher{7P9} 38>25 38>49 17|45b13 62l8 62t18 71s23
-38p25 une_liste{7P9} 17|45b25 49r10 52r24
-38*49 e{2+9} 17|45b49 54r40
-45U14*inserer_apres 45=29 45>57 45>72 17|65b14 76l8 76t21
-45p29 une_liste{7P9} 17|65b29 68r10 71r34
-45*57 n{2+9} 17|65b57 75r46
-45*72 data{2+9} 17|65b72 71r45
-52U14*inserer_avant 52=29 52>57 52>72 17|80b14 99l8 99t21
-52p29 une_liste{7P9} 17|80b29 83r10 86r21 93m26
-52*57 n{2+9} 17|80b57 93r37 97r41
-52*72 data{2+9} 17|80b72 88r38
-59U14*enlever 59=22 59>50 17|102b14 123l8 123t15
-59p22 une_liste{7P9} 17|102b22 105r10 108r24 116m16
-59*50 e{2+9} 17|102b50 110r69 118r40
-65V13*get_contenu{2+9} 65>26 17|126b13 134l8 134t19
-65p26 une_liste{7P9} 17|126b26 129r10 132r17
-67V13*get_next{7P9} 67>23 17|137b13 144l8 144t16
-67p23 une_liste{7P9} 17|137b23 139r10 140r17
-69V13*get_last{2+9} 69>23 17|153b13 160s17 162l8 162t16
-69p23 une_liste{7P9} 17|153b23 156r14
-73R9 T_cellule 74r27 75c9 78e14 17|8r63 13r24 28r16 75r35 97r30
-76*7 valeur{2+9} 17|29m13 39r37 54r31 88r28 110r59 118r31 132r31 158r25
-77p7 suivant{7P9} 17|30m13 40r39 58r38 75m20 75r66 90r35 97r59 112r38 116r44
-. 119m28 119r54 139r24 140r31 157r18 160r34 167r18 168r32
-80X4 liste_vide 17|69r16 84r16
-81X4 element_absent 17|73r16 95r16
+22U14*inserer_en_tete 22=31 22>59 17|25b14 32l8 32t23 93s10
+22p31 une_liste{7P9} 17|25b31 30r24 31m7
+22*59 n{2+9} 17|25b59 29r23
+29U22 afficher_gen 29>35 17|39s10
+29*35 le_type{2+9}
+30u14*afficher_liste 30>30 17|36b14 40s10 42l8 42t22
+30p30 une_liste{7P9} 17|36b30 38r10 39r23 40r25
+37V13*rechercher{7P9} 37>25 37>49 17|45b13 62l8 62t18 71s23
+37p25 une_liste{7P9} 17|45b25 49r10 52r24
+37*49 e{2+9} 17|45b49 54r40
+44U14*inserer_apres 44=29 44>57 44>72 17|65b14 76l8 76t21
+44p29 une_liste{7P9} 17|65b29 68r10 71r34
+44*57 n{2+9} 17|65b57 75r46
+44*72 data{2+9} 17|65b72 71r45
+51U14*inserer_avant 51=29 51>57 51>72 17|80b14 99l8 99t21
+51p29 une_liste{7P9} 17|80b29 83r10 86r21 93m26
+51*57 n{2+9} 17|80b57 93r37 97r41
+51*72 data{2+9} 17|80b72 88r38
+58U14*enlever 58=22 58>50 17|102b14 123l8 123t15
+58p22 une_liste{7P9} 17|102b22 105r10 108r24 116m16
+58*50 e{2+9} 17|102b50 110r69 118r40
+64V13*get_contenu{2+9} 64>26 17|126b13 134l8 134t19
+64p26 une_liste{7P9} 17|126b26 129r10 132r17
+66V13*get_next{7P9} 66>23 17|137b13 144l8 144t16 152s26 152s35 153s17
+66p23 une_liste{7P9} 17|137b23 139r10 140r17
+68V13*get_last{7P9} 68>23 17|148b13 156l8 156t16
+68p23 une_liste{7P9} 17|148b23 151r14
+72R9 T_cellule 73r27 74c9 77e14 17|8r63 13r24 28r16 75r35 97r30
+75*7 valeur{2+9} 17|29m13 39r37 54r31 88r28 110r59 118r31 132r31
+76p7 suivant{7P9} 17|30m13 40r39 58r38 75m20 75r66 90r35 97r59 112r38 116r44
+. 119m28 119r54 139r24 140r31
+79X4 liste_vide 17|69r16 84r16
+80X4 element_absent 17|73r16 95r16
 X 17 p_liste_gen.adb
 8U14 free[13|20] 120s13
 11p7 une_liste{16|7P9} 13m7 14m7 15r14
@@ -131,8 +129,5 @@ X 17 p_liste_gen.adb
 . 116r29 118r16 119r39 120m18 120r18
 103p19 prec_liste{16|7P9} 109m10 111m13 114r13 119r13
 127X7 vide 130r16
-147V13 get_liste{16|7P9} 147b13 147>24 150l8 150t17
-147p24 une_liste{16|7P9} 149r14
-154p7 tmp{16|7P9} 156m7 157r10 158r17 160r26
-165p7 tmp{16|7P9} 167r10 168r24
+149p7 tmp{16|7P9} 151m7 152r44 153m10 153r26 155r14
 

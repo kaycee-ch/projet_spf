@@ -9,6 +9,6 @@ procedure test_parser is
 
 
 Begin
-   test_cmd;
-   -- test_path;
-   end test_parser;
+   -- test_cmd;
+   test_path;
+end test_parser;

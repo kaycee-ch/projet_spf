@@ -144,31 +144,17 @@ package body P_liste_gen is
    end get_next;
 
 
-   function get_liste (une_liste : in T_liste) return T_liste is
-   Begin
-      return une_liste;
-   end get_liste;
 
-
-   function get_last (une_liste : in T_liste) return T_type is
+   function get_last (une_liste : in T_liste) return T_liste is
       tmp : T_liste;
    Begin
       tmp := une_liste;
-      if tmp.all.suivant = null then
-         return tmp.all.valeur;
-      else
-         return get_last(tmp.all.suivant);
-      end if;
+      while not est_vide(get_next(get_next(tmp))) loop
+         tmp := get_next(tmp);
+      end loop;
+      return tmp;
    end get_last;
 
-   function taille (une_liste : in T_liste) return Integer is
-      tmp : T_liste := une_liste;
-   Begin
-      if tmp.all.suivant /= null then
-         return taille(tmp.all.suivant) + 1;
-      else
-         return 0;
-      end if;
-   end taille;
+
 
 end P_liste_gen;

@@ -18,7 +18,6 @@ package P_liste_gen is
    -- post : none
    -- exception : none
 
-   function taille (une_liste : in T_liste) return Integer;
 
    procedure inserer_en_tete (une_liste : in out T_liste; n : in T_type);
    -- semantique : insere l'element nouveau en tete de la liste 1
@@ -66,7 +65,7 @@ package P_liste_gen is
 
    function get_next (une_liste : in T_liste) return T_liste;
 
-   function get_last (une_liste : in T_liste) return T_type;
+   function get_last (une_liste : in T_liste) return T_liste;
 
 
 private
