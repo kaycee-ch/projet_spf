@@ -18,7 +18,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U sgf%b			sgf.adb			82beb3ba NE OO PK IL
+U sgf%b			sgf.adb			92395b4d NE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -37,7 +37,7 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U sgf%s			sgf.ads			c1745e56 EE OO PK IL
+U sgf%s			sgf.ads			d3c08487 EE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -86,13 +86,13 @@ D file_gen.ads		20230118020043 7fb869e8 file_gen%s
 D file_gen.adb		20230117210320 60fd8196 file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230119090640 69dc48e6 p_arbre%s
-D p_arbre.adb		20230119095440 d4106f63 p_arbre%b
+D p_arbre.ads		20230119111855 809f28ec p_arbre%s
+D p_arbre.adb		20230119112804 9a188004 p_arbre%b
 D p_liste_gen.ads	20230119002050 0c628bfc p_liste_gen%s
 D p_liste_gen.adb	20230119002209 ffb23cc2 p_liste_gen%b
 D parser.ads		20230119085531 40e96ab0 parser%s
-D sgf.ads		20230119092524 eb732e27 sgf%s
-D sgf.adb		20230119095354 b9109b15 sgf%b
+D sgf.ads		20230119122050 108494fc sgf%s
+D sgf.adb		20230119122015 bb23a933 sgf%b
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -129,158 +129,158 @@ G c Z s s [init sgf__p_sgf 13 14 17_4]
 G c Z s s [creer_racine sgf__p_sgf 15 14 17_4]
 G c Z s s [ajouter_enfants sgf__p_sgf 17 14 17_4]
 G c Z s s [move sgf__p_sgf 24 14 17_4]
-G c Z s s [remove sgf__p_sgf 26 14 17_4]
-G c Z s s [remove_sa sgf__p_sgf 28 14 17_4]
-G c Z s s [get_root sgf__p_sgf 30 13 17_4]
-G c Z s s [get_contenu sgf__p_sgf 32 13 17_4]
-G c Z s s [set_arbre sgf__p_sgf 34 14 17_4]
-G c Z s s [creer_liste_vide sgf__p_sgf__file__liste_elem 9 13 11_4_46_4_17_4]
-G c Z s s [est_vide sgf__p_sgf__file__liste_elem 15 13 11_4_46_4_17_4]
-G c Z s s [inserer_en_tete sgf__p_sgf__file__liste_elem 22 14 11_4_46_4_17_4]
-G c Z s s [rechercher sgf__p_sgf__file__liste_elem 37 13 11_4_46_4_17_4]
-G c Z s s [inserer_apres sgf__p_sgf__file__liste_elem 44 14 11_4_46_4_17_4]
-G c Z s s [inserer_avant sgf__p_sgf__file__liste_elem 51 14 11_4_46_4_17_4]
-G c Z s s [enlever sgf__p_sgf__file__liste_elem 58 14 11_4_46_4_17_4]
-G c Z s s [get_contenu sgf__p_sgf__file__liste_elem 64 13 11_4_46_4_17_4]
-G c Z s s [get_next sgf__p_sgf__file__liste_elem 66 13 11_4_46_4_17_4]
-G c Z s s [get_last sgf__p_sgf__file__liste_elem 68 13 11_4_46_4_17_4]
-G c Z s s [contient sgf__p_sgf__file__liste_elem 70 13 11_4_46_4_17_4]
-G c Z s s [t_celluleIP sgf__p_sgf__file__liste_elem 76 9 11_4_46_4_17_4]
-G c Z s s [free sgf__p_sgf__file__liste_elem 8 14 11_4_46_4_17_4]
-G c Z s s [initialiser sgf__p_sgf__file 14 14 46_4_17_4]
-G c Z s s [enfiler sgf__p_sgf__file 16 14 46_4_17_4]
-G c Z s s [enfiler_liste sgf__p_sgf__file 18 14 46_4_17_4]
-G c Z s s [defiler sgf__p_sgf__file 20 14 46_4_17_4]
-G c Z s s [is_empty sgf__p_sgf__file 22 13 46_4_17_4]
-G c Z s s [taille sgf__p_sgf__file 24 13 46_4_17_4]
-G c Z s s [get_contenu sgf__p_sgf__file 26 13 46_4_17_4]
-G c Z s s [t_celluleIP sgf__p_sgf__file 34 9 46_4_17_4]
-G c Z s s [free sgf__p_sgf__file 6 14 46_4_17_4]
-G c Z s s [t_noeudDI sgf__p_sgf 49 9 17_4]
-G c Z s s [t_noeudDA sgf__p_sgf 49 9 17_4]
-G c Z s s [t_noeudDF sgf__p_sgf 49 9 17_4]
-G c Z s s [t_noeudIP sgf__p_sgf 49 9 17_4]
+G c Z s s [get_root sgf__p_sgf 32 13 17_4]
+G c Z s s [get_contenu sgf__p_sgf 34 13 17_4]
+G c Z s s [set_arbre sgf__p_sgf 36 14 17_4]
+G c Z s s [ab_est_vide sgf__p_sgf 38 13 17_4]
+G c Z s s [creer_liste_vide sgf__p_sgf__file__liste_elem 9 13 11_4_49_4_17_4]
+G c Z s s [est_vide sgf__p_sgf__file__liste_elem 15 13 11_4_49_4_17_4]
+G c Z s s [inserer_en_tete sgf__p_sgf__file__liste_elem 22 14 11_4_49_4_17_4]
+G c Z s s [rechercher sgf__p_sgf__file__liste_elem 37 13 11_4_49_4_17_4]
+G c Z s s [inserer_apres sgf__p_sgf__file__liste_elem 44 14 11_4_49_4_17_4]
+G c Z s s [inserer_avant sgf__p_sgf__file__liste_elem 51 14 11_4_49_4_17_4]
+G c Z s s [enlever sgf__p_sgf__file__liste_elem 58 14 11_4_49_4_17_4]
+G c Z s s [get_contenu sgf__p_sgf__file__liste_elem 64 13 11_4_49_4_17_4]
+G c Z s s [get_next sgf__p_sgf__file__liste_elem 66 13 11_4_49_4_17_4]
+G c Z s s [get_last sgf__p_sgf__file__liste_elem 68 13 11_4_49_4_17_4]
+G c Z s s [contient sgf__p_sgf__file__liste_elem 70 13 11_4_49_4_17_4]
+G c Z s s [t_celluleIP sgf__p_sgf__file__liste_elem 76 9 11_4_49_4_17_4]
+G c Z s s [free sgf__p_sgf__file__liste_elem 8 14 11_4_49_4_17_4]
+G c Z s s [initialiser sgf__p_sgf__file 14 14 49_4_17_4]
+G c Z s s [enfiler sgf__p_sgf__file 16 14 49_4_17_4]
+G c Z s s [enfiler_liste sgf__p_sgf__file 18 14 49_4_17_4]
+G c Z s s [defiler sgf__p_sgf__file 20 14 49_4_17_4]
+G c Z s s [is_empty sgf__p_sgf__file 22 13 49_4_17_4]
+G c Z s s [taille sgf__p_sgf__file 24 13 49_4_17_4]
+G c Z s s [get_contenu sgf__p_sgf__file 26 13 49_4_17_4]
+G c Z s s [t_celluleIP sgf__p_sgf__file 34 9 49_4_17_4]
+G c Z s s [free sgf__p_sgf__file 6 14 49_4_17_4]
+G c Z s s [t_noeudDI sgf__p_sgf 52 9 17_4]
+G c Z s s [t_noeudDA sgf__p_sgf 52 9 17_4]
+G c Z s s [t_noeudDF sgf__p_sgf 52 9 17_4]
+G c Z s s [t_noeudIP sgf__p_sgf 52 9 17_4]
 G c Z s s [free sgf__p_sgf 8 14 17_4]
 G c Z s b [cmp_name sgf 20 13 none]
-G c Z s s [chercheR sgf__chercheGP559 22 13 none]
+G c Z s s [chercheR sgf__chercheGP563 22 13 none]
 G c Z s s [cherche sgf 22 13 none]
-G c Z s b [formatage_disque sgf 26 14 none]
-G c Z s b [repo_courant sgf 33 13 none]
-G c Z s b [creer_fichier_dossier sgf 48 14 none]
-G c Z s b [change_dir sgf 66 14 none]
-G c Z s b [supp_fichier_dossier sgf 87 14 none]
-G c Z s b [archive_dir sgf 107 14 none]
-G c Z s b [test sgf 112 14 none]
-G c Z b b [liste_contenu sgf 71 14 none]
+G c Z s b [formatage_disque sgf 27 14 none]
+G c Z s b [repo_courant sgf 34 13 none]
+G c Z s b [creer_fichier_dossier sgf 49 14 none]
+G c Z s b [change_dir sgf 67 14 none]
+G c Z s b [supp_fichier_dossier sgf 88 14 none]
+G c Z s b [archive_dir sgf 108 14 none]
+G c Z s b [test sgf 113 14 none]
+G c Z b b [liste_contenu sgf 70 14 none]
 G r i none [s sgf 6 1 none] [p_arbre standard 7 9 none]
 G r i none [s sgf 6 1 none] [file_gen standard 7 9 none]
 G r i none [s sgf 6 1 none] [p_liste_gen standard 5 9 none]
-G r c none [creer_fichier_dossier sgf 48 14 none] [get_next parser__liste_cmd 66 13 9_4]
-G r c none [creer_fichier_dossier sgf 48 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
-G r c none [change_dir sgf 66 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
-G r c none [supp_fichier_dossier sgf 87 14 none] [get_next parser__liste_cmd 66 13 9_4]
-G r c none [supp_fichier_dossier sgf 87 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
-G r c none [archive_dir sgf 107 14 none] [get_next parser__liste_cmd 66 13 9_4]
-G r c none [archive_dir sgf 107 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
-G r s t_path [test sgf 112 14 none] [t_pathIP parser 14 9 none]
-G r l t_path [test sgf 112 14 none] [t_pathDI parser 14 9 none]
-G r k t_path [test sgf 112 14 none] [t_pathDF parser 14 9 none]
-G r c none [test sgf 112 14 none] [traiter parser 37 13 none]
-G r j t_path [test sgf 112 14 none] [t_pathDA parser 14 9 none]
-G r c none [test sgf 112 14 none] [get_next parser__liste_cmd 66 13 9_4]
-G r c none [test sgf 112 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
+G r c none [creer_fichier_dossier sgf 49 14 none] [get_next parser__liste_cmd 66 13 9_4]
+G r c none [creer_fichier_dossier sgf 49 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
+G r c none [change_dir sgf 67 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
+G r c none [supp_fichier_dossier sgf 88 14 none] [get_next parser__liste_cmd 66 13 9_4]
+G r c none [supp_fichier_dossier sgf 88 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
+G r c none [archive_dir sgf 108 14 none] [get_next parser__liste_cmd 66 13 9_4]
+G r c none [archive_dir sgf 108 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
+G r s t_path [test sgf 113 14 none] [t_pathIP parser 14 9 none]
+G r l t_path [test sgf 113 14 none] [t_pathDI parser 14 9 none]
+G r k t_path [test sgf 113 14 none] [t_pathDF parser 14 9 none]
+G r c none [test sgf 113 14 none] [traiter parser 37 13 none]
+G r j t_path [test sgf 113 14 none] [t_pathDA parser 14 9 none]
+G r c none [test sgf 113 14 none] [get_next parser__liste_cmd 66 13 9_4]
+G r c none [test sgf 113 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
 X 1 ada.ads
 16K9*Ada 20e8 30|1r6 1r33 31|2r6 2r33 3r6
 X 9 a-string.ads
 16K13*Strings 35e16 30|1r10 1r37 31|2r10 2r37
 X 12 a-strunb.ads
 83K21*Unbounded 765e26 30|1w18 1r45 31|2w18 2r45
-88R9*Unbounded_String<5|43R9> 744e15 30|10r14 12r16 14r17 33r33 31|26r33
-. 94r13
-104V13*To_Unbounded_String{88R9} 30|10s34 12s36 14s37 31|19s20 99s19 110s23
-128U14*Append 31|99s7
+88R9*Unbounded_String<5|43R9> 744e15 30|10r14 12r16 14r17 34r33 31|26r33
+. 93r13
+104V13*To_Unbounded_String{88R9} 30|10s34 12s36 31|19s20 98s19 109s23
+128U14*Append 31|98s7
 239V14*"="{boolean} 31|12s21
 X 16 a-textio.ads
 58K13*Text_IO 725e16 31|3w10
-271U14*Skip_Line 31|57s42
-506U14*Put_Line 31|56s18
+271U14*Skip_Line 31|56s42
+506U14*Put_Line 31|55s18
 X 18 a-tiunio.ads
 25K21*Unbounded_IO 61e29 31|1w14 1r40
-32U14*Put=34:42 31|114s7
-41U14*Put_Line=43:42 31|53s10
-57U14*Get_Line=59:42 31|57s10
+32U14*Put=34:42 31|38s7
+41U14*Put_Line=43:42 31|52s10 108s7
+57U14*Get_Line=59:42 31|56s10
 X 25 p_arbre.ads
 5+9 T_contenu 30|17r33
-7k9*p_arbre 57e12 30|2w6 17r25 31|5w6
-11P9*T_arbre 30|24r27[17] 112r32[17] 112r56[17] 31|105r32[30|17] 105r56[30|17]
+7k9*p_arbre 60e12 30|2w6 17r25 31|5w6
+11P9*T_arbre 30|25r27[17] 113r32[17] 113r56[17] 31|34r19[30|17] 104r32[30|17]
+. 104r56[30|17]
 13U14*init 31|18s7[30|17]
 15U14*creer_racine 31|21s7[30|17]
-17U14*ajouter_enfants 31|65s10[30|17]
+17U14*ajouter_enfants 31|64s10[30|17]
 20V21 is_equals{boolean} 30|22r39[17]
 21v13*find 30|22r34[17]
-26U14*remove 31|88s7[30|17]
-32V13*get_contenu{30|9R9} 31|28s14[30|17] 88s21[30|17] 98s14[30|17] 114s11[30|17]
-34U14*set_arbre 31|22s7[30|17] 37s10[30|17] 48s7[30|17] 87s7[30|17] 97s7[30|17]
+34V13*get_contenu{30|9R9} 31|28s14[30|17] 38s11[30|17] 97s14[30|17]
+36U14*set_arbre 31|22s7[30|17] 37s7[30|17] 47s7[30|17] 86s7[30|17] 96s7[30|17]
 X 27 p_liste_gen.ads
 7P9*T_liste
-64V13*get_contenu{12|88R9} 31|36s33[29|9] 47s29[29|9] 49s30[29|9] 86s29[29|9]
-. 96s29[29|9]
-66V13*get_next{7P9[29|9]} 31|47s51[29|9] 86s51[29|9] 96s51[29|9]
+64V13*get_contenu{12|88R9} 31|36s30[29|9] 46s29[29|9] 48s30[29|9] 85s29[29|9]
+. 95s29[29|9]
+66V13*get_next{7P9[29|9]} 31|46s51[29|9] 85s51[29|9] 95s51[29|9]
 X 29 parser.ads
 6K9*parser 39e11 30|3w6 3r18 31|4w6 4r18
-9K12*liste_cmd[27|5] 31|36r23 47r19 47r41 49r20 86r19 86r41 96r19 96r41
-14R9*T_PATH 18e14 30|48r46 66r42 87r45 107r37 31|32r42 43r46 71r38 83r45
-. 92r37 106r14
-16b7*isAbsolute{boolean} 31|35r22
-17p7*chemin{27|7P9[9]} 31|36r57 47r65 49r47 86r65 96r65
-37V13*traiter{14R9} 31|110s15
+9K12*liste_cmd[27|5] 31|36r20 46r19 46r41 48r20 85r19 85r41 95r19 95r41
+14R9*T_PATH 18e14 30|49r46 67r42 88r45 108r37 31|32r42 42r46 70r38 82r45
+. 91r37 105r14
+17p7*chemin{27|7P9[9]} 31|36r54 46r65 48r47 85r65 95r65
+37V13*traiter{14R9} 31|109s15
 X 30 sgf.ads
-6K9*sgf 114l5 114e8 31|7b14 118l5 118t8
-9R9*T_info 15e14 17r46 20r30 20r45 31|10r30 10r45 16r14 33r14 44r14 45r13
-. 84r13 93r19
-10r7*name{12|88R9} 31|12r16 12r25 19m12 28r41 36m15 47m11 49m12 86m11 96m11
-. 98r41 114r30
-11b7*isFile{boolean} 31|20m12 50m12 100m12
+6K9*sgf 115l5 115e8 31|7b14 118l5 118t8
+9R9*T_info 15e14 17r46 20r30 20r45 31|10r30 10r45 16r14 33r14 43r14 44r13
+. 83r13 92r19
+10r7*name{12|88R9} 31|12r16 12r25 19m12 28r41 36m12 38r38 46m11 48m12 85m11
+. 95m11 97r41
+11b7*isFile{boolean} 31|20m12 49m12 99m12
 12r7*droits{12|88R9}
-13i7*taille{integer} 31|51m12 58m15 101m12
-14r7*contenu{12|88R9} 31|53r24 57m24
+13i7*taille{integer} 31|50m12 57m15 100m12
+14r7*contenu{12|88R9} 31|52r24 56m24
 17K12*P_sgf[25|7] 18r8 22r28
 20V13*cmp_name{boolean} 20>23 20>38 22r52 31|10b13 13l8 13t16
 20r23 x{9R9} 31|10b23 12r14
 20r38 y{9R9} 31|10b38 12r23
-22V13*cherche[25|21]{25|11P9[17]} 31|37s20 48s17 87s17 97s17
-24p4*arbre{25|11P9[17]} 31|18m12 18r12 21m20 21r20 22r17 37r28 48r25 87r25
-. 88m14 88r14 97r25
-24p11*noeud_courant{25|11P9[17]} 31|22m24 22r24 28r26 37m42 37r42 48m38 48r38
-. 65m26 65r26 87m38 87r38 88r33 97m38 97r38 98r26
-26U14*formatage_disque 31|15b14 23l8 23t24 108s7
-33V13*repo_courant{12|88R9} 31|26b13 29l8 29t20
-48U14*creer_fichier_dossier 48>36 48>54 48>79 31|43b14 68l8 68t29 112s7
-48r36 path{29|14R9} 31|43b36 47r60 49r42
-48b54 estFichier{boolean} 31|43b54 50r22 55r10
-48b79 existe{boolean} 31|43b79 52r10 60r10
-66U14*change_dir 66>25 31|32b14 40l8 40t18 113s7
-66r25 destination{29|14R9} 31|32b25 35r10 36r45
-87U14*supp_fichier_dossier 87>35 31|83b14 89l8 89t28
-87r35 path{29|14R9} 31|83b35 86r60
-107U14*archive_dir 107>27 31|92b14 102l8 102t19
-107r27 path{29|14R9} 31|92b27 96r60
-112U14*test 112=20 112=41 31|105b14 116l8 116t12
-112p20 ab{25|11P9[17]} 31|105b20
-112p41 noeud{25|11P9[17]} 31|105b41 114r23
+22V13*cherche[25|21]{25|11P9[17]} 31|37s17 47s17 86s17 96s17
+25p4*arbre{25|11P9[17]} 31|18m12 18r12 21m20 21r20 22r17 37r25 47r25 86r25
+. 96r25
+25p11*noeud_courant{25|11P9[17]} 31|22m24 22r24 28r26 37m39 37r39 38r23 47m38
+. 47r38 64m26 64r26 86m38 86r38 96m38 96r38 97r26
+27U14*formatage_disque 31|15b14 23l8 23t24 107s7
+34V13*repo_courant{12|88R9} 31|26b13 29l8 29t20 108s16
+49U14*creer_fichier_dossier 49>36 49>54 49>79 31|42b14 67l8 67t29 111s7 112s7
+. 113s7
+49r36 path{29|14R9} 31|42b36 46r60 48r42
+49b54 estFichier{boolean} 31|42b54 49r22 54r10
+49b79 existe{boolean} 31|42b79 51r10 59r10
+67U14*change_dir 67>25 31|32b14 39l8 39t18
+67r25 destination{29|14R9} 31|32b25 36r42
+88U14*supp_fichier_dossier 88>35 31|82b14 88l8 88t28
+88r35 path{29|14R9} 31|82b35 85r60
+108U14*archive_dir 108>27 31|91b14 101l8 101t19
+108r27 path{29|14R9} 31|91b27 95r60
+113U14*test 113=20 113=41 31|104b14 116l8 116t12
+113p20 ab{25|11P9[17]} 31|104b20
+113p41 noeud{25|11P9[17]} 31|104b41
 X 31 sgf.adb
 16r7 data{30|9R9} 19m7 20m7 21r27
-33r7 data{30|9R9} 36m10 37r35
-44r7 data{30|9R9} 49m7 50m7 51m7 53r19 57m19 57r19 58m10 65r41
-45r7 tmp{30|9R9} 47m7 48r32
-71U14 liste_contenu 71b14 71>28 71>46 80l8 80t21
-71r28 path{29|14R9}
-71b46 dir_fils{boolean} 73r10
-84r7 tmp{30|9R9} 86m7 87r32
-93r7 data{30|9R9} 100m7 101m7
-93r13 tmp{30|9R9} 96m7 97r32
-94r7 nom{12|88R9} 98m7 99m14 99r14
-106r7 path{29|14R9} 110m7 110r7 112r29 113r18
+33r7 data{30|9R9} 36m7 37r32
+34p7 new_noeud{25|11P9[30|17]}
+43r7 data{30|9R9} 48m7 49m7 50m7 52r19 56m19 56r19 57m10 64r41
+44r7 tmp{30|9R9} 46m7 47r32
+70U14 liste_contenu 70b14 70>28 70>46 79l8 79t21
+70r28 path{29|14R9}
+70b46 dir_fils{boolean} 72r10
+83r7 tmp{30|9R9} 85m7 86r32
+92r7 data{30|9R9} 99m7 100m7
+92r13 tmp{30|9R9} 95m7 96r32
+93r7 nom{12|88R9} 97m7 98m14 98r14
+105r7 path{29|14R9} 109m7 109r7 111r29 112r29 113r29
 X 32 system.ads
 67M9*Address
 X 39 s-memory.ads
@@ -290,5 +290,5 @@ X 39 s-memory.ads
 X 47 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
 X 56 text_io.ads
-24K9*Text_IO=24:29 31|1w6 1r32 56r10 57r34
+24K9*Text_IO=24:29 31|1w6 1r32 55r10 56r34
 

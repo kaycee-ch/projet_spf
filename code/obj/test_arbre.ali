@@ -19,7 +19,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_arbre%b		test_arbre.adb		9e13f38d NE OO SU IL
+U test_arbre%b		test_arbre.adb		0d5fefcc NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -35,7 +35,6 @@ Z p_liste_gen%s		p_liste_gen.adb		p_liste_gen.ali
 Z system%s		system.ads		system.ali
 Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
-Z system.img_int%s	s-imgint.ads		s-imgint.ali
 Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
@@ -65,8 +64,8 @@ D file_gen.ads		20230118020043 7fb869e8 file_gen%s
 D file_gen.adb		20230117210320 60fd8196 file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230119090640 69dc48e6 p_arbre%s
-D p_arbre.adb		20230119103437 45cc8a42 p_arbre%b
+D p_arbre.ads		20230119154219 b488ac0f p_arbre%s
+D p_arbre.adb		20230119154939 75cec348 p_arbre%b
 D p_liste_gen.ads	20230119002050 0c628bfc p_liste_gen%s
 D p_liste_gen.adb	20230119002209 ffb23cc2 p_liste_gen%b
 D system.ads		20210520051134 a2da961d system%s
@@ -76,8 +75,6 @@ D s-exctab.ads		20210520051131 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
 D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
 D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
-D s-imagei.ads		20210520051132 0d3f86a7 system.image_i%s
-D s-imgint.ads		20210520051132 bdb6f5ec system.img_int%s
 D s-memory.ads		20210520051132 597d6634 system.memory%s
 D s-parame.ads		20210520051133 4752c4cb system.parameters%s
 D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
@@ -94,7 +91,7 @@ D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
-D test_arbre.adb	20230119100052 87d47ff9 test_arbre%b
+D test_arbre.adb	20230119154749 c9cc8751 test_arbre%b
 D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
@@ -103,47 +100,63 @@ G r i none [test_arbre standard 8 11 none] [p_liste_gen standard 5 9 none]
 G r i none [test_arbre standard 8 11 none] [file_gen standard 7 9 none]
 G r i none [test_arbre standard 8 11 none] [p_arbre standard 7 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 54|1r6 1r23 2r6 2r31 3r6 3r33
+16K9*Ada 20e8 52|1r6 1r23 2r6 2r31 3r6 3r33
 X 6 a-inteio.ads
-18K13*Integer_Text_IO[17|46] 54|2w10 2r35
+18K13*Integer_Text_IO[17|46] 52|2w10 2r35
 X 9 a-string.ads
-16K13*Strings 35e16 54|3r10 3r37
+16K13*Strings 35e16 52|3r10 3r37
 X 12 a-strunb.ads
-83K21*Unbounded 765e26 54|3w18 3r45
+83K21*Unbounded 765e26 52|3w18 3r45
 X 16 a-textio.ads
-58K13*Text_IO 725e16 54|1w10 1r27
-506U14*Put_Line 54|15s7
+58K13*Text_IO 725e16 52|1w10 1r27
+262U14*New_Line 52|16s7
+X 17 a-tiinio.ads
+80U14*Put 52|15s7[6|18]
 X 18 a-tiunio.ads
-25K21*Unbounded_IO 61e29 54|4w14
+25K21*Unbounded_IO 61e29 52|4w14
 X 21 file_gen.ads
-4+9 T_element 54|10r37
-7k9*file_gen 39e13 54|6w6 10r28
+4+9 T_element 52|10r37
+7k9*file_gen 39e13 52|6w6 10r28
 X 25 p_arbre.ads
-5+9 T_contenu 54|19r37
-7k9*p_arbre 57e12 54|5w6 19r29
-11P9 T_arbre 54|26r16[19]
-13U14 init 54|29s4[19]
-15U14 creer_racine 54|30s4[19]
-17U14 ajouter_enfants 54|32s4[19] 33s4[19] 34s4[19]
-39u14 print 54|22r34[19]
+5+9 T_contenu 52|27r37
+7k9*p_arbre 62e12 52|5w6 27r29
+11P9 T_arbre 52|38r28[27]
+13U14 init 52|41s4[27]
+15U14 creer_racine 52|42s4[27]
+17U14 ajouter_enfants 52|44s4[27] 45s4[27] 47s4[27] 48s4[27] 49s4[27] 51s4[27]
+. 53s4[27] 55s4[27]
+21v13 find 52|32r32[27]
+28u14 remove 52|34r32[27]
+36U14 set_arbre 52|58s4[27]
+44u14 print 52|30r34[27]
 X 29 system.ads
 67M9*Address
-X 38 s-memory.ads
+X 36 s-memory.ads
 53V13*Alloc{29|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
 76V13*Realloc{29|67M9} 105i<c,__gnat_realloc>22
-X 46 s-stalib.adb
+X 44 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
-X 54 test_arbre.adb
-8U11*test_arbre 8b11 41l5 41t15
+X 52 test_arbre.adb
+8U11*test_arbre 8b11 65l5 65t15
 10K12 file_int[21|7] 11r8
-13U14 print_int 13b14 13>24 16l8 16t17 22r40
-13i24 n{integer} 15r30
-19K12 arbre_int[25|7] 20r8
-22U14 afficher_int[25|39] 36s4
-26p4 arb{25|11P9[19]} 29m9 29r9 30m17 30r17 32m20 32r20 33m20 33r20 34m20
-. 34r20 36r17
-26p9 test{25|11P9[19]}
-X 55 text_io.ads
-24K9*Text_IO=24:29 54|4w6
+13U14 print_int 13b14 13>24 13>40 17l8 17t17 30r40
+13i24 n{integer} 15r11
+13i40 indent{integer} 15r14
+20V13 egal_int{boolean} 20b13 20>22 20>38 23l8 23t16 32r37
+20i22 x{integer} 22r14
+20i38 y{integer} 22r18
+27K12 arbre_int[25|7] 28r8
+30U14 afficher_int[25|44] 57s4
+32V13 trouver_int[25|21]{25|11P9[27]} 34r39 46s9 50s9 52s9 54s9
+34U14 remove_int[25|28]
+38p4 arb{25|11P9[27]} 41m9 41r9 42m17 42r17 44m20 44r20 45m20 45r20 46r21
+. 50r21 52r21 54r21 57r17 58r14
+38p9 test{25|11P9[27]} 58m20 58r20
+38p15 x{25|11P9[27]} 46m4 47m20 47r20 48m20 48r20 49m20 49r20
+38p18 y{25|11P9[27]} 50m4 51m20 51r20
+38p21 z{25|11P9[27]} 52m4 53m20 53r20
+38p24 m{25|11P9[27]} 54m4 55m20 55r20
+X 53 text_io.ads
+24K9*Text_IO=24:29 52|4w6
 

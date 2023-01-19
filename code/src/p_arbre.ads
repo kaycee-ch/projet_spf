@@ -8,7 +8,7 @@ package p_arbre is
 
    arbre_vide : EXCEPTION;
 
-   TYPE T_arbre is limited private;
+   TYPE T_arbre is private;
 
    procedure init (ab : out T_arbre);
 
@@ -23,9 +23,11 @@ package p_arbre is
 
    procedure move (ab : in out T_arbre; dest : in out T_arbre; data : in T_contenu);
 
+   generic
+      with function chercher(ab : in T_arbre; data : in T_contenu) return T_arbre;
    procedure remove (ab : in out T_arbre; data : in T_contenu);
 
-   procedure remove_sa (ab : in out T_arbre);
+   -- procedure remove_sa (ab : in out T_arbre);
 
    function get_root(ab : in T_arbre) return T_arbre;
 
@@ -33,9 +35,12 @@ package p_arbre is
 
    procedure set_arbre(ab : in T_arbre; ab2 : out T_arbre);
 
+   function ab_est_vide (ab : in T_arbre) return Boolean;
+
+   function profondeur(ab : in T_arbre) return Integer;
 
    generic
-      with procedure afficher_noeud(n : in T_contenu);
+      with procedure afficher_noeud(n : in T_contenu; indent : in Integer);
    procedure print(Ab : in T_arbre);
 
 private

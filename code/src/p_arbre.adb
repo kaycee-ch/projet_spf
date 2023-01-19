@@ -22,6 +22,20 @@ package body p_arbre is
    end creer_racine;
 
 
+   function profondeur(ab : in T_arbre) return Integer is
+      n : Integer := 0;
+      tmp, r : T_arbre;
+   Begin
+      r := get_root(ab);
+      tmp := ab;
+      while tmp /= r loop
+         n := n + 1;
+         tmp := tmp.all.parent;
+      end loop;
+      return n;
+   end profondeur;
+
+
    procedure ajouter_enfants(ab : in out T_arbre; data : T_contenu) is
       tmp : T_arbre;
    Begin
@@ -34,6 +48,11 @@ package body p_arbre is
       end if;
    end ajouter_enfants;
 
+   function ab_est_vide (ab : in T_arbre) return Boolean is
+   begin
+      return ab = null;
+   end ab_est_vide;
+
 
    procedure print (ab : in T_arbre) is
       arbre_vide : exception;
@@ -43,7 +62,7 @@ package body p_arbre is
    Begin
       curseur := ab;
       if curseur /= null then
-         afficher_noeud(curseur.all.f_info);
+         afficher_noeud(curseur.all.f_info, profondeur(ab)*profondeur(ab));
          file.enfiler_liste(une_file, curseur.all.enfants);
          while not file.is_empty(une_file) loop
             defiler(une_file, tmp);
@@ -52,6 +71,7 @@ package body p_arbre is
       else
          raise arbre_vide;
       end if;
+      New_LIne;
    end print;
 
 
@@ -59,8 +79,7 @@ package body p_arbre is
       addr : T_arbre;
       l_addr : liste_elem.T_liste;
    Begin
-      -- addr := cherche(ab, data);
-      addr := ab;
+      addr := chercher(ab, data);
       if addr /= null and then (not liste_elem.est_vide(addr.all.parent.all.enfants)) then
          l_addr := liste_elem.rechercher(addr.all.parent.all.enfants, addr);
          liste_elem.enlever(addr.all.parent.all.enfants, liste_elem.get_contenu(l_addr));
@@ -69,25 +88,25 @@ package body p_arbre is
    end remove;
 
 
-   procedure remove_sa (ab : in out T_arbre) is
-      tmp : liste_elem.T_liste;
-      abr_tmp : T_arbre;
-   Begin
-      if ab /= null then
-         tmp := ab.all.enfants;
-         abr_tmp := liste_elem.get_contenu(tmp);
-         while not liste_elem.est_vide(tmp) loop
-            remove(abr_tmp, abr_tmp.all.f_info);
-            tmp := liste_elem.get_next(tmp);
-         end loop;
-         free(ab);
-      end if;
-   end remove_sa;
+   --  procedure remove_sa (ab : in out T_arbre) is
+   --     tmp : liste_elem.T_liste;
+   --     abr_tmp : T_arbre;
+   --  Begin
+   --     if ab /= null then
+   --        tmp := ab.all.enfants;
+   --        abr_tmp := liste_elem.get_contenu(tmp);
+   --        while not liste_elem.est_vide(tmp) loop
+   --           remove(abr_tmp, abr_tmp.all.f_info);
+   --           tmp := liste_elem.get_next(tmp);
+   --        end loop;
+   --        free(ab);
+   --     end if;
+   --  end remove_sa;
 
 
    procedure move (ab : in out T_arbre; dest : in out T_arbre; data : in T_contenu) is
    Begin
-      remove(ab, data);
+      -- remove(ab, data);
       ajouter_enfants(dest, data);
    end move;
 

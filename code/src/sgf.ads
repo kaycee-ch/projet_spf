@@ -11,7 +11,7 @@ package sgf is
       isFile : Boolean := true;
       droits : Unbounded_String := To_Unbounded_String("None");
       taille : Integer := 0;
-      contenu : Unbounded_String := To_Unbounded_String("null");
+      contenu : Unbounded_String; -- := To_Unbounded_String("null");
    end record;
 
    package P_sgf is new P_arbre(T_contenu => T_info);
@@ -20,6 +20,7 @@ package sgf is
    function cmp_name (x : in T_info; y : in T_info) return Boolean;
 
    function cherche is new P_sgf.find(is_equals => cmp_name);
+
 
    arbre, noeud_courant : T_arbre;
 

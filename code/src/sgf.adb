@@ -31,12 +31,11 @@ package body sgf is
 
    procedure change_dir(destination : in T_PATH) is
       data : T_info;
+      new_noeud : T_arbre;
    Begin
-      if destination.isAbsolute then
-         data.name := liste_cmd.get_contenu(destination.chemin);
-         set_arbre(cherche(arbre, data), noeud_courant);
-         -- put(get_contenu(noeud_courant).name);
-      end if;
+      data.name := liste_cmd.get_contenu(destination.chemin);
+      set_arbre(cherche(arbre, data), noeud_courant);
+      put(get_contenu(noeud_courant).name);
    end change_dir;
 
 
@@ -85,7 +84,7 @@ package body sgf is
    Begin
       tmp.name := liste_cmd.get_contenu(liste_cmd.get_next(path.chemin));
       set_arbre(cherche(arbre, tmp), noeud_courant);
-      remove(arbre, get_contenu(noeud_courant));
+      -- remove(arbre, get_contenu(noeud_courant));
    end supp_fichier_dossier;
 
 
@@ -106,12 +105,13 @@ package body sgf is
       path : T_path;
    Begin
       formatage_disque;
-      -- Put_line(repo_courant);
+      Put_line(repo_courant);
       path := traiter(To_Unbounded_String("/test/"));
       -- put(liste_cmd.get_contenu(path.chemin));
       creer_fichier_dossier(path, false, False);
-      change_dir(path);
-      put(get_contenu(noeud).name);
+      creer_fichier_dossier(path, true, true);
+      creer_fichier_dossier(path, true, true);
+      -- put(get_contenu(noeud).name);
       -- put_line(repo_courant);
    end test;
 
