@@ -10,7 +10,7 @@ RV NO_IO
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_sgf%b		test_sgf.adb		b1275422 NE OO SU IL
+U test_sgf%b		test_sgf.adb		8530d0c1 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -41,8 +41,8 @@ D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
 D file_gen.ads		20230118020043 7fb869e8 file_gen%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230119111855 809f28ec p_arbre%s
-D p_arbre.adb		20230119112804 9a188004 p_arbre%b
+D p_arbre.ads		20230119220701 b488ac0f p_arbre%s
+D p_arbre.adb		20230119220830 3dea14b4 p_arbre%b
 D p_liste_gen.ads	20230119002050 0c628bfc p_liste_gen%s
 D parser.ads		20230119085531 40e96ab0 parser%s
 D sgf.ads		20230119122050 108494fc sgf%s
@@ -82,7 +82,7 @@ X 11 a-strunb.ads
 X 16 a-tiunio.ads
 25K21*Unbounded_IO 61e29 48|2w14 2r40
 X 22 p_arbre.ads
-7k9*p_arbre 60e12 48|3w6
+7k9*p_arbre 64e12 48|3w6
 11P9*T_arbre 48|8r17[26|17]
 X 26 sgf.ads
 6K9*sgf 115e8 48|4w6 4r15

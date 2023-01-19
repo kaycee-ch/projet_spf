@@ -43,6 +43,8 @@ package p_arbre is
       with procedure afficher_noeud(n : in T_contenu; indent : in Integer);
    procedure print(Ab : in T_arbre);
 
+
+
 private
    TYPE T_noeud;
    TYPE T_arbre is access T_noeud;

@@ -1,4 +1,5 @@
 with Ada.Text_IO; use Ada.Text_IO;
+with Ada.strings.Unbounded; use Ada.Strings.Unbounded;
 with file_gen;
 with p_liste_gen;
 with Ada.Unchecked_Deallocation;
@@ -48,6 +49,7 @@ package body p_arbre is
       end if;
    end ajouter_enfants;
 
+
    function ab_est_vide (ab : in T_arbre) return Boolean is
    begin
       return ab = null;
@@ -62,7 +64,7 @@ package body p_arbre is
    Begin
       curseur := ab;
       if curseur /= null then
-         afficher_noeud(curseur.all.f_info, profondeur(ab)*profondeur(ab));
+         afficher_noeud(curseur.all.f_info, profondeur(ab));
          file.enfiler_liste(une_file, curseur.all.enfants);
          while not file.is_empty(une_file) loop
             defiler(une_file, tmp);
@@ -71,7 +73,6 @@ package body p_arbre is
       else
          raise arbre_vide;
       end if;
-      New_LIne;
    end print;
 
 
@@ -148,21 +149,12 @@ package body p_arbre is
       ab2 := ab;
    end set_arbre;
 
-
-   function get_contenu (ab : in T_arbre) return T_contenu is
-      arbre_vide : exception;
+   function get_contenu(ab : in T_arbre) return T_contenu is
    Begin
-      if ab /= null then
-         return ab.all.f_info;
-      else
-         raise arbre_vide;
-      end if;
+      return ab.all.f_info;
    end get_contenu;
 
-   --  function etage (ab : in T_arbre) return Integer is
-   --     n : Integer;
-   --     tmp : T_arbre := ab;
-   --  Begin
-   --     if tmp /= null then
+
+
 
 end p_arbre;

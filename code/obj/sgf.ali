@@ -18,7 +18,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U sgf%b			sgf.adb			92395b4d NE OO PK IL
+U sgf%b			sgf.adb			a62edfae NE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -37,7 +37,7 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U sgf%s			sgf.ads			d3c08487 EE OO PK IL
+U sgf%s			sgf.ads			e7d70064 EE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -86,8 +86,8 @@ D file_gen.ads		20230118020043 7fb869e8 file_gen%s
 D file_gen.adb		20230117210320 60fd8196 file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230119111855 809f28ec p_arbre%s
-D p_arbre.adb		20230119112804 9a188004 p_arbre%b
+D p_arbre.ads		20230119220701 b488ac0f p_arbre%s
+D p_arbre.adb		20230119220830 3dea14b4 p_arbre%b
 D p_liste_gen.ads	20230119002050 0c628bfc p_liste_gen%s
 D p_liste_gen.adb	20230119002209 ffb23cc2 p_liste_gen%b
 D parser.ads		20230119085531 40e96ab0 parser%s
@@ -133,33 +133,34 @@ G c Z s s [get_root sgf__p_sgf 32 13 17_4]
 G c Z s s [get_contenu sgf__p_sgf 34 13 17_4]
 G c Z s s [set_arbre sgf__p_sgf 36 14 17_4]
 G c Z s s [ab_est_vide sgf__p_sgf 38 13 17_4]
-G c Z s s [creer_liste_vide sgf__p_sgf__file__liste_elem 9 13 11_4_49_4_17_4]
-G c Z s s [est_vide sgf__p_sgf__file__liste_elem 15 13 11_4_49_4_17_4]
-G c Z s s [inserer_en_tete sgf__p_sgf__file__liste_elem 22 14 11_4_49_4_17_4]
-G c Z s s [rechercher sgf__p_sgf__file__liste_elem 37 13 11_4_49_4_17_4]
-G c Z s s [inserer_apres sgf__p_sgf__file__liste_elem 44 14 11_4_49_4_17_4]
-G c Z s s [inserer_avant sgf__p_sgf__file__liste_elem 51 14 11_4_49_4_17_4]
-G c Z s s [enlever sgf__p_sgf__file__liste_elem 58 14 11_4_49_4_17_4]
-G c Z s s [get_contenu sgf__p_sgf__file__liste_elem 64 13 11_4_49_4_17_4]
-G c Z s s [get_next sgf__p_sgf__file__liste_elem 66 13 11_4_49_4_17_4]
-G c Z s s [get_last sgf__p_sgf__file__liste_elem 68 13 11_4_49_4_17_4]
-G c Z s s [contient sgf__p_sgf__file__liste_elem 70 13 11_4_49_4_17_4]
-G c Z s s [t_celluleIP sgf__p_sgf__file__liste_elem 76 9 11_4_49_4_17_4]
-G c Z s s [free sgf__p_sgf__file__liste_elem 8 14 11_4_49_4_17_4]
-G c Z s s [initialiser sgf__p_sgf__file 14 14 49_4_17_4]
-G c Z s s [enfiler sgf__p_sgf__file 16 14 49_4_17_4]
-G c Z s s [enfiler_liste sgf__p_sgf__file 18 14 49_4_17_4]
-G c Z s s [defiler sgf__p_sgf__file 20 14 49_4_17_4]
-G c Z s s [is_empty sgf__p_sgf__file 22 13 49_4_17_4]
-G c Z s s [taille sgf__p_sgf__file 24 13 49_4_17_4]
-G c Z s s [get_contenu sgf__p_sgf__file 26 13 49_4_17_4]
-G c Z s s [t_celluleIP sgf__p_sgf__file 34 9 49_4_17_4]
-G c Z s s [free sgf__p_sgf__file 6 14 49_4_17_4]
-G c Z s s [t_noeudDI sgf__p_sgf 52 9 17_4]
-G c Z s s [t_noeudDA sgf__p_sgf 52 9 17_4]
-G c Z s s [t_noeudDF sgf__p_sgf 52 9 17_4]
-G c Z s s [t_noeudIP sgf__p_sgf 52 9 17_4]
-G c Z s s [free sgf__p_sgf 8 14 17_4]
+G c Z s s [profondeur sgf__p_sgf 40 13 17_4]
+G c Z s s [creer_liste_vide sgf__p_sgf__file__liste_elem 9 13 11_4_53_4_17_4]
+G c Z s s [est_vide sgf__p_sgf__file__liste_elem 15 13 11_4_53_4_17_4]
+G c Z s s [inserer_en_tete sgf__p_sgf__file__liste_elem 22 14 11_4_53_4_17_4]
+G c Z s s [rechercher sgf__p_sgf__file__liste_elem 37 13 11_4_53_4_17_4]
+G c Z s s [inserer_apres sgf__p_sgf__file__liste_elem 44 14 11_4_53_4_17_4]
+G c Z s s [inserer_avant sgf__p_sgf__file__liste_elem 51 14 11_4_53_4_17_4]
+G c Z s s [enlever sgf__p_sgf__file__liste_elem 58 14 11_4_53_4_17_4]
+G c Z s s [get_contenu sgf__p_sgf__file__liste_elem 64 13 11_4_53_4_17_4]
+G c Z s s [get_next sgf__p_sgf__file__liste_elem 66 13 11_4_53_4_17_4]
+G c Z s s [get_last sgf__p_sgf__file__liste_elem 68 13 11_4_53_4_17_4]
+G c Z s s [contient sgf__p_sgf__file__liste_elem 70 13 11_4_53_4_17_4]
+G c Z s s [t_celluleIP sgf__p_sgf__file__liste_elem 76 9 11_4_53_4_17_4]
+G c Z s s [free sgf__p_sgf__file__liste_elem 8 14 11_4_53_4_17_4]
+G c Z s s [initialiser sgf__p_sgf__file 14 14 53_4_17_4]
+G c Z s s [enfiler sgf__p_sgf__file 16 14 53_4_17_4]
+G c Z s s [enfiler_liste sgf__p_sgf__file 18 14 53_4_17_4]
+G c Z s s [defiler sgf__p_sgf__file 20 14 53_4_17_4]
+G c Z s s [is_empty sgf__p_sgf__file 22 13 53_4_17_4]
+G c Z s s [taille sgf__p_sgf__file 24 13 53_4_17_4]
+G c Z s s [get_contenu sgf__p_sgf__file 26 13 53_4_17_4]
+G c Z s s [t_celluleIP sgf__p_sgf__file 34 9 53_4_17_4]
+G c Z s s [free sgf__p_sgf__file 6 14 53_4_17_4]
+G c Z s s [t_noeudDI sgf__p_sgf 56 9 17_4]
+G c Z s s [t_noeudDA sgf__p_sgf 56 9 17_4]
+G c Z s s [t_noeudDF sgf__p_sgf 56 9 17_4]
+G c Z s s [t_noeudIP sgf__p_sgf 56 9 17_4]
+G c Z s s [free sgf__p_sgf 9 14 17_4]
 G c Z s b [cmp_name sgf 20 13 none]
 G c Z s s [chercheR sgf__chercheGP563 22 13 none]
 G c Z s s [cherche sgf 22 13 none]
@@ -171,9 +172,9 @@ G c Z s b [supp_fichier_dossier sgf 88 14 none]
 G c Z s b [archive_dir sgf 108 14 none]
 G c Z s b [test sgf 113 14 none]
 G c Z b b [liste_contenu sgf 70 14 none]
+G r i none [s sgf 6 1 none] [p_liste_gen standard 5 9 none]
 G r i none [s sgf 6 1 none] [p_arbre standard 7 9 none]
 G r i none [s sgf 6 1 none] [file_gen standard 7 9 none]
-G r i none [s sgf 6 1 none] [p_liste_gen standard 5 9 none]
 G r c none [creer_fichier_dossier sgf 49 14 none] [get_next parser__liste_cmd 66 13 9_4]
 G r c none [creer_fichier_dossier sgf 49 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
 G r c none [change_dir sgf 67 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
@@ -210,7 +211,7 @@ X 18 a-tiunio.ads
 57U14*Get_Line=59:42 31|56s10
 X 25 p_arbre.ads
 5+9 T_contenu 30|17r33
-7k9*p_arbre 60e12 30|2w6 17r25 31|5w6
+7k9*p_arbre 64e12 30|2w6 17r25 31|5w6
 11P9*T_arbre 30|25r27[17] 113r32[17] 113r56[17] 31|34r19[30|17] 104r32[30|17]
 . 104r56[30|17]
 13U14*init 31|18s7[30|17]

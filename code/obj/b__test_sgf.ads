@@ -40,7 +40,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#b1275422#;
+   u00001 : constant Version_32 := 16#8530d0c1#;
    pragma Export (C, u00001, "test_sgfB");
    u00002 : constant Version_32 := 16#2e11c0b1#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -320,9 +320,9 @@ package ada_main is
    pragma Export (C, u00139, "system__file_ioS");
    u00140 : constant Version_32 := 16#5f450cb5#;
    pragma Export (C, u00140, "system__file_control_blockS");
-   u00141 : constant Version_32 := 16#040133f4#;
+   u00141 : constant Version_32 := 16#94d67180#;
    pragma Export (C, u00141, "p_arbreB");
-   u00142 : constant Version_32 := 16#f345caf8#;
+   u00142 : constant Version_32 := 16#c7524e1b#;
    pragma Export (C, u00142, "p_arbreS");
    u00143 : constant Version_32 := 16#d08fcfe7#;
    pragma Export (C, u00143, "file_genB");
@@ -364,9 +364,9 @@ package ada_main is
    pragma Export (C, u00161, "system__val_llliS");
    u00162 : constant Version_32 := 16#750441df#;
    pragma Export (C, u00162, "system__val_llluS");
-   u00163 : constant Version_32 := 16#92395b4d#;
+   u00163 : constant Version_32 := 16#a62edfae#;
    pragma Export (C, u00163, "sgfB");
-   u00164 : constant Version_32 := 16#d3c08487#;
+   u00164 : constant Version_32 := 16#e7d70064#;
    pragma Export (C, u00164, "sgfS");
    u00165 : constant Version_32 := 16#1a2b001e#;
    pragma Export (C, u00165, "parserB");
