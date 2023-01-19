@@ -19,7 +19,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_arbre%b		test_arbre.adb		af009653 NE OO SU IL
+U test_arbre%b		test_arbre.adb		9e13f38d NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -65,10 +65,10 @@ D file_gen.ads		20230118020043 7fb869e8 file_gen%s
 D file_gen.adb		20230117210320 60fd8196 file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230118012505 58cf2d38 p_arbre%s
-D p_arbre.adb		20230118205604 b6e284c6 p_arbre%b
-D p_liste_gen.ads	20230118234907 fc8fa0c8 p_liste_gen%s
-D p_liste_gen.adb	20230118235042 52ae7b1e p_liste_gen%b
+D p_arbre.ads		20230119090640 69dc48e6 p_arbre%s
+D p_arbre.adb		20230119103437 45cc8a42 p_arbre%b
+D p_liste_gen.ads	20230119002050 0c628bfc p_liste_gen%s
+D p_liste_gen.adb	20230119002209 ffb23cc2 p_liste_gen%b
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -94,7 +94,7 @@ D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
-D test_arbre.adb	20230118203442 87d47ff9 test_arbre%b
+D test_arbre.adb	20230119100052 87d47ff9 test_arbre%b
 D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
@@ -120,12 +120,12 @@ X 21 file_gen.ads
 7k9*file_gen 39e13 54|6w6 10r28
 X 25 p_arbre.ads
 5+9 T_contenu 54|19r37
-7k9*p_arbre 53e12 54|5w6 19r29
+7k9*p_arbre 57e12 54|5w6 19r29
 11P9 T_arbre 54|26r16[19]
 13U14 init 54|29s4[19]
 15U14 creer_racine 54|30s4[19]
 17U14 ajouter_enfants 54|32s4[19] 33s4[19] 34s4[19]
-35u14 print 54|22r34[19]
+39u14 print 54|22r34[19]
 X 29 system.ads
 67M9*Address
 X 38 s-memory.ads
@@ -135,14 +135,14 @@ X 38 s-memory.ads
 X 46 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
 X 54 test_arbre.adb
-8U11*test_arbre 8b11 40l5 40t15
+8U11*test_arbre 8b11 41l5 41t15
 10K12 file_int[21|7] 11r8
 13U14 print_int 13b14 13>24 16l8 16t17 22r40
 13i24 n{integer} 15r30
 19K12 arbre_int[25|7] 20r8
-22U14 afficher_int[25|35] 35s4
+22U14 afficher_int[25|39] 36s4
 26p4 arb{25|11P9[19]} 29m9 29r9 30m17 30r17 32m20 32r20 33m20 33r20 34m20
-. 34r20 35r17
+. 34r20 36r17
 26p9 test{25|11P9[19]}
 X 55 text_io.ads
 24K9*Text_IO=24:29 54|4w6

@@ -16,6 +16,8 @@ package p_arbre is
 
    procedure ajouter_enfants(ab : in out T_arbre; data : T_contenu);
 
+   generic
+      with function is_equals(x : in T_contenu; y : in T_contenu) return Boolean;
    function find(ab : in T_arbre; data : in T_contenu) return T_arbre;
    -- pre : ab /= null
 
@@ -28,6 +30,8 @@ package p_arbre is
    function get_root(ab : in T_arbre) return T_arbre;
 
    function get_contenu (ab : in T_arbre) return T_contenu;
+
+   procedure set_arbre(ab : in T_arbre; ab2 : out T_arbre);
 
 
    generic

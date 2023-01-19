@@ -155,6 +155,21 @@ package body P_liste_gen is
       return tmp;
    end get_last;
 
+   function contient (une_liste : in T_liste; e : in T_type) return Boolean is
+      temp_liste : T_liste;
+      b : Boolean;
+   Begin
+      b := false;
+      temp_liste := une_liste;
+      while temp_liste /= null loop
+         if temp_liste.all.valeur = e then
+            b := True; --la valeur est présente on renvoie l'adresse
+         end if;
+         temp_liste := temp_liste.suivant;
+      end loop;
+      return b;
+   end contient;
+
 
 
 end P_liste_gen;

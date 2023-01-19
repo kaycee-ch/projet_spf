@@ -6,28 +6,18 @@ A -march=x86-64
 P SS ZX
 
 RN
-RV NO_EXCEPTION_HANDLERS
-RV NO_EXCEPTION_PROPAGATION
-RV NO_EXCEPTIONS
 RV NO_IO
-RV NO_NESTED_FINALIZATION
-RV NO_SECONDARY_STACK
-RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_sgf%b		test_sgf.adb		278493e0 NE OO SU IL
+U test_sgf%b		test_sgf.adb		a3938ef3 NE OO SU IL
 W ada%s			ada.ads			ada.ali
-Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.text_io.unbounded_io%s  a-tiunio.ads	a-tiunio.ali
 W p_arbre%s		p_arbre.adb		p_arbre.ali
 W sgf%s			sgf.adb			sgf.ali
-Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-Z system.soft_links%s	s-soflin.adb		s-soflin.ali
-Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W text_io%s		text_io.ads		text_io.ali
 
 D ada.ads		20210520051130 76789da1 ada%s
@@ -51,10 +41,11 @@ D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
 D file_gen.ads		20230118020043 7fb869e8 file_gen%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230118012505 58cf2d38 p_arbre%s
-D p_arbre.adb		20230118205604 b6e284c6 p_arbre%b
-D p_liste_gen.ads	20230118234907 fc8fa0c8 p_liste_gen%s
-D sgf.ads		20230117213808 863963ba sgf%s
+D p_arbre.ads		20230119090640 69dc48e6 p_arbre%s
+D p_arbre.adb		20230119095440 d4106f63 p_arbre%b
+D p_liste_gen.ads	20230119002050 0c628bfc p_liste_gen%s
+D parser.ads		20230119085531 40e96ab0 parser%s
+D sgf.ads		20230119092524 eb732e27 sgf%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -62,7 +53,6 @@ D s-exctab.ads		20210520051131 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
 D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
 D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
-D s-memory.ads		20210520051132 597d6634 system.memory%s
 D s-parame.ads		20210520051133 4752c4cb system.parameters%s
 D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
 D s-putima.ads		20210520051133 4e095881 system.put_images%s
@@ -70,7 +60,6 @@ D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
 D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
 D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
 D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
-D s-stalib.adb		20210520051133 977290bf system.standard_library%b
 D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
@@ -78,52 +67,31 @@ D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
-D test_sgf.adb		20230117213503 ae6e2cd1 test_sgf%b
+D test_sgf.adb		20230119020154 76201981 test_sgf%b
 D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [test_sgf standard 6 11 none]
-G r s t_info [test_sgf standard 6 11 none] [t_infoIP sgf 7 9 none]
-G r l t_info [test_sgf standard 6 11 none] [t_infoDI sgf 7 9 none]
-G r k t_info [test_sgf standard 6 11 none] [t_infoDF sgf 7 9 none]
-G r j t_info [test_sgf standard 6 11 none] [t_infoDA sgf 7 9 none]
-G r c none [test_sgf standard 6 11 none] [formatage_disque sgf 19 14 none]
-G r c none [test_sgf standard 6 11 none] [repo_courant sgf 26 13 none]
-G r c none [test_sgf standard 6 11 none] [get_contenu sgf__p_sgf 30 13 14_4]
+G r c none [test_sgf standard 6 11 none] [test sgf 112 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 49|1r6 1r33
+16K9*Ada 20e8 48|1r6 1r33
 X 8 a-string.ads
-16K13*Strings 35e16 49|1r10 1r37
+16K13*Strings 35e16 48|1r10 1r37
 X 11 a-strunb.ads
-83K21*Unbounded 765e26 49|1w18 1r45
-104V13*To_Unbounded_String{88R9} 49|10s13 10s49
+83K21*Unbounded 765e26 48|1w18 1r45
 X 16 a-tiunio.ads
-25K21*Unbounded_IO 61e29 49|2w14 2r40
-32U14*Put=34:42 49|12s4
+25K21*Unbounded_IO 61e29 48|2w14 2r40
 X 22 p_arbre.ads
-7k9*p_arbre 53e12 49|3w6
-11P9*T_arbre 49|8r30[25|14]
-30V13*get_contenu{25|7R9} 49|12s14[25|14]
-X 25 sgf.ads
-5K9*sgf 116e8 49|4w6 4r15
-7R9*T_info 12e14 49|7r8
-8r7*name{11|88R9} 49|12r55
-14K12*P_sgf[22|7] 49|8r24 12r8
-19U14*formatage_disque 49|11s4
-26V13*repo_courant{22|11P9[14]} 49|12s26
-X 26 system.ads
-67M9*Address
-X 33 s-memory.ads
-53V13*Alloc{26|67M9} 103i<c,__gnat_malloc>22
-68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{26|67M9} 105i<c,__gnat_realloc>22
-X 41 s-stalib.adb
-89U14 Break_Start 90i<c,__gnat_break_start>22
-X 49 test_sgf.adb
-6U11*test_sgf 6b11 14l8 14t16
-7r1 data{25|7R9} 10m4 10r4 11r40
-8p4 noeud_courant{22|11P9[25|14]} 11m25 11r25 12r39
-8p19 ab{22|11P9[25|14]} 11m21 11r21
-X 50 text_io.ads
-24K9*Text_IO=24:29 49|2w6 2r32
+7k9*p_arbre 57e12 48|3w6
+11P9*T_arbre 48|8r17[26|17]
+X 26 sgf.ads
+6K9*sgf 114e8 48|4w6 4r15
+17K12*P_sgf[22|7] 48|8r11
+112U14*test 48|11s4
+X 48 test_sgf.adb
+6U11*test_sgf 6b11 13l8 13t16
+8p4 a{22|11P9[26|17]} 11m9 11r9
+8p7 n{22|11P9[26|17]} 11m12 11r12
+X 49 text_io.ads
+24K9*Text_IO=24:29 48|2w6 2r32
 

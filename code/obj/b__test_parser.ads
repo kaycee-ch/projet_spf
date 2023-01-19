@@ -320,7 +320,7 @@ package ada_main is
    pragma Export (C, u00139, "ada__strings__unbounded__text_ioB");
    u00140 : constant Version_32 := 16#8b1e6ee0#;
    pragma Export (C, u00140, "ada__strings__unbounded__text_ioS");
-   u00141 : constant Version_32 := 16#da9c2d3f#;
+   u00141 : constant Version_32 := 16#d5af5fb3#;
    pragma Export (C, u00141, "parserB");
    u00142 : constant Version_32 := 16#e5c993b2#;
    pragma Export (C, u00142, "parserS");

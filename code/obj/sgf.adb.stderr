@@ -1,4 +1,0 @@
-sgf.adb:10:07: error: left hand of assignment must not be limited type
-sgf.adb:12:07: error: left hand of assignment must not be limited type
-sgf.adb:19:14: error: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
-sgf.adb:19:14: error: consider switching to return of access type

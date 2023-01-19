@@ -1,7 +1,8 @@
 with parser; use parser;
+
 package IHM is
 
-   procedure traiter(liste_mot : in MOT);
+   procedure traiter_cmd(liste_mot : in T_COMMAND);
 
 
 end IHM;

@@ -5,10 +5,6 @@ with Text_Io;
 
 package body parser is
 
-   function isValid (la_cmd : in T_COMMAND) return Boolean is
-   Begin
-      return false;
-   end isValid;
 
    function i_char (phrase : in Unbounded_String; index : in out Integer; char : in Character) return Integer is
    Begin
@@ -95,17 +91,17 @@ package body parser is
       print(cmd.options);
    end test_cmd;
 
-   procedure test_path is
-      phrase : Unbounded_String;
+   function traiter (phrase : in Unbounded_String) return T_path is
       path : T_PATH;
       l : T_liste;
    Begin
       -- Get_Line(phrase);
-      phrase := to_unbounded_string("/home/kaycee/./n7/../prog/");
+      -- phrase := to_unbounded_string("/home/kaycee/./n7/../prog/");
       l := split(phrase, '/');
       -- print(l);
       path := parse_path(l);
-      print(path.chemin);
-   end test_path;
+      -- print(path.chemin);
+      return path;
+   end traiter;
 
 end parser;

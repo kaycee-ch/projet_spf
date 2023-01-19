@@ -67,6 +67,8 @@ package P_liste_gen is
 
    function get_last (une_liste : in T_liste) return T_liste;
 
+   function contient (une_liste : in T_liste; e : in T_type) return Boolean;
+
 
 private
    TYPE T_cellule;

@@ -1,0 +1,12 @@
+ihm.adb:33:26: error: missing operand
+ihm.adb:42:33: error: missing operand
+ihm.adb:44:30: error: missing operand
+ihm.adb:53:27: error: missing operand
+ihm.adb:61:24: error: missing operand
+ihm.adb:63:13: error: "when" not allowed here
+ihm.adb:65:30: error: missing operand
+ihm.adb:68:29: error: missing operand
+ihm.adb:84:28: error: missing operand
+ihm.adb:96:29: error: missing operand
+ihm.adb:108:28: error: missing ";"
+ihm.adb:116:03: error: missing "end case;" for "case" at line 9

@@ -7,6 +7,7 @@ package body p_arbre is
 
    procedure free is new Ada.Unchecked_Deallocation(Object => T_noeud, Name => T_arbre);
 
+
    procedure init (ab : out T_arbre) is
    Begin
       ab := null;
@@ -23,15 +24,13 @@ package body p_arbre is
 
    procedure ajouter_enfants(ab : in out T_arbre; data : T_contenu) is
       tmp : T_arbre;
-      curseur : file.liste_elem.T_liste;
    Begin
-      tmp := new T_noeud;
-      tmp.all.f_info := data;
-      tmp.all.parent := ab;
-      tmp.all.enfants := liste_elem.creer_liste_vide;
-      curseur := ab.all.enfants;
-      if not file.liste_elem.est_vide(curseur) then
-         liste_elem.inserer_apres(ab.all.enfants, liste_elem.get_contenu(curseur), tmp);
+      if ab /= null then
+         tmp := new T_noeud;
+         tmp.all.f_info := data;
+         tmp.all.parent := ab;
+         tmp.all.enfants := liste_elem.creer_liste_vide;
+         liste_elem.inserer_en_tete(ab.all.enfants, tmp);
       end if;
    end ajouter_enfants;
 
@@ -45,12 +44,11 @@ package body p_arbre is
       curseur := ab;
       if curseur /= null then
          afficher_noeud(curseur.all.f_info);
-         file.enfiler_liste(une_file,  curseur.all.enfants);
-         file.defiler(une_file, tmp);
-         if curseur /= null then
-            curseur := file.get_contenu(tmp);
-            print(curseur);
-         end if;
+         file.enfiler_liste(une_file, curseur.all.enfants);
+         while not file.is_empty(une_file) loop
+            defiler(une_file, tmp);
+            print(file.get_contenu(tmp));
+         end loop;
       else
          raise arbre_vide;
       end if;
@@ -61,7 +59,8 @@ package body p_arbre is
       addr : T_arbre;
       l_addr : liste_elem.T_liste;
    Begin
-      addr := find(ab, data);
+      -- addr := cherche(ab, data);
+      addr := ab;
       if addr /= null and then (not liste_elem.est_vide(addr.all.parent.all.enfants)) then
          l_addr := liste_elem.rechercher(addr.all.parent.all.enfants, addr);
          liste_elem.enlever(addr.all.parent.all.enfants, liste_elem.get_contenu(l_addr));
@@ -102,7 +101,7 @@ package body p_arbre is
          return ab;
       else
          while not liste_elem.est_vide(tmp) loop
-            if liste_elem.get_contenu(tmp).all.f_info = data then
+            if is_equals(liste_elem.get_contenu(tmp).all.f_info, data) then
                return liste_elem.get_contenu(tmp);
             else
                addr := find(liste_elem.get_contenu(tmp), data);
@@ -112,6 +111,7 @@ package body p_arbre is
       end if;
       return addr;
    end find;
+
 
 
    function get_root(ab : in T_arbre) return T_arbre is
@@ -124,9 +124,20 @@ package body p_arbre is
    end get_root;
 
 
-   function get_contenu (ab : in T_arbre) return T_contenu is
+   procedure set_arbre(ab : in T_arbre; ab2 : out T_arbre) is
    Begin
-      return ab.all.f_info;
+      ab2 := ab;
+   end set_arbre;
+
+
+   function get_contenu (ab : in T_arbre) return T_contenu is
+      arbre_vide : exception;
+   Begin
+      if ab /= null then
+         return ab.all.f_info;
+      else
+         raise arbre_vide;
+      end if;
    end get_contenu;
 
    --  function etage (ab : in T_arbre) return Integer is

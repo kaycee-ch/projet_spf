@@ -1,5 +1,5 @@
 [GENERATED OBJECT FILE]
-b__test_arbre.o
+b__test_sgf.o
 [PROJECT FILES]
 /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr
 20230119015833 36fbb1b7d63ddf658031467c631f732a
@@ -7,11 +7,13 @@ b__test_arbre.o
 /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/p_liste_gen.o
 /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/file_gen.o
 /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/p_arbre.o
-/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/test_arbre.o
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/parser.o
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/sgf.o
+/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/test_sgf.o
 [GENERATED SOURCE FILES]
-b__test_arbre.ads
-b__test_arbre.adb
-b__test_arbre.ali
+b__test_sgf.ads
+b__test_sgf.adb
+b__test_sgf.ali
 [RESULTING OPTIONS]
 -L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/
 -L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/

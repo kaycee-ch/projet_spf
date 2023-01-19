@@ -32,6 +32,7 @@ Begin
    ajouter_enfants(arb, 2);
    ajouter_enfants(arb, 3);
    ajouter_enfants(arb, 12);
+
    afficher_int(arb);
    -- remove(arb, 6);
    -- remove(arb, 12);

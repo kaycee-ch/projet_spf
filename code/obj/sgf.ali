@@ -1,77 +1,294 @@
 V "GNAT Lib v2021"
 A -gnatA
-A -gnatc
 A -mtune=generic
 A -march=x86-64
-P NO FX
+P SS ZX
 
 RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U sgf%s			sgf.ads			2d7944c3 EE OO PK IL
+U sgf%b			sgf.adb			82beb3ba NE OO PK IL
 W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.unbounded_io%s  a-tiunio.ads	a-tiunio.ali
 Z file_gen%s		file_gen.adb		file_gen.ali  ED
 W p_arbre%s		p_arbre.adb		p_arbre.ali  ED
 Z p_liste_gen%s		p_liste_gen.adb		p_liste_gen.ali  ED
+W parser%s		parser.adb		parser.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+W text_io%s		text_io.ads		text_io.ali
+
+U sgf%s			sgf.ads			c1745e56 EE OO PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+Z file_gen%s		file_gen.adb		file_gen.ali
+W p_arbre%s		p_arbre.adb		p_arbre.ali
+Z p_liste_gen%s		p_liste_gen.adb		p_liste_gen.ali
+W parser%s		parser.adb		parser.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
 D ada.ads		20210520051130 76789da1 ada%s
 D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
 D a-chlat1.ads		20210520051127 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
 D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-inteio.ads		20210520051127 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
 D a-string.ads		20210520051128 90ac6797 ada.strings%s
 D a-strmap.ads		20210520051128 5a88892a ada.strings.maps%s
 D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
 D a-strunb.ads		20210520051128 03325227 ada.strings.unbounded%s
+D a-suteio.ads		20210520051129 26d8e9aa ada.strings.unbounded.text_io%s
 D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
-D file_gen.ads		20230117073004 7fb869e8 file_gen%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
+D a-tiunio.ads		20210520051129 759c6b0c ada.text_io.unbounded_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D file_gen.ads		20230118020043 7fb869e8 file_gen%s
+D file_gen.adb		20230117210320 60fd8196 file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
-D p_arbre.ads		20230117205508 324280b6 p_arbre%s
-D p_liste_gen.ads	20230117182813 c938ea11 p_liste_gen%s
-D sgf.ads		20230117212922 1c099652 sgf%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D p_arbre.ads		20230119090640 69dc48e6 p_arbre%s
+D p_arbre.adb		20230119095440 d4106f63 p_arbre%b
+D p_liste_gen.ads	20230119002050 0c628bfc p_liste_gen%s
+D p_liste_gen.adb	20230119002209 ffb23cc2 p_liste_gen%b
+D parser.ads		20230119085531 40e96ab0 parser%s
+D sgf.ads		20230119092524 eb732e27 sgf%s
+D sgf.adb		20230119095354 b9109b15 sgf%b
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
 D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-memory.ads		20210520051132 597d6634 system.memory%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stalib.adb		20210520051133 977290bf system.standard_library%b
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
+D s-stposu.ads		20210520051133 e251976f system.storage_pools.subpools%s
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
-G a Z
+G a e
+G c s s s [s sgf 6 1 none]
+G c Z s s [t_infoDI sgf 9 9 none]
+G c Z s s [t_infoDA sgf 9 9 none]
+G c Z s s [t_infoDF sgf 9 9 none]
+G c Z s s [t_infoIP sgf 9 9 none]
+G c Z s s [init sgf__p_sgf 13 14 17_4]
+G c Z s s [creer_racine sgf__p_sgf 15 14 17_4]
+G c Z s s [ajouter_enfants sgf__p_sgf 17 14 17_4]
+G c Z s s [move sgf__p_sgf 24 14 17_4]
+G c Z s s [remove sgf__p_sgf 26 14 17_4]
+G c Z s s [remove_sa sgf__p_sgf 28 14 17_4]
+G c Z s s [get_root sgf__p_sgf 30 13 17_4]
+G c Z s s [get_contenu sgf__p_sgf 32 13 17_4]
+G c Z s s [set_arbre sgf__p_sgf 34 14 17_4]
+G c Z s s [creer_liste_vide sgf__p_sgf__file__liste_elem 9 13 11_4_46_4_17_4]
+G c Z s s [est_vide sgf__p_sgf__file__liste_elem 15 13 11_4_46_4_17_4]
+G c Z s s [inserer_en_tete sgf__p_sgf__file__liste_elem 22 14 11_4_46_4_17_4]
+G c Z s s [rechercher sgf__p_sgf__file__liste_elem 37 13 11_4_46_4_17_4]
+G c Z s s [inserer_apres sgf__p_sgf__file__liste_elem 44 14 11_4_46_4_17_4]
+G c Z s s [inserer_avant sgf__p_sgf__file__liste_elem 51 14 11_4_46_4_17_4]
+G c Z s s [enlever sgf__p_sgf__file__liste_elem 58 14 11_4_46_4_17_4]
+G c Z s s [get_contenu sgf__p_sgf__file__liste_elem 64 13 11_4_46_4_17_4]
+G c Z s s [get_next sgf__p_sgf__file__liste_elem 66 13 11_4_46_4_17_4]
+G c Z s s [get_last sgf__p_sgf__file__liste_elem 68 13 11_4_46_4_17_4]
+G c Z s s [contient sgf__p_sgf__file__liste_elem 70 13 11_4_46_4_17_4]
+G c Z s s [t_celluleIP sgf__p_sgf__file__liste_elem 76 9 11_4_46_4_17_4]
+G c Z s s [free sgf__p_sgf__file__liste_elem 8 14 11_4_46_4_17_4]
+G c Z s s [initialiser sgf__p_sgf__file 14 14 46_4_17_4]
+G c Z s s [enfiler sgf__p_sgf__file 16 14 46_4_17_4]
+G c Z s s [enfiler_liste sgf__p_sgf__file 18 14 46_4_17_4]
+G c Z s s [defiler sgf__p_sgf__file 20 14 46_4_17_4]
+G c Z s s [is_empty sgf__p_sgf__file 22 13 46_4_17_4]
+G c Z s s [taille sgf__p_sgf__file 24 13 46_4_17_4]
+G c Z s s [get_contenu sgf__p_sgf__file 26 13 46_4_17_4]
+G c Z s s [t_celluleIP sgf__p_sgf__file 34 9 46_4_17_4]
+G c Z s s [free sgf__p_sgf__file 6 14 46_4_17_4]
+G c Z s s [t_noeudDI sgf__p_sgf 49 9 17_4]
+G c Z s s [t_noeudDA sgf__p_sgf 49 9 17_4]
+G c Z s s [t_noeudDF sgf__p_sgf 49 9 17_4]
+G c Z s s [t_noeudIP sgf__p_sgf 49 9 17_4]
+G c Z s s [free sgf__p_sgf 8 14 17_4]
+G c Z s b [cmp_name sgf 20 13 none]
+G c Z s s [chercheR sgf__chercheGP559 22 13 none]
+G c Z s s [cherche sgf 22 13 none]
+G c Z s b [formatage_disque sgf 26 14 none]
+G c Z s b [repo_courant sgf 33 13 none]
+G c Z s b [creer_fichier_dossier sgf 48 14 none]
+G c Z s b [change_dir sgf 66 14 none]
+G c Z s b [supp_fichier_dossier sgf 87 14 none]
+G c Z s b [archive_dir sgf 107 14 none]
+G c Z s b [test sgf 112 14 none]
+G c Z b b [liste_contenu sgf 71 14 none]
+G r i none [s sgf 6 1 none] [p_arbre standard 7 9 none]
+G r i none [s sgf 6 1 none] [file_gen standard 7 9 none]
+G r i none [s sgf 6 1 none] [p_liste_gen standard 5 9 none]
+G r c none [creer_fichier_dossier sgf 48 14 none] [get_next parser__liste_cmd 66 13 9_4]
+G r c none [creer_fichier_dossier sgf 48 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
+G r c none [change_dir sgf 66 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
+G r c none [supp_fichier_dossier sgf 87 14 none] [get_next parser__liste_cmd 66 13 9_4]
+G r c none [supp_fichier_dossier sgf 87 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
+G r c none [archive_dir sgf 107 14 none] [get_next parser__liste_cmd 66 13 9_4]
+G r c none [archive_dir sgf 107 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
+G r s t_path [test sgf 112 14 none] [t_pathIP parser 14 9 none]
+G r l t_path [test sgf 112 14 none] [t_pathDI parser 14 9 none]
+G r k t_path [test sgf 112 14 none] [t_pathDF parser 14 9 none]
+G r c none [test sgf 112 14 none] [traiter parser 37 13 none]
+G r j t_path [test sgf 112 14 none] [t_pathDA parser 14 9 none]
+G r c none [test sgf 112 14 none] [get_next parser__liste_cmd 66 13 9_4]
+G r c none [test sgf 112 14 none] [get_contenu parser__liste_cmd 64 13 9_4]
 X 1 ada.ads
-16K9*Ada 20e8 14|1r6 1r33
-X 5 a-string.ads
-16K13*Strings 35e16 14|1r10 1r37
-X 8 a-strunb.ads
-83K21*Unbounded 765e26 14|1w18 1r45
-88R9*Unbounded_String<4|43R9> 744e15 14|8r14 10r16 12r22 112r46
-X 12 p_arbre.ads
-5+9 T_contenu 14|15r33
-7k9*p_arbre 53e12 14|2w6 15r25
-11P9*T_arbre 14|20r43[15] 20r72[15] 27r45[15] 27r61[15] 42r51[15] 42r75[15]
-. 112r30[15]
-X 14 sgf.ads
-5K9*sgf 117l5 117e8
-7R9*T_info 13e14 15r46 20r91 42r139
-8r7*name{8|88R9}
-9b7*isFile{boolean}
-10r7*droits{8|88R9}
-11i7*taille{integer}
-12r7*file_contenu{8|88R9}
-15K12*P_sgf[12|7] 16r8
-20U14*formatage_disque 20<31 20<52 20>81
-20p31 arbre{12|11P9[15]}
-20p52 noeud_courant{12|11P9[15]}
-20r81 data{7R9}
-27V13*repo_courant{12|11P9[15]} 27>26
-27p26 noeud_courant{12|11P9[15]}
-42U14*creer_fichier 42=28 42=60 42>84 42>102 42=120
-42p28 noeud_courant{12|11P9[15]}
-42p60 arbre{12|11P9[15]}
-42a84 path{string}
-42a102 name{string}
-42r120 file_info{7R9}
-112V12*get_name{8|88R9} 112>22
-112p22 ab{12|11P9[15]}
+16K9*Ada 20e8 30|1r6 1r33 31|2r6 2r33 3r6
+X 9 a-string.ads
+16K13*Strings 35e16 30|1r10 1r37 31|2r10 2r37
+X 12 a-strunb.ads
+83K21*Unbounded 765e26 30|1w18 1r45 31|2w18 2r45
+88R9*Unbounded_String<5|43R9> 744e15 30|10r14 12r16 14r17 33r33 31|26r33
+. 94r13
+104V13*To_Unbounded_String{88R9} 30|10s34 12s36 14s37 31|19s20 99s19 110s23
+128U14*Append 31|99s7
+239V14*"="{boolean} 31|12s21
+X 16 a-textio.ads
+58K13*Text_IO 725e16 31|3w10
+271U14*Skip_Line 31|57s42
+506U14*Put_Line 31|56s18
+X 18 a-tiunio.ads
+25K21*Unbounded_IO 61e29 31|1w14 1r40
+32U14*Put=34:42 31|114s7
+41U14*Put_Line=43:42 31|53s10
+57U14*Get_Line=59:42 31|57s10
+X 25 p_arbre.ads
+5+9 T_contenu 30|17r33
+7k9*p_arbre 57e12 30|2w6 17r25 31|5w6
+11P9*T_arbre 30|24r27[17] 112r32[17] 112r56[17] 31|105r32[30|17] 105r56[30|17]
+13U14*init 31|18s7[30|17]
+15U14*creer_racine 31|21s7[30|17]
+17U14*ajouter_enfants 31|65s10[30|17]
+20V21 is_equals{boolean} 30|22r39[17]
+21v13*find 30|22r34[17]
+26U14*remove 31|88s7[30|17]
+32V13*get_contenu{30|9R9} 31|28s14[30|17] 88s21[30|17] 98s14[30|17] 114s11[30|17]
+34U14*set_arbre 31|22s7[30|17] 37s10[30|17] 48s7[30|17] 87s7[30|17] 97s7[30|17]
+X 27 p_liste_gen.ads
+7P9*T_liste
+64V13*get_contenu{12|88R9} 31|36s33[29|9] 47s29[29|9] 49s30[29|9] 86s29[29|9]
+. 96s29[29|9]
+66V13*get_next{7P9[29|9]} 31|47s51[29|9] 86s51[29|9] 96s51[29|9]
+X 29 parser.ads
+6K9*parser 39e11 30|3w6 3r18 31|4w6 4r18
+9K12*liste_cmd[27|5] 31|36r23 47r19 47r41 49r20 86r19 86r41 96r19 96r41
+14R9*T_PATH 18e14 30|48r46 66r42 87r45 107r37 31|32r42 43r46 71r38 83r45
+. 92r37 106r14
+16b7*isAbsolute{boolean} 31|35r22
+17p7*chemin{27|7P9[9]} 31|36r57 47r65 49r47 86r65 96r65
+37V13*traiter{14R9} 31|110s15
+X 30 sgf.ads
+6K9*sgf 114l5 114e8 31|7b14 118l5 118t8
+9R9*T_info 15e14 17r46 20r30 20r45 31|10r30 10r45 16r14 33r14 44r14 45r13
+. 84r13 93r19
+10r7*name{12|88R9} 31|12r16 12r25 19m12 28r41 36m15 47m11 49m12 86m11 96m11
+. 98r41 114r30
+11b7*isFile{boolean} 31|20m12 50m12 100m12
+12r7*droits{12|88R9}
+13i7*taille{integer} 31|51m12 58m15 101m12
+14r7*contenu{12|88R9} 31|53r24 57m24
+17K12*P_sgf[25|7] 18r8 22r28
+20V13*cmp_name{boolean} 20>23 20>38 22r52 31|10b13 13l8 13t16
+20r23 x{9R9} 31|10b23 12r14
+20r38 y{9R9} 31|10b38 12r23
+22V13*cherche[25|21]{25|11P9[17]} 31|37s20 48s17 87s17 97s17
+24p4*arbre{25|11P9[17]} 31|18m12 18r12 21m20 21r20 22r17 37r28 48r25 87r25
+. 88m14 88r14 97r25
+24p11*noeud_courant{25|11P9[17]} 31|22m24 22r24 28r26 37m42 37r42 48m38 48r38
+. 65m26 65r26 87m38 87r38 88r33 97m38 97r38 98r26
+26U14*formatage_disque 31|15b14 23l8 23t24 108s7
+33V13*repo_courant{12|88R9} 31|26b13 29l8 29t20
+48U14*creer_fichier_dossier 48>36 48>54 48>79 31|43b14 68l8 68t29 112s7
+48r36 path{29|14R9} 31|43b36 47r60 49r42
+48b54 estFichier{boolean} 31|43b54 50r22 55r10
+48b79 existe{boolean} 31|43b79 52r10 60r10
+66U14*change_dir 66>25 31|32b14 40l8 40t18 113s7
+66r25 destination{29|14R9} 31|32b25 35r10 36r45
+87U14*supp_fichier_dossier 87>35 31|83b14 89l8 89t28
+87r35 path{29|14R9} 31|83b35 86r60
+107U14*archive_dir 107>27 31|92b14 102l8 102t19
+107r27 path{29|14R9} 31|92b27 96r60
+112U14*test 112=20 112=41 31|105b14 116l8 116t12
+112p20 ab{25|11P9[17]} 31|105b20
+112p41 noeud{25|11P9[17]} 31|105b41 114r23
+X 31 sgf.adb
+16r7 data{30|9R9} 19m7 20m7 21r27
+33r7 data{30|9R9} 36m10 37r35
+44r7 data{30|9R9} 49m7 50m7 51m7 53r19 57m19 57r19 58m10 65r41
+45r7 tmp{30|9R9} 47m7 48r32
+71U14 liste_contenu 71b14 71>28 71>46 80l8 80t21
+71r28 path{29|14R9}
+71b46 dir_fils{boolean} 73r10
+84r7 tmp{30|9R9} 86m7 87r32
+93r7 data{30|9R9} 100m7 101m7
+93r13 tmp{30|9R9} 96m7 97r32
+94r7 nom{12|88R9} 98m7 99m14 99r14
+106r7 path{29|14R9} 110m7 110r7 112r29 113r18
+X 32 system.ads
+67M9*Address
+X 39 s-memory.ads
+53V13*Alloc{32|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{32|67M9} 105i<c,__gnat_realloc>22
+X 47 s-stalib.adb
+89U14 Break_Start 90i<c,__gnat_break_start>22
+X 56 text_io.ads
+24K9*Text_IO=24:29 31|1w6 1r32 56r10 57r34
 

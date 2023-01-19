@@ -1,28 +1,21 @@
 with Ada.Text_IO; use Ada.Text_IO;
+with ada.Text_IO.Unbounded_IO;
+with strings.Unbounded;
 with parser; use parser;
+-- with sgf; use sgf;
 
 package body IHM is
 
-   procedure traiter_cmd(liste_cmd : in T_COMMAND) is
+   procedure traiter_cmd(cmd : in T_COMMAND) is
    Begin
-      case liste_cmd.commande is
+      case unbounded.to_string(liste_cmd.commande) is
          when "ls" =>
-            if taille(liste_cmd.arguments) > 1 then
-               Put_Line("nombre d'arguments invalide");
+            if taille(cmd.options) > 1 then
+               Put_Line("ls command can only have one option.");
             else
-               if liste_mot.longueur = 1 then
-                  Put("liste contenu dir");
-                  --liste_contenu_dir();
-               else
-                  if liste_mot(2) = "-r" then
-                     Put("liste contenu all");
-                     --liste_contenu_all();
-                  elsif liste_mot(2) = "--help" then
-                     Put("help ls");
-                  else
-                     Put("argument incorrect");
-                  end if;
-               end if;
+               if parser.liste_cmd.contient(cmd.arguments, Unbounded.To_Unbounded_String("a")) then
+                  liste_contenu_dir();
+
             end if;
 
       when "pwd" =>
@@ -112,6 +105,6 @@ package body IHM is
             Put_Line("commande inconnue");
       --end case;
 
-   end traiter;
+   end traiter_cmd;
 
 end IHM;

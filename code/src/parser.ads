@@ -12,6 +12,7 @@ package parser is
    procedure print is new afficher_liste(put_line);
 
    TYPE T_PATH is record
+      saisie : unbounded_string;
       isAbsolute : Boolean;
       chemin : T_liste;
    end record;
@@ -31,7 +32,8 @@ package parser is
    function split(phrase : in Unbounded_String; separateur : in Character) return T_liste;
 
    function parse_path(liste_mot : in T_liste) return T_PATH;
+
    procedure test_cmd;
-   procedure test_path;
+   function traiter (phrase : in Unbounded_String) return T_path;
 
 end parser;

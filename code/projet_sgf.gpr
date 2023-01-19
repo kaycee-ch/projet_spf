@@ -2,7 +2,7 @@ project Projet_Sgf is
 
    for Source_Dirs use ("src");
    for Object_Dir use "obj";
-   for Main use ("main.adb", "test_arbre.adb", "test_cli.adb", "test_parser.adb", "test_sgf.adb");
+   for Main use ("test_arbre.adb", "test_cli.adb", "test_ihm.adb", "test_parser.adb", "test_sgf.adb");
 
 end Projet_Sgf;
 
