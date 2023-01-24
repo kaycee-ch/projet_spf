@@ -6,9 +6,11 @@ with Ada.Text_IO;
 procedure test_parser is
    phrase : Unbounded_String;
    cmd : T_command;
+   path : T_path;
 
 
 Begin
-   -- test_cmd;
-   test_path;
+   --test_cmd;
+   phrase := (To_Unbounded_String("/home/kaycee/n7/prog"));
+   path := traiter(phrase);
 end test_parser;

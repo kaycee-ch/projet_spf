@@ -1,0 +1,99 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U pile_gen%b		pile_gen.adb		5ce9a6e8 NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+
+U pile_gen%s		pile_gen.ads		7aaed308 BN EE NE OO PK GE IL
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
+D pile_gen.adb		20230124054314 4b1b0ce8 pile_gen%b
+D system.ads		20210520051134 a2da961d system%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [pile_gen standard 4 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 15|1r6 1r23 2r6 6r26
+X 9 a-textio.ads
+58K13*Text_IO 725e16 15|1w10 1r27
+463U14*Put 15|60s10
+X 11 a-uncdea.ads
+17+9 Object 15|6r53
+18P9 Name(17+9) 15|6r70
+20u15*Unchecked_Deallocation 15|2w10 6r30
+X 14 pile_gen.ads
+2+9 un_type 23r51 31r48 34r54 46r17 15|20r54 30r52 33r14 46r48
+4k9*pile_gen 2z9 43E9 50l5 50e13 15|4b14 90l5 90t13
+5P9*pile 7r46 13r37 23r38 25r43 31r35 34r41 44c9 47r13 15|6r78 8r45 14r37
+. 20r41 21r11 30r39 31r11 46r35 56r43
+7U14*creer_pile_vide 7<31 15|8b14 12l8 12t23
+7p31 une_pile{5P9} 15|8b30 10m7 11m7
+13V13*est_vide{boolean} 13>23 15|14b13 17l8 17t16
+13p23 une_pile{5P9} 15|14b23 16r14
+23V12*depiler{2+9} 23=20 15|30b13 44l8 44t15
+23p20 une_pile{5P9} 15|30b21 35r10 36r18 37r15 38m10 38r22
+25U14*afficher_pile 25>29 15|56b14 61s10 63l8 63t21
+25p29 une_pile{5P9} 15|56b29 59r10 61r24
+31v13*sommet 31>21 15|46b13 54l8 54t14
+31p21 une_pile{5P9} 15|46b21 49r10 50r17
+34U14*empiler 34=23 34>47 15|20b14 27l8 27t15
+34p23 une_pile{5P9} 15|20b23 25r20 26m7
+34*47 n{2+9} 15|20b47 24r24
+43R9 etage 44r24 45c9 48e14 15|6r63 10r23 23r16
+46*7 element{2+9} 15|24m13 36r31 50r30
+47p7 inf{5P9} 15|25m13 38r35 61r37
+X 15 pile_gen.adb
+6U14 free[11|20] 39s10
+21p7 p{14|5P9} 23m7 24r7 25r7 26r19
+31p7 p{14|5P9} 37m10 39m15 39r15
+32X7 pile_vide 42r16
+33*7 data{14|2+9} 36m10 40r17
+47X7 pile_vide 52r16
+57X7 pile_vide
+

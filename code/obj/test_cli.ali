@@ -8,7 +8,7 @@ P SS ZX
 RN
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_cli%b		test_cli.adb		e9b78bad NE OO SU IL
+U test_cli%b		test_cli.adb		fc3c5636 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -36,8 +36,8 @@ D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D cli.ads		20230117202330 83d31454 cli%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_liste_gen.ads	20230118234907 fc8fa0c8 p_liste_gen%s
-D parser.ads		20230119000330 4e5ac2c9 parser%s
+D p_liste_gen.ads	20230123200703 26175e76 p_liste_gen%s
+D parser.ads		20230123165244 5bd11f52 parser%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -77,7 +77,7 @@ X 18 cli.ads
 5V13*afficher_menu{character} 44|8s13
 6U14*traiter_choix 44|9s4
 X 22 parser.ads
-6K9*parser 38e11 44|2w6 2r18
+6K9*parser 37e11 44|2w6 2r18
 X 44 test_cli.adb
 5U11*test_cli 5b11 10l5 10t13
 6e4 choix{character} 8m4 9r18

@@ -80,10 +80,13 @@ procedure test_arbre is
       ajouter_enfants(arb, 2);
       ajouter_enfants(arb, 3);
       x := trouver_int(arb, 3);
+
       ajouter_enfants(x, 4);
+
+      -- put((get_contenu(trouver_int(arb, 31))));
       -- ajouter_enfants(x, 5);
       -- ajouter_enfants(x, 6);
-      y := trouver_int(arb, 4);
+      -- y := trouver_int(arb, 4);
       ajouter_enfants(y, 5);
       z := trouver_int(arb, 2);
       ajouter_enfants(z, 6);
@@ -91,10 +94,16 @@ procedure test_arbre is
       ajouter_enfants(m, 7);
       l := trouver_int(arb, 7);
       ajouter_enfants(l, 8);
+      l := trouver_int(arb, 8);
+      ajouter_enfants(l, 9);
+      l := trouver_int(arb, 9);
+      ajouter_enfants(l, 10);
       afficher_int(arb);
-      remove_int(arb, 8);
+      remove_int(arb, 4);
       New_Line;
       afficher_int(arb);
+      New_Line;
+      -- afficher_int(arb);
       -- set_arbre(arb , test);
       -- afficher_int(test);
       return arb;
@@ -127,7 +136,7 @@ procedure test_arbre is
    --        -- afficher_int(test);
    --        return arb;
    -- end test_str;
-n : T_arbre;
+   n : T_arbre;
 Begin
    n := test_int;
 

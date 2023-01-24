@@ -12,9 +12,9 @@ package parser is
    procedure print is new afficher_liste(put_line);
 
    TYPE T_PATH is record
-      saisie : unbounded_string;
-      isAbsolute : Boolean;
       chemin : T_liste;
+      chemin_inv : T_liste;
+      isAbsolute : Boolean;
    end record;
 
 

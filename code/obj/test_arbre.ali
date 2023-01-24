@@ -7,6 +7,7 @@ P SS ZX
 
 RN
 RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_EXCEPTIONS
 RV NO_IO
 RV NO_IMPLICIT_CONDITIONALS
@@ -21,7 +22,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_arbre%b		test_arbre.adb		58b697c4 NE OO SU IL
+U test_arbre%b		test_arbre.adb		b291853d NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -67,10 +68,10 @@ D file_gen.ads		20230118020043 7fb869e8 file_gen%s
 D file_gen.adb		20230117210320 60fd8196 file_gen%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230119220701 b488ac0f p_arbre%s
-D p_arbre.adb		20230119220830 3dea14b4 p_arbre%b
-D p_liste_gen.ads	20230119002050 0c628bfc p_liste_gen%s
-D p_liste_gen.adb	20230119002209 ffb23cc2 p_liste_gen%b
+D p_arbre.ads		20230124195440 7303479d p_arbre%s
+D p_arbre.adb		20230124195440 2c53bdc6 p_arbre%b
+D p_liste_gen.ads	20230124135659 6c718cbb p_liste_gen%s
+D p_liste_gen.adb	20230124135715 70477a57 p_liste_gen%b
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -94,7 +95,7 @@ D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
-D test_arbre.adb	20230119222034 9c25ff59 test_arbre%b
+D test_arbre.adb	20230123153658 b1890632 test_arbre%b
 D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
@@ -116,7 +117,7 @@ X 12 a-strunb.ads
 239V14*"="{boolean} 52|56s16
 X 16 a-textio.ads
 58K13*Text_IO 725e16 52|1w10 1r27
-262U14*New_Line 52|26s7 46s7 96s7
+262U14*New_Line 52|26s7 46s7 103s7 105s7
 463U14*Put 52|19s10 21s10 38s10 40s10
 X 17 a-tiinio.ads
 80U14*Put 52|25s7[6|18]
@@ -128,15 +129,15 @@ X 21 file_gen.ads
 7k9*file_gen 39e13 52|6w6 10r28
 X 25 p_arbre.ads
 5+9 T_contenu 52|60r37
-7k9*p_arbre 64e12 52|5w6 60r29
-11P9 T_arbre 52|73r29[60] 74r37[60] 130r5[60]
-13U14 init 52|77s7[60]
-15U14 creer_racine 52|78s7[60]
-17U14 ajouter_enfants 52|80s7[60] 81s7[60] 83s7[60] 87s7[60] 89s7[60] 91s7[60]
-. 93s7[60]
-21v13 find 52|65r32[60]
-28u14 remove 52|67r32[60]
-44u14 print 52|63r34[60]
+7k9*p_arbre 79e12 52|5w6 60r29
+11P9 T_arbre 52|73r29[60] 74r37[60] 139r8[60]
+16U14 init 52|77s7[60]
+18U14 creer_racine 52|78s7[60]
+20U14 ajouter_enfants 52|80s7[60] 81s7[60] 84s7[60] 90s7[60] 92s7[60] 94s7[60]
+. 96s7[60] 98s7[60] 100s7[60]
+26v13 find 52|65r32[60]
+33u14 remove 52|67r32[60]
+54u14 print 52|63r34[60]
 X 29 system.ads
 67M9*Address
 X 36 s-memory.ads
@@ -146,7 +147,7 @@ X 36 s-memory.ads
 X 44 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
 X 52 test_arbre.adb
-8U11*test_arbre 8b11 134l5 134t15
+8U11*test_arbre 8b11 143l5 143t15
 10K12 file_int[21|7] 11r8
 13U14 print_int 13b14 13>24 13>40 27l8 27t17 63r40
 13i24 n{integer} 25r11
@@ -165,20 +166,21 @@ X 52 test_arbre.adb
 54r22 x{12|88R9} 56r14
 54r47 y{12|88R9} 56r18
 60K12 arbre_int[25|7] 61r8
-63U14 afficher_int[25|44] 94s7 97s7
-65V13 trouver_int[25|21]{25|11P9[60]} 67r39 82s12 86s12 88s12 90s12 92s12
-67U14 remove_int[25|28] 95s7
-73V13 test_int{25|11P9[60]} 73b13 101l8 101t16 132s9
+63U14 afficher_int[25|54] 101s7 104s7
+65V13 trouver_int[25|26]{25|11P9[60]} 67r39 82s12 91s12 93s12 95s12 97s12
+. 99s12
+67U14 remove_int[25|33] 102s7
+73V13 test_int{25|11P9[60]} 73b13 110l8 110t16 141s9
 74p7 arb{25|11P9[60]} 77m12 77r12 78m20 78r20 80m23 80r23 81m23 81r23 82r24
-. 86r24 88r24 90r24 92r24 94r20 95m18 95r18 97r20 100r14
+. 91r24 93r24 95r24 97r24 99r24 101r20 102m18 102r18 104r20 109r14
 74p12 test{25|11P9[60]}
-74p18 x{25|11P9[60]} 82m7 83m23 83r23
-74p21 y{25|11P9[60]} 86m7 87m23 87r23
-74p24 z{25|11P9[60]} 88m7 89m23 89r23
-74p27 m{25|11P9[60]} 90m7 91m23 91r23
-74p30 l{25|11P9[60]} 92m7 93m23 93r23
+74p18 x{25|11P9[60]} 82m7 84m23 84r23
+74p21 y{25|11P9[60]} 90m23 90r23
+74p24 z{25|11P9[60]} 91m7 92m23 92r23
+74p27 m{25|11P9[60]} 93m7 94m23 94r23
+74p30 l{25|11P9[60]} 95m7 96m23 96r23 97m7 98m23 98r23 99m7 100m23 100r23
 74p33 b{25|11P9[60]}
-130p1 n{25|11P9[60]} 132m4
+139p4 n{25|11P9[60]} 141m4
 X 53 text_io.ads
 24K9*Text_IO=24:29 52|4w6
 

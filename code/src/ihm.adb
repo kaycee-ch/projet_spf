@@ -22,7 +22,7 @@ package body IHM is
          if liste_mot.longueur > 1 then
             Put_Line("nombre d'arguments invalide");
          else
-            repo_courant();
+            repo_courant( );
          end if;
 
 

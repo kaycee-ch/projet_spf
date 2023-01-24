@@ -54,6 +54,8 @@ package P_liste_gen is
    -- post : n appartient à une_liste
    -- exception : data n'est pas dans la liste ou la liste est vide
 
+   function inverser_liste(une_liste : in T_liste) return T_liste;
+
 
    procedure enlever(une_liste : in out T_liste; e : in T_type);
    -- semantique : enlever un element e de la liste (vide ou non)

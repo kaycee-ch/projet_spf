@@ -66,14 +66,17 @@ package body parser is
       tmp : T_liste;
    Begin
       tmp := liste_mot;
+      -- put(get_contenu(liste_mot));
       if element(get_contenu(get_last(tmp)), 1) = '.' then
          le_path.isAbsolute := True;
       else
          le_path.isAbsolute := False;
       end if;
       le_path.chemin := liste_mot;
+le_path.chemin_inv := inverser_liste(liste_mot);
       return le_path;
    end parse_path;
+
 
    procedure test_cmd is
       phrase : Unbounded_String;
@@ -91,17 +94,21 @@ package body parser is
       print(cmd.options);
    end test_cmd;
 
+
+
    function traiter (phrase : in Unbounded_String) return T_path is
       path : T_PATH;
-      l : T_liste;
+      l, l2 : T_liste;
    Begin
       -- Get_Line(phrase);
       -- phrase := to_unbounded_string("/home/kaycee/./n7/../prog/");
       l := split(phrase, '/');
-      -- print(l);
+      -- print(l2);
       path := parse_path(l);
       -- print(path.chemin);
       return path;
    end traiter;
+
+
 
 end parser;

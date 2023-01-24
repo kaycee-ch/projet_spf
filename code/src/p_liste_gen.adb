@@ -62,6 +62,21 @@ package body P_liste_gen is
    end rechercher;
 
 
+   function inverser_liste(une_liste : in T_liste) return T_liste is
+      tmp : T_liste;
+      new_liste : T_liste;
+   Begin
+      tmp := une_liste;
+      new_liste := creer_liste_vide;
+      while not est_vide(tmp) loop
+         inserer_en_tete(new_liste, tmp.all.valeur);
+         tmp := tmp.all.suivant;
+      end loop;
+      return new_liste;
+   end inverser_liste;
+
+
+
    procedure inserer_apres (une_liste : in out T_liste; n : in T_type; data : in T_type) is
       address_data : T_liste;
    Begin
@@ -114,6 +129,7 @@ package body P_liste_gen is
          if prec_liste = null then
             if temp_liste /= null then
                une_liste := temp_liste.all.suivant;
+               free(temp_liste);
             end if;
          elsif temp_liste.all.valeur = e then
             prec_liste.all.suivant := temp_liste.all.suivant;
@@ -136,7 +152,7 @@ package body P_liste_gen is
 
    function get_next (une_liste : in T_liste) return T_liste is
    Begin
-      if une_liste.all.suivant /= null then
+      if une_liste /= null and then une_liste.all.suivant /= null then
          return une_liste.all.suivant;
       else
          return null;

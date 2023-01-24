@@ -18,7 +18,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U parser%b		parser.adb		1a2b001e NE OO PK IL
+U parser%b		parser.adb		49223302 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -33,7 +33,7 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U parser%s		parser.ads		1b9710ff EE OO PK IL
+U parser%s		parser.ads		f93e209e EE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -79,10 +79,10 @@ D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_liste_gen.ads	20230119002050 0c628bfc p_liste_gen%s
-D p_liste_gen.adb	20230119002209 ffb23cc2 p_liste_gen%b
-D parser.ads		20230119085531 40e96ab0 parser%s
-D parser.adb		20230119085531 da27da21 parser%b
+D p_liste_gen.ads	20230124135659 6c718cbb p_liste_gen%s
+D p_liste_gen.adb	20230124135715 70477a57 p_liste_gen%b
+D parser.ads		20230124135652 c2535d96 parser%s
+D parser.adb		20230124135652 0b94de1b parser%b
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -117,15 +117,16 @@ G c Z s s [inserer_en_tete parser__liste_cmd 22 14 9_4]
 G c Z s s [rechercher parser__liste_cmd 37 13 9_4]
 G c Z s s [inserer_apres parser__liste_cmd 44 14 9_4]
 G c Z s s [inserer_avant parser__liste_cmd 51 14 9_4]
-G c Z s s [enlever parser__liste_cmd 58 14 9_4]
-G c Z s s [get_contenu parser__liste_cmd 64 13 9_4]
-G c Z s s [get_next parser__liste_cmd 66 13 9_4]
-G c Z s s [get_last parser__liste_cmd 68 13 9_4]
-G c Z s s [contient parser__liste_cmd 70 13 9_4]
-G c Z s s [t_celluleDI parser__liste_cmd 76 9 9_4]
-G c Z s s [t_celluleDA parser__liste_cmd 76 9 9_4]
-G c Z s s [t_celluleDF parser__liste_cmd 76 9 9_4]
-G c Z s s [t_celluleIP parser__liste_cmd 76 9 9_4]
+G c Z s s [inverser_liste parser__liste_cmd 57 13 9_4]
+G c Z s s [enlever parser__liste_cmd 60 14 9_4]
+G c Z s s [get_contenu parser__liste_cmd 66 13 9_4]
+G c Z s s [get_next parser__liste_cmd 68 13 9_4]
+G c Z s s [get_last parser__liste_cmd 70 13 9_4]
+G c Z s s [contient parser__liste_cmd 72 13 9_4]
+G c Z s s [t_celluleDI parser__liste_cmd 78 9 9_4]
+G c Z s s [t_celluleDA parser__liste_cmd 78 9 9_4]
+G c Z s s [t_celluleDF parser__liste_cmd 78 9 9_4]
+G c Z s s [t_celluleIP parser__liste_cmd 78 9 9_4]
 G c Z s s [free parser__liste_cmd 8 14 9_4]
 G c Z s s [printR parser__printGP249 12 14 none]
 G c Z s s [print parser 12 14 none]
@@ -135,9 +136,6 @@ G c Z s b [split parser 32 13 none]
 G c Z s b [parse_path parser 34 13 none]
 G c Z s b [test_cmd parser 36 14 none]
 G c Z s b [traiter parser 37 13 none]
-G c Z s s [t_pathDI parser 14 9 none]
-G c Z s s [t_pathDA parser 14 9 none]
-G c Z s s [t_pathDF parser 14 9 none]
 G c Z s s [t_pathIP parser 14 9 none]
 G c Z s s [t_commandDI parser 21 9 none]
 G c Z s s [t_commandDA parser 21 9 none]
@@ -152,59 +150,61 @@ X 9 a-string.ads
 16K13*Strings 35e16 25|1r10 1r37 26|2r10 2r37
 X 12 a-strunb.ads
 83K21*Unbounded 765e26 25|1w18 1r45 26|2w18 2r45
-88R9*Unbounded_String<5|43R9> 744e15 25|9r51 15r16 22r18 28r33 32r31 37r34
-. 26|9r33 18r31 21r20 41r19 79r16 94r34
+88R9*Unbounded_String<5|43R9> 744e15 25|9r51 22r18 28r33 32r31 37r34 26|9r33
+. 18r31 21r20 41r19 82r16 99r34
 93V13*Length{natural} 26|11s61 24s15 52s45
-104V13*To_Unbounded_String{88R9} 26|84s17
+104V13*To_Unbounded_String{88R9} 26|87s17
 144U14*Append 26|26s10
-192V13*Element{character} 26|11s13 25s10 50s13 69s10
+192V13*Element{character} 26|11s13 25s10 50s13 70s10
 217V13*Unbounded_Slice{88R9} 26|32s39 52s21
 X 16 a-textio.ads
 58K13*Text_IO 725e16 25|2r6
-262U14*New_Line 26|88s15 90s15
+262U14*New_Line 26|91s15 93s15
 X 18 a-tiunio.ads
 25K21*Unbounded_IO 61e29 25|2w14 2r40 26|1w14 1r40
-41U14*Put_Line=43:42 25|12r42 26|87s7
+41U14*Put_Line=43:42 25|12r42 26|90s7
 X 23 p_liste_gen.ads
 2+9 T_type 25|9r41
-5k9*P_liste_gen 84e16 25|3w6 9r29
-7P9*T_liste 25|17r16[9] 23r17[9] 24r19[9] 30r42[9] 32r83[9] 34r39[9] 26|18r83[25|9]
-. 19r21[25|9] 39r42[25|9] 64r39[25|9] 66r13[25|9] 81r11[25|9] 96r11[25|9]
+5k9*P_liste_gen 86e16 25|3w6 9r29
+7P9*T_liste 25|15r16[9] 16r20[9] 23r17[9] 24r19[9] 30r42[9] 32r83[9] 34r39[9]
+. 26|18r83[25|9] 19r21[25|9] 39r42[25|9] 64r39[25|9] 66r13[25|9] 84r11[25|9]
+. 101r15[25|9]
 9V13*creer_liste_vide{7P9[25|9]} 26|23s22[25|9] 46s25[25|9] 47s27[25|9]
 15V13*est_vide{boolean} 26|49s17[25|9]
 22U14*inserer_en_tete 26|32s10[25|9] 53s13[25|9] 56s13[25|9]
 30u14*afficher_liste 25|12r27[9]
-58U14*enlever 26|44s7[25|9] 54s13[25|9] 57s13[25|9]
-64V13*get_contenu{12|88R9} 26|43s26[25|9] 44s26[25|9] 50s21[25|9] 51s20[25|9]
-. 56s47[25|9] 57s32[25|9] 69s18[25|9]
-68V13*get_last{7P9[25|9]} 26|43s38[25|9] 44s38[25|9] 69s30[25|9]
+57V13*inverser_liste{7P9[25|9]} 26|76s23[25|9]
+60U14*enlever 26|44s7[25|9] 54s13[25|9] 57s13[25|9]
+66V13*get_contenu{12|88R9} 26|43s26[25|9] 44s26[25|9] 50s21[25|9] 51s20[25|9]
+. 56s47[25|9] 57s32[25|9] 70s18[25|9]
+70V13*get_last{7P9[25|9]} 26|43s38[25|9] 44s38[25|9] 70s30[25|9]
 X 25 parser.ads
-6K9*parser 39l5 39e11 26|6b14 107l5 107t11
+6K9*parser 39l5 39e11 26|6b14 114l5 114t11
 9K12*liste_cmd[23|5] 10r8
-12U14*print[23|30] 26|89s7 91s7
-14R9*T_PATH 18e14 34r55 37r59 26|64r55 65r17 94r59 95r14
-15r7*saisie{12|88R9}
-16b7*isAbsolute{boolean} 26|70m18 72m18
-17p7*chemin{23|7P9[9]} 26|74m15
-21R9*T_COMMAND 25e14 30r58 26|39r58 40r16 80r13
-22r7*commande{12|88R9} 26|43m14 87r20
-23p7*options{23|7P9[9]} 26|46m14 53m36 91r17
-24p7*arguments{23|7P9[9]} 26|47m14 56m36 89r17
+12U14*print[23|30] 26|92s7 94s7
+14R9*T_PATH 18e14 34r55 37r59 26|64r55 65r17 99r59 100r14
+15p7*chemin{23|7P9[9]} 26|75m15
+16p7*chemin_inv{23|7P9[9]} 26|76m9
+17b7*isAbsolute{boolean} 26|71m18 73m18
+21R9*T_COMMAND 25e14 30r58 26|39r58 40r16 83r13
+22r7*commande{12|88R9} 26|43m14 90r20
+23p7*options{23|7P9[9]} 26|46m14 53m36 94r17
+24p7*arguments{23|7P9[9]} 26|47m14 56m36 92r17
 28V13*i_char{integer} 28>21 28=51 28>75 26|9b13 15l8 15t14 31s17
 28r21 phrase{12|88R9} 26|9b21 11r21 11r68
 28i51 index{integer} 26|9b51 11r29 11r53 12m10 12r19 14r14
 28e75 char{character} 26|9b75 11r39
-30V13*parse_cmd{21R9} 30=23 26|39b13 61l8 61t17 86s14
+30V13*parse_cmd{21R9} 30=23 26|39b13 61l8 61t17 89s14
 30p23 liste_mot{23|7P9[9]} 26|39b23 43r47 44m15 44r47 49r26 50r33 51r32 54m21
 . 56r59 57m21 57r44
-32V13*split{23|7P9[9]} 32>19 32>49 26|18b13 36l8 36t13 85s12 100s12
+32V13*split{23|7P9[9]} 32>19 32>49 26|18b13 36l8 36t13 88s12 105s12
 32r19 phrase{12|88R9} 26|18b19 21r40 24r22 25r18
 32e49 separateur{character} 26|18b49 25r35 26r29 31r41
-34V13*parse_path{14R9} 34>24 26|64b13 76l8 76t18 102s15
-34p24 liste_mot{23|7P9[9]} 26|64b24 68r14 74r25
-36U14*test_cmd 26|78b14 92l8 92t16
-37V13*traiter{14R9} 37>22 26|94b13 105l8 105t15
-37r22 phrase{12|88R9} 26|94b22 100r18
+34V13*parse_path{14R9} 34>24 26|64b13 78l8 78t18 107s15
+34p24 liste_mot{23|7P9[9]} 26|64b24 68r14 75r25 76r38
+36U14*test_cmd 26|81b14 95l8 95t16
+37V13*traiter{14R9} 37>22 26|99b13 110l8 110t15
+37r22 phrase{12|88R9} 26|99b22 105r18
 X 26 parser.adb
 19p7 liste_split{23|7P9[25|9]} 23m7 32m26 32r26 35r14
 20i7 deb{integer} 28m7 29r13 30r17 32r67 33m10
@@ -215,13 +215,14 @@ X 26 parser.adb
 40r7 la_cmd{25|21R9} 43m7 46m7 47m7 53m29 53r29 56m29 56r29 60r14
 41r7 tmp{12|88R9} 51m13 52r37 52r52 54r32
 41r12 tmp1{12|88R9} 52m13 53r45
-65r7 le_path{25|14R9} 70m10 72m10 74m7 75r14
-66p7 tmp{23|7P9[25|9]} 68m7 69r39
-79r7 phrase{12|88R9} 84m7 85r18
-80r7 cmd{25|21R9} 86m7 86r7 87r16 89r13 91r13
-81p7 l{23|7P9[25|9]} 85m7 86m24 86r24
-95r7 path{25|14R9} 102m7 102r7 104r14
-96p7 l{23|7P9[25|9]} 100m7 102r26
+65r7 le_path{25|14R9} 71m10 73m10 75m7 76m1 77r14
+66p7 tmp{23|7P9[25|9]} 68m7 70r39
+82r7 phrase{12|88R9} 87m7 88r18
+83r7 cmd{25|21R9} 89m7 89r7 90r16 92r13 94r13
+84p7 l{23|7P9[25|9]} 88m7 89m24 89r24
+100r7 path{25|14R9} 107m7 109r14
+101p7 l{23|7P9[25|9]} 105m7 107r26
+101p10 l2{23|7P9[25|9]}
 X 27 system.ads
 67M9*Address
 X 34 s-memory.ads
@@ -231,5 +232,5 @@ X 34 s-memory.ads
 X 42 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
 X 51 text_io.ads
-24K9*Text_IO=24:29 25|2w6 2r32 26|1w6 1r32 4w6 88r7 90r7
+24K9*Text_IO=24:29 25|2w6 2r32 26|1w6 1r32 4w6 91r7 93r7
 

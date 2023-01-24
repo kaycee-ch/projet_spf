@@ -5,9 +5,9 @@ with sgf; use sgf;
 
 procedure test_sgf is
 
-   a, n : p_sgf.T_arbre;
+   sgf_test : T_sgf;
 
 Begin
-   test(a, n);
+   test(sgf_test);
 
    end test_sgf;
