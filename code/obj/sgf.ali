@@ -20,7 +20,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U sgf%b			sgf.adb			d5d7466a NE OO PK IL
+U sgf%b			sgf.adb			927fe749 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -41,7 +41,7 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U sgf%s			sgf.ads			d46294c3 EE OO PK IL
+U sgf%s			sgf.ads			94387e22 EE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -95,11 +95,11 @@ D p_arbre.ads		20230124195440 7303479d p_arbre%s
 D p_arbre.adb		20230124195440 2c53bdc6 p_arbre%b
 D p_liste_gen.ads	20230124135659 6c718cbb p_liste_gen%s
 D p_liste_gen.adb	20230124135715 70477a57 p_liste_gen%b
-D parser.ads		20230124135652 c2535d96 parser%s
+D parser.ads		20230125220744 fbd468e0 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
 D pile_gen.adb		20230124054314 4b1b0ce8 pile_gen%b
-D sgf.ads		20230124201116 1cae0fe7 sgf%s
-D sgf.adb		20230124203354 778afefc sgf%b
+D sgf.ads		20230125194941 6573d070 sgf%s
+D sgf.adb		20230125223042 7078b53e sgf%b
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -197,6 +197,7 @@ G c Z s b [formatage_disque sgf 48 14 none]
 G c Z s b [repo_courant sgf 55 14 none]
 G c Z s b [creer_fichier_dossier sgf 65 14 none]
 G c Z s b [change_dir sgf 83 14 none]
+G c Z s b [liste_contenu sgf 90 14 none]
 G c Z s b [supp_fichier_dossier sgf 104 14 none]
 G c Z s b [archive_dir sgf 124 14 none]
 G c Z s b [test sgf 129 14 none]
@@ -204,7 +205,6 @@ G c Z s s [t_sgfDI sgf 23 9 none]
 G c Z s s [t_sgfDA sgf 23 9 none]
 G c Z s s [t_sgfDF sgf 23 9 none]
 G c Z s s [t_sgfIP sgf 23 9 none]
-G c Z b b [liste_contenu sgf 148 14 none]
 G r i none [s sgf 7 1 none] [p_liste_gen standard 5 9 none]
 G r i none [s sgf 7 1 none] [p_arbre standard 7 9 none]
 G r i none [s sgf 7 1 none] [pile_gen standard 4 9 none]
@@ -215,14 +215,14 @@ G r c none [change_dir sgf 83 14 none] [get_contenu parser__liste_cmd 66 13 9_4]
 G r c none [change_dir sgf 83 14 none] [get_next parser__liste_cmd 68 13 9_4]
 G r c none [change_dir sgf 83 14 none] [est_vide parser__liste_cmd 15 13 9_4]
 G r c none [change_dir sgf 83 14 none] [enlever parser__liste_cmd 60 14 9_4]
+G r i none [liste_contenu sgf 90 14 none] [afficher_liste parser__liste_cmd 30 14 9_4]
 G r c none [supp_fichier_dossier sgf 104 14 none] [get_contenu parser__liste_cmd 66 13 9_4]
 G r c none [archive_dir sgf 124 14 none] [get_contenu parser__liste_cmd 66 13 9_4]
 G r s t_path [test sgf 129 14 none] [t_pathIP parser 14 9 none]
-G r c none [test sgf 129 14 none] [traiter parser 37 13 none]
+G r c none [test sgf 129 14 none] [traiter_path parser 38 13 none]
 G r c none [test sgf 129 14 none] [get_next parser__liste_cmd 68 13 9_4]
 G r c none [test sgf 129 14 none] [get_contenu parser__liste_cmd 66 13 9_4]
 G r i none [test sgf 129 14 none] [afficher_liste parser__liste_cmd 30 14 9_4]
-G r i none [liste_contenu sgf 148 14 none] [afficher_liste parser__liste_cmd 30 14 9_4]
 X 1 ada.ads
 16K9*Ada 20e8 32|1r6 1r33 33|2r6 2r33 3r6 3r23 4r6 4r31
 X 6 a-inteio.ads
@@ -232,67 +232,67 @@ X 9 a-string.ads
 X 12 a-strunb.ads
 83K21*Unbounded 765e26 32|1w18 1r45 33|2w18 2r45
 88R9*Unbounded_String<5|43R9> 744e15 32|13r14 15r16 17r17 26r13 30r46 33|72r15
-. 150r35 183r13
+. 155r35 189r13
 93V13*Length{natural} 33|23s22
-104V13*To_Unbounded_String{88R9} 33|46s20 89s21 192s22 211s23 214s23 216s23
-. 222s23 225s23 228s23
+104V13*To_Unbounded_String{88R9} 33|46s20 89s21 198s22 218s28 221s28 223s28
+. 229s28
 117V13*To_String{string} 33|36s13
-128U14*Append 33|192s10
+128U14*Append 33|198s10
 239V14*"="{boolean} 33|13s21 18s34 89s19
 245V14*"="{boolean} 33|91s22
 X 16 a-textio.ads
 58K13*Text_IO 725e16 33|3w10 3r27
-262U14*New_Line 33|38s7 166s7
-271U14*Skip_Line 33|135s42
+262U14*New_Line 33|38s7 171s7
+271U14*Skip_Line 33|136s42
 463U14*Put 33|30s10 32s10 37s7 64s10
-506U14*Put_Line 33|134s18
+506U14*Put_Line 33|111s7 135s18 146s10 148s10 183s7 205s7
 X 17 a-tiinio.ads
 97U14*Put 33|34s10[6|18]
 X 18 a-tiunio.ads
 25K21*Unbounded_IO 61e29 33|1w14 1r40
 32U14*Put=34:42 33|65s10
-41U14*Put_Line=43:42 33|131s10 152s10
-57U14*Get_Line=59:42 33|135s10
+41U14*Put_Line=43:42 33|132s10 157s10
+57U14*Get_Line=59:42 33|136s10
 X 25 p_arbre.ads
 5+9 T_contenu 32|20r33
 7k9*p_arbre 79e12 32|2w6 20r25 33|6w6
 11P9*T_arbre 32|24r14[20] 25r23[20] 43r30[20] 43r46[20] 46r27[20] 33|16r30[32|20]
-. 16r46[32|20] 54r13[32|20] 73r16[32|20] 117r16[32|20] 172r19[32|20] 184r19[32|20]
-. 204r13[32|20]
+. 16r46[32|20] 54r13[32|20] 73r16[32|20] 118r16[32|20] 177r19[32|20] 190r19[32|20]
+. 211r13[32|20]
 16U14*init 33|45s7[32|20]
 18U14*creer_racine 33|48s7[32|20]
-20U14*ajouter_enfants 33|142s10[32|20]
+20U14*ajouter_enfants 33|143s10[32|20]
 25V21 is_equals{boolean} 32|37r39[20]
 26v13*find 32|37r34[20]
 32V21 chercher{11P9[32|20]} 32|39r37[20]
 33u14*remove 32|39r30[20]
 41V13*get_contenu{32|12R9} 33|18s14[32|20] 18s36[32|20] 59s21[32|20] 82s10[32|20]
-. 177s23[32|20] 188s10[32|20] 191s17[32|20]
+. 182s20[32|20] 194s10[32|20] 197s17[32|20]
 43U14*set_arbre 33|49s7[32|20] 90s13[32|20] 93s16[32|20] 95s16[32|20] 101s16[32|20]
-. 123s7[32|20] 176s7[32|20] 187s7[32|20]
+. 124s7[32|20] 181s7[32|20] 193s7[32|20]
 45V13*ab_est_vide{boolean} 33|58s17[32|20] 92s20[32|20]
-48V13*get_parent{11P9[32|20]} 33|60s17[32|20] 92s32[32|20] 93s26[32|20] 187s17[32|20]
-49U14*modifier 33|196s10[32|20]
-50U14*supp_enfants 33|197s10[32|20]
+48V13*get_parent{11P9[32|20]} 33|60s17[32|20] 92s32[32|20] 93s26[32|20]
+49U14*modifier 33|202s10[32|20]
+50U14*supp_enfants 33|203s10[32|20]
 53U22 afficher_noeud 32|41r41[20]
 54u14*print 32|41r35[20]
 X 27 p_liste_gen.ads
 7P9*T_liste
 15V13*est_vide{boolean} 33|83s30[29|9] 85s30[29|9]
-30u14*afficher_liste 33|155r51[29|9]
+30u14*afficher_liste 33|160r51[29|9]
 60U14*enlever 33|105s23[29|9]
-66V13*get_contenu{12|88R9} 33|79s34[29|9] 88s29[29|9] 98s40[29|9] 120s29[29|9]
-. 126s30[29|9] 174s29[29|9] 186s29[29|9]
-68V13*get_next{7P9[29|9]} 33|83s49[29|9] 98s62[29|9] 120s51[29|9]
+66V13*get_contenu{12|88R9} 33|79s34[29|9] 88s29[29|9] 98s40[29|9] 121s29[29|9]
+. 127s30[29|9] 179s29[29|9] 192s29[29|9]
+68V13*get_next{7P9[29|9]} 33|83s49[29|9] 98s62[29|9] 121s51[29|9]
 X 29 parser.ads
-6K9*parser 39e11 32|3w6 3r18 33|5w6 5r18
+6K9*parser 42e11 32|3w6 3r18 33|5w6 5r18
 9K12*liste_cmd[27|5] 33|79r24 83r20 83r39 85r20 88r19 98r30 98r52 105r13
-. 120r19 120r41 126r20 155r41 174r19 186r19
-14R9*T_PATH 18e14 32|65r66 83r62 104r65 124r57 33|70r62 71r18 114r66 148r58
-. 170r65 181r57 203r14
-15p7*chemin{27|7P9[9]} 33|79r55 120r65 126r47 174r46 186r46
+. 121r19 121r41 127r20 160r41 179r19 192r19
+14R9*T_PATH 18e14 32|65r66 83r62 90r58 104r65 124r57 33|70r62 71r18 115r66
+. 153r58 175r65 187r57 210r14
+15p7*chemin{27|7P9[9]} 33|79r55 121r65 127r47 179r46 192r46
 16p7*chemin_inv{27|7P9[9]} 33|83r67 85r48 88r50 98r80 105m40
-37V13*traiter{14R9} 33|211s15 214s15 216s15 222s15 225s15 228s15
+38V13*traiter_path{14R9} 33|218s15 221s15 223s15 229s15
 X 30 pile_gen.ads
 2+9 un_type 32|30r35
 4k9*pile_gen 50e13 32|4w6 30r26
@@ -302,24 +302,24 @@ X 30 pile_gen.ads
 23V12*depiler{12|88R9} 33|65s14[32|30]
 34U14*empiler 33|59s10[32|30]
 X 32 sgf.ads
-7K9*sgf 131l5 131e8 33|8b14 247l5 247t8
-9X4*chemin_invalide 33|189r16
+7K9*sgf 131l5 131e8 33|8b14 254l5 254t8
+9X4*chemin_invalide 33|195r16
 10X4*arbre_vide
 12R9*T_info 18e14 20r46 33r30 33r45 35r35 33|11r30 11r45 22r34 43r14 74r18
-. 115r14 116r13 171r13 182r19
+. 116r14 117r13 176r13 188r19
 13r7*name{12|88R9} 33|13r16 13r25 18r29 18r51 23r34 36r28 46m12 59r38 79m16
-. 98m22 120m11 126m12 174m11 186m11 191r40 193m15
-14b7*isFile{boolean} 33|47m12 82r30 127m12 188r33 194m15
+. 98m22 121m11 127m12 179m11 192m11 197r40 199m15
+14b7*isFile{boolean} 33|47m12 82r30 128m12 194r33 200m15
 15r7*droits{12|88R9}
-16i7*taille{integer} 33|128m12 136m15 195m15
-17r7*contenu{12|88R9} 33|131r24 135m24
+16i7*taille{integer} 33|129m12 137m15 201m15
+17r7*contenu{12|88R9} 33|132r24 136m24
 20K12*P_sgf[25|7] 21r8 37r28 39r24 41r29
-23R9*T_sgf 27e17 48r45 55r41 65r49 83r38 104r48 124r40 129r32 33|42r44 53r40
-. 70r38 114r49 148r41 170r48 181r40 202r33
-24p7*root{25|11P9[20]} 33|45m16 48m24 49r21 80r29 99r35 123r29 176r29 177m17
-. 187r40
+23R9*T_sgf 27e17 48r45 55r41 65r49 83r38 90r41 104r48 124r40 129r32 33|42r44
+. 53r40 70r38 115r49 153r41 175r48 187r40 209r33
+24p7*root{25|11P9[20]} 33|45m16 48m24 49r21 80r29 99r35 124r29 181r29 182m14
+. 193r29
 25p7*noeud_courant{25|11P9[20]} 33|49m31 54r28 90r27 90m46 92r47 93r41 93m61
-. 95r30 95m49 101m38 160r22 184r34
+. 95r30 95m49 101m38 165r22 190r34
 26r7*nom{12|88R9}
 30K12*P_pile[30|4] 31r8
 33V13*cmp_name{boolean} 33>23 33>38 37r52 33|11b13 14l8 14t16
@@ -328,37 +328,43 @@ X 32 sgf.ads
 35U14*print_str 35>25 35>43 41r59 33|22b14 39l8 39t17
 35r25 data{12R9} 33|22b24 23r29 36r23
 35i43 indent{integer} 33|22b42 27r10 29r13 34r19 34r26
-37V13*cherche[25|26]{25|11P9[20]} 39r49 33|80s17 99s23 123s17 176s17 187s28
-39U14*rm[25|33] 33|177s10
-41U14*affiche[25|54] 33|160s10
+37V13*cherche[25|26]{25|11P9[20]} 39r49 33|80s17 99s23 124s17 181s17 193s17
+39U14*rm[25|33] 33|182s7
+41U14*affiche[25|54] 33|165s10
 43V13*is_equal{boolean} 43>23 43>39 33|16b13 19l8 19t16
 43p23 a{25|11P9[20]} 33|16b23 18r26
 43p39 b{25|11P9[20]} 33|16b39 18r48
 46p4*arbre{25|11P9[20]}
 46p11*noeud_courant{25|11P9[20]}
-48U14*formatage_disque 48=32 33|42b14 50l8 50t24 207s7
+48U14*formatage_disque 48=32 33|42b14 50l8 50t24 214s7
 48r32 sgf{23R9} 33|42b31 45m12 45r12 48m20 48r20 49r17 49m27 49r27
-55U14*repo_courant 55=28 33|53b14 67l8 67t20
+55U14*repo_courant 55=28 33|53b14 67l8 67t20 226s7
 55r28 sgf{23R9} 33|53b27 54r24
-65U14*creer_fichier_dossier 65=36 65>56 65>74 65>99 33|114b14 145l8 145t29
-. 213s7 215s7 217s7 223s7 229s7
-65r36 sgf{23R9} 33|114b36 123r25
-65r56 path{29|14R9} 33|114b56 120r60 126r42
-65b74 estFichier{boolean} 33|114b74 127r22 130r26 133r10
-65b99 existe{boolean} 33|114b99 130r10 138r10
-83U14*change_dir 83=25 83>45 33|70b14 111l8 111t18
+65U14*creer_fichier_dossier 65=36 65>56 65>74 65>99 33|115b14 150l8 150t29
+. 220s7 222s7 224s7 230s7
+65r36 sgf{23R9} 33|115b36 124r25
+65r56 path{29|14R9} 33|115b56 121r60 127r42
+65b74 estFichier{boolean} 33|115b74 128r22 131r26 134r10 145r10
+65b99 existe{boolean} 33|115b99 131r10 139r10
+83U14*change_dir 83=25 83>45 33|70b14 112l8 112t18
 83r25 sgf{23R9} 33|70b25 80r25 90r23 90m42 90r42 92r43 93r37 93m57 93r57
 . 95r26 95m45 95r45 99r31 101m34 101r34
 83r45 destination{29|14R9} 33|70b45 71r28
-104U14*supp_fichier_dossier 104=35 104>55 33|170b14 178l8 178t28
-104r35 sgf{23R9} 33|170b35 176r25 177m13 177r13
-104r55 path{29|14R9} 33|170b55 174r41
-124U14*archive_dir 124=27 124>47 33|181b14 199l8 199t19 230s7
-124r27 sgf{23R9} 33|181b27 184r30 187r36
-124r47 path{29|14R9} 33|181b47 186r41
-129U14*test 129=19 33|202b14 245l8 245t12
-129r19 sgf{23R9} 33|202b20 207m24 213m29 215m29 217m29 223m29 226m21 229m29
-. 230m19 232m21
+90U14*liste_contenu 90=28 90>48 90>66 90>89 33|153b14 172l8 172t21 233s7
+. 239s7
+90r28 sgf{23R9} 33|153b28 165r18
+90r48 path{29|14R9} 33|153b48
+90b66 dir_fils{boolean} 33|153b66 164r10
+90b89 all_info{boolean} 33|153b89
+104U14*supp_fichier_dossier 104=35 104>55 33|175b14 184l8 184t28
+104r35 sgf{23R9} 33|175b35 181r25 182m10 182r10
+104r55 path{29|14R9} 33|175b55 179r41
+124U14*archive_dir 124=27 124>47 33|187b14 206l8 206t19 237s7
+124r27 sgf{23R9} 33|187b27 190r30 193r25
+124r47 path{29|14R9} 33|187b47 192r41
+129U14*test 129=19 33|209b14 252l8 252t12
+129r19 sgf{23R9} 33|209b20 214m24 220m29 222m29 224m29 226m20 230m29 233m21
+. 237m19 239m21
 X 33 sgf.adb
 23i7 m{integer} 24r23
 24a7 tmp{string} 36m7 37r11
@@ -373,26 +379,22 @@ X 33 sgf.adb
 75b7 chemin_incorrect{boolean} 87r32 103m16 108r10
 75b25 isLast{boolean} 83m10 85m10 87r17 100r20
 76X7 chemin_invalide 109r16
-115r7 data{32|12R9} 126m7 127m7 128m7 131r19 135m19 135r19 136m10 142r34
-116r7 tmp{32|12R9} 120m7 123r35
-117p7 ab_tmp{25|11P9[32|20]} 123m41 123r41 142m26 142r26
-148U14 liste_contenu 148b14 148=28 148>48 148>66 167l8 167t21 226s7 232s7
-148r28 sgf{32|23R9} 160r18
-148r48 path{29|14R9}
-148b66 dir_fils{boolean} 159r10
-150U17 print_enf 150b17 150>28 153l11 153t20 155r66
-150r28 n{12|88R9} 152r19
-155U17 afficher_enfants[27|30]
-171r7 tmp{32|12R9} 174m7 176r35
-172p7 tmp_noeud{25|11P9[32|20]} 176m41 176r41 177r35
-182r7 data{32|12R9} 193m10 194m10 195m10 196r30
-182r13 tmp{32|12R9} 186m7 187r46
-183r7 nom{12|88R9} 191m10 192m17 192r17 193r23
-184p7 tmp_noeud{25|11P9[32|20]} 187m53 187r53 188r22 191r29 196m19 196r19
-. 197m23 197r23
-203r7 path{29|14R9} 211m7 213r34 214m7 215r34 216m7 217r34 222m7 223r34 225m7
-. 226r26 228m7 229r34 230r24 232r26
-204p7 tmp{25|11P9[32|20]}
+116r7 data{32|12R9} 127m7 128m7 129m7 132r19 136m19 136r19 137m10 143r34
+117r7 tmp{32|12R9} 121m7 124r35
+118p7 ab_tmp{25|11P9[32|20]} 124m41 124r41 143m26 143r26
+155U17 print_enf 155b17 155>28 158l11 158t20 160r66
+155r28 n{12|88R9} 157r19
+160U17 afficher_enfants[27|30]
+176r7 tmp{32|12R9} 179m7 181r35
+177p7 tmp_noeud{25|11P9[32|20]} 181m41 181r41 182r32
+188r7 data{32|12R9} 199m10 200m10 201m10 202r30
+188r13 tmp{32|12R9} 192m7 193r35
+189r7 nom{12|88R9} 197m10 198m17 198r17 199r23
+190p7 tmp_noeud{25|11P9[32|20]} 193m41 193r41 194r22 197r29 202m19 202r19
+. 203m23 203r23
+210r7 path{29|14R9} 218m7 220r34 221m7 222r34 223m7 224r34 229m7 230r34 233r26
+. 237r24 239r26
+211p7 tmp{25|11P9[32|20]}
 X 34 system.ads
 67M9*Address
 X 41 s-memory.ads
@@ -402,5 +404,5 @@ X 41 s-memory.ads
 X 49 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
 X 58 text_io.ads
-24K9*Text_IO=24:29 33|1w6 1r32 134r10 135r34
+24K9*Text_IO=24:29 33|1w6 1r32 135r10 136r34
 

@@ -1,109 +1,41 @@
 with Ada.Text_IO; use Ada.Text_IO;
-with ada.Text_IO.Unbounded_IO;
-with strings.Unbounded;
+with ada.Text_IO.Unbounded_IO; use ada.Text_IO.Unbounded_IO;
+with ada.strings.Unbounded; use ada.Strings.Unbounded;
 with parser; use parser;
--- with sgf; use sgf;
+with sgf; use sgf;
 
 package body IHM is
 
-   procedure traiter_cmd(cmd : in T_COMMAND) is
+   procedure traiter_cmd(le_sgf : in out T_sgf; cmd : in T_COMMAND) is
+      dir_fils, all_info : Boolean := false;
+      path : T_path;
    Begin
-      case unbounded.to_string(liste_cmd.commande) is
-         when "ls" =>
-            if taille(cmd.options) > 1 then
-               Put_Line("ls command can only have one option.");
-            else
-               if parser.liste_cmd.contient(cmd.arguments, Unbounded.To_Unbounded_String("a")) then
-                  liste_contenu_dir();
 
-            end if;
-
-      when "pwd" =>
-         if liste_mot.longueur > 1 then
-            Put_Line("nombre d'arguments invalide");
-         else
-            repo_courant( );
+      if to_string(cmd.commande) = "ls" then
+         if parser.liste_cmd.contient(cmd.options, to_unbounded_string("-a")) then
+            dir_fils := True;
          end if;
-
-
-      when "nano" =>
-         if liste_mot.longueur > 2 then
-            Put_Line("nombre d'arguments invalide");
-         else
-            if file_exists(liste_mot.tab(2)) then
-               modifier_fichier();
-            else
-               creer_fichier(); --name = liste_mot.tab(2)
-            end if;
+         if parser.liste_cmd.contient(cmd.options, to_unbounded_string("-l")) then
+            all_info := True;
          end if;
+         path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
+         sgf.liste_contenu(le_sgf, path, dir_fils, all_info);
 
 
-      when "mkdir" =>
-         if liste_mot.longueur > 2 then
-            Put_Line("nombre d'arguments invalide");
-         else
-            creer_dossier(); --name = liste_mot.tab(2)
-         end if;
+      elsif to_string(cmd.commande) = "pwd" then
+         sgf.repo_courant(le_sgf);
 
 
-      when "cd" =>
-         if liste_mot.longueur > 2 then
-            Put_Line("nombre d'arguments invalide");
-         else
-            change_dir(); -- new_path = liste_mot.tab(2)
-
-            when "rm" =>
-            if liste_mot.longueur = 1 then
-               suppr_fichier();
-            else
-               if liste_mot(2) = "-r" then
-                  suppr_dir();
-               elsif liste_mot(2) = "--help" then
-                  Put("help ls");
-               else
-                  Put("commande invalide");
-               end if;
-            end if;
-         end if;
-
-      when "tar" =>
-         if liste_mot.longueur > 2 then
-            Put_Line("arguments invalides");
-         else
-            if liste_mot(2) = "--help" then
-               Put("help tar");
-            else
-               archive_dir();
-            end if;
-         end if;
+      elsif to_string(cmd.commande) = "nano" then
+         path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
+         sgf.creer_fichier_dossier(le_sgf, path, True, False);
 
 
-      when "mv" =>
-         if liste_mot.longueur > 3 then
-            Put_LIne("arguments invalides");
-         else
-            if liste_mot.longueur(2) = "--help" then
-               Put_Line("help mv");
-            else
-               move_fichier(); -- fichier a deplacer = liste_mot.tab(2) destination = liste_mot.tab(3)
-            end if;
-         end if;
+      elsif to_string(cmd.commande) = "mkdir" then
+         path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
+         sgf.creer_fichier_dossier(le_sgf, path, False, False);
+      end if;
 
-
-      when "cp" =>
-         if liste_mot.longueur > 3 then
-            Put_LIne("arguments invalides");
-         else
-            if liste_mot.longueur(2) = "--help" then
-               Put_Line("help cp");
-            else
-               copy_fichier-- a copiermot.tab(2) destination = liste_mot.tab(3)
-            end if;
-         end if;
-
-       when others =>
-            Put_Line("commande inconnue");
-      --end case;
 
    end traiter_cmd;
 

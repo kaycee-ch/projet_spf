@@ -34,6 +34,9 @@ package parser is
    function parse_path(liste_mot : in T_liste) return T_PATH;
 
    procedure test_cmd;
-   function traiter (phrase : in Unbounded_String) return T_path;
+
+   function traiter_path (phrase : in Unbounded_String) return T_path;
+
+   function traiter_cmd(phrase : in Unbounded_String) return T_command;
 
 end parser;

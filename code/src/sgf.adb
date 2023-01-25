@@ -108,6 +108,7 @@ package body sgf is
       if chemin_incorrect then
          raise chemin_invalide;
       end if;
+      Put_Line("Directory has been changed");
    end change_dir;
 
 
@@ -141,11 +142,15 @@ package body sgf is
       else
          ajouter_enfants(ab_tmp, data);
       end if;
-      -- affiche(ab_tmp);
+      if estFichier then
+         Put_Line("File created");
+      else
+         Put_Line("Folder created");
+         end if;
    end creer_fichier_dossier;
 
 
-   procedure liste_contenu(sgf : in out T_sgf; path : in T_PATH; dir_fils : Boolean)  is
+   procedure liste_contenu(sgf : in out T_sgf; path : in T_PATH; dir_fils : in Boolean; all_info : in Boolean)  is
 
       procedure print_enf (n : in Unbounded_String) is
       Begin
@@ -174,7 +179,8 @@ package body sgf is
       tmp.name := liste_cmd.get_contenu(path.chemin);
       -- put(tmp.name);
       set_arbre(cherche(sgf.root, tmp), tmp_noeud);
-         rm(sgf.root, get_contenu(tmp_noeud));
+      rm(sgf.root, get_contenu(tmp_noeud));
+      Put_Line("Deleted");
    end supp_fichier_dossier;
 
 
@@ -184,7 +190,7 @@ package body sgf is
       tmp_noeud : T_arbre := sgf.noeud_courant;
    Begin
       tmp.name := liste_cmd.get_contenu(path.chemin);
-      set_arbre(get_parent(cherche(sgf.root, tmp)), tmp_noeud);
+      set_arbre(cherche(sgf.root, tmp), tmp_noeud);
       if get_contenu(tmp_noeud).isFile then
          raise chemin_invalide;
       else
@@ -196,6 +202,7 @@ package body sgf is
          modifier(tmp_noeud, data);
          supp_enfants(tmp_noeud);
       end if;
+      Put_Line("Folder compressed");
    end archive_dir;
 
 
@@ -208,28 +215,28 @@ package body sgf is
       -- affiche(arbre);
       -- affiche(noeud_courant);
       -- repo_courant;
-      path := traiter(To_Unbounded_String("/\/home/"));
+      path := traiter_path(To_Unbounded_String("/\/home/"));
       -- put(liste_cmd.get_contenu(liste_cmd.get_last(path.chemin)));
       creer_fichier_dossier(sgf, path, false, False);
-      path := traiter(To_Unbounded_String("/\/home/kaycee/"));
+      path := traiter_path(To_Unbounded_String("/\/home/kaycee/"));
       creer_fichier_dossier(sgf, path, false, false);
-      path := traiter(To_Unbounded_String("/\/home/kaycee/projet"));
+      path := traiter_path(To_Unbounded_String("/\/home/kaycee/projet"));
       creer_fichier_dossier(sgf, path, false, false);
       -- affiche(arbre);
-      -- repo_courant;
+      repo_courant(sgf);
       -- change_dir(path);
 
-      path := traiter(To_Unbounded_String("/\/home/kaycee/projet/sgf.gpr"));
+      path := traiter_path(To_Unbounded_String("/\/home/kaycee/projet/sgf.gpr"));
       creer_fichier_dossier(sgf, path, true, false);
 
-      path := traiter(To_Unbounded_String("/\/home/kaycee/projet/sgf.gpr"));
-      liste_contenu(sgf, path, true);
+      -- path := traiter(To_Unbounded_String("/\/home/kaycee/projet/sgf.gpr"));
+      liste_contenu(sgf, path, true, true);
 
-      path := traiter(To_Unbounded_String("/\/home/kaycee/projet/sgf.gpr"));
-      creer_fichier_dossier(sgf, path, false, false);
+      -- thpath := traiter(To_Unbounded_String("/\/home/kaycee/projet/"));
+      -- creer_fichier_dossier(sgf, path, false, false);
       archive_dir(sgf, path);
       -- supp_fichier_dossier(sgf, path);
-      liste_contenu(sgf, path, true);
+      liste_contenu(sgf, path, true, true);
       -- change_dir(path);
       -- data.name := To_Unbounded_String("sgf.gpr");
       -- tmp := cherche(arbre, data);

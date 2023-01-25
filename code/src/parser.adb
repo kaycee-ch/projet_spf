@@ -73,7 +73,7 @@ package body parser is
          le_path.isAbsolute := False;
       end if;
       le_path.chemin := liste_mot;
-le_path.chemin_inv := inverser_liste(liste_mot);
+      le_path.chemin_inv := inverser_liste(liste_mot);
       return le_path;
    end parse_path;
 
@@ -96,7 +96,7 @@ le_path.chemin_inv := inverser_liste(liste_mot);
 
 
 
-   function traiter (phrase : in Unbounded_String) return T_path is
+   function traiter_path (phrase : in Unbounded_String) return T_path is
       path : T_PATH;
       l, l2 : T_liste;
    Begin
@@ -107,8 +107,17 @@ le_path.chemin_inv := inverser_liste(liste_mot);
       path := parse_path(l);
       -- print(path.chemin);
       return path;
-   end traiter;
+   end traiter_path;
 
+
+   function traiter_cmd(phrase : in Unbounded_String) return T_command is
+      cmd : T_command;
+      l : T_liste;
+   Begin
+      l := split(phrase, ' ');
+      cmd := parse_cmd(l);
+      return cmd;
+   end traiter_cmd;
 
 
 end parser;

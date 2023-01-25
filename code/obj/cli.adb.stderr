@@ -1,1 +1,0 @@
-cli.adb:43:07: warning: variable "f" is never read and never assigned [-gnatwv]

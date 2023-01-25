@@ -1,14 +1,14 @@
 pragma Warnings (Off);
 pragma Ada_95;
-pragma Source_File_Name (ada_main, Spec_File_Name => "b__test_cli.ads");
-pragma Source_File_Name (ada_main, Body_File_Name => "b__test_cli.adb");
+pragma Source_File_Name (ada_main, Spec_File_Name => "b__test_ihm.ads");
+pragma Source_File_Name (ada_main, Body_File_Name => "b__test_ihm.adb");
 pragma Suppress (Overflow_Check);
 with Ada.Exceptions;
 
 package body ada_main is
 
    E070 : Short_Integer; pragma Import (Ada, E070, "system__os_lib_E");
-   E006 : Short_Integer; pragma Import (Ada, E006, "ada__exceptions_E");
+   E005 : Short_Integer; pragma Import (Ada, E005, "ada__exceptions_E");
    E011 : Short_Integer; pragma Import (Ada, E011, "system__soft_links_E");
    E023 : Short_Integer; pragma Import (Ada, E023, "system__exception_table_E");
    E036 : Short_Integer; pragma Import (Ada, E036, "ada__containers_E");
@@ -25,25 +25,24 @@ package body ada_main is
    E094 : Short_Integer; pragma Import (Ada, E094, "ada__strings__utf_encoding_E");
    E100 : Short_Integer; pragma Import (Ada, E100, "ada__tags_E");
    E092 : Short_Integer; pragma Import (Ada, E092, "ada__strings__text_buffers_E");
-   E119 : Short_Integer; pragma Import (Ada, E119, "ada__streams_E");
-   E137 : Short_Integer; pragma Import (Ada, E137, "system__file_control_block_E");
-   E121 : Short_Integer; pragma Import (Ada, E121, "system__finalization_root_E");
-   E117 : Short_Integer; pragma Import (Ada, E117, "ada__finalization_E");
-   E136 : Short_Integer; pragma Import (Ada, E136, "system__file_io_E");
-   E169 : Short_Integer; pragma Import (Ada, E169, "system__storage_pools_E");
-   E167 : Short_Integer; pragma Import (Ada, E167, "system__finalization_masters_E");
-   E175 : Short_Integer; pragma Import (Ada, E175, "system__storage_pools__subpools_E");
-   E106 : Short_Integer; pragma Import (Ada, E106, "ada__strings__unbounded_E");
-   E132 : Short_Integer; pragma Import (Ada, E132, "ada__text_io_E");
-   E171 : Short_Integer; pragma Import (Ada, E171, "system__pool_global_E");
-   E164 : Short_Integer; pragma Import (Ada, E164, "p_liste_gen_E");
-   E181 : Short_Integer; pragma Import (Ada, E181, "file_gen_E");
-   E183 : Short_Integer; pragma Import (Ada, E183, "p_arbre_E");
-   E146 : Short_Integer; pragma Import (Ada, E146, "parser_E");
-   E185 : Short_Integer; pragma Import (Ada, E185, "pile_gen_E");
-   E179 : Short_Integer; pragma Import (Ada, E179, "sgf_E");
-   E144 : Short_Integer; pragma Import (Ada, E144, "ihm_E");
-   E139 : Short_Integer; pragma Import (Ada, E139, "cli_E");
+   E121 : Short_Integer; pragma Import (Ada, E121, "ada__streams_E");
+   E139 : Short_Integer; pragma Import (Ada, E139, "system__file_control_block_E");
+   E123 : Short_Integer; pragma Import (Ada, E123, "system__finalization_root_E");
+   E119 : Short_Integer; pragma Import (Ada, E119, "ada__finalization_E");
+   E138 : Short_Integer; pragma Import (Ada, E138, "system__file_io_E");
+   E167 : Short_Integer; pragma Import (Ada, E167, "system__storage_pools_E");
+   E165 : Short_Integer; pragma Import (Ada, E165, "system__finalization_masters_E");
+   E173 : Short_Integer; pragma Import (Ada, E173, "system__storage_pools__subpools_E");
+   E108 : Short_Integer; pragma Import (Ada, E108, "ada__strings__unbounded_E");
+   E134 : Short_Integer; pragma Import (Ada, E134, "ada__text_io_E");
+   E169 : Short_Integer; pragma Import (Ada, E169, "system__pool_global_E");
+   E162 : Short_Integer; pragma Import (Ada, E162, "p_liste_gen_E");
+   E179 : Short_Integer; pragma Import (Ada, E179, "file_gen_E");
+   E181 : Short_Integer; pragma Import (Ada, E181, "p_arbre_E");
+   E144 : Short_Integer; pragma Import (Ada, E144, "parser_E");
+   E183 : Short_Integer; pragma Import (Ada, E183, "pile_gen_E");
+   E177 : Short_Integer; pragma Import (Ada, E177, "sgf_E");
+   E106 : Short_Integer; pragma Import (Ada, E106, "ihm_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -54,35 +53,35 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E171 := E171 - 1;
+      E169 := E169 - 1;
       declare
          procedure F1;
          pragma Import (Ada, F1, "system__pool_global__finalize_spec");
       begin
          F1;
       end;
-      E132 := E132 - 1;
+      E134 := E134 - 1;
       declare
          procedure F2;
          pragma Import (Ada, F2, "ada__text_io__finalize_spec");
       begin
          F2;
       end;
-      E106 := E106 - 1;
+      E108 := E108 - 1;
       declare
          procedure F3;
          pragma Import (Ada, F3, "ada__strings__unbounded__finalize_spec");
       begin
          F3;
       end;
-      E175 := E175 - 1;
+      E173 := E173 - 1;
       declare
          procedure F4;
          pragma Import (Ada, F4, "system__storage_pools__subpools__finalize_spec");
       begin
          F4;
       end;
-      E167 := E167 - 1;
+      E165 := E165 - 1;
       declare
          procedure F5;
          pragma Import (Ada, F5, "system__finalization_masters__finalize_spec");
@@ -93,7 +92,7 @@ package body ada_main is
          procedure F6;
          pragma Import (Ada, F6, "system__file_io__finalize_body");
       begin
-         E136 := E136 - 1;
+         E138 := E138 - 1;
          F6;
       end;
       declare
@@ -226,7 +225,7 @@ package body ada_main is
       E011 := E011 + 1;
       System.Traceback.Symbolic'Elab_Body;
       E035 := E035 + 1;
-      E006 := E006 + 1;
+      E005 := E005 + 1;
       Ada.Strings.Utf_Encoding'Elab_Spec;
       E094 := E094 + 1;
       Ada.Tags'Elab_Spec;
@@ -236,47 +235,46 @@ package body ada_main is
       Ada.Strings.Text_Buffers'Elab_Body;
       E092 := E092 + 1;
       Ada.Streams'Elab_Spec;
-      E119 := E119 + 1;
+      E121 := E121 + 1;
       System.File_Control_Block'Elab_Spec;
-      E137 := E137 + 1;
+      E139 := E139 + 1;
       System.Finalization_Root'Elab_Spec;
       System.Finalization_Root'Elab_Body;
-      E121 := E121 + 1;
+      E123 := E123 + 1;
       Ada.Finalization'Elab_Spec;
-      E117 := E117 + 1;
+      E119 := E119 + 1;
       System.File_Io'Elab_Body;
-      E136 := E136 + 1;
+      E138 := E138 + 1;
       System.Storage_Pools'Elab_Spec;
-      E169 := E169 + 1;
+      E167 := E167 + 1;
       System.Finalization_Masters'Elab_Spec;
       System.Finalization_Masters'Elab_Body;
-      E167 := E167 + 1;
+      E165 := E165 + 1;
       System.Storage_Pools.Subpools'Elab_Spec;
       System.Storage_Pools.Subpools'Elab_Body;
-      E175 := E175 + 1;
+      E173 := E173 + 1;
       Ada.Strings.Unbounded'Elab_Spec;
       Ada.Strings.Unbounded'Elab_Body;
-      E106 := E106 + 1;
+      E108 := E108 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
-      E132 := E132 + 1;
+      E134 := E134 + 1;
       System.Pool_Global'Elab_Spec;
       System.Pool_Global'Elab_Body;
-      E171 := E171 + 1;
-      E164 := E164 + 1;
-      E181 := E181 + 1;
-      E183 := E183 + 1;
-      parser'elab_spec;
-      E146 := E146 + 1;
-      E185 := E185 + 1;
-      sgf'elab_spec;
+      E169 := E169 + 1;
+      E162 := E162 + 1;
       E179 := E179 + 1;
+      E181 := E181 + 1;
+      parser'elab_spec;
       E144 := E144 + 1;
-      E139 := E139 + 1;
+      E183 := E183 + 1;
+      sgf'elab_spec;
+      E177 := E177 + 1;
+      E106 := E106 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
-   pragma Import (Ada, Ada_Main_Program, "_ada_test_cli");
+   pragma Import (Ada, Ada_Main_Program, "_ada_test_ihm");
 
    function main
      (argc : Integer;
@@ -317,8 +315,7 @@ package body ada_main is
    --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/pile_gen.o
    --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/sgf.o
    --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/ihm.o
-   --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/cli.o
-   --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/test_cli.o
+   --   /home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/test_ihm.o
    --   -L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/
    --   -L/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/obj/
    --   -L/home/kaycee/opt/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/

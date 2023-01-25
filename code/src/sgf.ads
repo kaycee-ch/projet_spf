@@ -87,7 +87,7 @@ package sgf is
    -- exception
 
 
-   -- procedure liste_contenu_dir(noeud_courant : in out T_arbre; arbre : in out T_arbre; path : in String);
+   procedure liste_contenu(sgf : in out T_sgf; path : in T_PATH; dir_fils : in Boolean; all_info : in Boolean) ;
    --semantique : affichage du contenu, fichiers et repertoires, du repertoire designe par un chemin.
 
    -- pre :
