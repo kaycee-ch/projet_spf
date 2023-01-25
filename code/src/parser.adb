@@ -40,9 +40,11 @@ package body parser is
       la_cmd : T_COMMAND;
       tmp, tmp1 : Unbounded_String;
    Begin
-      la_cmd.commande := get_contenu(get_last(liste_mot));
-      enlever(liste_mot, get_contenu(get_last(liste_mot)));
-
+      liste_mot := inverser_liste(liste_mot);
+      -- print(liste_mot);
+      la_cmd.commande := get_contenu(liste_mot);
+      -- put(la_cmd.commande);
+      enlever(liste_mot, get_contenu(liste_mot));
       la_cmd.options := creer_liste_vide;
       la_cmd.arguments := creer_liste_vide;
 
@@ -87,11 +89,11 @@ package body parser is
       phrase := To_Unbounded_String("ls -l -a test.adb test.ads test.ali");
       l := split(phrase, ' ');
       cmd := parse_cmd(l);
-      put_line(cmd.commande);
+      -- put_line(cmd.commande);
       text_io.New_line;
-      print(cmd.arguments);
+      -- print(cmd.arguments);
       text_io.new_line;
-      print(cmd.options);
+      -- print(cmd.options);
    end test_cmd;
 
 

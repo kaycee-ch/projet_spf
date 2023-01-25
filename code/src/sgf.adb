@@ -64,50 +64,17 @@ package body sgf is
          put("/");
          Put(depiler(p));
       end loop;
+      new_line;
    end repo_courant;
 
 
    procedure change_dir(sgf : in out T_sgf; destination : in T_PATH) is
-      tmp_path : T_path := destination;
-      first : Unbounded_String;
-      tmp_ab : T_arbre;
-      tmp_data : T_info;
-      chemin_incorrect, isLast : Boolean := false;
-      chemin_invalide : EXCEPTION;
+      data : T_info;
+      new_noeud : T_arbre;
    Begin
-      -- Traiter la liste des étapes
-      tmp_data.name := liste_cmd.get_contenu(tmp_path.chemin);
-      tmp_ab := cherche(sgf.root, tmp_data);
-      -- put(tmp_data.name);
-      if get_contenu(tmp_ab).isFile then
-         isLast := liste_cmd.est_vide(liste_cmd.get_next(tmp_path.chemin_inv));
-      else
-         isLast := liste_cmd.est_vide(tmp_path.chemin_inv);
-      end if;
-      while not isLast and not chemin_incorrect loop
-         first := liste_cmd.get_contenu(tmp_path.chemin_inv);
-         if first = to_unbounded_string(".") then
-            set_arbre(sgf.noeud_courant, sgf.noeud_courant);
-         elsif first = ".." then
-            if not ab_est_vide(get_parent(sgf.noeud_courant)) then
-               set_arbre(get_parent(sgf.noeud_courant), sgf.noeud_courant);
-            else
-               set_arbre(sgf.noeud_courant, sgf.noeud_courant);
-            end if;
-         else
-            tmp_data.name := liste_cmd.get_contenu(liste_cmd.get_next(tmp_path.chemin_inv));
-            tmp_ab := cherche(sgf.root, tmp_data);
-            if not isLast then-- liste_cmd.contient(liste_cmd.get_enfants(noeud_courant), tmp_ab) then
-               set_arbre(tmp_ab, sgf.noeud_courant);
-            else
-               chemin_incorrect := true;
-            end if;
-            liste_cmd.enlever(tmp_path.chemin_inv, first);
-         end if;
-      end loop;
-      if chemin_incorrect then
-         raise chemin_invalide;
-      end if;
+      data.name := liste_cmd.get_contenu(destination.chemin);
+      set_arbre(cherche(sgf.root, data), sgf.noeud_courant);
+      -- put(get_contenu(sgf.noeud_courant).name);
       Put_Line("Directory has been changed");
    end change_dir;
 
@@ -146,7 +113,7 @@ package body sgf is
          Put_Line("File created");
       else
          Put_Line("Folder created");
-         end if;
+      end if;
    end creer_fichier_dossier;
 
 
@@ -183,6 +150,16 @@ package body sgf is
       Put_Line("Deleted");
    end supp_fichier_dossier;
 
+
+   procedure affiche_fichier(sgf : in out T_sgf; path : in T_path) is
+      tmp, data : T_info;
+      ab_tmp : T_arbre;
+   Begin
+      tmp.name := liste_cmd.get_contenu(liste_cmd.get_last(path.chemin));
+      set_arbre(cherche(sgf.root, tmp), ab_tmp);
+      data.name := liste_cmd.get_contenu(path.chemin);
+      Put_Line(data.contenu);
+   end affiche_fichier;
 
    procedure archive_dir (sgf : in out T_sgf; path : in T_PATH) is
       data, tmp : T_info;

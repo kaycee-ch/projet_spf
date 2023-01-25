@@ -10,7 +10,7 @@ procedure test_parser is
 
 
 Begin
-   --test_cmd;
-   phrase := (To_Unbounded_String("/home/kaycee/n7/prog"));
-   path := traiter(phrase);
+   test_cmd;
+   -- phrase := (To_Unbounded_String("/home/kaycee/n7/prog"));
+   -- path := traiter(phrase);
 end test_parser;

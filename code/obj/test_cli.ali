@@ -14,7 +14,7 @@ RV NO_NESTED_FINALIZATION
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_cli%b		test_cli.adb		4efb53af NE OO SU IL
+U test_cli%b		test_cli.adb		ce07fcc6 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -47,14 +47,14 @@ D a-tiunio.ads		20210520051129 759c6b0c ada.text_io.unbounded_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D cli.ads		20230125220744 9f02dc1b cli%s
 D file_gen.ads		20230118020043 7fb869e8 file_gen%s
-D ihm.ads		20230125195219 d266e06a ihm%s
+D ihm.ads		20230125233244 460c14bf ihm%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
 D p_arbre.ads		20230124195440 7303479d p_arbre%s
 D p_liste_gen.ads	20230124135659 6c718cbb p_liste_gen%s
 D parser.ads		20230125220744 fbd468e0 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
-D sgf.ads		20230125194941 6573d070 sgf%s
+D sgf.ads		20230125233749 71e58bcc sgf%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -100,11 +100,11 @@ X 18 cli.ads
 4K9*CLI 14e8 51|4w6 4r15
 9U14*afficher_menu 51|12s4
 X 20 ihm.ads
-4K9*IHM 9e8 51|5w6 5r15
+5K9*IHM 11e8 51|5w6 5r15
 X 25 parser.ads
 6K9*parser 42e11 51|3w6 3r18
 X 27 sgf.ads
-7K9*sgf 131e8 51|6w6 6r15
+7K9*sgf 132e8 51|6w6 6r15
 9X4*chemin_invalide 51|16r9
 23R9*T_sgf 27e17 51|10r15
 X 28 system.ads

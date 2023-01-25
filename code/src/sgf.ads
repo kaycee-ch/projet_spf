@@ -86,6 +86,7 @@ package sgf is
    -- post :
    -- exception
 
+   procedure affiche_fichier(sgf : in out T_sgf; path : in T_path);
 
    procedure liste_contenu(sgf : in out T_sgf; path : in T_PATH; dir_fils : in Boolean; all_info : in Boolean) ;
    --semantique : affichage du contenu, fichiers et repertoires, du repertoire designe par un chemin.

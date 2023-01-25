@@ -16,7 +16,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U cli%b			cli.adb			c9db1814 NE OO PK IU
+U cli%b			cli.adb			4927b77d NE OO PK IU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -33,7 +33,7 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U cli%s			cli.ads			f9435e4c EE NE OO PK IU
+U cli%s			cli.ads			edd505f0 EE NE OO PK IU
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -60,14 +60,14 @@ D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D cli.ads		20230125220744 9f02dc1b cli%s
 D cli.adb		20230125223243 e3f0b82b cli%b
 D file_gen.ads		20230118020043 7fb869e8 file_gen%s
-D ihm.ads		20230125195219 d266e06a ihm%s
+D ihm.ads		20230125233244 460c14bf ihm%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
 D p_arbre.ads		20230124195440 7303479d p_arbre%s
 D p_liste_gen.ads	20230124135659 6c718cbb p_liste_gen%s
 D parser.ads		20230125220744 fbd468e0 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
-D sgf.ads		20230125194941 6573d070 sgf%s
+D sgf.ads		20230125233749 71e58bcc sgf%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -103,29 +103,29 @@ G r c none [afficher_menu cli 9 14 none] [repo_courant sgf 55 14 none]
 G r c none [afficher_menu cli 9 14 none] [traiter_path parser 38 13 none]
 G r c none [afficher_menu cli 9 14 none] [creer_fichier_dossier sgf 65 14 none]
 G r c none [afficher_menu cli 9 14 none] [change_dir sgf 83 14 none]
-G r c none [afficher_menu cli 9 14 none] [liste_contenu sgf 90 14 none]
-G r c none [afficher_menu cli 9 14 none] [supp_fichier_dossier sgf 104 14 none]
-G r c none [afficher_menu cli 9 14 none] [archive_dir sgf 124 14 none]
+G r c none [afficher_menu cli 9 14 none] [liste_contenu sgf 91 14 none]
+G r c none [afficher_menu cli 9 14 none] [supp_fichier_dossier sgf 105 14 none]
+G r c none [afficher_menu cli 9 14 none] [archive_dir sgf 125 14 none]
 G r s t_command [afficher_menu cli 9 14 none] [t_commandIP parser 21 9 none]
 G r l t_command [afficher_menu cli 9 14 none] [t_commandDI parser 21 9 none]
 G r k t_command [afficher_menu cli 9 14 none] [t_commandDF parser 21 9 none]
 G r c none [afficher_menu cli 9 14 none] [traiter_cmd parser 40 13 none]
 G r j t_command [afficher_menu cli 9 14 none] [t_commandDA parser 21 9 none]
-G r c none [afficher_menu cli 9 14 none] [traiter_cmd ihm 6 14 none]
+G r c none [afficher_menu cli 9 14 none] [traiter_cmd ihm 7 14 none]
 G r s t_command [saisie_libre cli 10 14 none] [t_commandIP parser 21 9 none]
 G r l t_command [saisie_libre cli 10 14 none] [t_commandDI parser 21 9 none]
 G r k t_command [saisie_libre cli 10 14 none] [t_commandDF parser 21 9 none]
 G r c none [saisie_libre cli 10 14 none] [traiter_cmd parser 40 13 none]
 G r j t_command [saisie_libre cli 10 14 none] [t_commandDA parser 21 9 none]
-G r c none [saisie_libre cli 10 14 none] [traiter_cmd ihm 6 14 none]
+G r c none [saisie_libre cli 10 14 none] [traiter_cmd ihm 7 14 none]
 G r s t_path [traiter_choix cli 11 14 none] [t_pathIP parser 14 9 none]
 G r c none [traiter_choix cli 11 14 none] [repo_courant sgf 55 14 none]
 G r c none [traiter_choix cli 11 14 none] [traiter_path parser 38 13 none]
 G r c none [traiter_choix cli 11 14 none] [creer_fichier_dossier sgf 65 14 none]
 G r c none [traiter_choix cli 11 14 none] [change_dir sgf 83 14 none]
-G r c none [traiter_choix cli 11 14 none] [liste_contenu sgf 90 14 none]
-G r c none [traiter_choix cli 11 14 none] [supp_fichier_dossier sgf 104 14 none]
-G r c none [traiter_choix cli 11 14 none] [archive_dir sgf 124 14 none]
+G r c none [traiter_choix cli 11 14 none] [liste_contenu sgf 91 14 none]
+G r c none [traiter_choix cli 11 14 none] [supp_fichier_dossier sgf 105 14 none]
+G r c none [traiter_choix cli 11 14 none] [archive_dir sgf 125 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 18|2r6 2r33 19|1r6 1r23 3r6 3r33
 X 8 a-string.ads
@@ -170,8 +170,8 @@ X 19 cli.adb
 126r7 cmd{26|21R9} 132m10 132r10 133r30
 127r7 cmd_str{11|88R9} 130m32 132r29
 X 21 ihm.ads
-4K9*IHM 19|4w6 4r15 21|9e8
-6U14*traiter_cmd 19|133s10
+5K9*IHM 19|4w6 4r15 21|11e8
+7U14*traiter_cmd 19|133s10
 X 26 parser.ads
 6K9*parser 19|6w6 6r18 26|42e11
 14R9*T_PATH 19|54r21 26|18e14
@@ -180,15 +180,15 @@ X 26 parser.ads
 . 109s28 114s28
 40V13*traiter_cmd{21R9} 19|132s17
 X 28 sgf.ads
-7K9*sgf 18|1w6 1r15 19|5w6 5r15 95r13 100r13 115r13 28|131e8
+7K9*sgf 18|1w6 1r15 19|5w6 5r15 95r13 100r13 115r13 28|132e8
 23R9*T_sgf 18|9r44 10r43 11r45 19|10r44 52r45 125r43 28|27e17
 48U14*formatage_disque 19|24s7
 55U14*repo_courant 19|59s13
 65U14*creer_fichier_dossier 19|64s13 69s13 74s13
 83U14*change_dir 19|79s13
-90U14*liste_contenu 19|87s16 89s16
-104U14*supp_fichier_dossier 19|95s17 100s17
-124U14*archive_dir 19|115s17
+91U14*liste_contenu 19|87s16 89s16
+105U14*supp_fichier_dossier 19|95s17 100s17
+125U14*archive_dir 19|115s17
 X 29 system.ads
 67M9*Address
 X 36 s-memory.ads
