@@ -17,7 +17,9 @@ package sgf is
       contenu : Unbounded_String; -- := To_Unbounded_String("null");
    end record;
 
-   package P_sgf is new P_arbre(T_contenu => T_info);
+   function cmp_name (x : in T_info; y : in T_info) return Boolean;
+
+   package P_sgf is new P_arbre(T_contenu => T_info, is_equals => cmp_name);
    use P_sgf;
 
    TYPE T_sgf is record
@@ -30,20 +32,23 @@ package sgf is
    package P_pile is new pile_gen(un_type => Unbounded_String);
    use P_pile;
 
-   function cmp_name (x : in T_info; y : in T_info) return Boolean;
 
    procedure print_str (data : in T_info; indent : in Integer);
 
-   function cherche is new P_sgf.find(is_equals => cmp_name);
+   procedure print_all(data : in T_info; indent : In Integer);
 
-   procedure rm is new P_sgf.remove(chercher => cherche);
+   -- function cherche is new P_sgf.find;
+
+   -- procedure rm is new P_sgf.remove(chercher => cherche);
 
    procedure affiche is new P_sgf.print(afficher_noeud => print_str);
+
+   -- procedure find_child is new P_sgf.cherche_enfant;
 
    function is_equal (a : in T_arbre; b : in T_arbre) return Boolean;
 
 
-   arbre, noeud_courant : T_arbre;
+
 
    procedure formatage_disque (sgf : in out T_sgf);
    -- semantique : creation d'un SGF ne contenant que le dossier racine

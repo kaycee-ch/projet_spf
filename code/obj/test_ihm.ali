@@ -13,7 +13,7 @@ RV NO_NESTED_FINALIZATION
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_ihm%b		test_ihm.adb		c5eda30c NE OO SU IL
+U test_ihm%b		test_ihm.adb		3e7ac958 NE OO SU IL
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ihm%s			ihm.adb			ihm.ali
@@ -40,14 +40,14 @@ D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
 D a-tiunio.ads		20210520051129 759c6b0c ada.text_io.unbounded_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D file_gen.ads		20230118020043 7fb869e8 file_gen%s
-D ihm.ads		20230125195219 d266e06a ihm%s
+D ihm.ads		20230125233244 460c14bf ihm%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230124195440 7303479d p_arbre%s
+D p_arbre.ads		20230126110831 cec83eea p_arbre%s
 D p_liste_gen.ads	20230124135659 6c718cbb p_liste_gen%s
-D parser.ads		20230124135652 c2535d96 parser%s
+D parser.ads		20230125220744 fbd468e0 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
-D sgf.ads		20230125194941 6573d070 sgf%s
+D sgf.ads		20230126111059 33097b87 sgf%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -76,16 +76,16 @@ D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [test_ihm standard 6 11 none]
-G r s t_sgf [test_ihm standard 6 11 none] [t_sgfIP sgf 23 9 none]
-G r l t_sgf [test_ihm standard 6 11 none] [t_sgfDI sgf 23 9 none]
-G r k t_sgf [test_ihm standard 6 11 none] [t_sgfDF sgf 23 9 none]
+G r s t_sgf [test_ihm standard 6 11 none] [t_sgfIP sgf 25 9 none]
+G r l t_sgf [test_ihm standard 6 11 none] [t_sgfDI sgf 25 9 none]
+G r k t_sgf [test_ihm standard 6 11 none] [t_sgfDF sgf 25 9 none]
 X 19 ihm.ads
-4K9*IHM 9e8 50|3w6 3r15
+5K9*IHM 11e8 50|3w6 3r15
 X 24 parser.ads
-6K9*parser 39e11 50|1w6 1r18
+6K9*parser 42e11 50|1w6 1r18
 X 26 sgf.ads
-7K9*sgf 131e8 50|2w6 2r15 7r15
-23R9*T_sgf 27e17 50|7r19
+7K9*sgf 136e8 50|2w6 2r15 7r15
+25R9*T_sgf 29e17 50|7r19
 X 27 system.ads
 67M9*Address
 X 34 s-memory.ads
@@ -96,5 +96,5 @@ X 42 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
 X 50 test_ihm.adb
 6U11*test_ihm 6b11 11l5 11t13
-7r4 test_sgf{26|23R9}
+7r4 test_sgf{26|25R9}
 

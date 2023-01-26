@@ -18,7 +18,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U parser%b		parser.adb		8f2f28f7 NE OO PK IL
+U parser%b		parser.adb		69a22964 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -82,7 +82,7 @@ D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
 D p_liste_gen.ads	20230124135659 6c718cbb p_liste_gen%s
 D p_liste_gen.adb	20230124135715 70477a57 p_liste_gen%b
 D parser.ads		20230125220744 fbd468e0 parser%s
-D parser.adb		20230125225934 f41ef098 parser%b
+D parser.adb		20230126095117 1293f10b parser%b
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -144,7 +144,7 @@ G c Z s s [t_commandDF parser 21 9 none]
 G c Z s s [t_commandIP parser 21 9 none]
 G r i none [s parser 6 1 none] [p_liste_gen standard 5 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 25|1r6 1r33 26|2r6 2r33 3r6
+16K9*Ada 20e8 25|1r6 1r33 26|2r6 2r33 3r6 116r7 129r7
 X 6 a-inteio.ads
 18K13*Integer_Text_IO[17|46] 26|3w10
 X 9 a-string.ads
@@ -152,15 +152,15 @@ X 9 a-string.ads
 X 12 a-strunb.ads
 83K21*Unbounded 765e26 25|1w18 1r45 26|2w18 2r45
 88R9*Unbounded_String<5|43R9> 744e15 25|9r51 22r18 28r33 32r31 38r39 40r37
-. 26|9r33 18r31 21r20 41r19 84r16 101r39 115r37
+. 26|9r33 18r31 21r20 41r19 89r16 106r39 122r37
 93V13*Length{natural} 26|11s61 24s15 54s45
-104V13*To_Unbounded_String{88R9} 26|89s17
+104V13*To_Unbounded_String{88R9} 26|94s17
 144U14*Append 26|26s10
-192V13*Element{character} 26|11s13 25s10 52s13 72s10
+192V13*Element{character} 26|11s13 25s10 52s13 74s10
 217V13*Unbounded_Slice{88R9} 26|32s39 54s21
 X 16 a-textio.ads
-58K13*Text_IO 725e16 25|2r6
-262U14*New_Line 26|93s15 95s15
+58K13*Text_IO 725e16 25|2r6 26|116r11 129r11
+262U14*New_Line 26|98s15 100s15 116s19 129s19
 X 18 a-tiunio.ads
 25K21*Unbounded_IO 61e29 25|2w14 2r40 26|1w14 1r40
 41U14*Put_Line=43:42 25|12r42
@@ -168,66 +168,67 @@ X 23 p_liste_gen.ads
 2+9 T_type 25|9r41
 5k9*P_liste_gen 86e16 25|3w6 9r29
 7P9*T_liste 25|15r16[9] 16r20[9] 23r17[9] 24r19[9] 30r42[9] 32r83[9] 34r39[9]
-. 26|18r83[25|9] 19r21[25|9] 39r42[25|9] 66r39[25|9] 68r13[25|9] 86r11[25|9]
-. 103r15[25|9] 117r11[25|9]
+. 26|18r83[25|9] 19r21[25|9] 39r42[25|9] 68r39[25|9] 70r13[25|9] 91r11[25|9]
+. 108r15[25|9] 124r11[25|9]
 9V13*creer_liste_vide{7P9[25|9]} 26|23s22[25|9] 48s25[25|9] 49s27[25|9]
 15V13*est_vide{boolean} 26|51s17[25|9]
 22U14*inserer_en_tete 26|32s10[25|9] 55s13[25|9] 58s13[25|9]
 30u14*afficher_liste 25|12r27[9]
-57V13*inverser_liste{7P9[25|9]} 26|43s20[25|9] 78s29[25|9]
+57V13*inverser_liste{7P9[25|9]} 26|35s14[25|9] 62s25[25|9] 63s27[25|9] 82s29[25|9]
 60U14*enlever 26|47s7[25|9] 56s13[25|9] 59s13[25|9]
 66V13*get_contenu{12|88R9} 26|45s26[25|9] 47s26[25|9] 52s21[25|9] 53s20[25|9]
-. 58s47[25|9] 59s32[25|9] 72s18[25|9]
-70V13*get_last{7P9[25|9]} 26|72s30[25|9]
+. 58s47[25|9] 59s32[25|9] 74s18[25|9]
+70V13*get_last{7P9[25|9]} 26|74s30[25|9]
 X 25 parser.ads
-6K9*parser 42l5 42e11 26|6b14 125l5 125t11
+6K9*parser 42l5 42e11 26|6b14 135l5 135t11
 9K12*liste_cmd[23|5] 10r8
 12U14*print[23|30]
-14R9*T_PATH 18e14 34r55 38r64 26|66r55 67r17 101r64 102r14
-15p7*chemin{23|7P9[9]} 26|77m15
-16p7*chemin_inv{23|7P9[9]} 26|78m15
-17b7*isAbsolute{boolean} 26|73m18 75m18
-21R9*T_COMMAND 25e14 30r58 40r62 26|39r58 40r16 85r13 115r62 116r13
+14R9*T_PATH 18e14 34r55 38r64 26|68r55 69r17 106r64 107r14
+15p7*chemin{23|7P9[9]} 26|79m15
+16p7*chemin_inv{23|7P9[9]} 26|82m15
+17b7*isAbsolute{boolean} 26|75m18 77m18
+21R9*T_COMMAND 25e14 30r58 40r62 26|39r58 40r16 90r13 122r62 123r13
 22r7*commande{12|88R9} 26|45m14
-23p7*options{23|7P9[9]} 26|48m14 55m36
-24p7*arguments{23|7P9[9]} 26|49m14 58m36
+23p7*options{23|7P9[9]} 26|48m14 55m36 62m14 62r47
+24p7*arguments{23|7P9[9]} 26|49m14 58m36 63m14 63r49
 28V13*i_char{integer} 28>21 28=51 28>75 26|9b13 15l8 15t14 31s17
 28r21 phrase{12|88R9} 26|9b21 11r21 11r68
 28i51 index{integer} 26|9b51 11r29 11r53 12m10 12r19 14r14
 28e75 char{character} 26|9b75 11r39
-30V13*parse_cmd{21R9} 30=23 26|39b13 63l8 63t17 91s14 120s14
-30p23 liste_mot{23|7P9[9]} 26|39b23 43m7 43r35 45r38 47m15 47r38 51r26 52r33
-. 53r32 56m21 58r59 59m21 59r44
-32V13*split{23|7P9[9]} 32>19 32>49 26|18b13 36l8 36t13 90s12 107s12 119s12
+30V13*parse_cmd{21R9} 30=23 26|39b13 65l8 65t17 127s14
+30p23 liste_mot{23|7P9[9]} 26|39b23 45r38 47m15 47r38 51r26 52r33 53r32 56m21
+. 58r59 59m21 59r44
+32V13*split{23|7P9[9]} 32>19 32>49 26|18b13 36l8 36t13 112s12 126s12
 32r19 phrase{12|88R9} 26|18b19 21r40 24r22 25r18
 32e49 separateur{character} 26|18b49 25r35 26r29 31r41
-34V13*parse_path{14R9} 34>24 26|66b13 80l8 80t18 109s15
-34p24 liste_mot{23|7P9[9]} 26|66b24 70r14 77r25 78r44
-36U14*test_cmd 26|83b14 97l8 97t16
-38V13*traiter_path{14R9} 38>27 26|101b13 112l8 112t20
-38r27 phrase{12|88R9} 26|101b27 107r18
-40V13*traiter_cmd{21R9} 40>25 26|115b13 122l8 122t19
-40r25 phrase{12|88R9} 26|115b25 119r18
+34V13*parse_path{14R9} 34>24 26|68b13 85l8 85t18 114s15
+34p24 liste_mot{23|7P9[9]} 26|68b24 72r14 79r25 82r44
+36U14*test_cmd 26|88b14 102l8 102t16
+38V13*traiter_path{14R9} 38>27 26|106b13 119l8 119t20
+38r27 phrase{12|88R9} 26|106b27 112r18
+40V13*traiter_cmd{21R9} 40>25 26|96s14 122b13 132l8 132t19
+40r25 phrase{12|88R9} 26|122b25 126r18
 X 26 parser.adb
-19p7 liste_split{23|7P9[25|9]} 23m7 32m26 32r26 35r14
+19p7 liste_split{23|7P9[25|9]} 23m7 32m26 32r26 35r29
 20i7 deb{integer} 28m7 29r13 30r17 32r67 33m10
 20i12 fin{integer} 31m10 32r72 33r17
 20i17 long{integer} 24m7 25r26 29r20
 20i23 tmp{integer} 30m10 31m36 31r36
 21r7 new_phrase{12|88R9} 26m17 26r17 31r24 32r55
-40r7 la_cmd{25|21R9} 45m7 48m7 49m7 55m29 55r29 58m29 58r29 62r14
+40r7 la_cmd{25|21R9} 45m7 48m7 49m7 55m29 55r29 58m29 58r29 62m7 62r40 63m7
+. 63r42 64r14
 41r7 tmp{12|88R9} 53m13 54r37 54r52 56r32
 41r12 tmp1{12|88R9} 54m13 55r45
-67r7 le_path{25|14R9} 73m10 75m10 77m7 78m7 79r14
-68p7 tmp{23|7P9[25|9]} 70m7 72r39
-84r7 phrase{12|88R9} 89m7 90r18
-85r7 cmd{25|21R9} 91m7 91r7
-86p7 l{23|7P9[25|9]} 90m7 91m24 91r24
-102r7 path{25|14R9} 109m7 111r14
-103p7 l{23|7P9[25|9]} 107m7 109r26
-103p10 l2{23|7P9[25|9]}
-116r7 cmd{25|21R9} 120m7 120r7 121r14
-117p7 l{23|7P9[25|9]} 119m7 120m24 120r24
+69r7 le_path{25|14R9} 75m10 77m10 79m7 82m7 84r14
+70p7 tmp{23|7P9[25|9]} 72m7 74r39
+89r7 phrase{12|88R9} 94m7 96r26
+90r7 cmd{25|21R9} 96m7 96r7
+91p7 l{23|7P9[25|9]}
+107r7 path{25|14R9} 114m7 118r14
+108p7 l{23|7P9[25|9]} 112m7 114r26
+108p10 l2{23|7P9[25|9]}
+123r7 cmd{25|21R9} 127m7 127r7 131r14
+124p7 l{23|7P9[25|9]} 126m7 127m24 127r24
 X 27 system.ads
 67M9*Address
 X 34 s-memory.ads
@@ -237,5 +238,5 @@ X 34 s-memory.ads
 X 42 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
 X 51 text_io.ads
-24K9*Text_IO=24:29 25|2w6 2r32 26|1w6 1r32 4w6 93r7 95r7
+24K9*Text_IO=24:29 25|2w6 2r32 26|1w6 1r32 4w6 98r7 100r7
 

@@ -32,7 +32,7 @@ package body parser is
          inserer_en_tete(liste_split, Unbounded_Slice(new_phrase, deb, fin - 1));
          deb := fin + 1;
       end loop;
-      return liste_split;
+      return inverser_liste(liste_split);
    end split;
 
 
@@ -40,7 +40,7 @@ package body parser is
       la_cmd : T_COMMAND;
       tmp, tmp1 : Unbounded_String;
    Begin
-      liste_mot := inverser_liste(liste_mot);
+      -- liste_mot := inverser_liste(liste_mot);
       -- print(liste_mot);
       la_cmd.commande := get_contenu(liste_mot);
       -- put(la_cmd.commande);
@@ -59,6 +59,8 @@ package body parser is
             enlever(liste_mot, get_contenu(liste_mot));
          end if;
       end loop;
+      la_cmd.options := inverser_liste(la_cmd.options);
+      la_cmd.arguments := inverser_liste(la_cmd.arguments);
       return la_cmd;
    end parse_cmd;
 
@@ -75,7 +77,10 @@ package body parser is
          le_path.isAbsolute := False;
       end if;
       le_path.chemin := liste_mot;
+
+      -- print(le_path.chemin);
       le_path.chemin_inv := inverser_liste(liste_mot);
+      -- print(le_path.chemin_inv);
       return le_path;
    end parse_path;
 
@@ -87,8 +92,8 @@ package body parser is
    Begin
       -- Get_Line();
       phrase := To_Unbounded_String("ls -l -a test.adb test.ads test.ali");
-      l := split(phrase, ' ');
-      cmd := parse_cmd(l);
+      -- l := split(phrase, ' ');
+      cmd := traiter_cmd(phrase);
       -- put_line(cmd.commande);
       text_io.New_line;
       -- print(cmd.arguments);
@@ -108,6 +113,8 @@ package body parser is
       -- print(l2);
       path := parse_path(l);
       -- print(path.chemin);
+      ada.text_io.new_line;
+      -- print(path.chemin_inv);
       return path;
    end traiter_path;
 
@@ -118,6 +125,9 @@ package body parser is
    Begin
       l := split(phrase, ' ');
       cmd := parse_cmd(l);
+      -- print(cmd.options);
+      ada.text_io.new_line;
+      -- print(cmd.arguments);
       return cmd;
    end traiter_cmd;
 

@@ -16,7 +16,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U cli%b			cli.adb			4927b77d NE OO PK IU
+U cli%b			cli.adb			d0ff3043 NE OO PK IU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -33,7 +33,7 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U cli%s			cli.ads			edd505f0 EE NE OO PK IU
+U cli%s			cli.ads			e7bfdfeb EE NE OO PK IU
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -57,17 +57,17 @@ D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
 D a-tiunio.ads		20210520051129 759c6b0c ada.text_io.unbounded_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
-D cli.ads		20230125220744 9f02dc1b cli%s
-D cli.adb		20230125223243 e3f0b82b cli%b
+D cli.ads		20230126141840 557ced22 cli%s
+D cli.adb		20230126142414 c10c3838 cli%b
 D file_gen.ads		20230118020043 7fb869e8 file_gen%s
-D ihm.ads		20230125233244 460c14bf ihm%s
+D ihm.ads		20230126141157 f742c989 ihm%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230124195440 7303479d p_arbre%s
+D p_arbre.ads		20230126112036 3d2f2671 p_arbre%s
 D p_liste_gen.ads	20230124135659 6c718cbb p_liste_gen%s
 D parser.ads		20230125220744 fbd468e0 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
-D sgf.ads		20230125233749 71e58bcc sgf%s
+D sgf.ads		20230126140050 b1f160ee sgf%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -94,101 +94,62 @@ D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
 D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
+G c Z s b [affichage_deb cli 8 13 none]
 G c Z s b [afficher_menu cli 9 14 none]
 G c Z s b [saisie_libre cli 10 14 none]
-G c Z s b [traiter_choix cli 11 14 none]
-G r c none [afficher_menu cli 9 14 none] [formatage_disque sgf 48 14 none]
-G r s t_path [afficher_menu cli 9 14 none] [t_pathIP parser 14 9 none]
-G r c none [afficher_menu cli 9 14 none] [repo_courant sgf 55 14 none]
-G r c none [afficher_menu cli 9 14 none] [traiter_path parser 38 13 none]
-G r c none [afficher_menu cli 9 14 none] [creer_fichier_dossier sgf 65 14 none]
-G r c none [afficher_menu cli 9 14 none] [change_dir sgf 83 14 none]
-G r c none [afficher_menu cli 9 14 none] [liste_contenu sgf 91 14 none]
-G r c none [afficher_menu cli 9 14 none] [supp_fichier_dossier sgf 105 14 none]
-G r c none [afficher_menu cli 9 14 none] [archive_dir sgf 125 14 none]
-G r s t_command [afficher_menu cli 9 14 none] [t_commandIP parser 21 9 none]
-G r l t_command [afficher_menu cli 9 14 none] [t_commandDI parser 21 9 none]
-G r k t_command [afficher_menu cli 9 14 none] [t_commandDF parser 21 9 none]
-G r c none [afficher_menu cli 9 14 none] [traiter_cmd parser 40 13 none]
-G r j t_command [afficher_menu cli 9 14 none] [t_commandDA parser 21 9 none]
-G r c none [afficher_menu cli 9 14 none] [traiter_cmd ihm 7 14 none]
+G c Z s b [menu cli 11 14 none]
 G r s t_command [saisie_libre cli 10 14 none] [t_commandIP parser 21 9 none]
 G r l t_command [saisie_libre cli 10 14 none] [t_commandDI parser 21 9 none]
 G r k t_command [saisie_libre cli 10 14 none] [t_commandDF parser 21 9 none]
+G r c none [saisie_libre cli 10 14 none] [formatage_disque sgf 51 14 none]
 G r c none [saisie_libre cli 10 14 none] [traiter_cmd parser 40 13 none]
 G r j t_command [saisie_libre cli 10 14 none] [t_commandDA parser 21 9 none]
 G r c none [saisie_libre cli 10 14 none] [traiter_cmd ihm 7 14 none]
-G r s t_path [traiter_choix cli 11 14 none] [t_pathIP parser 14 9 none]
-G r c none [traiter_choix cli 11 14 none] [repo_courant sgf 55 14 none]
-G r c none [traiter_choix cli 11 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_choix cli 11 14 none] [creer_fichier_dossier sgf 65 14 none]
-G r c none [traiter_choix cli 11 14 none] [change_dir sgf 83 14 none]
-G r c none [traiter_choix cli 11 14 none] [liste_contenu sgf 91 14 none]
-G r c none [traiter_choix cli 11 14 none] [supp_fichier_dossier sgf 105 14 none]
-G r c none [traiter_choix cli 11 14 none] [archive_dir sgf 125 14 none]
+G r c none [menu cli 11 14 none] [traiter_choix ihm 11 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 18|2r6 2r33 19|1r6 1r23 3r6 3r33
 X 8 a-string.ads
 16K13*Strings 35e16 18|2r10 2r37 19|3r10 3r37
 X 11 a-strunb.ads
 83K21*Unbounded 765e26 18|2w18 2r45 19|3w18 3r45
-88R9*Unbounded_String<5|43R9> 744e15 19|53r14 127r17
+88R9*Unbounded_String<5|43R9> 744e15 19|54r17
 X 15 a-textio.ads
 58K13*Text_IO 725e16 19|1w10 1r27
-262U14*New_Line 19|44s13
-271U14*Skip_Line 19|17s7 62s42 67s42 72s42 77s42 82s42 85s21 93s42 98s42
-. 103s42 108s42 113s42 131s10
-379U14*Get 19|16s7 42s13 85s13
-506U14*Put_Line 19|15s7 21s25 25s7 28s13 29s13 30s13 31s13 32s13 33s13 34s13
-. 35s13 36s13 37s13 38s13 39s13 40s13 61s13 66s13 71s13 76s13 81s13 84s13
-. 92s13 97s13 102s13 107s13 112s13 117s13 120s13
+271U14*Skip_Line 19|16s7 42s19 59s10
+379U14*Get 19|15s7 42s7
+506U14*Put_Line 19|14s7 20s25 28s7 29s7 30s7 31s7 32s7 33s7 34s7 35s7 36s7
+. 37s7 38s7 39s7 40s7 41s7
 X 16 a-tiunio.ads
-25K21*Unbounded_IO 61e29 19|2w14 62r13 67r13 72r13 77r13 82r13 93r13 98r13
-. 103r13 108r13 113r13 130r10
-57U14*Get_Line=59:42 19|62s26 67s26 72s26 77s26 82s26 93s26 98s26 103s26
-. 108s26 113s26 130s23
+25K21*Unbounded_IO 61e29 19|2w14 58r10
+57U14*Get_Line=59:42 19|58s23
 X 18 cli.ads
-4K9*CLI 14l5 14e8 19|8b14 138l5 138t8
-6b4*quitte{boolean} 19|27r20 118m13
-9U14*afficher_menu 9=28 19|10b14 49l8 49t21
-9r28 le_sgf{28|23R9} 19|10b28 24m24 43m27 47m23
-10U14*saisie_libre 10=27 19|47s10 125b14 135l8 135t20
-10r27 le_sgf{28|23R9} 19|125b27 133m22
-11U14*traiter_choix 11=29 11>52 19|43s13 52b14 122l8 122t21
-11r29 le_sgf{28|23R9} 19|52b29 59m26 64m35 69m35 74m35 79m24 87m30 89m30
-. 95m38 100m38 115m29
-11e52 choix{character} 19|52b52 57r12
+4K9*CLI 14l5 14e8 19|8b14 66l5 66t8
+6b4*quitte{boolean}
+8V13*affichage_deb{boolean} 19|10b13 23l8 23t21
+9U14*afficher_menu 9<29 19|26b14 43l8 43t21
+9e29 choix{character} 19|26b29 42m11
+10U14*saisie_libre 10=27 19|52b14 63l8 63t20
+10r27 le_sgf{28|25R9} 19|52b27 57m27 61m22
+11U14*menu 11=19 11>42 19|46b14 49l8 49t12
+11r19 le_sgf{28|25R9} 19|46b19 48m21
+11e42 choix{character} 19|46b42 48r29
 X 19 cli.adb
-12e7 choix_affichage{character} 16m11 18r12
-12e24 choix_action{character} 42m17 43r35
-13b7 menu{boolean} 19m22 20m22 26r10
-53r7 path{11|88R9} 62m35 63r41 67m35 68r41 72m35 73r41 77m35 78r41 82m35
-. 83r41 93m35 94r41 98m35 99r41 103m35 104r41 108m35 109r41 113m35 114r41
-54r7 path_traite{26|14R9} 63m13 64r43 68m13 69r43 73m13 74r43 78m13 79r32
-. 83m13 87r38 89r38 94m13 95r46 99m13 100r46 104m13 109m13 114m13 115r37
-55e7 y{character} 85m17 86r16
-126r7 cmd{26|21R9} 132m10 132r10 133r30
-127r7 cmd_str{11|88R9} 130m32 132r29
+11e7 choix_affichage{character} 15m11 17r12
+12b7 menu{boolean} 18m22 19m22 22r14
+53r7 cmd{26|21R9} 60m10 60r10 61r30
+54r7 cmd_str{11|88R9} 58m32 60r29
 X 21 ihm.ads
-5K9*IHM 19|4w6 4r15 21|11e8
-7U14*traiter_cmd 19|133s10
+5K9*IHM 19|4w6 4r15 21|13e8
+7U14*traiter_cmd 19|61s10
+11U14*traiter_choix 19|48s7
 X 26 parser.ads
 6K9*parser 19|6w6 6r18 26|42e11
-14R9*T_PATH 19|54r21 26|18e14
-21R9*T_COMMAND 19|126r13 26|25e14
-38V13*traiter_path{14R9} 19|63s28 68s28 73s28 78s28 83s28 94s28 99s28 104s28
-. 109s28 114s28
-40V13*traiter_cmd{21R9} 19|132s17
+21R9*T_COMMAND 19|53r13 26|25e14
+40V13*traiter_cmd{21R9} 19|60s17
 X 28 sgf.ads
-7K9*sgf 18|1w6 1r15 19|5w6 5r15 95r13 100r13 115r13 28|132e8
-23R9*T_sgf 18|9r44 10r43 11r45 19|10r44 52r45 125r43 28|27e17
-48U14*formatage_disque 19|24s7
-55U14*repo_courant 19|59s13
-65U14*creer_fichier_dossier 19|64s13 69s13 74s13
-83U14*change_dir 19|79s13
-91U14*liste_contenu 19|87s16 89s16
-105U14*supp_fichier_dossier 19|95s17 100s17
-125U14*archive_dir 19|115s17
+7K9*sgf 18|1w6 1r15 19|5w6 5r15 28|135e8
+25R9*T_sgf 18|10r43 11r35 19|46r35 52r43 28|29e17
+51U14*formatage_disque 19|57s10
 X 29 system.ads
 67M9*Address
 X 36 s-memory.ads

@@ -1,1 +1,0 @@
-test_parser.adb:9:04: warning: variable "path" is never read and never assigned [-gnatwv]

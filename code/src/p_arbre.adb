@@ -86,7 +86,7 @@ package body p_arbre is
       addr : T_arbre;
       l_addr : liste_elem.T_liste;
    Begin
-      addr := chercher(ab, data);
+      addr := find(ab, data);
       if addr /= null and then (not liste_elem.est_vide(addr.all.parent.all.enfants)) then
          l_addr := liste_elem.rechercher(addr.all.parent.all.enfants, addr);
          liste_elem.enlever(addr.all.parent.all.enfants, liste_elem.get_contenu(l_addr)); -- = addr
@@ -196,6 +196,32 @@ package body p_arbre is
    Begin
       ab.all.enfants := liste_elem.creer_liste_vide;
    end supp_enfants;
+
+
+
+   function cherche_enfant(ab : in T_arbre; data : in T_contenu) return T_arbre is
+      tmp_enf : liste_elem.T_liste;
+      liste_vide : EXCEPTION;
+      present : Boolean;
+   Begin
+      tmp_enf := ab.all.enfants;
+      present := false;
+      while not liste_elem.est_vide(tmp_enf) and not present loop
+         if is_equals(liste_elem.get_contenu(tmp_enf).all.f_info, data) then
+            present := True;
+         else
+            tmp_enf := liste_elem.get_next(tmp_enf);
+         end if;
+      end loop;
+
+      if present then
+         return liste_elem.get_contenu(tmp_enf);
+      else
+         return null;
+      end if;
+
+
+   end cherche_enfant;
 
 
 end p_arbre;

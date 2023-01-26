@@ -100,4 +100,80 @@ package body IHM is
    end help;
 
 
+   procedure traiter_choix (le_sgf : in out T_sgf; choix : in Character) is
+      path : Unbounded_String;
+      path_traite : T_path;
+      y : character;
+      quitte : Boolean;
+   Begin
+      case choix is
+         when 'a' =>
+            repo_courant(le_sgf);
+         when 'b' =>
+            Put_Line("What is the file path (absolute) ?");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            creer_fichier_dossier(le_sgf, path_traite, True, False);
+         when 'c' =>
+            Put_Line("What is the file path (absolute) ?");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            creer_fichier_dossier(le_sgf, path_traite, True, True);
+         when 'd' =>
+            Put_Line("What is the folder path (absolute) ?");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            creer_fichier_dossier(le_sgf, path_traite, False, False);
+         when 'e' =>
+            Put_Line("What is the destination path (absolute)?");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            change_dir(le_sgf, path_traite);
+         when 'f' =>
+            Put_Line("What is the directory path (absolute) ? ");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            Put_Line("List everything in the children directory ? Y/N");
+            get(y); skip_line;
+            if y = 'y' then
+               liste_contenu(le_sgf, path_traite, true, false);
+            else
+               liste_contenu(le_sgf, path_traite, false, false);
+            end if;
+         when 'g' =>
+            Put_Line("What is the file path (absolute) ?");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            sgf.supp_fichier_dossier(le_sgf, path_traite);
+         when 'h' =>
+            Put_Line("What is the folder path (absolute) ?");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            sgf.supp_fichier_dossier(le_sgf, path_traite);
+         when 'i' =>
+            Put_Line("What is the current file path (absolute) ?");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            -- sgf.deplacer(le_sgf, path_traite, path_traite_dest);
+         when 'j' =>
+            Put_Line("What is the folder path (absolute)");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            --sgf.copy(le_sgf, path_traite, path_traite_dest);
+         when 'k' =>
+            Put_Line("What is the current file path (absolute) ?");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            sgf.archive_dir(le_sgf, path_traite);
+         when 'l' =>
+            Put_line("Exiting, goodbye");
+            quitte := true;
+         when 'z' =>
+            sgf.formatage_disque(le_sgf);
+            Put_Line("Disk formatted");
+         when others =>
+            Put_Line("Commande Inconnue");
+      end case;
+   end traiter_choix;
+
 end IHM;

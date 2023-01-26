@@ -280,8 +280,8 @@ package body sgf is
       -- creer_fichier_dossier(sgf, path, false, false);
       -- archive_dir(sgf, path);
       -- supp_fichier_dossier(sgf, path);
-      -- liste_contenu(sgf, path, true, true);
-      change_dir(sgf, path);
+      liste_contenu(sgf, path, true, true);
+      -- change_dir(sgf, path);
       -- data.name := To_Unbounded_String("sgf.gpr");
       -- tmp := cherche(arbre, data);
       -- put(get_contenu(tmp).contenu);

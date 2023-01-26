@@ -8,4 +8,6 @@ package IHM is
 
    procedure help(commande : in Unbounded_String);
 
+   procedure traiter_choix (le_sgf : in out T_sgf; choix : in Character);
+
 end IHM;

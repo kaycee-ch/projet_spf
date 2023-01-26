@@ -6,12 +6,27 @@ with ihm; use ihm;
 with sgf; use sgf;
 
 procedure test_cli is
-   -- choix : Character;
+   menu : Boolean;
    test_sgf : T_sgf;
+   choix : Character;
+
+   procedure launch(test_sgf : in out T_sgf) is
+   Begin
+      if menu then
+         afficher_menu(choix);
+         traiter_choix(test_sgf, choix);
+      else
+         saisie_libre(test_sgf);
+      end if;
+   end launch;
+
 Begin
-   afficher_menu(test_sgf);
-   -- traiter_choix(test_sgf, choix);
+   menu := affichage_deb;
+   launch(test_sgf);
+
 EXCEPTION
-   WHEN Constraint_Error => Put("Parsing problem.");
-   WHEN chemin_invalide => Put("Invalid Path");
+   WHEN Constraint_Error => Put_Line("Parsing problem.");
+      launch(test_sgf);
+   WHEN chemin_invalide => Put_Line("Invalid Path");
+      launch(test_sgf);
 end test_cli;

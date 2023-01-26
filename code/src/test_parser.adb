@@ -11,6 +11,6 @@ procedure test_parser is
 
 Begin
    test_cmd;
-   -- phrase := (To_Unbounded_String("/home/kaycee/n7/prog"));
-   -- path := traiter(phrase);
+   phrase := (To_Unbounded_String("/home/kaycee/n7/prog"));
+   path := traiter_path(phrase);
 end test_parser;

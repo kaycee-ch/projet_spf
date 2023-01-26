@@ -3,6 +3,7 @@ with file_gen;
 
 generic
    TYPE T_contenu is private;
+    with function is_equals(x : in T_contenu; y : in T_contenu) return Boolean;
 
 package p_arbre is
 
@@ -21,15 +22,21 @@ package p_arbre is
 
    -- procedure afficher (ab : in T_arbre);
 
-   generic
-      with function is_equals(x : in T_contenu; y : in T_contenu) return Boolean;
+
+
+   function cherche_enfant(ab : in T_arbre; data : in T_contenu) return T_arbre;
+
+
    function find(ab : in T_arbre; data : in T_contenu) return T_arbre;
    -- pre : ab /= null
 
+
+
+
    procedure move (ab : in out T_arbre; dest : in out T_arbre; data : in T_contenu);
 
-   generic
-      with function chercher(ab : in T_arbre; data : in T_contenu) return T_arbre;
+
+
    procedure remove (ab : in out T_arbre; data : in T_contenu);
 
    -- procedure remove_sa (ab : in out T_arbre);
