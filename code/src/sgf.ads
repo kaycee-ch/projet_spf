@@ -2,6 +2,7 @@ with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with P_arbre;
 with parser; use parser;
 with pile_gen;
+with p_liste_gen;
 
 
 package sgf is
@@ -12,9 +13,9 @@ package sgf is
    TYPE T_info is record
       name : Unbounded_String;
       isFile : Boolean;
-      droits : Unbounded_String;
-      taille : Integer := 0;
-      contenu : Unbounded_String; -- := To_Unbounded_String("null");
+      droits : Integer;
+      taille : Integer;
+      contenu : Unbounded_String;
    end record;
 
    function cmp_name (x : in T_info; y : in T_info) return Boolean;
@@ -32,6 +33,7 @@ package sgf is
    package P_pile is new pile_gen(un_type => Unbounded_String);
    use P_pile;
 
+   package liste_enf is new p_liste_gen(T_type => T_arbre);
 
    procedure print_str (data : in T_info; indent : in Integer);
 
@@ -41,7 +43,8 @@ package sgf is
 
    -- procedure rm is new P_sgf.remove(chercher => cherche);
 
-   procedure affiche is new P_sgf.print(afficher_noeud => print_str);
+   procedure affiche_simple is new P_sgf.print(afficher_noeud => print_str);
+   procedure affiche_detail is new P_sgf.print(afficher_noeud => print_all);
 
    -- procedure find_child is new P_sgf.cherche_enfant;
 

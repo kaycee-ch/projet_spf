@@ -176,7 +176,11 @@ package body p_arbre is
    function get_parent (ab : in T_arbre) return T_arbre is
    Begin
       if not ab_est_vide(ab) then
-         return ab.all.parent;
+         if not ab_est_vide(ab.all.parent) then
+            return ab.all.parent;
+         else
+            return ab;
+         end if;
       else
          raise arbre_vide;
       end if;

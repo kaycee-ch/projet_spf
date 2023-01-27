@@ -4,6 +4,7 @@ with Ada.Text_IO; use Ada.Text_IO;
 with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 with parser; use parser;
 with p_arbre;
+with p_liste_gen;
 
 package body sgf is
 
@@ -34,28 +35,29 @@ package body sgf is
          Put(str, indent*indent);
       end if;
       tmp:= to_string(data.name);
-      Put(tmp);
+      Put(data.name);
       new_line;
    end print_str;
+
 
    procedure print_all(data : in T_info; indent : In Integer) is
       m : Integer := length(data.name);
       tmp : String(1..m);
-      str : String(1..3);
+      -- str : String(1..3);
    Begin
-      if indent = 0 then
-         null;
-      elsif indent = 1 then
-         Put("\- ");
+      Put("Type : ");
+      if data.isFile then
+         Put_line("File");
+         Put("Size : ");
+         Put_Line(Integer'Image(data.taille));
       else
-         Put("|    ");
-         str := "\- ";
-         Put(str, indent*indent);
+         Put_line("Folder");
       end if;
       tmp:= to_string(data.name);
+      Put("Name : ");
       Put_Line(tmp);
-      Put_line(data.droits);
-      Put_Line(Integer'Image(data.taille));
+      Put("Rights : ");
+      Put_line(INteger'Image(data.droits));
       new_line;
    end print_all;
 
@@ -99,7 +101,7 @@ package body sgf is
       chemin_invalide : EXCEPTION;
    Begin
       -- Traiter la liste des étapes
-      tmp_data.name := liste_cmd.get_contenu(tmp_path.chemin);
+      tmp_data.name := liste_cmd.get_contenu(liste_cmd.get_last(tmp_path.chemin_inv));
       -- put(tmp_data.name);
       tmp_ab := find(sgf.root, tmp_data);
       --  if get_contenu(tmp_ab).isFile then
@@ -109,8 +111,8 @@ package body sgf is
       --  end if;
 
 
-      while not chemin_incorrect and not liste_cmd.est_vide(tmp_path.chemin) loop
-         first := liste_cmd.get_contenu(tmp_path.chemin);
+      while not chemin_incorrect and not liste_cmd.est_vide(tmp_path.chemin_inv) loop
+         first := liste_cmd.get_contenu(liste_cmd.get_last(tmp_path.chemin_inv));
          -- put_line(first);
          if first = to_unbounded_string(".") then
             set_arbre(sgf.noeud_courant, sgf.noeud_courant);
@@ -121,9 +123,8 @@ package body sgf is
                set_arbre(sgf.noeud_courant, sgf.noeud_courant);
             end if;
          else
-            tmp_data.name := liste_cmd.get_contenu(tmp_path.chemin);
-            tmp_ab := cherche_enfant(sgf.noeud_courant, tmp_data);
-
+            tmp_data.name := first;
+            tmp_ab := cherche_enfant(get_parent(sgf.noeud_courant), tmp_data);
             if ab_est_vide(tmp_ab) then
                chemin_incorrect := true;
             else
@@ -134,7 +135,6 @@ package body sgf is
                end if;
             end if;
          end if;
-         first := liste_cmd.get_contenu(liste_cmd.get_next(tmp_path.chemin));
          liste_cmd.enlever(tmp_path.chemin, first);
       end loop;
       if chemin_incorrect then
@@ -151,15 +151,15 @@ package body sgf is
       ab_tmp : T_arbre;
    Begin
       -- je récuppère l'avant dernier mot du path => c'est le nom du dossier ou je dois créer mon fichier/dossier
-      tmp.name := liste_cmd.get_contenu(liste_cmd.get_next(path.chemin));
+      tmp.name := liste_cmd.get_contenu(liste_cmd.get_next(path.chemin_inv));
       -- put(tmp.name);
       -- je cherche le noeud de l'arbre correspondant au nom et j'y pointe le noeud_courant local à la procédure
       set_arbre(find(sgf.root, tmp), ab_tmp);
       -- affiche(ab_tmp);
       -- je récupère le dernier mot du path => c'est le nom du fichier/dossier que je crée
-      data.name := liste_cmd.get_contenu(path.chemin);
+      data.name := liste_cmd.get_contenu(path.chemin_inv);
+      -- put(data.name);
       data.isFile := estFichier;
-      data.taille := 0;
       -- si le c'est un fichier et qu'il existe deja j'affiche le contenu
       if existe and then estFichier then
          Put_Line(data.contenu);
@@ -168,6 +168,10 @@ package body sgf is
          Text_IO.Put_Line("Saisissez le contenu du fichier");
          Get_line(data.contenu); text_io.Skip_Line;
          data.taille := length(data.contenu);
+         data.droits := 666;
+      else
+         data.taille := 0;
+         data.droits := 777;
       end if;
       if existe then
          -- modifier_noeud(noeud_courant, data);
@@ -185,20 +189,66 @@ package body sgf is
 
    procedure liste_contenu(sgf : in out T_sgf; path : in T_PATH; dir_fils : in Boolean; all_info : in Boolean)  is
 
-      procedure print_enf (n : in Unbounded_String) is
+      procedure print_enf_all(l_enf : in liste_enf.T_liste) is
+         tmp_data : T_info;
       Begin
-         Put_Line(n);
-      end print_enf;
+         tmp_data := get_contenu(liste_enf.get_contenu(l_enf));
+         Put("Type : ");
+         if tmp_data.isFile then
+            Put_line("File");
+            Put("Size : ");
+            Put_Line(Integer'Image(tmp_data.taille));
+         else
+            Put_line("Folder");
+         end if;
+         Put("Name : ");
+         Put(tmp_data.name);
+         New_Line;
+         Put("Rights : ");
+         Put_line(Integer'Image(tmp_data.droits));
+         new_line;
+      end print_enf_all;
 
-      procedure afficher_enfants is new liste_cmd.afficher_liste(print_enf);
+      procedure print_enf_simpl (l_enf : in liste_enf.T_liste) is
+         indent : Integer;
+         tmp : UNbounded_String;
+         str : String(1..3);
+      Begin
+         tmp := get_contenu(liste_enf.get_contenu(l_enf)).name;
+         indent := profondeur(sgf.noeud_courant);
+         if indent = 0 then
+            null;
+         elsif indent = 1 then
+            Put("\- ");
+         else
+            Put("|    ");
+            str := "\- ";
+            Put(str, indent*indent);
+         end if;
+         Put(tmp);
+         new_line;
+      end print_enf_simpl;
+
+      -- procedure afficher_enfants_simpl is new liste_enf.afficher_liste(print_enf_simpl);
+      -- procedure afficher_enfants_all is new liste_enf.afficher_liste(print_enf_all);
+
+      tmp_name : Unbounded_String;
 
    Begin
       -- change_dir(path);
       if dir_fils then
-         affiche(sgf.noeud_courant);
+         if all_info then
+            affiche_detail(sgf.noeud_courant);
+         else
+            affiche_simple(sgf.noeud_courant);
+         end if;
       else
-         -- afficher_enfants(noeud_courant);
-         null;
+         if all_info then
+            -- afficher_enfants_all(sgf.noeud_courant);
+            null;
+         else
+            null;
+         end if;
       end if;
       -- noeud_courant := tmp_noeud_cour;
       New_Line;
@@ -255,7 +305,7 @@ package body sgf is
       formatage_disque(sgf);
       -- affiche(arbre);
       -- affiche(noeud_courant);
-      -- repo_courant;
+      -- repo_courant(sgf);
       path := traiter_path(To_Unbounded_String("/\/home/"));
       -- put(liste_cmd.get_contenu(liste_cmd.get_last(path.chemin)));
       creer_fichier_dossier(sgf, path, false, False);
@@ -266,22 +316,22 @@ package body sgf is
       -- change_dir(sgf, path);
       -- affiche(arbre);
       -- repo_courant(sgf);
-      -- change_dir(path);
+      change_dir(sgf, path);
 
-      path := traiter_path(To_Unbounded_String("/\/home/kaycee/projet/sgf.gpr"));
-      creer_fichier_dossier(sgf, path, true, false);
+      -- path := traiter_path(To_Unbounded_String("/\/home/kaycee/projet/sgf.gpr"));
+      -- creer_fichier_dossier(sgf, path, true, false);
 
       -- path := traiter(To_Unbounded_String("/\/home/kaycee/projet/sgf.gpr"));
-      affiche(sgf.root);
-      affiche_fichier(sgf, path);
+      -- affiche(sgf.root);
+      -- affiche_fichier(sgf, path);
       -- path := traiter_path(To_Unbounded_String("/\"));
       -- liste_contenu(sgf, path, true, false);
       path := traiter_path(To_Unbounded_String("/\/home/kaycee/projet/"));
       -- creer_fichier_dossier(sgf, path, false, false);
       -- archive_dir(sgf, path);
       -- supp_fichier_dossier(sgf, path);
-      -- liste_contenu(sgf, path, true, true);
-      change_dir(sgf, path);
+      -- liste_contenu(sgf, path, true, false);
+      -- change_dir(sgf, path);
       -- data.name := To_Unbounded_String("sgf.gpr");
       -- tmp := cherche(arbre, data);
       -- put(get_contenu(tmp).contenu);
@@ -292,7 +342,7 @@ package body sgf is
       -- creer_fichier_dossier(path, false, False);
       -- change_dir(path);
       -- put_line(repo_courant);
-      -- affiche(arbre);
+      -- affiche(sgf.root);
    end test;
 
 end sgf;
