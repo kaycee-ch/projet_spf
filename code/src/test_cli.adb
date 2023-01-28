@@ -13,10 +13,15 @@ procedure test_cli is
    procedure launch(test_sgf : in out T_sgf) is
    Begin
       if menu then
-         afficher_menu(choix);
-         traiter_choix(test_sgf, choix);
+         loop
+            afficher_menu(choix);
+            traiter_choix(test_sgf, choix);
+            EXIT when choix = 'l';
+         end loop;
       else
-         saisie_libre(test_sgf);
+         loop
+            saisie_libre(test_sgf);
+         end loop;
       end if;
    end launch;
 
@@ -25,8 +30,8 @@ Begin
    launch(test_sgf);
 
 EXCEPTION
-   WHEN Constraint_Error => Put_Line("Parsing problem.");
-      launch(test_sgf);
    WHEN chemin_invalide => Put_Line("Invalid Path");
+      launch(test_sgf);
+   WHEN others => Put_Line("Sorry there was an error, try again.");
       launch(test_sgf);
 end test_cli;

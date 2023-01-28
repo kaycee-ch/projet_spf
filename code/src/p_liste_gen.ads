@@ -25,6 +25,8 @@ package P_liste_gen is
    -- post : n appartient à la liste
    -- exception : aucune
 
+   procedure inserer_fin (une_liste : in out T_liste; n : in T_type);
+
    generic
       with procedure afficher_gen(le_type : in T_type);
    procedure afficher_liste (une_liste : in T_liste);

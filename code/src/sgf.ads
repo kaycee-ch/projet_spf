@@ -60,7 +60,7 @@ package sgf is
    -- exception : none
 
 
-   procedure repo_courant (sgf : in out T_sgf) ;
+   function repo_courant (sgf : in out T_sgf) return Unbounded_String;
    -- semantique : obtention du repertoire de travail ou repertoire courant (pwd)
    -- pre : arbre a ete initialise
    -- post : none
@@ -110,7 +110,7 @@ package sgf is
    -- exception :
 
 
-   procedure supp_fichier_dossier(sgf : in out T_sgf; path : in T_PATH);
+   procedure supp_fichier_dossier(sgf : in out T_sgf; path : in T_PATH; isFile : in Boolean);
    -- semantique : suppression d'un fichier (rm)
    -- pre : le noeud existe
    -- post : le noeud n'est plus dans l'arbre
@@ -122,11 +122,7 @@ package sgf is
    -- exception : droit_insufisant : l'utilisateur n'a pas les droits nécessaires pour cette action
 
 
-   -- procedure move_fichier;
-   -- semantique : deplacement (et renommage) eventuel d'un fichier (mv)
-
-
-   -- procedure copy_fichier;
+   procedure copy_move(sgf : in out T_sgf; old_path : in T_PATH; new_path : in T_PATH; isFile : in Boolean; copy : in Boolean);
    -- semantique : copie d'un fichier ou d'un repertoire (cp -r)
 
 

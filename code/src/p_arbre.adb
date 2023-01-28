@@ -179,7 +179,7 @@ package body p_arbre is
          if not ab_est_vide(ab.all.parent) then
             return ab.all.parent;
          else
-            return ab;
+            return null;
          end if;
       else
          raise arbre_vide;
@@ -208,22 +208,25 @@ package body p_arbre is
       liste_vide : EXCEPTION;
       present : Boolean;
    Begin
-      tmp_enf := ab.all.enfants;
-      present := false;
-      while not liste_elem.est_vide(tmp_enf) and not present loop
-         if is_equals(liste_elem.get_contenu(tmp_enf).all.f_info, data) then
-            present := True;
-         else
-            tmp_enf := liste_elem.get_next(tmp_enf);
-         end if;
-      end loop;
-
-      if present then
-         return liste_elem.get_contenu(tmp_enf);
+      if ab = null then
+         raise arbre_vide;
       else
-         return null;
-      end if;
+         tmp_enf := ab.all.enfants;
+         present := false;
+         while not liste_elem.est_vide(tmp_enf) and not present loop
+            if is_equals(liste_elem.get_contenu(tmp_enf).all.f_info, data) then
+               present := True;
+            else
+               tmp_enf := liste_elem.get_next(tmp_enf);
+            end if;
+         end loop;
 
+         if present then
+            return liste_elem.get_contenu(tmp_enf);
+         else
+            return null;
+         end if;
+      end if;
 
    end cherche_enfant;
 

@@ -35,6 +35,8 @@ package parser is
 
    procedure test_cmd;
 
+   function isPath (phrase : in Unbounded_String) return Boolean;
+
    function traiter_path (phrase : in Unbounded_String) return T_path;
 
    function traiter_cmd(phrase : in Unbounded_String) return T_command;

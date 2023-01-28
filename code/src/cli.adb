@@ -54,7 +54,6 @@ package body CLI is
       cmd_str : Unbounded_String;
    Begin
       loop
-         formatage_disque(le_sgf);
          unbounded_io.Get_line(cmd_str);
          Skip_line;
          cmd := traiter_cmd(cmd_str);

@@ -31,7 +31,19 @@ package body P_liste_gen is
       une_liste := p;
    end inserer_en_tete;
 
-
+   procedure inserer_fin (une_liste : in out T_liste; n : in T_type) is
+      curseur : T_liste;
+   Begin
+      curseur := une_liste;
+      if curseur = null then
+         inserer_en_tete(une_liste, n);
+      else
+         while curseur.all.suivant /= null loop
+            curseur := curseur.all.suivant;
+         end loop;
+         curseur.all.suivant := new T_cellule'(n, null);
+      end if;
+   end inserer_fin;
 
    procedure afficher_liste (une_liste : in T_liste) is
    Begin

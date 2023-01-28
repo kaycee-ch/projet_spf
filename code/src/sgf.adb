@@ -48,16 +48,16 @@ package body sgf is
       Put("Type : ");
       if data.isFile then
          Put_line("File");
-         Put("Size : ");
-         Put_Line(Integer'Image(data.taille));
       else
          Put_line("Folder");
       end if;
       tmp:= to_string(data.name);
       Put("Name : ");
       Put_Line(tmp);
+      Put("Size : ");
+      Put_Line(Integer'Image(data.taille));
       Put("Rights : ");
-      Put_line(INteger'Image(data.droits));
+      Put_line(Integer'Image(data.droits));
       new_line;
    end print_all;
 
@@ -73,21 +73,23 @@ package body sgf is
    end formatage_disque;
 
 
-   procedure repo_courant(sgf : in out T_sgf) is
+   function repo_courant(sgf : in out T_sgf) return Unbounded_String IS
       tmp : T_arbre := sgf.noeud_courant;
       p : pile;
+      pwd : Unbounded_String;
    Begin
       creer_pile_vide(p);
       while not ab_est_vide(tmp) loop
          empiler(p, get_contenu(tmp).name);
          tmp := get_parent(tmp);
       end loop;
-      -- afficher_pile(p);
       while not est_vide(p) loop
-         put("/");
-         Put(depiler(p));
+         append(pwd, "/");
+         append(pwd, depiler(p));
       end loop;
+      put(pwd);
       new_line;
+      return pwd;
    end repo_courant;
 
 
@@ -100,21 +102,13 @@ package body sgf is
       chemin_incorrect, isLast : Boolean := false;
       chemin_invalide : EXCEPTION;
    Begin
-      -- Traiter la liste des étapes
-      tmp_data.name := liste_cmd.get_contenu(liste_cmd.get_last(tmp_path.chemin_inv));
-      -- put(tmp_data.name);
-      tmp_ab := find(sgf.root, tmp_data);
-      --  if get_contenu(tmp_ab).isFile then
-      --     isLast := liste_cmd.est_vide(liste_cmd.get_next(tmp_path.chemin));
-      --  else
-      --     isLast := liste_cmd.est_vide(tmp_path.chemin);
-      --  end if;
 
-
-      while not chemin_incorrect and not liste_cmd.est_vide(tmp_path.chemin_inv) loop
-         first := liste_cmd.get_contenu(liste_cmd.get_last(tmp_path.chemin_inv));
+      while not chemin_incorrect and not liste_cmd.est_vide(liste_cmd.get_next(tmp_path.chemin)) loop
+         first := liste_cmd.get_contenu(liste_cmd.get_next(tmp_path.chemin));
          -- put_line(first);
-         if first = to_unbounded_string(".") then
+         tmp_data.name := first;
+         tmp_ab := cherche_enfant(sgf.noeud_courant, tmp_data);
+         if first = "." then
             set_arbre(sgf.noeud_courant, sgf.noeud_courant);
          elsif first = ".." then
             if not ab_est_vide(get_parent(sgf.noeud_courant)) then
@@ -122,18 +116,12 @@ package body sgf is
             else
                set_arbre(sgf.noeud_courant, sgf.noeud_courant);
             end if;
+         elsif first = get_contenu(sgf.root).name then
+            set_arbre(sgf.root, sgf.noeud_courant);
+         elsif not ab_est_vide(tmp_ab) and then not get_contenu(tmp_ab).isFile then
+            set_arbre(tmp_ab, sgf.noeud_courant);
          else
-            tmp_data.name := first;
-            tmp_ab := cherche_enfant(get_parent(sgf.noeud_courant), tmp_data);
-            if ab_est_vide(tmp_ab) then
-               chemin_incorrect := true;
-            else
-               if not get_contenu(tmp_ab).isFile then
-                  set_arbre(tmp_ab, sgf.noeud_courant);
-               else
-                  chemin_incorrect := true;
-               end if;
-            end if;
+            chemin_incorrect := true;
          end if;
          liste_cmd.enlever(tmp_path.chemin, first);
       end loop;
@@ -170,7 +158,7 @@ package body sgf is
          data.taille := length(data.contenu);
          data.droits := 666;
       else
-         data.taille := 0;
+         data.taille := 10;
          data.droits := 777;
       end if;
       if existe then
@@ -255,24 +243,34 @@ package body sgf is
    end liste_contenu;
 
 
-   procedure supp_fichier_dossier(sgf : in out T_sgf; path : in T_PATH) is
+   procedure supp_fichier_dossier(sgf : in out T_sgf; path : in T_PATH; isFile : in Boolean) is
       tmp : T_info;
       tmp_noeud : T_Arbre;
    Begin
-      tmp.name := liste_cmd.get_contenu(path.chemin);
-      set_arbre(find(sgf.root, tmp), tmp_noeud);
+      if isFile then
+         tmp.name := liste_cmd.get_contenu(liste_cmd.get_next(path.chemin_inv));
+      else
+         tmp.name := liste_cmd.get_contenu(path.chemin_inv);
+      end if;
+      set_arbre(find(sgf.noeud_courant, tmp), tmp_noeud);
       remove(sgf.root, get_contenu(tmp_noeud));
       Put_Line("Deleted");
    end supp_fichier_dossier;
+
 
 
    procedure affiche_fichier(sgf : in out T_sgf; path : in T_path) is
       tmp : T_info;
       ab_tmp : T_arbre;
    Begin
-      tmp.name := liste_cmd.get_contenu(path.chemin);
+      tmp.name := liste_cmd.get_contenu(path.chemin_inv);
+      -- put(tmp.name);
       set_arbre(find(sgf.root, tmp), ab_tmp);
-      Put_Line(get_contenu(ab_tmp).contenu);
+      if get_contenu(ab_tmp).isFile then
+         Put_Line(get_contenu(ab_tmp).contenu);
+      else
+         raise chemin_invalide;
+      end if;
    end affiche_fichier;
 
    procedure archive_dir (sgf : in out T_sgf; path : in T_PATH) is
@@ -280,7 +278,7 @@ package body sgf is
       nom : Unbounded_String;
       tmp_noeud : T_arbre := sgf.noeud_courant;
    Begin
-      tmp.name := liste_cmd.get_contenu(path.chemin);
+      tmp.name := liste_cmd.get_contenu(path.chemin_inv);
       set_arbre(find(sgf.root, tmp), tmp_noeud);
       if get_contenu(tmp_noeud).isFile then
          raise chemin_invalide;
@@ -297,8 +295,21 @@ package body sgf is
    end archive_dir;
 
 
+   procedure copy_move(sgf : in out T_sgf; old_path : in T_PATH; new_path : in T_PATH; isFile : in Boolean; copy : in Boolean)  is
+      tmp_ab : T_arbre;
+   Begin
+      if isFile then
+         null;
+      else
+         -- forcement copier car on ne deplace pas un dossier
+         set_arbre(sgf.root, tmp_ab);
+      end if;
+   end copy_move;
+
+
    procedure test (sgf : in out T_sgf) is
       path : T_path;
+      path_str : Unbounded_String;
       tmp : T_arbre;
       -- data : T_info;
    Begin
@@ -311,12 +322,30 @@ package body sgf is
       creer_fichier_dossier(sgf, path, false, False);
       path := traiter_path(To_Unbounded_String("/\/home/kaycee/"));
       creer_fichier_dossier(sgf, path, false, false);
-      path := traiter_path(To_Unbounded_String("/\/home/kaycee/projet"));
-      creer_fichier_dossier(sgf, path, false, false);
+      change_dir(sgf, path);
+      -- path_str := repo_courant(sgf);
+
+      path := traiter_path(To_Unbounded_String("/\/home/kaycee/test.txt"));
+      creer_fichier_dossier(sgf, path, true, false);
+      affiche_fichier(sgf, path);
+      path := traiter_path(to_unbounded_string("/\/"));
+      liste_contenu(sgf, path, true, true);
+      -- path := traiter_path(To_Unbounded_String("/../kaycee"));
+      -- supp_fichier_dossier(sgf, path, false);
+      -- path := traiter_path(To_Unbounded_String("/\/home/"));
+      -- archive_dir(sgf, path);
+      -- change_dir(sgf, path);
+      -- path_str := repo_courant(sgf);
+      -- path := traiter_path(to_unbounded_string("./projet"));
+      -- change_dir(sgf, path);
+      --  path := traiter_path(repo_courant(sgf));
+      --  change_dir(sgf, path);
+      --  path_str := repo_courant(sgf);
+      --  liste_contenu(sgf, path, true, true);
       -- change_dir(sgf, path);
       -- affiche(arbre);
+      -- change_dir(sgf, path);
       -- repo_courant(sgf);
-      change_dir(sgf, path);
 
       -- path := traiter_path(To_Unbounded_String("/\/home/kaycee/projet/sgf.gpr"));
       -- creer_fichier_dossier(sgf, path, true, false);

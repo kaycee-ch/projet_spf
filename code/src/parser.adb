@@ -6,6 +6,18 @@ with Text_Io;
 package body parser is
 
 
+   function isPath (phrase : in Unbounded_String) return Boolean is
+      est_chemin : Boolean := false;
+   Begin
+      for i in 1..length(phrase) loop
+         if element(phrase, i) = '/' then
+            est_chemin := True;
+         end if;
+      end loop;
+      return est_chemin;
+   end isPath;
+
+
    function i_char (phrase : in Unbounded_String; index : in out Integer; char : in Character) return Integer is
    Begin
       while element(phrase, index) /= char and then index < length(phrase) loop
@@ -67,11 +79,9 @@ package body parser is
 
    function parse_path(liste_mot : in T_liste) return T_PATH is
       le_path : T_PATH;
-      tmp : T_liste;
    Begin
-      tmp := liste_mot;
       -- put(get_contenu(liste_mot));
-      if element(get_contenu(get_last(tmp)), 1) = '.' then
+      if get_contenu(liste_mot) = "." or else get_contenu(liste_mot) = ".." then
          le_path.isAbsolute := True;
       else
          le_path.isAbsolute := False;
