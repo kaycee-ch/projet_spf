@@ -271,6 +271,7 @@ package body ada_main is
       E185 := E185 + 1;
       sgf'elab_spec;
       E179 := E179 + 1;
+      IHM'ELAB_SPEC;
       E144 := E144 + 1;
       E139 := E139 + 1;
    end adainit;

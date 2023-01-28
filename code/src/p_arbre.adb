@@ -14,7 +14,7 @@ package body p_arbre is
       ab := null;
    end init;
 
-   procedure creer_racine(ab : in out T_arbre; data : T_contenu) is
+   procedure creer_racine(ab : in out T_arbre; data : in T_contenu) is
    Begin
       ab := new T_noeud;
       ab.all.f_info := data;
@@ -27,10 +27,14 @@ package body p_arbre is
       n : Integer := 0;
       tmp, r : T_arbre;
    Begin
+      -- cette fonction revient compte rle nombre de noeud entre ab et root
       r := get_root(ab);
       tmp := ab;
+      -- tant que je ne suis pas à la racine je boucle
       while tmp /= r loop
+         -- j'incrémente n de 1 parce que j'ai renontré un nouveau noeud
          n := n + 1;
+         -- je remonte d'un noeud
          tmp := tmp.all.parent;
       end loop;
       return n;
@@ -46,6 +50,8 @@ package body p_arbre is
          tmp.all.parent := ab;
          tmp.all.enfants := liste_elem.creer_liste_vide;
          liste_elem.inserer_en_tete(ab.all.enfants, tmp);
+      else
+         raise arbre_vide;
       end if;
    end ajouter_enfants;
 
@@ -64,10 +70,13 @@ package body p_arbre is
    Begin
       curseur := ab;
       if curseur /= null then
+         -- j'utilise un affichage générique car il dépendra du contenu du noeud qui est lui meme generique
          afficher_noeud(curseur.all.f_info, profondeur(ab));
+         -- j'enfile tous les enfants qui car ils seraient perdu dans l'appel récursif
          file.enfiler_liste(une_file, curseur.all.enfants);
          while not file.is_empty(une_file) loop
             defiler(une_file, tmp);
+            -- je rappel print sur le premier enfant qui sera affiché puis je descends dans ses enfants à lui et ainsi de suite
             print(file.get_contenu(tmp));
          end loop;
       else
@@ -76,21 +85,23 @@ package body p_arbre is
    end print;
 
 
-   function get_enfants (ab : in T_arbre) return T_liste is
-   Begin
-      return null; --ab.all.enfants
-   end get_enfants;
-
 
    procedure remove (ab : in out T_arbre; data : in T_contenu) is
       addr : T_arbre;
       l_addr : liste_elem.T_liste;
    Begin
+      -- cette procedure ne prévient pas des fuites de mémoire puisqu'on supprime le noeud au lieu de supprimer tous les noeuds du sous-arbre
       addr := find(ab, data);
-      if addr /= null and then (not liste_elem.est_vide(addr.all.parent.all.enfants)) then
-         l_addr := liste_elem.rechercher(addr.all.parent.all.enfants, addr);
-         liste_elem.enlever(addr.all.parent.all.enfants, liste_elem.get_contenu(l_addr)); -- = addr
-         free(addr);
+      if addr /= null then
+         if (not liste_elem.est_vide(addr.all.parent.all.enfants)) then
+            -- je cherche (recherche de la lise) parmi les enfants du père de ab celui qui a pour contenu data et je l'enlève de la liste
+            l_addr := liste_elem.rechercher(addr.all.parent.all.enfants, addr);
+            liste_elem.enlever(addr.all.parent.all.enfants, liste_elem.get_contenu(l_addr)); -- = addr
+            -- je libère la case mémoire
+            free(addr);
+         end if;
+      else
+         raise data_absente;
       end if;
    end remove;
 
@@ -111,11 +122,6 @@ package body p_arbre is
    --  end remove_sa;
 
 
-   procedure move (ab : in out T_arbre; dest : in out T_arbre; data : in T_contenu) is
-   Begin
-      -- remove(ab, data);
-      ajouter_enfants(dest, data);
-   end move;
 
 
    function find(ab : in T_arbre; data : in T_contenu) return T_arbre is
@@ -125,6 +131,7 @@ package body p_arbre is
    Begin
       if ab /= null then
          tmp := ab.all.enfants;
+         -- si ab a le contenu voulu on revoie direct ab
          if is_equals(ab.all.f_info, data) then
             return ab;
          else
@@ -150,10 +157,14 @@ package body p_arbre is
 
    function get_root(ab : in T_arbre) return T_arbre is
    Begin
-      if ab.all.parent /= null then
-         return get_root(ab.all.parent);
+      if ab /= null then
+         if ab.all.parent /= null then
+            return get_root(ab.all.parent);
+         else
+            return ab;
+         end if;
       else
-         return ab;
+         raise arbre_vide;
       end if;
    end get_root;
 
@@ -190,15 +201,24 @@ package body p_arbre is
    procedure modifier (ab : in out T_arbre; new_data : in T_contenu) is
       tmp : T_arbre;
    Begin
-      tmp := ab;
-      liste_elem.enlever(ab.all.parent.all.enfants, tmp);
-      tmp.all.f_info := new_data;
-      liste_elem.inserer_en_tete(ab.all.parent.all.enfants, tmp);
+      if ab /= null then
+         tmp := ab;
+         liste_elem.enlever(ab.all.parent.all.enfants, tmp);
+         tmp.all.f_info := new_data;
+         liste_elem.inserer_en_tete(ab.all.parent.all.enfants, tmp);
+      else
+         raise arbre_vide;
+      end if;
    end modifier;
+
 
    procedure supp_enfants (ab : in out T_arbre) is
    Begin
-      ab.all.enfants := liste_elem.creer_liste_vide;
+      if ab /= null then
+         ab.all.enfants := liste_elem.creer_liste_vide;
+      else
+         raise arbre_vide;
+      end if;
    end supp_enfants;
 
 

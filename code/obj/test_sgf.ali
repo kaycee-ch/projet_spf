@@ -14,7 +14,7 @@ RV NO_NESTED_FINALIZATION
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_sgf%b		test_sgf.adb		5007eba4 NE OO SU IL
+U test_sgf%b		test_sgf.adb		274f4207 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -48,12 +48,12 @@ D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
 D file_gen.ads		20230118020043 7fb869e8 file_gen%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230126112036 3d2f2671 p_arbre%s
-D p_arbre.adb		20230127231227 77a41d24 p_arbre%b
+D p_arbre.ads		20230128151834 8e7435ed p_arbre%s
+D p_arbre.adb		20230128165028 2f67807d p_arbre%b
 D p_liste_gen.ads	20230127220056 bd955693 p_liste_gen%s
 D parser.ads		20230127230202 39f41b24 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
-D sgf.ads		20230127235200 33209087 sgf%s
+D sgf.ads		20230128185016 f7332ab8 sgf%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -85,7 +85,7 @@ G c Z b b [test_sgf standard 6 11 none]
 G r s t_sgf [test_sgf standard 6 11 none] [t_sgfIP sgf 26 9 none]
 G r l t_sgf [test_sgf standard 6 11 none] [t_sgfDI sgf 26 9 none]
 G r k t_sgf [test_sgf standard 6 11 none] [t_sgfDF sgf 26 9 none]
-G r c none [test_sgf standard 6 11 none] [test sgf 134 14 none]
+G r c none [test_sgf standard 6 11 none] [test sgf 132 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 51|1r6 1r33
 X 8 a-string.ads
@@ -95,11 +95,11 @@ X 11 a-strunb.ads
 X 16 a-tiunio.ads
 25K21*Unbounded_IO 61e29 51|2w14 2r40
 X 22 p_arbre.ads
-8k9*p_arbre 86e12 51|3w6
+8k9*p_arbre 147e12 51|3w6
 X 27 sgf.ads
-8K9*sgf 136e8 51|4w6 4r15
+8K9*sgf 134e8 51|4w6 4r15
 26R9*T_sgf 30e17 51|8r15
-134U14*test 51|11s4
+132U14*test 51|11s4
 X 28 system.ads
 67M9*Address
 X 35 s-memory.ads

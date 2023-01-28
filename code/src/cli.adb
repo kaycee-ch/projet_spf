@@ -26,17 +26,16 @@ package body CLI is
    procedure afficher_menu (choix : out Character) is
    Begin
       Put_Line("Que souhaitez-vous faire ?");
-      Put_Line("z) Create a new file system");
-      Put_Line("a) Find the current directory");
-      Put_Line("b) Create a new file");
-      Put_Line("c) Modify an existing file");
-      Put_Line("d) Create a folder");
-      Put_Line("e) Go to a different directory");
-      Put_Line("f) List everything in the current directory");
-      Put_Line("g) Remove a file");
-      Put_Line("h) Remove a folder");
-      Put_Line("i) Move a file");
-      Put_Line("j) Copy a file");
+      Put_Line("a) Create a new file system");
+      Put_Line("b) Find the current directory");
+      Put_Line("c) Create a new file");
+      Put_Line("d) Show filecontent");
+      Put_Line("e) Modify an existing file");
+      Put_Line("f) Create a folder");
+      Put_Line("g) Go to a different directory");
+      Put_Line("h) List files & folders");
+      Put_Line("i) Remove a file");
+      Put_Line("j) Remove a folder");
       Put_Line("k) Archive a folder");
       Put_line("l) Exit this SGF");
       Get(choix); Skip_Line;
@@ -54,10 +53,9 @@ package body CLI is
       cmd_str : Unbounded_String;
    Begin
       loop
-         unbounded_io.Get_line(cmd_str);
-         Skip_line;
-         cmd := traiter_cmd(cmd_str);
-         traiter_cmd(le_sgf, cmd);
+         unbounded_io.Get_Line(cmd_str);
+         cmd := parser.traiter_cmd(cmd_str);
+         ihm.traiter_cmd(le_sgf, cmd);
       end loop;
    end saisie_libre;
 

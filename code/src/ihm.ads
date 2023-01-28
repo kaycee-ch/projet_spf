@@ -4,6 +4,8 @@ with sgf; use sgf;
 
 package IHM is
 
+   commande_inconnu : EXCEPTION;
+
    procedure traiter_cmd(le_sgf : in out T_sgf; cmd : in T_COMMAND);
 
    procedure help(commande : in Unbounded_String);
@@ -14,7 +16,7 @@ package IHM is
 
    procedure traiter_pwd (le_sgf : in out T_sgf; cmd : in T_command; path : in out T_path);
 
-   procedure traiter_nano (le_sgf : in out T_sgf; menu : in Boolean; cmd : in T_command; path : in out T_path);
+   procedure traiter_nano (le_sgf : in out T_sgf; menu : in Boolean; existe : in Boolean; cmd : in T_command; path : in out T_path);
 
    procedure traiter_mkdir(le_sgf : in out T_sgf; menu : in Boolean; cmd : in T_COMMAND; path : in out T_path);
 
@@ -23,5 +25,8 @@ package IHM is
    procedure traiter_tar(le_sgf : in out T_SGF; menu : in Boolean; cmd : in T_COMMAND; path : in out T_path);
 
    procedure traiter_cat(le_sgf : in out T_SGF; menu : in Boolean; cmd : in T_COMMAND; path : in out T_path);
+
+   procedure traiter_rm(le_sgf : in out T_SGF; menu : in Boolean; cmd : in T_COMMAND; path : in out T_path);
+
 
 end IHM;

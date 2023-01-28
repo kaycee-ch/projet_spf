@@ -122,8 +122,6 @@ package sgf is
    -- exception : droit_insufisant : l'utilisateur n'a pas les droits nécessaires pour cette action
 
 
-   procedure copy_move(sgf : in out T_sgf; old_path : in T_PATH; new_path : in T_PATH; isFile : in Boolean; copy : in Boolean);
-   -- semantique : copie d'un fichier ou d'un repertoire (cp -r)
 
 
    procedure archive_dir (sgf : in out T_sgf; path : in T_PATH);

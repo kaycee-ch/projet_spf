@@ -70,6 +70,7 @@ package body sgf is
       data.isFile := False;
       creer_racine(sgf.root, data);
       set_arbre(sgf.root, sgf.noeud_courant);
+      Put_Line("Disk formatted");
    end formatage_disque;
 
 
@@ -197,6 +198,7 @@ package body sgf is
          new_line;
       end print_enf_all;
 
+
       procedure print_enf_simpl (l_enf : in liste_enf.T_liste) is
          indent : Integer;
          tmp : UNbounded_String;
@@ -247,7 +249,7 @@ package body sgf is
       tmp : T_info;
       tmp_noeud : T_Arbre;
    Begin
-      if isFile then
+      if not isFile then
          tmp.name := liste_cmd.get_contenu(liste_cmd.get_next(path.chemin_inv));
       else
          tmp.name := liste_cmd.get_contenu(path.chemin_inv);
@@ -273,6 +275,7 @@ package body sgf is
       end if;
    end affiche_fichier;
 
+
    procedure archive_dir (sgf : in out T_sgf; path : in T_PATH) is
       data, tmp : T_info;
       nom : Unbounded_String;
@@ -294,17 +297,6 @@ package body sgf is
       Put_Line("Folder compressed");
    end archive_dir;
 
-
-   procedure copy_move(sgf : in out T_sgf; old_path : in T_PATH; new_path : in T_PATH; isFile : in Boolean; copy : in Boolean)  is
-      tmp_ab : T_arbre;
-   Begin
-      if isFile then
-         null;
-      else
-         -- forcement copier car on ne deplace pas un dossier
-         set_arbre(sgf.root, tmp_ab);
-      end if;
-   end copy_move;
 
 
    procedure test (sgf : in out T_sgf) is
@@ -328,10 +320,8 @@ package body sgf is
       path := traiter_path(To_Unbounded_String("/\/home/kaycee/test.txt"));
       creer_fichier_dossier(sgf, path, true, false);
       affiche_fichier(sgf, path);
-      path := traiter_path(to_unbounded_string("/\/"));
-      liste_contenu(sgf, path, true, true);
       -- path := traiter_path(To_Unbounded_String("/../kaycee"));
-      -- supp_fichier_dossier(sgf, path, false);
+      supp_fichier_dossier(sgf, path, true);
       -- path := traiter_path(To_Unbounded_String("/\/home/"));
       -- archive_dir(sgf, path);
       -- change_dir(sgf, path);

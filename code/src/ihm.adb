@@ -43,26 +43,22 @@ package body IHM is
    end traiter_pwd;
 
 
-   procedure traiter_nano(le_sgf : in out T_sgf; menu : in Boolean; cmd : in T_command; path : in out T_path) is
-      existe : Boolean := False;
+   procedure traiter_nano(le_sgf : in out T_sgf; menu : in Boolean; existe : in Boolean; cmd : in T_command; path : in out T_path) is
       tmp : T_sgf := le_sgf;
    Begin
-      if liste_cmd.contient(cmd.options, To_Unbounded_String("-help")) then
-         help(to_unbounded_string("nano"));
+      if existe then
+         sgf.affiche_fichier(le_sgf, path);
+         sgf.supp_fichier_dossier(le_sgf, path, True);
       end if;
-      if liste_cmd.est_vide(cmd.arguments) then
-         path := traiter_path(sgf.repo_courant(le_sgf));
+      if menu then
+         sgf.creer_fichier_dossier(le_sgf, path, true, existe);
       else
+         if liste_cmd.contient(cmd.options, To_Unbounded_String("-help")) then
+            help(to_unbounded_string("nano"));
+         end if;
          path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
+         sgf.creer_fichier_dossier(le_sgf, path, True, False);
       end if;
-      change_dir(le_sgf, path);
-      --  set_arbre(get_parent(le_sgf.noeud_courant), le_sgf.noeud_courant);
-      --  -- si le fichier existe déja dans le répertoire alors nano le modifie
-      --  if cherche_enfant(le_sgf.noeud_courant, liste_cmd.get_contenu(path.chemin_inv)) /= null then
-      --     existe := True;
-      --  end if;
-      le_sgf := tmp;
-      sgf.creer_fichier_dossier(le_sgf, path, True, existe);
    end traiter_nano;
 
 
@@ -75,14 +71,11 @@ package body IHM is
          if liste_cmd.contient(cmd.options, To_Unbounded_String("-help")) then
             help(to_unbounded_string("mkdir"));
          end if;
-         if liste_cmd.est_vide(cmd.arguments) then
-            path := traiter_path(sgf.repo_courant(le_sgf));
-         else
-            path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
-         end if;
+         path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
          sgf.creer_fichier_dossier(le_sgf, path, False, False);
       end if;
    end traiter_mkdir;
+
 
 
    procedure traiter_cd(le_sgf : in out T_SGF; menu : in Boolean; cmd : in T_COMMAND; path : in out T_path) is
@@ -105,11 +98,7 @@ package body IHM is
       if liste_cmd.contient(cmd.options, To_Unbounded_String("-help")) then
          help(to_unbounded_string("tar"));
       end if;
-      if liste_cmd.est_vide(cmd.arguments) then
-         path := traiter_path(sgf.repo_courant(le_sgf));
-      else
-         path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
-      end if;
+      path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
       sgf.archive_dir(le_sgf, path);
    end traiter_tar;
 
@@ -117,14 +106,22 @@ package body IHM is
 
    procedure traiter_cat(le_sgf : in out T_sgf; menu : in Boolean; cmd : in T_command; path : in out T_path) is
    Begin
-      if liste_cmd.est_vide(cmd.arguments) then
-         path := traiter_path(sgf.repo_courant(le_sgf));
-      else
-         path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
-      end if;
+      path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
       sgf.affiche_fichier(le_sgf, path);
    end traiter_cat;
 
+
+   procedure traiter_rm(le_sgf : in out T_SGF; menu : in Boolean; cmd : in T_COMMAND; path : in out T_path) is
+   Begin
+      path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
+      if liste_cmd.est_vide(cmd.options) then
+         sgf.supp_fichier_dossier(le_sgf, path, True);
+      elsif liste_cmd.get_contenu(cmd.options) = "r" then
+         sgf.supp_fichier_dossier(le_sgf, path, False);
+      else
+         raise commande_inconnu;
+      end if;
+   end traiter_rm;
 
 
 
@@ -133,14 +130,20 @@ package body IHM is
       menu : Boolean := false;
    Begin
 
-      if to_string(cmd.commande) = "ls" then
+      if to_string(cmd.commande) = "init" then
+         sgf.formatage_disque(le_sgf);
+
+
+      elsif to_string(cmd.commande) = "ls" then
          traiter_ls(le_sgf, menu, cmd, path);
+
 
       elsif to_string(cmd.commande) = "pwd" then
          traiter_pwd(le_sgf, cmd, path);
 
+
       elsif to_string(cmd.commande) = "nano" then
-         traiter_nano(le_sgf, menu, cmd, path);
+         traiter_nano(le_sgf, menu, false, cmd, path);
 
 
       elsif to_string(cmd.commande) = "mkdir" then
@@ -157,6 +160,15 @@ package body IHM is
 
       elsif to_string(cmd.commande) = "cat" then
          traiter_cat(le_sgf, menu, cmd, path);
+
+
+      elsif to_string(cmd.commande) = "rm" then
+         traiter_rm(le_sgf, menu, cmd, path);
+
+
+      else
+         Put("Unknown Command");
+
       end if;
 
 
@@ -208,13 +220,13 @@ package body IHM is
             Put_Line("What is the file path ? ('/./<filename>' if it's the current directory) ");
             Unbounded_IO.Get_Line(path); Skip_line;
             path_traite := traiter_path(path);
-            traiter_nano(le_sgf, menu, cmd, path_traite);
+            traiter_nano(le_sgf, menu, false, cmd, path_traite);
 
          when 'c' =>
             Put_Line("What is the file path ('/./<filename>' if it's the current directory) ?");
             Unbounded_IO.Get_Line(path); Skip_line;
             path_traite := traiter_path(path);
-            traiter_nano(le_sgf, menu, cmd, path_traite);
+            traiter_nano(le_sgf, menu, true, cmd, path_traite);
 
          when 'd' =>
             Put_Line("What is the folder path ('/./<foldername>' if it's the current directory) ?");
