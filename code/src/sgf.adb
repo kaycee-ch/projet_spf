@@ -4,7 +4,6 @@ with Ada.Text_IO; use Ada.Text_IO;
 with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 with parser; use parser;
 with p_arbre;
-with p_liste_gen;
 
 package body sgf is
 
@@ -20,30 +19,36 @@ package body sgf is
    end is_equal;
 
 
-   procedure print_str(data : in T_info; indent : in Integer) is
+   procedure print_enf_tree(data : in T_info; indent : in Integer) is
       m : Integer := length(data.name);
       tmp : String(1..m);
-      str : String(1..3);
    Begin
       if indent = 0 then
          null;
       elsif indent = 1 then
          Put("\- ");
       else
-         Put("|    ");
-         str := "\- ";
-         Put(str, indent*indent);
+         Put("|  ");
+         for i in 1..indent loop
+            Put("   ");
+         end loop;
+         if data.isFile then
+            Put("|- ");
+         else
+            Put("\- ");
+         end if;
       end if;
       tmp:= to_string(data.name);
       Put(data.name);
       new_line;
-   end print_str;
+   end print_enf_tree;
 
 
-   procedure print_all(data : in T_info; indent : In Integer) is
+
+
+   procedure print_all(data : in T_info; indent : in INteger) is
       m : Integer := length(data.name);
       tmp : String(1..m);
-      -- str : String(1..3);
    Begin
       Put("Type : ");
       if data.isFile then
@@ -62,15 +67,32 @@ package body sgf is
    end print_all;
 
 
+
+   procedure print_simpl (data : in T_info; indent : in INteger) is
+   Begin
+      Put(data.name);
+      Put("     ");
+   end print_simpl;
+
+
+
    procedure formatage_disque(sgf : in out T_sgf) is
       data : T_info;
    Begin
       init(sgf.root);
+      sgf.taille := 0;
       data.name := To_Unbounded_String("\");
       data.isFile := False;
+      data.taille := 10;
+      data.droits := 750;
       creer_racine(sgf.root, data);
       set_arbre(sgf.root, sgf.noeud_courant);
    end formatage_disque;
+
+
+
+
+
 
 
    function repo_courant(sgf : in out T_sgf) return T_PATH IS
@@ -96,6 +118,15 @@ package body sgf is
 
 
 
+
+   function stockage_occupe(sgf : in out T_SGF) return Integer is
+   Begin
+      return sgf.taille;
+   end stockage_occupe;
+
+
+
+
    procedure change_dir(sgf : in out T_sgf; destination : in T_PATH) is
       tmp_path : T_path := destination;
       first : Unbounded_String;
@@ -107,7 +138,6 @@ package body sgf is
 
       while not chemin_incorrect and not liste_cmd.est_vide(liste_cmd.get_next(tmp_path.chemin)) loop
          first := liste_cmd.get_contenu(liste_cmd.get_next(tmp_path.chemin));
-         -- put_line(first);
          tmp_data.name := first;
          tmp_ab := cherche_enfant(sgf.noeud_courant, tmp_data);
          if first = "." then
@@ -118,20 +148,29 @@ package body sgf is
             else
                set_arbre(sgf.noeud_courant, sgf.noeud_courant);
             end if;
-         elsif first = get_contenu(sgf.root).name then
+         elsif first = get_contenu(sgf.root).name or else first = "" then
             set_arbre(sgf.root, sgf.noeud_courant);
-         elsif not ab_est_vide(tmp_ab) and then not get_contenu(tmp_ab).isFile then
-            set_arbre(tmp_ab, sgf.noeud_courant);
+         elsif not ab_est_vide(tmp_ab) then
+            if not get_contenu(tmp_ab).isFile then
+               set_arbre(tmp_ab, sgf.noeud_courant);
+            else
+               chemin_incorrect := true;
+            end if;
          else
             chemin_incorrect := true;
          end if;
          liste_cmd.enlever(tmp_path.chemin, first);
       end loop;
+
       if chemin_incorrect then
          raise chemin_invalide;
       end if;
-      -- Put_Line("Directory has been changed");
    end change_dir;
+
+
+
+
+
 
 
 
@@ -159,11 +198,14 @@ package body sgf is
       if estFichier then
          Text_IO.Put_Line("Saisissez le contenu du fichier");
          Get_line(data.contenu); text_io.Skip_Line;
-         data.taille := length(data.contenu);
+         data.taille := length(data.contenu) * 100;
          data.droits := 666;
       else
-         data.taille := 10;
+         data.taille := 10000;
          data.droits := 777;
+      end if;
+      if (sgf.taille + data.taille) >= 10**9 then
+         raise stockage_plein;
       end if;
       if existe then
          modifier(sgf.noeud_courant, data);
@@ -171,74 +213,67 @@ package body sgf is
          ajouter_enfants(sgf.noeud_courant, data);
       end if;
       change_dir(sgf, old_path);
+      sgf.taille := sgf.taille + data.taille;
    end creer_fichier_dossier;
+
+
+
+
+
 
 
    procedure liste_contenu(sgf : in out T_sgf; path : in T_PATH; dir_fils : in Boolean; all_info : in Boolean)  is
 
-      procedure print_enf_all(l_enf : in liste_enf.T_liste) is
-         tmp_data : T_info;
-      Begin
-         tmp_data := get_contenu(liste_enf.get_contenu(l_enf));
-         Put("Type : ");
-         if tmp_data.isFile then
-            Put_line("File");
-            Put("Size : ");
-            Put_Line(Integer'Image(tmp_data.taille));
-         else
-            Put_line("Folder");
-         end if;
-         Put("Name : ");
-         Put(tmp_data.name);
-         New_Line;
-         Put("Rights : ");
-         Put_line(Integer'Image(tmp_data.droits));
-         new_line;
-      end print_enf_all;
-
-
-      procedure print_enf_simpl (l_enf : in liste_enf.T_liste) is
-         indent : Integer;
-         tmp : UNbounded_String;
-         str : String(1..3);
-      Begin
-         tmp := get_contenu(liste_enf.get_contenu(l_enf)).name;
-         indent := profondeur(sgf.noeud_courant);
-         if indent = 0 then
-            null;
-         elsif indent = 1 then
-            Put("\- ");
-         else
-            Put("|    ");
-            str := "\- ";
-            Put(str, indent*indent);
-         end if;
-         Put(tmp);
-         new_line;
-      end print_enf_simpl;
-
-
       tmp_name : Unbounded_String;
+      tmp_noeud : T_arbre := SGF.noeud_courant;
 
    Begin
-      -- change_dir(path);
+      change_dir(sgf, path);
       if dir_fils then
-         if all_info then
-            affiche_detail(sgf.noeud_courant);
-         else
-            affiche_simple(sgf.noeud_courant);
+         if all_info then -- ls -l -A
+            affiche_all(sgf.noeud_courant);
+         else -- ls -A
+            affiche_enf_tree(sgf.noeud_courant);
          end if;
       else
-         if all_info then
-            -- afficher_enfants_all(sgf.noeud_courant);
-            null;
-         else
-            null;
+         if all_info then  --ls -l
+            affiche_enf_det(sgf.noeud_courant);
+         else -- ls
+            affiche_simpl(sgf.noeud_courant);
          end if;
       end if;
-      -- noeud_courant := tmp_noeud_cour;
+      sgf.noeud_courant := tmp_noeud;
       New_Line;
    end liste_contenu;
+
+
+
+   procedure change_droits(sgf : in out T_sgf; path : in T_path; n : in Integer) is
+      tmp : T_path;
+      data : T_info;
+   Begin
+      tmp := repo_courant(sgf);
+      change_dir(sgf, path);
+      data := get_contenu(sgf.noeud_courant);
+      data.droits := n;
+      modifier(sgf.noeud_courant, data);
+      change_dir(sgf, tmp);
+   end change_droits;
+
+
+
+   procedure change_name (sgf : in out T_SGF; path : in T_PATH; name : in Unbounded_String) is
+      tmp : T_path;
+      data : T_info;
+   Begin
+      tmp := repo_courant(sgf);
+      change_dir(sgf, path);
+      data := get_contenu(sgf.noeud_courant);
+      data.name := name;
+      modifier(sgf.noeud_courant, data);
+      change_dir(sgf, tmp);
+   end change_name;
+
 
 
    procedure supp_fichier_dossier(sgf : in out T_sgf; path : in T_PATH; isFile : in Boolean) is
@@ -252,22 +287,32 @@ package body sgf is
       end if;
       set_arbre(find(sgf.noeud_courant, tmp), tmp_noeud);
       remove(sgf.root, get_contenu(tmp_noeud));
+      sgf.taille := sgf.taille - get_contenu(tmp_noeud).taille;
    end supp_fichier_dossier;
+
 
 
 
    procedure affiche_fichier(sgf : in out T_sgf; path : in T_path) is
       tmp : T_info;
       ab_tmp : T_arbre;
+      cannot_print : EXCEPTION;
    Begin
       tmp.name := liste_cmd.get_contenu(path.chemin_inv);
       set_arbre(find(sgf.root, tmp), ab_tmp);
-      if get_contenu(ab_tmp).isFile then
-         Put_Line(get_contenu(ab_tmp).contenu);
+      if not ab_est_vide(ab_tmp) then
+         if get_contenu(ab_tmp).isFile then
+            Put_Line(get_contenu(ab_tmp).contenu);
+         else
+            raise chemin_invalide;
+         end if;
       else
-         raise chemin_invalide;
+         raise cannot_print;
       end if;
    end affiche_fichier;
+
+
+
 
 
    procedure archive_dir (sgf : in out T_sgf; path : in T_PATH) is
@@ -289,6 +334,7 @@ package body sgf is
          supp_enfants(tmp_noeud);
       end if;
    end archive_dir;
+
 
 
 

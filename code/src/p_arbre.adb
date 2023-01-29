@@ -24,17 +24,13 @@ package body p_arbre is
 
 
    function profondeur(ab : in T_arbre) return Integer is
-      n : Integer := 0;
-      tmp, r : T_arbre;
+      n : Integer;
+      tmp : T_arbre;
    Begin
-      -- cette fonction revient compte rle nombre de noeud entre ab et root
-      r := get_root(ab);
+      n := 0;
       tmp := ab;
-      -- tant que je ne suis pas à la racine je boucle
-      while tmp /= r loop
-         -- j'incrémente n de 1 parce que j'ai renontré un nouveau noeud
+      while tmp.all.parent /= null loop
          n := n + 1;
-         -- je remonte d'un noeud
          tmp := tmp.all.parent;
       end loop;
       return n;
@@ -62,7 +58,24 @@ package body p_arbre is
    end ab_est_vide;
 
 
-   procedure print (ab : in T_arbre) is
+   procedure print_just(ab : in T_arbre) is
+      arbre_vide : exception;
+      tmp : liste_elem.T_liste;
+   Begin
+      if ab /= null then
+         tmp := ab.all.enfants;
+         while not liste_elem.est_vide(tmp) loop
+            afficher_noeud(liste_elem.get_contenu(tmp).all.f_info, profondeur(liste_elem.get_contenu(tmp)));
+            tmp := liste_elem.get_next(tmp);
+         end loop;
+      else
+         raise arbre_vide;
+      end if;
+   end print_just;
+
+
+
+   procedure print_every (ab : in T_arbre) is
       arbre_vide : exception;
       une_file : file.T_file;
       curseur : T_arbre;
@@ -77,12 +90,12 @@ package body p_arbre is
          while not file.is_empty(une_file) loop
             defiler(une_file, tmp);
             -- je rappel print sur le premier enfant qui sera affiché puis je descends dans ses enfants à lui et ainsi de suite
-            print(file.get_contenu(tmp));
+            print_every(file.get_contenu(tmp));
          end loop;
       else
          raise arbre_vide;
       end if;
-   end print;
+   end print_every;
 
 
 

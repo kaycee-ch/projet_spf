@@ -2,13 +2,13 @@ with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with P_arbre;
 with parser; use parser;
 with pile_gen;
-with p_liste_gen;
 
 
 package sgf is
 
    chemin_invalide : EXCEPTION;
    arbre_vide : EXCEPTION;
+   stockage_plein : EXCEPTION;
 
    TYPE T_info is record
       name : Unbounded_String;
@@ -23,30 +23,27 @@ package sgf is
    package P_sgf is new P_arbre(T_contenu => T_info, is_equals => cmp_name);
    use P_sgf;
 
-   TYPE T_sgf is record
-      root : T_arbre;
-      noeud_courant : T_arbre;
-      nom : Unbounded_String;
-      end record;
-
+   TYPE T_sgf is private;
 
    package P_pile is new pile_gen(un_type => Unbounded_String);
    use P_pile;
 
-   package liste_enf is new p_liste_gen(T_type => T_arbre);
 
-   procedure print_str (data : in T_info; indent : in Integer);
 
-   procedure print_all(data : in T_info; indent : In Integer);
+   procedure print_simpl (data : in T_info; indent : in Integer);
 
-   -- function cherche is new P_sgf.find;
+   procedure print_enf_tree(data : in T_info; indent : in Integer);
 
-   -- procedure rm is new P_sgf.remove(chercher => cherche);
+   procedure print_all (data : in T_info; indent : in Integer);
 
-   procedure affiche_simple is new P_sgf.print(afficher_noeud => print_str);
-   procedure affiche_detail is new P_sgf.print(afficher_noeud => print_all);
+   procedure affiche_enf_det is new P_sgf.print_just(afficher_noeud => print_all);
 
-   -- procedure find_child is new P_sgf.cherche_enfant;
+   procedure affiche_simpl is new P_sgf.print_just(afficher_noeud => print_simpl);
+
+   procedure affiche_enf_tree is new P_sgf.print_every(afficher_noeud => print_enf_tree);
+
+   procedure affiche_all is new P_sgf.print_every(afficher_noeud => print_all);
+
 
    function is_equal (a : in T_arbre; b : in T_arbre) return Boolean;
 
@@ -122,7 +119,9 @@ package sgf is
    -- exception : droit_insufisant : l'utilisateur n'a pas les droits nécessaires pour cette action
 
 
+   procedure change_droits(sgf : in out T_sgf; path : in T_path; n : in Integer);
 
+   procedure change_name (sgf : in out T_SGF; path : in T_PATH; name : in Unbounded_String);
 
    procedure archive_dir (sgf : in out T_sgf; path : in T_PATH);
 
@@ -130,5 +129,16 @@ package sgf is
 
 
    procedure test(sgf : in out T_sgf);
+
+   function stockage_occupe(sgf : in out T_SGF) return Integer;
+
+
+private
+   TYPE T_sgf is record
+      root : T_arbre;
+      noeud_courant : T_arbre;
+      nom : Unbounded_String;
+      taille : Integer; -- 1 To max
+   end record;
 
 end sgf;

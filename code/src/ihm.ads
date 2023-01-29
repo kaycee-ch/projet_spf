@@ -28,5 +28,8 @@ package IHM is
 
    procedure traiter_rm(le_sgf : in out T_SGF; menu : in Boolean; cmd : in T_COMMAND; path : in out T_path);
 
+   procedure traiter_chmod(le_sgf : in out T_SGF; cmd : in T_COMMAND; path : in out T_PATH);
+
+   procedure traiter_rename(le_sgf : in out T_SGF; cmd : in T_COMMAND; path : in out T_PATH);
 
 end IHM;

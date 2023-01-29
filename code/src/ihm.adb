@@ -15,7 +15,7 @@ package body IHM is
          if liste_cmd.contient(cmd.options, to_unbounded_string("l")) then
             all_info := True;
          end if;
-         if liste_cmd.contient(cmd.options, to_unbounded_string("a")) then
+         if liste_cmd.contient(cmd.options, to_unbounded_string("R")) then
             dir_fils := true;
          end if;
       end if;
@@ -124,6 +124,21 @@ package body IHM is
    end traiter_rm;
 
 
+   procedure traiter_chmod(le_sgf : in out T_SGF; cmd : in T_COMMAND; path : in out T_PATH) is
+   Begin
+      path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
+      sgf.change_droits(le_sgf, path, Integer'Value(to_string(liste_cmd.get_contenu(cmd.options))));
+   end traiter_chmod;
+
+
+
+   procedure traiter_rename(le_sgf : in out T_SGF; cmd : in T_COMMAND; path : in out T_PATH) is
+   Begin
+      path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
+      sgf.change_name(le_sgf, path, liste_cmd.get_contenu(cmd.options));
+   end traiter_rename;
+
+
 
    procedure traiter_cmd(le_sgf : in out T_sgf; cmd : in T_COMMAND) is
       path : T_PATH;
@@ -133,6 +148,7 @@ package body IHM is
       if to_string(cmd.commande) = "init" then
          sgf.formatage_disque(le_sgf);
          Put_Line("Disk formatted");
+
 
       elsif to_string(cmd.commande) = "ls" then
          traiter_ls(le_sgf, menu, cmd, path);
@@ -170,8 +186,28 @@ package body IHM is
          traiter_rm(le_sgf, menu, cmd, path);
          Put_Line("Deleted");
 
+
+      elsif to_string(cmd.commande) = "chmod" then
+         traiter_chmod(le_sgf, cmd, path);
+         Put_Line("Rights changed");
+
+
+      elsif to_string(cmd.commande) = "rename" then
+         traiter_rename(le_sgf, cmd, path);
+         Put_Line("Name changed");
+
+
+      elsif to_string(cmd.commande) = "du" then
+         Put_Line(Integer'Image(sgf.stockage_occupe(le_sgf)));
+         Put_Line("octets");
+
+
+      elsif to_string(cmd.commande) = "clear" then
+         Put(ASCII.ESC & "[2J");
+
+
       else
-         Put("Unknown Command");
+         Put_Line("Unknown Command");
 
       end if;
 
@@ -183,25 +219,41 @@ package body IHM is
    Begin
       if to_string(commande) = "ls" then
          Put_Line("This command is used to display a list of files and sub-directories");
-         Put_Line("ls [ Options ] [File]");
-         Put_Line("ls -a list all files including hidden files starting with '.'");
-         Put_Line("ls -l list with long format - show permissions");
+         Put_Line("ls [ Options ] [File name]");
+         Put_Line("ls -R list all of the files, folders and subfolders");
+         Put_Line("ls -l list with long format - show name, type, permissions, size");
 
       elsif to_string(commande) = "tar" then
-         Put_Line("This comprocedure traiter_cd(le_sgf : in out T_SGF; cmd  in T_COMMAND);mand is used to creat Archive and exctract Archive files");
-         Put_Line("tar [Folder]");
+         Put_Line("This command is used to creat an Archive from a folder");
+         Put_Line("tar [Folder name]");
 
       elsif to_string(commande) = "nano" then
          Put_Line("This command opens up a text editor");
-         Put_Line("nano [File]");
+         Put_Line("nano [File name]");
 
       elsif to_string(commande) = "cd" then
          Put_Line("This command is used to change the current working directory");
-         Put_Line("cd [directory]");
+         Put_Line("cd [path]");
 
       elsif to_string(commande) = "pwd" then
          Put_Line("This command is used to get the current working directory");
          Put_Line("pwd");
+
+      elsif to_string(commande) = "cat" then
+         Put_Line("This command is used to show the content of a file");
+         Put_Line("cat [File path]");
+
+      elsif to_string(commande) = "rename" then
+         Put_Line("This command is used to rename a folder");
+         Put_Line("rename -[new_name] [File path]");
+
+      elsif to_string(commande) = "mkdir" then
+         Put_Line("This command is used to create a folder");
+         Put_Line("mkdir [File path]");
+
+      elsif to_string(commande) = "chmod" then
+         Put_Line("This commmand is used to change a folder's permissions");
+         Put_Line("chmod -[Permission Number] [Folder Path]");
       end if;
 
    end help;
@@ -215,86 +267,107 @@ package body IHM is
       quitte : Boolean;
       menu : Boolean := true;
       sure : Character;
+      n : INteger;
    Begin
       case choix is
-         when 'a' =>
-            Put_Line("This action will erase everything in the current disk and is irreversible, are you sure Y/N ?");
-            Get(sure); Skip_Line;
-            case sure is
-               when 'Y' =>
-                  sgf.formatage_disque(le_sgf);
-                  Put_Line("Disk formatted");
-               when others =>
-                  Put_Line("Action canceled.");
-            end case;
+      when 'a' =>
+         Put_Line("This action will erase everything in the current disk and is irreversible, are you sure Y/N ?");
+         Get(sure); Skip_Line;
+         case sure is
+            when 'Y' =>
+               sgf.formatage_disque(le_sgf);
+               Put_Line("Disk formatted");
+            when others =>
+               Put_Line("Action canceled.");
+         end case;
 
-         when 'b' =>
-            path_traite := repo_courant(le_sgf);
+      when 'b' =>
+         path_traite := repo_courant(le_sgf);
 
-         when 'c' =>
-            Put_Line("What is the file path ? ('/./<filename>' if it's the current directory) ");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            traiter_nano(le_sgf, menu, false, cmd, path_traite);
+      when 'c' =>
+         Put_Line("What is the file path ? ('<filename>' if it's the current directory) ");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         traiter_nano(le_sgf, menu, false, cmd, path_traite);
 
-         when 'd' =>
-            Put_Line("What is the file path ? ('/./<filename>' if it's the current directory) ");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            traiter_cat(le_sgf, menu, cmd, path_traite);
+      when 'd' =>
+         Put_Line("What is the file path ? ('<filename>' if it's the current directory) ");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         traiter_cat(le_sgf, menu, cmd, path_traite);
 
-         when 'e' =>
-            Put_Line("What is the file path ('/./<filename>' if it's the current directory) ?");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            traiter_nano(le_sgf, menu, true, cmd, path_traite);
+      when 'e' =>
+         Put_Line("What is the file path ('<filename>' if it's the current directory) ?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         traiter_nano(le_sgf, menu, true, cmd, path_traite);
 
-         when 'f' =>
-            Put_Line("What is the folder path ('/./<foldername>' if it's the current directory) ?");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            traiter_mkdir(le_sgf, menu, cmd, path_traite);
+      when 'f' =>
+         Put_Line("What is the folder path ('<foldername>' if it's the current directory) ?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         traiter_mkdir(le_sgf, menu, cmd, path_traite);
 
-         when 'g' =>
-            Put_Line("What is the destination path ('/.' if it's the current directory)?");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            traiter_cd(le_sgf, menu, cmd, path_traite);
+      when 'g' =>
+         Put_Line("What is the destination path ('/.' if it's the current directory, '/..' if it's the current directory's parent)?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         traiter_cd(le_sgf, menu, cmd, path_traite);
 
-         when 'h' =>
-            Put_Line("What is the directory path ('/.' if it's the current directory) ? ");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            Put_Line("If you want to list everything in the children directory put '-l'");
-            Put_Line("If you want to list every details about the files/folders put '-a'");
-            Unbounded_Io.Get_Line(y); skip_line;
-            cmd := traiter_cmd(y);
-            traiter_ls(le_sgf, menu, cmd, path_traite);
+      when 'h' =>
+         Put_Line("What is the directory path ('/.' if it's the current directory) ? ");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         Put_Line("If you want to see the children tree, type '-R'");
+         Put_Line("If you want to list every details about the files/folders, type '-l'");
+         Unbounded_Io.Get_Line(y); skip_line;
+         cmd := traiter_cmd(y);
+         traiter_ls(le_sgf, menu, cmd, path_traite);
 
-         when 'i' =>
-            Put_Line("What is the file path (<filename> if it's the current directory) ?");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            sgf.supp_fichier_dossier(le_sgf, path_traite, true);
+      when 'i' =>
+         Put_Line("What is the file path (<filename> if it's the current directory) ?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         sgf.supp_fichier_dossier(le_sgf, path_traite, true);
 
-         when 'j' =>
-            Put_Line("What is the folder path (<foldername> if it's the current directory) ?");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            sgf.supp_fichier_dossier(le_sgf, path_traite, false);
+      when 'j' =>
+         Put_Line("What is the folder path (<foldername> if it's the current directory) ?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         sgf.supp_fichier_dossier(le_sgf, path_traite, false);
 
-         when 'k' =>
-            Put_Line("What is the current file path ('/.' if it's the current directory) ?");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            sgf.archive_dir(le_sgf, path_traite);
+      when 'k' =>
+         Put_Line("What is the folder path ?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         sgf.archive_dir(le_sgf, path_traite);
 
-         when 'l' =>
-            Put_line("Exiting, goodbye");
-            quitte := true;
+      when 'l' =>
+         Put_Line("What is the folder path ?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         Put_Line("What are the new rights ? (Integer only)");
+         n := integer'value(Get_Line);
+         sgf.change_droits(le_sgf, path_traite, n);
 
-         when others =>
-            Put_Line("Unknown command, please pick from the menu.");
+      when 'm' =>
+         Put_Line("What is the file/folder path ?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         Put_Line("What is the new name ?");
+         Unbounded_IO.Get_Line(y);
+         sgf.change_name(le_sgf, path_traite, y);
+
+      when 'n' =>
+         Put_Line(Integer'Image(sgf.stockage_occupe(le_sgf)));
+
+
+      when 'o' =>
+         Put_line("Exiting, goodbye");
+         quitte := true;
+
+      when others =>
+         Put_Line("Unknown command, please pick from the menu.");
 
       end case;
    end traiter_choix;

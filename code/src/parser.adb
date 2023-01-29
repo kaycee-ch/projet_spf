@@ -6,17 +6,6 @@ with Text_Io;
 package body parser is
 
 
-   function isPath (phrase : in Unbounded_String) return Boolean is
-      est_chemin : Boolean := false;
-   Begin
-      for i in 1..length(phrase) loop
-         if element(phrase, i) = '/' then
-            est_chemin := True;
-         end if;
-      end loop;
-      return est_chemin;
-   end isPath;
-
 
    function i_char (phrase : in Unbounded_String; index : in out Integer; char : in Character) return Integer is
    Begin

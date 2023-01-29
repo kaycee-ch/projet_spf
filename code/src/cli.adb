@@ -37,7 +37,8 @@ package body CLI is
       Put_Line("i) Remove a file");
       Put_Line("j) Remove a folder");
       Put_Line("k) Archive a folder");
-      Put_line("l) Exit this SGF");
+      Put_line("l) Change a folder's rights");
+      Put_Line("m) Exit this SGF (non reversible!)");
       Get(choix); Skip_Line;
    end afficher_menu;
 

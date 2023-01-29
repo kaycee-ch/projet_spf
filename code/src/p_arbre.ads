@@ -117,12 +117,15 @@ package p_arbre is
 
    generic
       with procedure afficher_noeud(n : in T_contenu; indent : in Integer);
-   procedure print(Ab : in T_arbre);
+   procedure print_every(Ab : in T_arbre);
    -- semantique : cette fonction affiche tous les noeuds en dessous de ab en faisant un parcours préfixe
    -- pre : /
    -- post : /
    -- exception : arbre_vide si ab = null
 
+   generic
+      with procedure afficher_noeud(n : in T_contenu; indent : in Integer);
+   procedure print_just(ab : in T_arbre);
 
 private
    TYPE T_noeud;
