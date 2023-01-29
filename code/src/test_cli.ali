@@ -1,0 +1,124 @@
+V "GNAT Lib v10"
+M P W=b
+P SS ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_NESTED_FINALIZATION
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U test_cli%b		test_cli.adb		00a29628 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W cli%s			cli.adb			cli.ali
+W ihm%s			ihm.adb			ihm.ali
+W parser%s		parser.adb		parser.ali
+W sgf%s			sgf.adb			sgf.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20220628085427 76789da1 ada%s
+D a-charac.ads		20220628085427 2d3ec45b ada.characters%s
+D a-chlat1.ads		20220628085427 66457d31 ada.characters.latin_1%s
+D a-except.ads		20220628085427 a7106115 ada.exceptions%s
+D a-finali.ads		20220628085427 bf4f806b ada.finalization%s
+D a-ioexce.ads		20220628085427 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20220628085427 119b8fb3 ada.streams%s
+D a-string.ads		20220628085427 90ac6797 ada.strings%s
+D a-strmap.ads		20220628085427 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20220628085427 1656705b ada.strings.unbounded%s
+D a-suteio.ads		20220628085427 26d8e9aa ada.strings.unbounded.text_io%s
+D a-tags.ads		20220628085427 491b781d ada.tags%s
+D a-textio.ads		20220628085427 aef4d56d ada.text_io%s
+D a-tiunio.ads		20220628085427 759c6b0c ada.text_io.unbounded_io%s
+D a-unccon.ads		20220628085427 0e9b276f ada.unchecked_conversion%s
+D cli.ads		20230126141840 557ced22 cli%s
+D file_gen.ads		20230118020043 7fb869e8 file_gen%s
+D ihm.ads		20230128184356 43dd056d ihm%s
+D interfac.ads		20220628085427 5ab55268 interfaces%s
+D i-cstrea.ads		20220628085427 e53d8b8e interfaces.c_streams%s
+D p_arbre.ads		20230128151834 8e7435ed p_arbre%s
+D p_liste_gen.ads	20230127220056 bd955693 p_liste_gen%s
+D parser.ads		20230127230202 39f41b24 parser%s
+D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
+D sgf.ads		20230128185016 f7332ab8 sgf%s
+D system.ads		20220628085427 4635ec04 system%s
+D s-atocou.ads		20220628085427 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20220628085427 0ebbdb71 system.crtl%s
+D s-exctab.ads		20220628085427 54135002 system.exception_table%s
+D s-ficobl.ads		20220628085427 078245e4 system.file_control_block%s
+D s-finmas.ads		20220628085427 7811a767 system.finalization_masters%s
+D s-finroo.ads		20220628085427 4ff27390 system.finalization_root%s
+D s-memory.ads		20220628085427 597d6634 system.memory%s
+D s-parame.ads		20220628085427 48ec542b system.parameters%s
+D s-pooglo.ads		20220628085427 ede33ef8 system.pool_global%s
+D s-secsta.ads		20220628085427 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20220628085427 a7318a92 system.soft_links%s
+D s-stache.ads		20220628085427 a37c21ec system.stack_checking%s
+D s-stalib.ads		20220628085427 09bd3940 system.standard_library%s
+D s-stalib.adb		20220628085427 f2fe2716 system.standard_library%b
+D s-stoele.ads		20220628085427 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20220628085427 b16154c2 system.storage_pools%s
+D s-stposu.ads		20220628085427 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20220628085427 aedef97e system.stream_attributes%s
+D s-traent.ads		20220628085427 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20220628085427 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20220628085427 1b7d22d2 system.wch_con%s
+D test_cli.adb		20230128135253 6066eacd test_cli%b
+D text_io.ads		20220628085427 21b2c898 text_io%s
+G a e
+G c Z b b [test_cli standard 8 11 none]
+G r s t_sgf [test_cli standard 8 11 none] [t_sgfIP sgf 26 9 none]
+G r l t_sgf [test_cli standard 8 11 none] [t_sgfDI sgf 26 9 none]
+G r k t_sgf [test_cli standard 8 11 none] [t_sgfDF sgf 26 9 none]
+G r c none [test_cli standard 8 11 none] [affichage_deb cli 8 13 none]
+G r c none [test_cli standard 8 11 none] [saisie_libre cli 10 14 none]
+G r c none [test_cli standard 8 11 none] [afficher_menu cli 9 14 none]
+G r c none [test_cli standard 8 11 none] [traiter_choix ihm 13 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 48|1r6 1r33 2r6 2r23
+X 8 a-string.ads
+16K13*Strings 35e16 48|1r10 1r37
+X 10 a-strunb.ads
+82K21*Unbounded 756e26 48|1w18 1r45
+X 13 a-textio.ads
+57K13*Text_IO 727e16 48|2w10 2r27
+508U14*Put_Line 48|33s28 35s19
+X 16 cli.ads
+4K9*CLI 14e8 48|4w6 4r15
+8V13*affichage_deb{boolean} 48|29s12
+9U14*afficher_menu 48|17s13
+10U14*saisie_libre 48|23s13
+X 18 ihm.ads
+5K9*IHM 32e8 48|5w6 5r15
+13U14*traiter_choix 48|18s13
+X 23 parser.ads
+6K9*parser 44e11 48|3w6 3r18
+X 25 sgf.ads
+8K9*sgf 134e8 48|6w6 6r15
+10X4*chemin_invalide 48|33r9
+26R9*T_sgf 30e17 48|10r15 13r39
+X 26 system.ads
+67M9*Address
+X 33 s-memory.ads
+53V13*Alloc{26|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{26|67M9} 105i<c,__gnat_realloc>22
+X 40 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+X 48 test_cli.adb
+8U11*test_cli 8b11 37l5 37t13
+9b4 menu{boolean} 15r10 29m4
+10r4 test_sgf{25|26R9} 30m11 30r11 34m14 34r14 36m14 36r14
+11e4 choix{character} 17m27 18r37 19r23
+13U14 launch 13b14 13=21 26l8 26t14 30s4 34s7 36s7
+13r21 test_sgf{25|26R9} 18m27 23m26
+

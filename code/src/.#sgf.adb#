@@ -297,7 +297,7 @@ package body sgf is
       path_str : Unbounded_String;
       tmp : T_arbre;
       -- data : T_info;
-   Begin
+      Begin
       formatage_disque(sgf);
       -- affiche(arbre);
       -- affiche(noeud_courant);

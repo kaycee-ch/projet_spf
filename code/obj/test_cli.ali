@@ -14,7 +14,7 @@ RV NO_NESTED_FINALIZATION
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_cli%b		test_cli.adb		15c6b454 NE OO SU IL
+U test_cli%b		test_cli.adb		0f0089b6 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -54,7 +54,7 @@ D p_arbre.ads		20230128151834 8e7435ed p_arbre%s
 D p_liste_gen.ads	20230127220056 bd955693 p_liste_gen%s
 D parser.ads		20230127230202 39f41b24 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
-D sgf.ads		20230128185016 f7332ab8 sgf%s
+D sgf.ads		20230128231825 edf5175a sgf%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s

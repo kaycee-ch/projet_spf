@@ -60,7 +60,7 @@ package sgf is
    -- exception : none
 
 
-   function repo_courant (sgf : in out T_sgf) return Unbounded_String;
+   function repo_courant (sgf : in out T_sgf) return T_path;
    -- semantique : obtention du repertoire de travail ou repertoire courant (pwd)
    -- pre : arbre a ete initialise
    -- post : none

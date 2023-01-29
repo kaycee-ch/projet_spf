@@ -23,7 +23,7 @@ package body IHM is
          sgf.liste_contenu(le_sgf, path, dir_fils, all_info);
       else
          if liste_cmd.est_vide(cmd.arguments) then
-            path := traiter_path(sgf.repo_courant(le_sgf));
+            path := sgf.repo_courant(le_sgf);
          else
             path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
          end if;
@@ -34,7 +34,7 @@ package body IHM is
 
 
    procedure traiter_pwd (le_sgf : in out T_sgf; cmd : in T_command; path : in out T_path) is
-      repo : Unbounded_String;
+      repo : T_path;
    Begin
       if liste_cmd.contient(cmd.options, To_Unbounded_String("-help")) then
          help(to_unbounded_string("pwd"));
@@ -84,7 +84,7 @@ package body IHM is
          help(to_unbounded_string("cd"));
       end if;
       if liste_cmd.est_vide(cmd.arguments) then
-         path := traiter_path(sgf.repo_courant(le_sgf));
+         path := sgf.repo_courant(le_sgf);
       else
          path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
       end if;
@@ -132,7 +132,7 @@ package body IHM is
 
       if to_string(cmd.commande) = "init" then
          sgf.formatage_disque(le_sgf);
-
+         Put_Line("Disk formatted");
 
       elsif to_string(cmd.commande) = "ls" then
          traiter_ls(le_sgf, menu, cmd, path);
@@ -144,18 +144,22 @@ package body IHM is
 
       elsif to_string(cmd.commande) = "nano" then
          traiter_nano(le_sgf, menu, false, cmd, path);
+         Put_Line("File created");
 
 
       elsif to_string(cmd.commande) = "mkdir" then
          traiter_mkdir(le_sgf, menu, cmd, path);
+         Put_Line("Folder created");
 
 
       elsif to_string(cmd.commande) = "cd" then
          traiter_cd(le_sgf, menu, cmd, path);
+         Put_Line("Working Directory has been changed");
 
 
       elsif to_string(cmd.commande) = "tar" then
          traiter_tar(le_sgf, menu, cmd, path);
+         Put_Line("Folder compressed");
 
 
       elsif to_string(cmd.commande) = "cat" then
@@ -164,7 +168,7 @@ package body IHM is
 
       elsif to_string(cmd.commande) = "rm" then
          traiter_rm(le_sgf, menu, cmd, path);
-
+         Put_Line("Deleted");
 
       else
          Put("Unknown Command");
@@ -214,33 +218,50 @@ package body IHM is
    Begin
       case choix is
          when 'a' =>
-            path := repo_courant(le_sgf);
+            Put_Line("This action will erase everything in the current disk and is irreversible, are you sure Y/N ?");
+            Get(sure); Skip_Line;
+            case sure is
+               when 'Y' =>
+                  sgf.formatage_disque(le_sgf);
+                  Put_Line("Disk formatted");
+               when others =>
+                  Put_Line("Action canceled.");
+            end case;
 
          when 'b' =>
+            path_traite := repo_courant(le_sgf);
+
+         when 'c' =>
             Put_Line("What is the file path ? ('/./<filename>' if it's the current directory) ");
             Unbounded_IO.Get_Line(path); Skip_line;
             path_traite := traiter_path(path);
             traiter_nano(le_sgf, menu, false, cmd, path_traite);
 
-         when 'c' =>
+         when 'd' =>
+            Put_Line("What is the file path ? ('/./<filename>' if it's the current directory) ");
+            Unbounded_IO.Get_Line(path); Skip_line;
+            path_traite := traiter_path(path);
+            traiter_cat(le_sgf, menu, cmd, path_traite);
+
+         when 'e' =>
             Put_Line("What is the file path ('/./<filename>' if it's the current directory) ?");
             Unbounded_IO.Get_Line(path); Skip_line;
             path_traite := traiter_path(path);
             traiter_nano(le_sgf, menu, true, cmd, path_traite);
 
-         when 'd' =>
+         when 'f' =>
             Put_Line("What is the folder path ('/./<foldername>' if it's the current directory) ?");
             Unbounded_IO.Get_Line(path); Skip_line;
             path_traite := traiter_path(path);
             traiter_mkdir(le_sgf, menu, cmd, path_traite);
 
-         when 'e' =>
+         when 'g' =>
             Put_Line("What is the destination path ('/.' if it's the current directory)?");
             Unbounded_IO.Get_Line(path); Skip_line;
             path_traite := traiter_path(path);
             traiter_cd(le_sgf, menu, cmd, path_traite);
 
-         when 'f' =>
+         when 'h' =>
             Put_Line("What is the directory path ('/.' if it's the current directory) ? ");
             Unbounded_IO.Get_Line(path); Skip_line;
             path_traite := traiter_path(path);
@@ -250,29 +271,17 @@ package body IHM is
             cmd := traiter_cmd(y);
             traiter_ls(le_sgf, menu, cmd, path_traite);
 
-         when 'g' =>
+         when 'i' =>
             Put_Line("What is the file path (<filename> if it's the current directory) ?");
             Unbounded_IO.Get_Line(path); Skip_line;
             path_traite := traiter_path(path);
             sgf.supp_fichier_dossier(le_sgf, path_traite, true);
 
-         when 'h' =>
+         when 'j' =>
             Put_Line("What is the folder path (<foldername> if it's the current directory) ?");
             Unbounded_IO.Get_Line(path); Skip_line;
             path_traite := traiter_path(path);
             sgf.supp_fichier_dossier(le_sgf, path_traite, false);
-
-         when 'i' =>
-            Put_Line("What is the current file path (<filename> if it's the current directory) ?");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            -- sgf.deplacer(le_sgf, path_traite, path_traite_dest);
-
-         when 'j' =>
-            Put_Line("What is the folder path ( if it's the current directory)");
-            Unbounded_IO.Get_Line(path); Skip_line;
-            path_traite := traiter_path(path);
-            --sgf.copy(le_sgf, path_traite, path_traite_dest);
 
          when 'k' =>
             Put_Line("What is the current file path ('/.' if it's the current directory) ?");
@@ -283,17 +292,6 @@ package body IHM is
          when 'l' =>
             Put_line("Exiting, goodbye");
             quitte := true;
-
-         when 'z' =>
-            Put_Line("This action will erase everything in the current disk and is irreversible, are you sure Y/N ?");
-            Get(sure); Skip_Line;
-            case sure is
-               when 'Y' =>
-                  sgf.formatage_disque(le_sgf);
-                  Put_Line("Disk formatted");
-               when others =>
-                  Put_Line("Action canceled.");
-            end case;
 
          when others =>
             Put_Line("Unknown command, please pick from the menu.");

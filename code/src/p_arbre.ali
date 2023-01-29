@@ -1,0 +1,202 @@
+V "GNAT Lib v10"
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U p_arbre%b		p_arbre.adb		346f4cff NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+W file_gen%s		file_gen.adb		file_gen.ali
+W p_liste_gen%s		p_liste_gen.adb		p_liste_gen.ali
+
+U p_arbre%s		p_arbre.ads		f1cc5c05 BN EE NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+W file_gen%s		file_gen.adb		file_gen.ali
+Z p_liste_gen%s		p_liste_gen.adb		p_liste_gen.ali
+
+D ada.ads		20220628085427 76789da1 ada%s
+D a-charac.ads		20220628085427 2d3ec45b ada.characters%s
+D a-chlat1.ads		20220628085427 66457d31 ada.characters.latin_1%s
+D a-except.ads		20220628085427 a7106115 ada.exceptions%s
+D a-finali.ads		20220628085427 bf4f806b ada.finalization%s
+D a-inteio.ads		20220628085427 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20220628085427 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20220628085427 119b8fb3 ada.streams%s
+D a-string.ads		20220628085427 90ac6797 ada.strings%s
+D a-strmap.ads		20220628085427 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20220628085427 1656705b ada.strings.unbounded%s
+D a-tags.ads		20220628085427 491b781d ada.tags%s
+D a-textio.ads		20220628085427 aef4d56d ada.text_io%s
+D a-tiinio.ads		20220628085427 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20220628085427 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20220628085427 eff36322 ada.unchecked_deallocation%s
+D file_gen.ads		20230118020043 7fb869e8 file_gen%s
+D file_gen.adb		20230117210320 60fd8196 file_gen%b
+D interfac.ads		20220628085427 5ab55268 interfaces%s
+D i-cstrea.ads		20220628085427 e53d8b8e interfaces.c_streams%s
+D p_arbre.ads		20230128151834 8e7435ed p_arbre%s
+D p_arbre.adb		20230128165028 2f67807d p_arbre%b
+D p_liste_gen.ads	20230127220056 bd955693 p_liste_gen%s
+D p_liste_gen.adb	20230127220105 55c5940e p_liste_gen%b
+D system.ads		20220628085427 4635ec04 system%s
+D s-atocou.ads		20220628085427 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20220628085427 0ebbdb71 system.crtl%s
+D s-exctab.ads		20220628085427 54135002 system.exception_table%s
+D s-ficobl.ads		20220628085427 078245e4 system.file_control_block%s
+D s-finmas.ads		20220628085427 7811a767 system.finalization_masters%s
+D s-finroo.ads		20220628085427 4ff27390 system.finalization_root%s
+D s-parame.ads		20220628085427 48ec542b system.parameters%s
+D s-secsta.ads		20220628085427 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20220628085427 a7318a92 system.soft_links%s
+D s-stache.ads		20220628085427 a37c21ec system.stack_checking%s
+D s-stalib.ads		20220628085427 09bd3940 system.standard_library%s
+D s-stoele.ads		20220628085427 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20220628085427 b16154c2 system.storage_pools%s
+D s-stposu.ads		20220628085427 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20220628085427 aedef97e system.stream_attributes%s
+D s-traent.ads		20220628085427 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20220628085427 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20220628085427 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [p_arbre standard 8 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 22|1r6 1r23 2r6 2r33 5r6 9r26
+X 9 a-string.ads
+16K13*Strings 35e16 22|2r10 2r37
+X 11 a-strunb.ads
+82K21*Unbounded 756e26 22|2w18 2r45
+X 13 a-textio.ads
+57K13*Text_IO 727e16 22|1w10 1r27
+X 16 a-uncdea.ads
+17+9 Object 22|9r53
+18P9 Name(17+9) 22|9r72
+20u15*Unchecked_Deallocation 22|5w10 9r30
+X 17 file_gen.ads
+4+9 T_element 21|131r33
+7k9*file_gen 39e13 21|1w6 131r24 22|3w6
+8P9 T_file 22|67r23[21|131] 69r18[21|131]
+11K12 liste_elem[23|5] 21|144r22[131] 22|22r25[21|131] 51r29[21|131] 52r10[21|131]
+. 91r16[21|131] 96r18[21|131] 98r23[21|131] 99r13[21|131] 99r61[21|131] 129r13[21|131]
+. 138r23[21|131] 139r29[21|131] 140r26[21|131] 142r32[21|131] 144r29[21|131]
+. 206r10[21|131] 208r10[21|131] 218r28[21|131] 227r17[21|131] 236r20[21|131]
+. 237r26[21|131] 240r27[21|131] 245r20[21|131]
+18U14 enfiler_liste 22|76s15[21|131]
+20U14 defiler 22|78s13[21|131]
+22V13 is_empty{boolean} 22|77s25[21|131]
+26V13 get_contenu{21|12P9} 22|80s24[21|131]
+X 21 p_arbre.ads
+4+9 T_contenu 6r35 6r53 22r58 29r61 36r55 45r45 54r53 68r50 104r59 119r44
+. 142r16 22|17r58 44r61 89r53 127r45 177r49 201r59 226r55
+6V18 is_equals{boolean} 6>28 6>46 22|135s13 139s19 237s16
+6*28 x{4+9}
+6*46 y{4+9}
+8k9*p_arbre 4z9 6z18 128E9 147l5 147e12 22|7b14 254l5 254t12
+10X4*arbre_vide 22|54r16 167r16 182r16 196r16 210r16 220r16 232r16
+10X16*data_absente 22|104r16
+12P9*T_arbre 15r29 22r39 29r42 36r36 36r73 45r26 45r63 54r34 61r30 61r46
+. 68r34 75r32 75r51 82r34 89r32 96r33 96r49 104r36 111r40 120r28 129c9 131r46
+. 137r16 143r16 22|9r80 12r29 17r39 26r32 28r16 44r42 45r13 59r34 65r29 68r17
+. 89r34 90r14 127r26 127r63 128r14 158r30 158r46 172r32 172r51 177r33 187r33
+. 187r49 201r36 202r13 215r40 226r36 226r73
+15U14*init 15<20 22|12b14 15l8 15t12
+15p20 ab{12P9} 22|12b20 14m7
+22U14*creer_racine 22=27 22>48 22|17b14 23l8 23t20
+22p27 ab{12P9} 22|17b27 19m7 20r7 21r7 22r7
+22*48 data{4+9} 22|17b48 20r24
+29U14*ajouter_enfants 29=30 29>51 22|44b14 56l8 56t23
+29p30 ab{12P9} 22|44b30 47r10 50r28 52r37
+29*51 data{4+9} 22|44b51 49r28
+36V13*cherche_enfant{12P9} 36>28 36>45 22|226b13 251l8 251t22
+36p28 ab{12P9} 22|226b28 231r10 234r21
+36*45 data{4+9} 22|226b45 237r70
+45V13*find{12P9} 45>18 45>35 22|94s15 127b13 142s27 155l8 155t12
+45p18 ab{12P9} 22|127b18 132r10 133r17 135r23 136r20
+45*35 data{4+9} 22|127b35 135r38 139r69 142r61
+54U14*remove 54=22 54>43 22|89b14 106l8 106t14
+54p22 ab{12P9} 22|89b22 94r20
+54*43 data{4+9} 22|89b43 94r24
+61V13*get_root{12P9} 61>22 22|31s12 158b13 162s20 169l8 169t16
+61p22 ab{12P9} 22|158b22 160r10 161r13 162r29 164r20
+68V13*get_contenu{4+9} 68>26 22|177b13 184l8 184t19
+68p26 ab{12P9} 22|177b25 179r26 180r17
+75U14*set_arbre 75>24 75<41 22|172b14 175l8 175t17
+75p24 ab{12P9} 22|172b24 174r14
+75p41 ab2{12P9} 22|172b41 174m7
+82V13*ab_est_vide{boolean} 82>26 22|59b13 62l8 62t19 143s22 179s14 189s14
+. 190s17
+82p26 ab{12P9} 22|59b26 61r14
+89V13*profondeur{integer} 89>24 22|26b13 41l8 41t18 74s45
+89p24 ab{12P9} 22|26b24 31r21 32r14
+96V13*get_parent{12P9} 96>25 22|187b13 198l8 198t18
+96p25 ab{12P9} 22|187b25 189r26 190r29 191r20
+104U14*modifier 104=24 104>45 22|201b14 212l8 212t16
+104p24 ab{12P9} 22|201b24 204r10 205r17 206r29 208r37
+104*45 new_data{4+9} 22|201b45 207r28
+111U14*supp_enfants 111=28 22|215b14 222l8 222t20
+111p28 ab{12P9} 22|215b28 217r10 218r10
+119U22 afficher_noeud 119>37 119>55 22|74s10
+119*37 n{4+9}
+119i55 indent{integer}
+120u14*print 120>20 22|65b14 80s13 85l8 85t13
+120p20 Ab{12P9} 22|65b21 71r18 74r56
+128R9 T_noeud 129r27 141c9 145e14 22|9r63 19r17 48r21
+131K12 file[17|7] 132r8 144r17 22|67r18 69r13 76r10 77r20 80r19
+134R9 T_cellule 135r27 136c9 139e14
+135P9 T_liste(134R9) 138r17
+137p7 valeur{12P9}
+138p7 suivant{135P9}
+142*7 f_info{4+9} 22|20m14 49m18 74r37 135r30 139r61 180r24 207m18 237r62
+143p7 parent{12P9} 22|21m14 38r25 50m18 96r47 98r54 99r41 161r20 162r36 190r36
+. 191r27 206r36 208r44
+144p7 enfants{23|7P9[17|11[21|131]]} 22|22m14 51m18 52m44 76r51 96r58 98r65
+. 99m52 133r24 206m47 208m55 218m17 234r28
+X 22 p_arbre.adb
+9U14 free[16|20] 101s13
+27i7 n{integer} 36m10 36r15 40r14
+28p7 tmp{21|12P9} 32m7 34r13 38m10 38r17
+28p12 r{21|12P9} 31m7 34r20
+45p7 tmp{21|12P9} 48m10 49r10 50r10 51r10 52r53
+66X7 arbre_vide 83r16
+67p7 une_file{17|8P9[21|131]} 76m29 76r29 77r34 78m21 78r21
+68p7 curseur{21|12P9} 71m7 72r10 74r25 76r39
+69p7 tmp{17|8P9[21|131]} 78m31 78r31 80r36
+90p7 addr{21|12P9} 94m7 95r10 96r38 98r45 98r74 99r32 101m18 101r18
+91p7 l_addr{23|7P9[17|11[21|131]]} 98m13 99r84
+128p7 addr{21|12P9} 142m19 143r34 151r17
+129p7 tmp{23|7P9[17|11[21|131]]} 133m10 138r43 139r52 140r49 142r55 144m22
+. 144r49
+130b7 present{boolean} 138r56 146m22
+202p7 tmp{21|12P9} 205m10 206r56 207r10 208r64
+227p7 tmp_enf{23|7P9[17|11[21|131]]} 234m10 236r40 237r49 240m16 240r47 245r43
+228X7 liste_vide
+229b7 present{boolean} 235m10 236r57 238m16 244r13
+X 23 p_liste_gen.ads
+5k9*P_liste_gen 22|4w6 23|88e16
+7P9 T_liste 21|144r33[17|11[21|131]] 22|91r27[17|11[21|131]] 129r24[17|11[21|131]]
+. 227r28[17|11[21|131]]
+9V13 creer_liste_vide{7P9[17|11[21|131]]} 22|22s36[17|11[21|131]] 51s40[17|11[21|131]]
+. 218s39[17|11[21|131]]
+15V13 est_vide{boolean} 22|96s29[17|11[21|131]] 138s34[17|11[21|131]] 236s31[17|11[21|131]]
+22U14 inserer_en_tete 22|52s21[17|11[21|131]] 208s21[17|11[21|131]]
+39V13 rechercher{7P9[17|11[21|131]]} 22|98s34[17|11[21|131]]
+62U14 enlever 22|99s24[17|11[21|131]] 206s21[17|11[21|131]]
+68V13 get_contenu{21|12P9} 22|99s72[17|11[21|131]] 139s40[17|11[21|131]]
+. 140s37[17|11[21|131]] 142s43[17|11[21|131]] 237s37[17|11[21|131]] 245s31[17|11[21|131]]
+70V13 get_next{7P9[17|11[21|131]]} 22|144s40[17|11[21|131]] 240s38[17|11[21|131]]
+
