@@ -92,6 +92,23 @@ package body sgf is
 
 
 
+   procedure print_repo(sgf : in T_sgf) is
+      tmp : T_arbre := sgf.noeud_courant;
+      p : pile;
+      pwd : Unbounded_String;
+   Begin
+      creer_pile_vide(p);
+      while not ab_est_vide(tmp) loop
+         empiler(p, get_contenu(tmp).name);
+         tmp := get_parent(tmp);
+      end loop;
+      while not est_vide(p) loop
+         append(pwd, "/");
+         append(pwd, depiler(p));
+      end loop;
+      Put(pwd);
+      New_Line;
+      end print_repo;
 
 
 
@@ -110,8 +127,6 @@ package body sgf is
          append(pwd, "/");
          append(pwd, depiler(p));
       end loop;
-      put(pwd);
-      new_line;
       pwd_path := traiter_path(pwd);
       return pwd_path;
    end repo_courant;
@@ -198,7 +213,7 @@ package body sgf is
       if estFichier then
          Text_IO.Put_Line("Saisissez le contenu du fichier");
          Get_line(data.contenu); text_io.Skip_Line;
-         data.taille := length(data.contenu) * 100;
+         data.taille := length(data.contenu) * 100; -- choix arbritaire : 1 lettre = 100 octets
          data.droits := 666;
       else
          data.taille := 10000;
@@ -230,9 +245,9 @@ package body sgf is
    Begin
       change_dir(sgf, path);
       if dir_fils then
-         if all_info then -- ls -l -A
+         if all_info then -- ls -l -R
             affiche_all(sgf.noeud_courant);
-         else -- ls -A
+         else -- ls -R
             affiche_enf_tree(sgf.noeud_courant);
          end if;
       else
@@ -286,8 +301,12 @@ package body sgf is
          tmp.name := liste_cmd.get_contenu(path.chemin_inv);
       end if;
       set_arbre(find(sgf.noeud_courant, tmp), tmp_noeud);
-      remove(sgf.root, get_contenu(tmp_noeud));
-      sgf.taille := sgf.taille - get_contenu(tmp_noeud).taille;
+      if not ab_est_vide(tmp_noeud) then
+         remove(sgf.root, get_contenu(tmp_noeud));
+         sgf.taille := sgf.taille - get_contenu(tmp_noeud).taille;
+      else
+         raise chemin_invalide;
+      end if;
    end supp_fichier_dossier;
 
 
@@ -296,7 +315,6 @@ package body sgf is
    procedure affiche_fichier(sgf : in out T_sgf; path : in T_path) is
       tmp : T_info;
       ab_tmp : T_arbre;
-      cannot_print : EXCEPTION;
    Begin
       tmp.name := liste_cmd.get_contenu(path.chemin_inv);
       set_arbre(find(sgf.root, tmp), ab_tmp);
@@ -322,18 +340,48 @@ package body sgf is
    Begin
       tmp.name := liste_cmd.get_contenu(path.chemin_inv);
       set_arbre(find(sgf.root, tmp), tmp_noeud);
-      if get_contenu(tmp_noeud).isFile then
+      if not ab_est_vide(tmp_noeud) then
          raise chemin_invalide;
       else
-         nom := get_contenu(tmp_noeud).name;
-         append(nom, To_Unbounded_String(".zip"));
-         data.name := nom;
-         data.isFile := True;
-         data.taille := 0;
-         modifier(tmp_noeud, data);
-         supp_enfants(tmp_noeud);
+         if get_contenu(tmp_noeud).isFile then
+            raise tar_file;
+         else
+            nom := get_contenu(tmp_noeud).name;
+            append(nom, To_Unbounded_String(".zip"));
+            data.name := nom;
+            data.isFile := True;
+            data.taille := 0;
+            modifier(tmp_noeud, data);
+            supp_enfants(tmp_noeud);
+         end if;
       end if;
    end archive_dir;
+
+
+
+   procedure copy_move(sgf : in out T_sgf; path : in T_path; name : in out Unbounded_String; move : in Boolean) is
+      tmp : T_info;
+      tmp_noeud : T_ARBRE;
+      dest : T_arbre;
+   Begin
+      tmp.name := name;
+      tmp_noeud := find(sgf.noeud_courant, tmp);
+      if not ab_est_vide(tmp_noeud) then
+         tmp.name := liste_cmd.get_contenu(path.chemin_inv);
+         set_arbre(find(sgf.root, tmp), dest);
+         tmp := get_contenu(tmp_noeud);
+         if not ab_est_vide(dest) then
+            ajouter_enfants(dest, tmp);
+            if move then
+               remove(sgf.noeud_courant, tmp);
+            end if;
+         else
+            raise chemin_invalide;
+         end if;
+      else
+         raise no_file;
+      end if;
+   end copy_move;
 
 
 

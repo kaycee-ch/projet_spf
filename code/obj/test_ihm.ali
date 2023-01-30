@@ -6,21 +6,13 @@ A -march=x86-64
 P SS ZX
 
 RN
-RV NO_EXCEPTION_HANDLERS
-RV NO_EXCEPTION_PROPAGATION
-RV NO_EXCEPTIONS
-RV NO_NESTED_FINALIZATION
-RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_ihm%b		test_ihm.adb		4db6356f NE OO SU IL
-Z ada.exceptions%s	a-except.adb		a-except.ali
+U test_ihm%b		test_ihm.adb		edf0eeb6 NE OO SU IL
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ihm%s			ihm.adb			ihm.ali
 W parser%s		parser.adb		parser.ali
 W sgf%s			sgf.adb			sgf.ali
-Z system.soft_links%s	s-soflin.adb		s-soflin.ali
-Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
 D ada.ads		20210520051130 76789da1 ada%s
 D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
@@ -40,14 +32,14 @@ D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
 D a-tiunio.ads		20210520051129 759c6b0c ada.text_io.unbounded_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D file_gen.ads		20230118020043 7fb869e8 file_gen%s
-D ihm.ads		20230128130022 f7c9704c ihm%s
+D ihm.ads		20230130170932 f486dca9 ihm%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
-D p_arbre.ads		20230128151834 8e7435ed p_arbre%s
+D p_arbre.ads		20230129143036 ad8a1ad9 p_arbre%s
 D p_liste_gen.ads	20230127220056 bd955693 p_liste_gen%s
-D parser.ads		20230127230202 39f41b24 parser%s
+D parser.ads		20230129155647 fbd468e0 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
-D sgf.ads		20230127235200 33209087 sgf%s
+D sgf.ads		20230130192032 b668f63e sgf%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -55,7 +47,6 @@ D s-exctab.ads		20210520051131 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
 D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
 D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
-D s-memory.ads		20210520051132 597d6634 system.memory%s
 D s-parame.ads		20210520051133 4752c4cb system.parameters%s
 D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
 D s-putima.ads		20210520051133 4e095881 system.put_images%s
@@ -63,7 +54,6 @@ D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
 D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
 D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
 D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
-D s-stalib.adb		20210520051133 977290bf system.standard_library%b
 D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
@@ -71,30 +61,17 @@ D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
-D test_ihm.adb		20230125195038 b0abce80 test_ihm%b
+D test_ihm.adb		20230130170707 54caacc1 test_ihm%b
 D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [test_ihm standard 6 11 none]
-G r s t_sgf [test_ihm standard 6 11 none] [t_sgfIP sgf 26 9 none]
-G r l t_sgf [test_ihm standard 6 11 none] [t_sgfDI sgf 26 9 none]
-G r k t_sgf [test_ihm standard 6 11 none] [t_sgfDF sgf 26 9 none]
 X 19 ihm.ads
-5K9*IHM 27e8 50|3w6 3r15
+5K9*IHM 37e8 48|3w6 3r15
 X 24 parser.ads
-6K9*parser 44e11 50|1w6 1r18
+6K9*parser 42e11 48|1w6 1r18
 X 26 sgf.ads
-8K9*sgf 136e8 50|2w6 2r15 7r15
-26R9*T_sgf 30e17 50|7r19
-X 27 system.ads
-67M9*Address
-X 34 s-memory.ads
-53V13*Alloc{27|67M9} 103i<c,__gnat_malloc>22
-68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{27|67M9} 105i<c,__gnat_realloc>22
-X 42 s-stalib.adb
-89U14 Break_Start 90i<c,__gnat_break_start>22
-X 50 test_ihm.adb
-6U11*test_ihm 6b11 11l5 11t13
-7r4 test_sgf{26|26R9}
+7K9*sgf 147e8 48|2w6 2r15
+X 48 test_ihm.adb
+6U11*test_ihm 6b11 10l5 10t13
 

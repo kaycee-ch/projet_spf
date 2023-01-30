@@ -14,8 +14,6 @@ package IHM is
 
    procedure traiter_ls (le_sgf : in out T_sgf; menu : in Boolean; cmd : in T_command; path : in out T_path);
 
-   procedure traiter_pwd (le_sgf : in out T_sgf; cmd : in T_command; path : in out T_path);
-
    procedure traiter_nano (le_sgf : in out T_sgf; menu : in Boolean; existe : in Boolean; cmd : in T_command; path : in out T_path);
 
    procedure traiter_mkdir(le_sgf : in out T_sgf; menu : in Boolean; cmd : in T_COMMAND; path : in out T_path);
@@ -31,5 +29,9 @@ package IHM is
    procedure traiter_chmod(le_sgf : in out T_SGF; cmd : in T_COMMAND; path : in out T_PATH);
 
    procedure traiter_rename(le_sgf : in out T_SGF; cmd : in T_COMMAND; path : in out T_PATH);
+
+   procedure traiter_cp(le_sgf : in out T_sgf; cmd : in T_command; path : in out T_path);
+
+   procedure traiter_mv(le_sgf : in out T_sgf; cmd : in T_command; path : in out T_path);
 
 end IHM;

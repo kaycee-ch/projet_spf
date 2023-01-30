@@ -37,8 +37,12 @@ package body CLI is
       Put_Line("i) Remove a file");
       Put_Line("j) Remove a folder");
       Put_Line("k) Archive a folder");
-      Put_line("l) Change a folder's rights");
-      Put_Line("m) Exit this SGF (non reversible!)");
+      Put_line("l) Change a folder's name");
+      Put_line("m) Change a folder's rights");
+      Put_line("n) Find the current disk's storage occupancy");
+      Put_Line("o) Copy a file from this repository to another");
+      Put_Line("p) Move a file from this repository to another");
+      Put_line("q) Exit this SGF (non reversible!)");
       Get(choix); Skip_Line;
    end afficher_menu;
 

@@ -33,15 +33,6 @@ package body IHM is
    end traiter_ls;
 
 
-   procedure traiter_pwd (le_sgf : in out T_sgf; cmd : in T_command; path : in out T_path) is
-      repo : T_path;
-   Begin
-      if liste_cmd.contient(cmd.options, To_Unbounded_String("-help")) then
-         help(to_unbounded_string("pwd"));
-      end if;
-      repo := sgf.repo_courant(le_sgf);
-   end traiter_pwd;
-
 
    procedure traiter_nano(le_sgf : in out T_sgf; menu : in Boolean; existe : in Boolean; cmd : in T_command; path : in out T_path) is
       tmp : T_sgf := le_sgf;
@@ -140,6 +131,26 @@ package body IHM is
 
 
 
+   procedure traiter_cp(le_sgf : in out T_sgf; cmd : in T_command; path : in out T_path) is
+      name : Unbounded_String;
+   Begin
+      path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
+      name := liste_cmd.get_contenu(cmd.options);
+      sgf.copy_move(le_sgf, path, name, False);
+   end traiter_cp;
+
+
+
+   procedure traiter_mv(le_sgf : in out T_sgf; cmd : in T_command; path : in out T_path) is
+      name : Unbounded_String;
+   Begin
+      path := traiter_path(liste_cmd.get_contenu(cmd.arguments));
+      name := liste_cmd.get_contenu(cmd.options);
+      sgf.copy_move(le_sgf, path, name, True);
+   end traiter_mv;
+
+
+
    procedure traiter_cmd(le_sgf : in out T_sgf; cmd : in T_COMMAND) is
       path : T_PATH;
       menu : Boolean := false;
@@ -155,7 +166,7 @@ package body IHM is
 
 
       elsif to_string(cmd.commande) = "pwd" then
-         traiter_pwd(le_sgf, cmd, path);
+         sgf.print_repo(le_sgf);
 
 
       elsif to_string(cmd.commande) = "nano" then
@@ -202,6 +213,16 @@ package body IHM is
          Put_Line("octets");
 
 
+      elsif to_string(cmd.commande) = "cp" then
+         traiter_cp(le_sgf, cmd, path);
+         Put_Line("Copied");
+
+
+      elsif to_string(cmd.commande) = "mv" then
+         traiter_mv(le_sgf, cmd, path);
+         Put_Line("Moved");
+
+
       elsif to_string(cmd.commande) = "clear" then
          Put(ASCII.ESC & "[2J");
 
@@ -222,25 +243,23 @@ package body IHM is
          Put_Line("ls [ Options ] [File name]");
          Put_Line("ls -R list all of the files, folders and subfolders");
          Put_Line("ls -l list with long format - show name, type, permissions, size");
+         Put_Line("ls -l -R list with long format - show name, type, permissions, size for all the files, flders, and subfolders");
 
       elsif to_string(commande) = "tar" then
-         Put_Line("This command is used to creat an Archive from a folder");
+         Put_Line("This command is used to create an Archive from a folder");
          Put_Line("tar [Folder name]");
 
       elsif to_string(commande) = "nano" then
-         Put_Line("This command opens up a text editor");
+         Put_Line("This command opens up a text editor and creates a file");
          Put_Line("nano [File name]");
 
       elsif to_string(commande) = "cd" then
          Put_Line("This command is used to change the current working directory");
          Put_Line("cd [path]");
 
-      elsif to_string(commande) = "pwd" then
-         Put_Line("This command is used to get the current working directory");
-         Put_Line("pwd");
 
       elsif to_string(commande) = "cat" then
-         Put_Line("This command is used to show the content of a file");
+         Put_Line("This command is used to show the content of an existing file");
          Put_Line("cat [File path]");
 
       elsif to_string(commande) = "rename" then
@@ -253,7 +272,22 @@ package body IHM is
 
       elsif to_string(commande) = "chmod" then
          Put_Line("This commmand is used to change a folder's permissions");
-         Put_Line("chmod -[Permission Number] [Folder Path]");
+         Put_Line("chmod -[Permission Code] [Folder Path]");
+
+      elsif to_string(commande) = "cp" then
+         Put_Line("This command is used to copy a file from the current working repository to a destination folder");
+         Put_Line("cp -[filename] [destination folder]");
+
+      elsif to_string(commande) = "mv" then
+         Put_Line("This command is used to move a file from the current working repository to a destination folder");
+         Put_Line("mv -[filename] [destination path]");
+
+      elsif to_string(commande) = "clear" then
+         Put_Line("This command is use to clear out the terminal");
+
+      else
+         Put("This command is either not supported by this SGF or his help manual is not yet defined, sorry.");
+
       end if;
 
    end help;
@@ -361,8 +395,23 @@ package body IHM is
       when 'n' =>
          Put_Line(Integer'Image(sgf.stockage_occupe(le_sgf)));
 
-
       when 'o' =>
+         Put_Line("What is the filename ?");
+         Unbounded_IO.Get_Line(y);
+         Put_Line("What is the destination path ?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         sgf.copy_move(le_sgf, path_traite, y, False);
+
+      when 'p' =>
+         Put_Line("What is the filename ?");
+         Unbounded_IO.Get_Line(y);
+         Put_Line("What is the destination path ?");
+         Unbounded_IO.Get_Line(path);
+         path_traite := traiter_path(path);
+         sgf.copy_move(le_sgf, path_traite, y, True);
+
+      when 'q' =>
          Put_line("Exiting, goodbye");
          quitte := true;
 

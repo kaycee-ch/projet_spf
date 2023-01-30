@@ -24,9 +24,15 @@ procedure test_cli is
          end loop;
       end if;
    EXCEPTION
-      WHEN chemin_invalide => Put_Line("Invalid Path");
+      WHEN sgf.chemin_invalide => Put_Line("Invalid Path");
          launch(test_sgf);
-      WHEN stockage_plein => Put_Line("Disk Full, Delete something");
+      WHEN sgf.stockage_plein => Put_Line("Disk Full, Delete something");
+         launch(test_sgf);
+      WHEN sgf.tar_file => Put_Line("Can't compress a file, please select a folder");
+         launch(test_sgf);
+      WHEN sgf.no_file => Put_Line("No file with this name in the repository, please try again");
+         launch(test_sgf);
+      WHEN sgf.cannot_print => Put_line("This file doesn't exist");
          launch(test_sgf);
       WHEN others => Put_Line("Sorry there was an error, try again.");
          launch(test_sgf);

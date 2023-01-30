@@ -8,7 +8,7 @@ package sgf is
 
    chemin_invalide : EXCEPTION;
    arbre_vide : EXCEPTION;
-   stockage_plein : EXCEPTION;
+   stockage_plein, tar_file, no_file, cannot_print : EXCEPTION;
 
    TYPE T_info is record
       name : Unbounded_String;
@@ -66,6 +66,7 @@ package sgf is
 
    -- exception : path_invalid : le chemin ne mene a aucun noeud de l'arbre
 
+   procedure print_repo(sgf : in T_sgf);
 
    procedure creer_fichier_dossier(sgf : in out T_sgf; path : in T_PATH; estFichier : in Boolean; existe : in Boolean);
    -- semantique : creation d'un fichier dans le dossier courant
@@ -132,13 +133,15 @@ package sgf is
 
    function stockage_occupe(sgf : in out T_SGF) return Integer;
 
+   procedure copy_move(sgf : in out T_sgf; path : in T_path; name : in out Unbounded_String; move : in Boolean);
+
 
 private
    TYPE T_sgf is record
       root : T_arbre;
       noeud_courant : T_arbre;
       nom : Unbounded_String;
-      taille : Integer; -- 1 To max
+      taille : Integer; -- 1 Go max
    end record;
 
 end sgf;
