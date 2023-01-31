@@ -1,459 +1,275 @@
 <?xml version="1.0"?>
 <Locations >
   <Project >
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 138" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 265" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 94" line=" 77" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 30" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/test_cli.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 42" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/cli.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/cli.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 268" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 151" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 7" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/parser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 220" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 104" line=" 139" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 112" line=" 368" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 382" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 390" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 461" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 104" line=" 139" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 89" line=" 144" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 139" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 149" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 139" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 39" line=" 149" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/test_ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 6" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/test_ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 107" line=" 368" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 196" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 368" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 268" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 40" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 48" line=" 374" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 46" line=" 377" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 39" line=" 378" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 101" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/test_ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 6" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/test_ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 102" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 39" line=" 149" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 34" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 34" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 34" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 169" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 7" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 239" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 96" line=" 213" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 57" line=" 279" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 45" line=" 64" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/cli.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/test_cli.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 371" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 101" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 237" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 334" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 418" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 399" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 425" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 404" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 105" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/parser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 41" line=" 47" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/parser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 47" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/parser.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 67" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/parser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/cli.adb</vfs_file>
+    </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/cli.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/cli.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 52" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/cli.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 187" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 10" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 144" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 28" line=" 86" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/parser.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 22" line=" 57" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/cli.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 57" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/cli.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 356" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 163" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 271" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 43" line=" 283" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 47" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 28" line=" 86" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 342" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 47" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 144" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 30" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 38" line=" 117" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 115" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 280" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 48" line=" 290" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 342" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 65" line=" 117" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 242" >
+    <file_marker column=" 16" line=" 419" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/test_cli.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 43" line=" 364" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 178" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 212" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 113" line=" 188" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 24" line=" 27" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 187" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 131" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 115" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 115" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 336" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 178" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 175" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 22" line=" 88" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 178" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 88" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 235" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 50" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 48" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 115" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 50" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 115" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 50" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 408" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 115" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 48" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 408" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 237" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 50" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 89" line=" 44" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 38" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 70" line=" 42" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 50" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 42" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 229" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 48" line=" 241" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 9" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 48" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 63" line=" 38" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 74" line=" 44" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 67" line=" 23" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 236" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 47" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 74" line=" 46" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 70" line=" 42" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 7" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 32" line=" 50" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 80" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 42" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 38" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 408" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 50" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 46" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 42" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 62" line=" 38" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 42" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 90" line=" 44" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 42" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 50" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 241" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 50" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 26" line=" 27" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 72" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 232" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 175" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 10" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 26" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 232" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 23" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 19" line=" 35" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 28" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 408" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 26" line=" 25" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 30" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 78" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 19" line=" 98" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
     </file_marker>
@@ -461,345 +277,137 @@
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 14" line=" 120" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 20" line=" 67" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 80" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 86" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 89" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 104" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 109" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 138" line=" 110" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 61" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 93" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/p_arbre.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 18" line=" 32" >
+    <file_marker column=" 6" line=" 37" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 14" line=" 80" >
+    <file_marker column=" 13" line=" 121" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 28" line=" 106" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 44" line=" 235" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 80" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 42" line=" 85" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 226" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 81" line=" 40" >
+    <file_marker column=" 1" line=" 80" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 14" line=" 42" >
+    <file_marker column=" 14" line=" 74" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 52" line=" 331" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 144" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 22" line=" 132" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 72" line=" 131" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 330" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 72" line=" 131" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 330" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 256" >
+    <file_marker column=" 1" line=" 148" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 7" line=" 258" >
+    <file_marker column=" 14" line=" 196" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 33" line=" 260" >
+    <file_marker column=" 16" line=" 86" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 82" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 423" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 14" line=" 131" >
+    <file_marker column=" 14" line=" 151" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 14" line=" 168" >
+    <file_marker column=" 64" line=" 91" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 90" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 158" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 7" line=" 169" >
+    <file_marker column=" 14" line=" 321" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 20" line=" 348" >
+    <file_marker column=" 15" line=" 331" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 17" line=" 169" >
+    <file_marker column=" 14" line=" 237" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 21" line=" 178" >
+    <file_marker column=" 72" line=" 11" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 105" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 461" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
       <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 179" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 348" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 179" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 348" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 179" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 180" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 189" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 348" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 47" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 144" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 47" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/parser.adb</vfs_file>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 7" >
+    <file_marker column=" 32" line=" 419" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/parser.adb</vfs_file>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 304" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 315" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 277" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 151" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 263" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 293" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 368" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 371" >
+      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/parser.ads</vfs_file>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/test_cli.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 316" >
+    <file_marker current="true" column=" 15" line=" 33" >
       <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 297" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 47" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 47" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 47" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 47" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 408" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 252" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 143" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 140" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 69" line=" 136" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 138" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 93" line=" 136" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 197" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 40" line=" 142" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 54" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 92" line=" 266" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 80" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 56" line=" 123" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 319" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 280" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 178" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 64" line=" 291" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 123" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 52" line=" 202" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 42" line=" 208" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 5" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 67" line=" 123" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 30" line=" 5" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 67" line=" 134" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/sgf.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 40" line=" 202" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 45" line=" 4" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 26" line=" 342" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 30" line=" 4" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 19" line=" 202" >
-      <vfs_project>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/projet_sgf.gpr</vfs_project>
-      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/ihm.adb</vfs_file>
+      <vfs_file>/home/kaycee/n7/cours/1A/s1/programmation/projet_spf/code/src/test_cli.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >

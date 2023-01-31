@@ -228,7 +228,7 @@ package body IHM is
 
 
       else
-         Put_Line("Unknown Command");
+         raise commande_inconnu;
 
       end if;
 
@@ -301,7 +301,7 @@ package body IHM is
       quitte : Boolean;
       menu : Boolean := true;
       sure : Character;
-      n : INteger;
+      n : Integer;
    Begin
       case choix is
       when 'a' =>
@@ -416,7 +416,7 @@ package body IHM is
          quitte := true;
 
       when others =>
-         Put_Line("Unknown command, please pick from the menu.");
+         raise commande_inconnu;
 
       end case;
    end traiter_choix;

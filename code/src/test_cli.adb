@@ -30,9 +30,11 @@ procedure test_cli is
          launch(test_sgf);
       WHEN sgf.tar_file => Put_Line("Can't compress a file, please select a folder");
          launch(test_sgf);
-      WHEN sgf.no_file => Put_Line("No file with this name in the repository, please try again");
+      WHEN sgf.no_folder => Put_Line("No file with this name in the repository, please try again");
          launch(test_sgf);
       WHEN sgf.cannot_print => Put_line("This file doesn't exist");
+         launch(test_sgf);
+      WHEN ihm.commande_inconnu => Put_Line("Unknown command.");
          launch(test_sgf);
       WHEN others => Put_Line("Sorry there was an error, try again.");
          launch(test_sgf);

@@ -16,7 +16,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_parser%b		test_parser.adb		37a80f58 NE OO SU IL
+U test_parser%b		test_parser.adb		7b0534d0 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -50,7 +50,7 @@ D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
 D p_liste_gen.ads	20230127220056 bd955693 p_liste_gen%s
-D parser.ads		20230129155647 fbd468e0 parser%s
+D parser.ads		20230131165104 b7795368 parser%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -79,12 +79,12 @@ D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [test_parser standard 6 11 none]
-G r s t_command [test_parser standard 6 11 none] [t_commandIP parser 21 9 none]
-G r l t_command [test_parser standard 6 11 none] [t_commandDI parser 21 9 none]
-G r k t_command [test_parser standard 6 11 none] [t_commandDF parser 21 9 none]
-G r s t_path [test_parser standard 6 11 none] [t_pathIP parser 14 9 none]
-G r c none [test_parser standard 6 11 none] [test_cmd parser 36 14 none]
-G r c none [test_parser standard 6 11 none] [traiter_path parser 38 13 none]
+G r s t_command [test_parser standard 6 11 none] [t_commandIP parser 22 9 none]
+G r l t_command [test_parser standard 6 11 none] [t_commandDI parser 22 9 none]
+G r k t_command [test_parser standard 6 11 none] [t_commandDF parser 22 9 none]
+G r s t_path [test_parser standard 6 11 none] [t_pathIP parser 15 9 none]
+G r c none [test_parser standard 6 11 none] [test_cmd parser 63 14 none]
+G r c none [test_parser standard 6 11 none] [traiter_path parser 57 13 none]
 X 1 ada.ads
 16K9*Ada 20e8 45|1r6 1r33 4r6
 X 8 a-string.ads
@@ -98,11 +98,11 @@ X 15 a-textio.ads
 X 16 a-tiunio.ads
 25K21*Unbounded_IO 61e29 45|2w14 2r40
 X 21 parser.ads
-6K9*parser 42e11 45|3w6 3r18
-14R9*T_PATH 18e14 45|9r11
-21R9*T_COMMAND 25e14 45|8r10
-36U14*test_cmd 45|13s4
-38V13*traiter_path{14R9} 45|15s12
+6K9*parser 65e11 45|3w6 3r18
+15R9*T_PATH 19e14 45|9r11
+22R9*T_COMMAND 26e14 45|8r10
+57V13*traiter_path{15R9} 45|15s12
+63U14*test_cmd 45|13s4
 X 22 system.ads
 67M9*Address
 X 29 s-memory.ads
@@ -114,8 +114,8 @@ X 37 s-stalib.adb
 X 45 test_parser.adb
 6U11*test_parser 6b11 16l5 16t16
 7r4 phrase{11|88R9} 14m4 15r25
-8r4 cmd{21|21R9}
-9r4 path{21|14R9} 15m4
+8r4 cmd{21|22R9}
+9r4 path{21|15R9} 15m4
 X 46 text_io.ads
 24K9*Text_IO=24:29 45|2w6 2r32
 

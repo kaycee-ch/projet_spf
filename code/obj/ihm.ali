@@ -18,7 +18,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 
-U ihm%b			ihm.adb			e4339560 NE OO PK IU
+U ihm%b			ihm.adb			dbb3abde NE OO PK IU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -35,7 +35,7 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 Z system.val_int%s	s-valint.ads		s-valint.ali
 
-U ihm%s			ihm.ads			ba081050 EE OO PK IU
+U ihm%s			ihm.ads			5666d08d EE OO PK IU
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -64,15 +64,15 @@ D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
 D a-tiunio.ads		20210520051129 759c6b0c ada.text_io.unbounded_io%s
 D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
 D file_gen.ads		20230118020043 7fb869e8 file_gen%s
-D ihm.ads		20230130170932 f486dca9 ihm%s
-D ihm.adb		20230130192542 85533b51 ihm%b
+D ihm.ads		20230131171056 2a1e0826 ihm%s
+D ihm.adb		20230131173703 56bdc532 ihm%b
 D interfac.ads		20210520051131 edec285f interfaces%s
 D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
 D p_arbre.ads		20230129143036 ad8a1ad9 p_arbre%s
 D p_liste_gen.ads	20230127220056 bd955693 p_liste_gen%s
-D parser.ads		20230129155647 fbd468e0 parser%s
+D parser.ads		20230131165104 b7795368 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
-D sgf.ads		20230130192032 b668f63e sgf%s
+D sgf.ads		20230131174338 c833d9e4 sgf%s
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -106,114 +106,114 @@ D text_io.ads		20210520051134 21b2c898 text_io%s
 D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z s b [traiter_cmd ihm 9 14 none]
-G c Z s b [help ihm 11 14 none]
-G c Z s b [traiter_choix ihm 13 14 none]
-G c Z s b [traiter_ls ihm 15 14 none]
-G c Z s b [traiter_nano ihm 17 14 none]
-G c Z s b [traiter_mkdir ihm 19 14 none]
-G c Z s b [traiter_cd ihm 21 14 none]
-G c Z s b [traiter_tar ihm 23 14 none]
-G c Z s b [traiter_cat ihm 25 14 none]
-G c Z s b [traiter_rm ihm 27 14 none]
-G c Z s b [traiter_chmod ihm 29 14 none]
-G c Z s b [traiter_rename ihm 31 14 none]
-G c Z s b [traiter_cp ihm 33 14 none]
-G c Z s b [traiter_mv ihm 35 14 none]
-G r s t_path [traiter_cmd ihm 9 14 none] [t_pathIP parser 14 9 none]
+G c Z s b [traiter_choix ihm 16 14 none]
+G c Z s b [traiter_ls ihm 23 14 none]
+G c Z s b [traiter_nano ihm 30 14 none]
+G c Z s b [traiter_mkdir ihm 37 14 none]
+G c Z s b [traiter_cd ihm 43 14 none]
+G c Z s b [traiter_tar ihm 50 14 none]
+G c Z s b [traiter_cat ihm 56 14 none]
+G c Z s b [traiter_rm ihm 63 14 none]
+G c Z s b [traiter_chmod ihm 70 14 none]
+G c Z s b [traiter_rename ihm 77 14 none]
+G c Z s b [traiter_cp ihm 84 14 none]
+G c Z s b [traiter_mv ihm 91 14 none]
+G c Z s b [help ihm 98 14 none]
+G r s t_path [traiter_cmd ihm 9 14 none] [t_pathIP parser 15 9 none]
 G r c none [traiter_cmd ihm 9 14 none] [formatage_disque sgf 53 14 none]
-G r c none [traiter_cmd ihm 9 14 none] [contient parser__liste_cmd 74 13 9_4]
-G r c none [traiter_cmd ihm 9 14 none] [liste_contenu sgf 97 14 none]
-G r c none [traiter_cmd ihm 9 14 none] [est_vide parser__liste_cmd 15 13 9_4]
+G r c none [traiter_cmd ihm 9 14 none] [contient parser__liste_cmd 74 13 10_4]
+G r c none [traiter_cmd ihm 9 14 none] [liste_contenu sgf 98 14 none]
+G r c none [traiter_cmd ihm 9 14 none] [est_vide parser__liste_cmd 15 13 10_4]
 G r c none [traiter_cmd ihm 9 14 none] [repo_courant sgf 60 13 none]
-G r c none [traiter_cmd ihm 9 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_cmd ihm 9 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_cmd ihm 9 14 none] [print_repo sgf 69 14 none]
-G r j t_sgf [traiter_cmd ihm 9 14 none] [t_sgfDA sgf 140 9 none]
-G r c none [traiter_cmd ihm 9 14 none] [affiche_fichier sgf 95 14 none]
-G r c none [traiter_cmd ihm 9 14 none] [supp_fichier_dossier sgf 111 14 none]
-G r c none [traiter_cmd ihm 9 14 none] [creer_fichier_dossier sgf 71 14 none]
-G r c none [traiter_cmd ihm 9 14 none] [change_dir sgf 89 14 none]
-G r c none [traiter_cmd ihm 9 14 none] [archive_dir sgf 127 14 none]
-G r c none [traiter_cmd ihm 9 14 none] [change_droits sgf 123 14 none]
-G r c none [traiter_cmd ihm 9 14 none] [change_name sgf 125 14 none]
-G r c none [traiter_cmd ihm 9 14 none] [stockage_occupe sgf 134 13 none]
-G r c none [traiter_cmd ihm 9 14 none] [copy_move sgf 136 14 none]
-G r s t_command [traiter_choix ihm 13 14 none] [t_commandIP parser 21 9 none]
-G r l t_command [traiter_choix ihm 13 14 none] [t_commandDI parser 21 9 none]
-G r k t_command [traiter_choix ihm 13 14 none] [t_commandDF parser 21 9 none]
-G r s t_path [traiter_choix ihm 13 14 none] [t_pathIP parser 14 9 none]
-G r c none [traiter_choix ihm 13 14 none] [formatage_disque sgf 53 14 none]
-G r c none [traiter_choix ihm 13 14 none] [repo_courant sgf 60 13 none]
-G r c none [traiter_choix ihm 13 14 none] [traiter_path parser 38 13 none]
-G r j t_sgf [traiter_choix ihm 13 14 none] [t_sgfDA sgf 140 9 none]
-G r c none [traiter_choix ihm 13 14 none] [affiche_fichier sgf 95 14 none]
-G r c none [traiter_choix ihm 13 14 none] [supp_fichier_dossier sgf 111 14 none]
-G r c none [traiter_choix ihm 13 14 none] [creer_fichier_dossier sgf 71 14 none]
-G r c none [traiter_choix ihm 13 14 none] [contient parser__liste_cmd 74 13 9_4]
-G r c none [traiter_choix ihm 13 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_choix ihm 13 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [traiter_choix ihm 13 14 none] [change_dir sgf 89 14 none]
-G r c none [traiter_choix ihm 13 14 none] [traiter_cmd parser 40 13 none]
-G r j t_command [traiter_choix ihm 13 14 none] [t_commandDA parser 21 9 none]
-G r c none [traiter_choix ihm 13 14 none] [liste_contenu sgf 97 14 none]
-G r c none [traiter_choix ihm 13 14 none] [archive_dir sgf 127 14 none]
-G r c none [traiter_choix ihm 13 14 none] [change_droits sgf 123 14 none]
-G r c none [traiter_choix ihm 13 14 none] [change_name sgf 125 14 none]
-G r c none [traiter_choix ihm 13 14 none] [stockage_occupe sgf 134 13 none]
-G r c none [traiter_choix ihm 13 14 none] [copy_move sgf 136 14 none]
-G r c none [traiter_ls ihm 15 14 none] [contient parser__liste_cmd 74 13 9_4]
-G r c none [traiter_ls ihm 15 14 none] [liste_contenu sgf 97 14 none]
-G r c none [traiter_ls ihm 15 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [traiter_ls ihm 15 14 none] [repo_courant sgf 60 13 none]
-G r c none [traiter_ls ihm 15 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_ls ihm 15 14 none] [traiter_path parser 38 13 none]
-G r j t_sgf [traiter_nano ihm 17 14 none] [t_sgfDA sgf 140 9 none]
-G r c none [traiter_nano ihm 17 14 none] [affiche_fichier sgf 95 14 none]
-G r c none [traiter_nano ihm 17 14 none] [supp_fichier_dossier sgf 111 14 none]
-G r c none [traiter_nano ihm 17 14 none] [creer_fichier_dossier sgf 71 14 none]
-G r c none [traiter_nano ihm 17 14 none] [contient parser__liste_cmd 74 13 9_4]
-G r c none [traiter_nano ihm 17 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_nano ihm 17 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_mkdir ihm 19 14 none] [creer_fichier_dossier sgf 71 14 none]
-G r c none [traiter_mkdir ihm 19 14 none] [contient parser__liste_cmd 74 13 9_4]
-G r c none [traiter_mkdir ihm 19 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_mkdir ihm 19 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_cd ihm 21 14 none] [contient parser__liste_cmd 74 13 9_4]
-G r c none [traiter_cd ihm 21 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [traiter_cd ihm 21 14 none] [repo_courant sgf 60 13 none]
-G r c none [traiter_cd ihm 21 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_cd ihm 21 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_cd ihm 21 14 none] [change_dir sgf 89 14 none]
-G r c none [traiter_tar ihm 23 14 none] [contient parser__liste_cmd 74 13 9_4]
-G r c none [traiter_tar ihm 23 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_tar ihm 23 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_tar ihm 23 14 none] [archive_dir sgf 127 14 none]
-G r c none [traiter_cat ihm 25 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_cat ihm 25 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_cat ihm 25 14 none] [affiche_fichier sgf 95 14 none]
-G r c none [traiter_rm ihm 27 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_rm ihm 27 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_rm ihm 27 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [traiter_rm ihm 27 14 none] [supp_fichier_dossier sgf 111 14 none]
-G r c none [traiter_chmod ihm 29 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_chmod ihm 29 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_chmod ihm 29 14 none] [change_droits sgf 123 14 none]
-G r c none [traiter_rename ihm 31 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_rename ihm 31 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_rename ihm 31 14 none] [change_name sgf 125 14 none]
-G r c none [traiter_cp ihm 33 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_cp ihm 33 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_cp ihm 33 14 none] [copy_move sgf 136 14 none]
-G r c none [traiter_mv ihm 35 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [traiter_mv ihm 35 14 none] [traiter_path parser 38 13 none]
-G r c none [traiter_mv ihm 35 14 none] [copy_move sgf 136 14 none]
+G r c none [traiter_cmd ihm 9 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_cmd ihm 9 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_cmd ihm 9 14 none] [print_repo sgf 67 14 none]
+G r j t_sgf [traiter_cmd ihm 9 14 none] [t_sgfDA sgf 148 9 none]
+G r c none [traiter_cmd ihm 9 14 none] [affiche_fichier sgf 90 14 none]
+G r c none [traiter_cmd ihm 9 14 none] [supp_fichier_dossier sgf 105 14 none]
+G r c none [traiter_cmd ihm 9 14 none] [creer_fichier_dossier sgf 74 14 none]
+G r c none [traiter_cmd ihm 9 14 none] [change_dir sgf 82 14 none]
+G r c none [traiter_cmd ihm 9 14 none] [archive_dir sgf 126 14 none]
+G r c none [traiter_cmd ihm 9 14 none] [change_droits sgf 112 14 none]
+G r c none [traiter_cmd ihm 9 14 none] [change_name sgf 119 14 none]
+G r c none [traiter_cmd ihm 9 14 none] [stockage_occupe sgf 133 13 none]
+G r c none [traiter_cmd ihm 9 14 none] [copy_move sgf 139 14 none]
+G r s t_command [traiter_choix ihm 16 14 none] [t_commandIP parser 22 9 none]
+G r l t_command [traiter_choix ihm 16 14 none] [t_commandDI parser 22 9 none]
+G r k t_command [traiter_choix ihm 16 14 none] [t_commandDF parser 22 9 none]
+G r s t_path [traiter_choix ihm 16 14 none] [t_pathIP parser 15 9 none]
+G r c none [traiter_choix ihm 16 14 none] [formatage_disque sgf 53 14 none]
+G r c none [traiter_choix ihm 16 14 none] [repo_courant sgf 60 13 none]
+G r c none [traiter_choix ihm 16 14 none] [traiter_path parser 57 13 none]
+G r j t_sgf [traiter_choix ihm 16 14 none] [t_sgfDA sgf 148 9 none]
+G r c none [traiter_choix ihm 16 14 none] [affiche_fichier sgf 90 14 none]
+G r c none [traiter_choix ihm 16 14 none] [supp_fichier_dossier sgf 105 14 none]
+G r c none [traiter_choix ihm 16 14 none] [creer_fichier_dossier sgf 74 14 none]
+G r c none [traiter_choix ihm 16 14 none] [contient parser__liste_cmd 74 13 10_4]
+G r c none [traiter_choix ihm 16 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_choix ihm 16 14 none] [est_vide parser__liste_cmd 15 13 10_4]
+G r c none [traiter_choix ihm 16 14 none] [change_dir sgf 82 14 none]
+G r c none [traiter_choix ihm 16 14 none] [traiter_cmd parser 60 13 none]
+G r j t_command [traiter_choix ihm 16 14 none] [t_commandDA parser 22 9 none]
+G r c none [traiter_choix ihm 16 14 none] [liste_contenu sgf 98 14 none]
+G r c none [traiter_choix ihm 16 14 none] [archive_dir sgf 126 14 none]
+G r c none [traiter_choix ihm 16 14 none] [change_droits sgf 112 14 none]
+G r c none [traiter_choix ihm 16 14 none] [change_name sgf 119 14 none]
+G r c none [traiter_choix ihm 16 14 none] [stockage_occupe sgf 133 13 none]
+G r c none [traiter_choix ihm 16 14 none] [copy_move sgf 139 14 none]
+G r c none [traiter_ls ihm 23 14 none] [contient parser__liste_cmd 74 13 10_4]
+G r c none [traiter_ls ihm 23 14 none] [liste_contenu sgf 98 14 none]
+G r c none [traiter_ls ihm 23 14 none] [est_vide parser__liste_cmd 15 13 10_4]
+G r c none [traiter_ls ihm 23 14 none] [repo_courant sgf 60 13 none]
+G r c none [traiter_ls ihm 23 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_ls ihm 23 14 none] [traiter_path parser 57 13 none]
+G r j t_sgf [traiter_nano ihm 30 14 none] [t_sgfDA sgf 148 9 none]
+G r c none [traiter_nano ihm 30 14 none] [affiche_fichier sgf 90 14 none]
+G r c none [traiter_nano ihm 30 14 none] [supp_fichier_dossier sgf 105 14 none]
+G r c none [traiter_nano ihm 30 14 none] [creer_fichier_dossier sgf 74 14 none]
+G r c none [traiter_nano ihm 30 14 none] [contient parser__liste_cmd 74 13 10_4]
+G r c none [traiter_nano ihm 30 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_nano ihm 30 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_mkdir ihm 37 14 none] [creer_fichier_dossier sgf 74 14 none]
+G r c none [traiter_mkdir ihm 37 14 none] [contient parser__liste_cmd 74 13 10_4]
+G r c none [traiter_mkdir ihm 37 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_mkdir ihm 37 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_cd ihm 43 14 none] [contient parser__liste_cmd 74 13 10_4]
+G r c none [traiter_cd ihm 43 14 none] [est_vide parser__liste_cmd 15 13 10_4]
+G r c none [traiter_cd ihm 43 14 none] [repo_courant sgf 60 13 none]
+G r c none [traiter_cd ihm 43 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_cd ihm 43 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_cd ihm 43 14 none] [change_dir sgf 82 14 none]
+G r c none [traiter_tar ihm 50 14 none] [contient parser__liste_cmd 74 13 10_4]
+G r c none [traiter_tar ihm 50 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_tar ihm 50 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_tar ihm 50 14 none] [archive_dir sgf 126 14 none]
+G r c none [traiter_cat ihm 56 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_cat ihm 56 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_cat ihm 56 14 none] [affiche_fichier sgf 90 14 none]
+G r c none [traiter_rm ihm 63 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_rm ihm 63 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_rm ihm 63 14 none] [est_vide parser__liste_cmd 15 13 10_4]
+G r c none [traiter_rm ihm 63 14 none] [supp_fichier_dossier sgf 105 14 none]
+G r c none [traiter_chmod ihm 70 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_chmod ihm 70 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_chmod ihm 70 14 none] [change_droits sgf 112 14 none]
+G r c none [traiter_rename ihm 77 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_rename ihm 77 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_rename ihm 77 14 none] [change_name sgf 119 14 none]
+G r c none [traiter_cp ihm 84 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_cp ihm 84 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_cp ihm 84 14 none] [copy_move sgf 139 14 none]
+G r c none [traiter_mv ihm 91 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [traiter_mv ihm 91 14 none] [traiter_path parser 57 13 none]
+G r c none [traiter_mv ihm 91 14 none] [copy_move sgf 139 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 19|1r6 1r33 20|1r6 1r23 2r6 2r36 3r6 3r33
 X 8 a-string.ads
 16K13*Strings 35e16 19|1r10 1r37 20|3r10 3r37
 X 11 a-strunb.ads
 83K21*Unbounded 765e26 19|1w18 1r45 20|3w18 3r45
-88R9*Unbounded_String<5|43R9> 744e15 19|11r33 20|135r14 145r14 239r33 297r14
+88R9*Unbounded_String<5|43R9> 744e15 19|98r33 20|135r14 145r14 239r33 297r14
 . 300r11
 104V13*To_Unbounded_String{88R9} 20|12s42 13s15 15s45 18s45 47s45 48s18 62s45
 . 63s18 74s42 75s15 89s42 90s15
@@ -228,11 +228,11 @@ X 15 a-textio.ads
 463U14*Put 20|227s10 289s10
 493V13*Get_Line{string} 20|384s29
 506U14*Put_Line 20|161s10 174s10 179s10 184s10 189s10 198s10 203s10 208s10
-. 212s10 213s10 218s10 223s10 231s10 242s10 243s10 244s10 245s10 246s10 249s10
-. 250s10 253s10 254s10 257s10 258s10 262s10 263s10 266s10 267s10 270s10 271s10
-. 274s10 275s10 278s10 279s10 282s10 283s10 286s10 308s10 313s16 315s16 322s10
-. 328s10 334s10 340s10 346s10 352s10 355s10 356s10 362s10 368s10 374s10 380s10
-. 383s10 388s10 391s10 396s10 399s10 401s10 407s10 409s10 415s10 419s10
+. 212s10 213s10 218s10 223s10 242s10 243s10 244s10 245s10 246s10 249s10 250s10
+. 253s10 254s10 257s10 258s10 262s10 263s10 266s10 267s10 270s10 271s10 274s10
+. 275s10 278s10 279s10 282s10 283s10 286s10 308s10 313s16 315s16 322s10 328s10
+. 334s10 340s10 346s10 352s10 355s10 356s10 362s10 368s10 374s10 380s10 383s10
+. 388s10 391s10 396s10 399s10 401s10 407s10 409s10 415s10
 X 16 a-tiunio.ads
 25K21*Unbounded_IO 61e29 20|2w18 2r48 323r10 329r10 335r10 341r10 347r10
 . 353r10 357r10 363r10 369r10 375r10 381r10 389r10 392r10 400r10 402r10 408r10
@@ -240,90 +240,90 @@ X 16 a-tiunio.ads
 57U14*Get_Line=59:42 20|323s23 329s23 335s23 341s23 347s23 353s23 357s23
 . 363s23 369s23 375s23 381s23 389s23 392s23 400s23 402s23 408s23 410s23
 X 19 ihm.ads
-5K9*IHM 37l5 37e8 20|7b14 424l5 424t8
-7X4*commande_inconnu 20|113r16
+5K9*IHM 105l5 105e8 20|7b14 424l5 424t8
+7X4*commande_inconnu 20|113r16 231r16 419r16
 9U14*traiter_cmd 9=26 9>49 20|154b14 236l8 236t19
 9r26 le_sgf{27|26R9} 20|154b26 160m31 165m21 169r25 173m23 178m24 183m21
 . 188m22 193m22 197m21 202m24 207m25 212m53 212r53 217m21 222m21
-9r49 cmd{25|21R9} 20|154b49 159r20 164r23 165r35 168r23 172r23 173r44 177r23
+9r49 cmd{25|22R9} 20|154b49 159r20 164r23 165r35 168r23 172r23 173r44 177r23
 . 178r38 182r23 183r35 187r23 188r36 192r23 193r36 196r23 197r35 201r23 202r32
 . 206r23 207r33 211r23 216r23 217r29 221r23 222r29 226r23
-11U14*help 11>19 20|13s10 48s13 63s13 75s10 90s10 239b14 293l8 293t12
-11r19 commande{11|88R9} 20|239b19 241r20 248r23 252r23 256r23 261r23 265r23
-. 269r23 273r23 277r23 281r23 285r23
-13U14*traiter_choix 13=29 13>52 20|296b14 422l8 422t21
-13r29 le_sgf{27|26R9} 20|296b29 312m37 319m38 319r38 325m23 331m22 337m23
+16U14*traiter_choix 16=29 16>52 20|296b14 422l8 422t21
+16r29 le_sgf{27|26R9} 20|296b29 312m37 319m38 319r38 325m23 331m22 337m23
 . 343m24 349m21 359m21 365m35 371m35 377m26 385m28 393m26 396m53 396r53 404m24
 . 412m24
-13e52 choix{character} 20|296b52 306r12
-15U14*traiter_ls 15=26 15>49 15>68 15=88 20|9b14 33l8 33t18 165s10 359s10
-15r26 le_sgf{27|26R9} 20|9b26 23m28 26m38 26r38 30m28
-15b49 menu{boolean} 20|9b49 22r10
-15r68 cmd{25|21R9} 20|9b68 12r29 15r32 18r32 25r32 28r56
-15r88 path{25|14R9} 20|9b88 23r36 26m13 28m13 30r36
-17U14*traiter_nano 17=28 17>51 17>70 17>91 17=111 20|37b14 53l8 53t20 173s10
+16e52 choix{character} 20|296b52 306r12
+23U14*traiter_ls 23=26 23>49 23>68 23=88 20|9b14 33l8 33t18 165s10 359s10
+23r26 le_sgf{27|26R9} 20|9b26 23m28 26m38 26r38 30m28
+23b49 menu{boolean} 20|9b49 22r10
+23r68 cmd{25|22R9} 20|9b68 12r29 15r32 18r32 25r32 28r56
+23r88 path{25|15R9} 20|9b88 23r36 26m13 28m13 30r36
+30U14*traiter_nano 30=28 30>51 30>70 30>91 30=111 20|37b14 53l8 53t20 173s10
 . 325s10 337s10
-17r28 le_sgf{27|26R9} 20|37b27 38r22 41m30 42m35 45m36 51m36
-17b51 menu{boolean} 20|37b50 44r10
-17b70 existe{boolean} 20|37b69 40r10 45r56
-17r91 cmd{25|21R9} 20|37b90 47r32 50r53
-17r111 path{25|14R9} 20|37b110 41r38 42r43 45r44 50m10 51r44
-19U14*traiter_mkdir 19=28 19>51 19>70 19=90 20|57b14 68l8 68t21 178s10 343s10
-19r28 le_sgf{27|26R9} 20|57b28 60m36 66m36
-19b51 menu{boolean} 20|57b51 59r10
-19r70 cmd{25|21R9} 20|57b70 62r32 65r53
-19r90 path{25|14R9} 20|57b90 60r44 65m10 66r44
-21U14*traiter_cd 21=25 21>48 21>67 21=87 20|72b14 83l8 83t18 183s10 349s10
-21r25 le_sgf{27|26R9} 20|72b25 78m35 78r35 82m22
-21b48 menu{boolean} 20|72b48
-21r67 cmd{25|21R9} 20|72b67 74r29 77r29 80r53
-21r87 path{25|14R9} 20|72b87 78m10 80m10 82r30
-23U14*traiter_tar 23=26 23>49 23>68 23=88 20|87b14 94l8 94t19 188s10
-23r26 le_sgf{27|26R9} 20|87b26 93m23
-23b49 menu{boolean} 20|87b49
-23r68 cmd{25|21R9} 20|87b68 89r29 92r50
-23r88 path{25|14R9} 20|87b88 92m7 93r31
-25U14*traiter_cat 25=26 25>49 25>68 25=88 20|98b14 102l8 102t19 193s10 331s10
-25r26 le_sgf{27|26R9} 20|98b26 101m27
-25b49 menu{boolean} 20|98b49
-25r68 cmd{25|21R9} 20|98b68 100r50
-25r88 path{25|14R9} 20|98b88 100m7 101r35
-27U14*traiter_rm 27=25 27>48 27>67 27=87 20|105b14 115l8 115t18 197s10
-27r25 le_sgf{27|26R9} 20|105b25 109m35 111m35
-27b48 menu{boolean} 20|105b48
-27r67 cmd{25|21R9} 20|105b67 107r50 108r29 110r35
-27r87 path{25|14R9} 20|105b87 107m7 109r43 111r43
-29U14*traiter_chmod 29=28 29>51 29=71 20|118b14 122l8 122t21 202s10
-29r28 le_sgf{27|26R9} 20|118b28 121m25
-29r51 cmd{25|21R9} 20|118b51 120r50 121r85
-29r71 path{25|14R9} 20|118b71 120m7 121r33
-31U14*traiter_rename 31=29 31>52 31=72 20|126b14 130l8 130t22 207s10
-31r29 le_sgf{27|26R9} 20|126b29 129m23
-31r52 cmd{25|21R9} 20|126b52 128r50 129r59
-31r72 path{25|14R9} 20|126b72 128m7 129r31
-33U14*traiter_cp 33=25 33>48 33=68 20|134b14 140l8 140t18 217s10
-33r25 le_sgf{27|26R9} 20|134b25 139m21
-33r48 cmd{25|21R9} 20|134b48 137r50 138r37
-33r68 path{25|14R9} 20|134b68 137m7 139r29
-35U14*traiter_mv 35=25 35>48 35=68 20|144b14 150l8 150t18 222s10
-35r25 le_sgf{27|26R9} 20|144b25 149m21
-35r48 cmd{25|21R9} 20|144b48 147r50 148r37
-35r68 path{25|14R9} 20|144b68 147m7 149r29
+30r28 le_sgf{27|26R9} 20|37b27 38r22 41m30 42m35 45m36 51m36
+30b51 menu{boolean} 20|37b50 44r10
+30b70 existe{boolean} 20|37b69 40r10 45r56
+30r91 cmd{25|22R9} 20|37b90 47r32 50r53
+30r111 path{25|15R9} 20|37b110 41r38 42r43 45r44 50m10 51r44
+37U14*traiter_mkdir 37=28 37>51 37>70 37=90 20|57b14 68l8 68t21 178s10 343s10
+37r28 le_sgf{27|26R9} 20|57b28 60m36 66m36
+37b51 menu{boolean} 20|57b51 59r10
+37r70 cmd{25|22R9} 20|57b70 62r32 65r53
+37r90 path{25|15R9} 20|57b90 60r44 65m10 66r44
+43U14*traiter_cd 43=25 43>48 43>67 43=87 20|72b14 83l8 83t18 183s10 349s10
+43r25 le_sgf{27|26R9} 20|72b25 78m35 78r35 82m22
+43b48 menu{boolean} 20|72b48
+43r67 cmd{25|22R9} 20|72b67 74r29 77r29 80r53
+43r87 path{25|15R9} 20|72b87 78m10 80m10 82r30
+50U14*traiter_tar 50=26 50>49 50>68 50=88 20|87b14 94l8 94t19 188s10
+50r26 le_sgf{27|26R9} 20|87b26 93m23
+50b49 menu{boolean} 20|87b49
+50r68 cmd{25|22R9} 20|87b68 89r29 92r50
+50r88 path{25|15R9} 20|87b88 92m7 93r31
+56U14*traiter_cat 56=26 56>49 56>68 56=88 20|98b14 102l8 102t19 193s10 331s10
+56r26 le_sgf{27|26R9} 20|98b26 101m27
+56b49 menu{boolean} 20|98b49
+56r68 cmd{25|22R9} 20|98b68 100r50
+56r88 path{25|15R9} 20|98b88 100m7 101r35
+63U14*traiter_rm 63=25 63>48 63>67 63=87 20|105b14 115l8 115t18 197s10
+63r25 le_sgf{27|26R9} 20|105b25 109m35 111m35
+63b48 menu{boolean} 20|105b48
+63r67 cmd{25|22R9} 20|105b67 107r50 108r29 110r35
+63r87 path{25|15R9} 20|105b87 107m7 109r43 111r43
+70U14*traiter_chmod 70=28 70>51 70=71 20|118b14 122l8 122t21 202s10
+70r28 le_sgf{27|26R9} 20|118b28 121m25
+70r51 cmd{25|22R9} 20|118b51 120r50 121r85
+70r71 path{25|15R9} 20|118b71 120m7 121r33
+77U14*traiter_rename 77=29 77>52 77=72 20|126b14 130l8 130t22 207s10
+77r29 le_sgf{27|26R9} 20|126b29 129m23
+77r52 cmd{25|22R9} 20|126b52 128r50 129r59
+77r72 path{25|15R9} 20|126b72 128m7 129r31
+84U14*traiter_cp 84=25 84>48 84=68 20|134b14 140l8 140t18 217s10
+84r25 le_sgf{27|26R9} 20|134b25 139m21
+84r48 cmd{25|22R9} 20|134b48 137r50 138r37
+84r68 path{25|15R9} 20|134b68 137m7 139r29
+91U14*traiter_mv 91=25 91>48 91=68 20|144b14 150l8 150t18 222s10
+91r25 le_sgf{27|26R9} 20|144b25 149m21
+91r48 cmd{25|22R9} 20|144b48 147r50 148r37
+91r68 path{25|15R9} 20|144b68 147m7 149r29
+98U14*help 98>19 20|13s10 48s13 63s13 75s10 90s10 239b14 293l8 293t12
+98r19 commande{11|88R9} 20|239b19 241r20 248r23 252r23 256r23 261r23 265r23
+. 269r23 273r23 277r23 281r23 285r23
 X 20 ihm.adb
 10b7 dir_fils{boolean} 19m13 23r42 30r42
 10b17 all_info{boolean} 16m13 23r52 30r52
 38r7 tmp{27|26R9}
 135r7 name{11|88R9} 138m7 139m35 139r35
 145r7 name{11|88R9} 148m7 149m35 149r35
-155r7 path{25|14R9} 165m40 165r40 173m49 173r49 178m43 178r43 183m40 183r40
+155r7 path{25|15R9} 165m40 165r40 173m49 173r49 178m43 178r43 183m40 183r40
 . 188m41 188r41 193m41 193r41 197m40 197r40 202m37 202r37 207m38 207r38 217m34
 . 217r34 222m34 222r34
 156b7 menu{boolean} 165r29 173r31 178r32 183r29 188r30 193r30 197r29
 297r7 path{11|88R9} 323m32 324r38 329m32 330r38 335m32 336r38 341m32 342r38
 . 347m32 348r38 353m32 354r38 363m32 364r38 369m32 370r38 375m32 376r38 381m32
 . 382r38 389m32 390r38 402m32 403r38 410m32 411r38
-298r7 cmd{25|21R9} 325r44 331r36 337r43 343r38 349r35 358m10 358r10 359r35
-299r7 path_traite{25|14R9} 319m10 324m10 325m49 325r49 330m10 331m41 331r41
+298r7 cmd{25|22R9} 325r44 331r36 337r43 343r38 349r35 358m10 358r10 359r35
+299r7 path_traite{25|15R9} 319m10 324m10 325m49 325r49 330m10 331m41 331r41
 . 336m10 337m48 337r48 342m10 343m43 343r43 348m10 349m40 349r40 354m10 359m40
 . 359r40 364m10 365r43 370m10 371r43 376m10 377r34 382m10 385r36 390m10 393r34
 . 403m10 404r32 411m10 412r32
@@ -335,54 +335,54 @@ X 20 ihm.adb
 304i7 n{integer} 384m10 385r49
 X 24 p_liste_gen.ads
 7P9*T_liste
-15V13*est_vide{boolean} 20|25s23[25|9] 77s20[25|9] 108s20[25|9]
-68V13*get_contenu{11|88R9} 20|28s44[25|9] 50s41[25|9] 65s41[25|9] 80s41[25|9]
-. 92s38[25|9] 100s38[25|9] 107s38[25|9] 110s23[25|9] 120s38[25|9] 121s73[25|9]
-. 128s38[25|9] 129s47[25|9] 137s38[25|9] 138s25[25|9] 147s38[25|9] 148s25[25|9]
-74V13*contient{boolean} 20|12s20[25|9] 15s23[25|9] 18s23[25|9] 47s23[25|9]
-. 62s23[25|9] 74s20[25|9] 89s20[25|9]
+15V13*est_vide{boolean} 20|25s23[25|10] 77s20[25|10] 108s20[25|10]
+68V13*get_contenu{11|88R9} 20|28s44[25|10] 50s41[25|10] 65s41[25|10] 80s41[25|10]
+. 92s38[25|10] 100s38[25|10] 107s38[25|10] 110s23[25|10] 120s38[25|10] 121s73[25|10]
+. 128s38[25|10] 129s47[25|10] 137s38[25|10] 138s25[25|10] 147s38[25|10] 148s25[25|10]
+74V13*contient{boolean} 20|12s20[25|10] 15s23[25|10] 18s23[25|10] 47s23[25|10]
+. 62s23[25|10] 74s20[25|10] 89s20[25|10]
 X 25 parser.ads
-6K9*parser 19|2w6 2r18 20|4w6 4r18 25|42e11
-9K12*liste_cmd[24|5] 20|12r10 15r13 18r13 25r13 28r34 47r13 50r31 62r13 65r31
-. 74r10 77r10 80r31 89r10 92r28 100r28 107r28 108r10 110r13 120r28 121r63
-. 128r28 129r37 137r28 138r15 147r28 148r15
-14R9*T_PATH 19|15r102 17r125 19r104 21r101 23r102 25r102 27r101 29r85 31r86
-. 33r82 35r82 20|9r102 37r124 57r104 72r101 87r102 98r102 105r101 118r85
-. 126r86 134r82 144r82 155r14 299r21 25|18e14
-21R9*T_COMMAND 19|9r58 15r77 17r100 19r79 21r76 23r77 25r77 27r76 29r60 31r61
-. 33r57 35r57 20|9r77 37r99 57r79 72r76 87r77 98r77 105r76 118r60 126r61
-. 134r57 144r57 154r58 298r13 25|25e14
-22r7*commande{11|88R9} 20|159r24 164r27 168r27 172r27 177r27 182r27 187r27
+6K9*parser 19|2w6 2r18 20|4w6 4r18 25|65e11
+10K12*liste_cmd[24|5] 20|12r10 15r13 18r13 25r13 28r34 47r13 50r31 62r13
+. 65r31 74r10 77r10 80r31 89r10 92r28 100r28 107r28 108r10 110r13 120r28
+. 121r63 128r28 129r37 137r28 138r15 147r28 148r15
+15R9*T_PATH 19|23r102 30r125 37r104 43r101 50r102 56r102 63r101 70r85 77r86
+. 84r82 91r82 20|9r102 37r124 57r104 72r101 87r102 98r102 105r101 118r85
+. 126r86 134r82 144r82 155r14 299r21 25|19e14
+22R9*T_COMMAND 19|9r58 23r77 30r100 37r79 43r76 50r77 56r77 63r76 70r60 77r61
+. 84r57 91r57 20|9r77 37r99 57r79 72r76 87r77 98r77 105r76 118r60 126r61
+. 134r57 144r57 154r58 298r13 25|26e14
+23r7*commande{11|88R9} 20|159r24 164r27 168r27 172r27 177r27 182r27 187r27
 . 192r27 196r27 201r27 206r27 211r27 216r27 221r27 226r27
-23p7*options{24|7P9[9]} 20|12r33 15r36 18r36 47r36 62r36 74r33 89r33 108r33
+24p7*options{24|7P9[10]} 20|12r33 15r36 18r36 47r36 62r36 74r33 89r33 108r33
 . 110r39 121r89 129r63 138r41 148r41
-24p7*arguments{24|7P9[9]} 20|25r36 28r60 50r57 65r57 77r33 80r57 92r54 100r54
+25p7*arguments{24|7P9[10]} 20|25r36 28r60 50r57 65r57 77r33 80r57 92r54 100r54
 . 107r54 120r54 128r54 137r54 147r54
-38V13*traiter_path{14R9} 20|28s21 50s18 65s18 80s18 92s15 100s15 107s15 120s15
+57V13*traiter_path{15R9} 20|28s21 50s18 65s18 80s18 92s15 100s15 107s15 120s15
 . 128s15 137s15 147s15 324s25 330s25 336s25 342s25 348s25 354s25 364s25 370s25
 . 376s25 382s25 390s25 403s25 411s25
-40V13*traiter_cmd{21R9} 20|358s17
+60V13*traiter_cmd{22R9} 20|358s17
 X 27 sgf.ads
 7K9*sgf 19|3w6 3r15 20|5w6 5r15 23r10 26r21 30r10 41r10 42r10 45r10 51r10
 . 60r10 66r10 78r18 82r7 93r7 101r7 109r10 111r10 121r7 129r7 139r7 149r7
 . 160r10 169r10 212r33 312r16 365r10 371r10 377r10 385r10 393r10 396r33 404r10
-. 412r10 27|147e8
-26R9*T_sgf 19|9r42 13r45 15r42 17r44 19r44 21r41 23r42 25r42 27r41 29r44
-. 31r45 33r41 35r41 20|9r42 37r43 38r13 57r44 72r41 87r42 98r42 105r41 118r44
-. 126r45 134r41 144r41 154r42 296r45 27|145e14
+. 412r10 27|155e8
+26R9*T_sgf 19|9r42 16r45 23r42 30r44 37r44 43r41 50r42 56r42 63r41 70r44
+. 77r45 84r41 91r41 20|9r42 37r43 38r13 57r44 72r41 87r42 98r42 105r41 118r44
+. 126r45 134r41 144r41 154r42 296r45 27|153e14
 53U14*formatage_disque 20|160s14 312s20
-60V13*repo_courant{25|14R9} 20|26s25 78s22 319s25
-69U14*print_repo 20|169s14
-71U14*creer_fichier_dossier 20|45s14 51s14 60s14 66s14
-89U14*change_dir 20|82s11
-95U14*affiche_fichier 20|41s14 101s11
-97U14*liste_contenu 20|23s14 30s14
-111U14*supp_fichier_dossier 20|42s14 109s14 111s14 365s14 371s14
-123U14*change_droits 20|121s11 385s14
-125U14*change_name 20|129s11 393s14
-127U14*archive_dir 20|93s11 377s14
-134V13*stockage_occupe{integer} 20|212s37 396s37
-136U14*copy_move 20|139s11 149s11 404s14 412s14
+60V13*repo_courant{25|15R9} 20|26s25 78s22 319s25
+67U14*print_repo 20|169s14
+74U14*creer_fichier_dossier 20|45s14 51s14 60s14 66s14
+82U14*change_dir 20|82s11
+90U14*affiche_fichier 20|41s14 101s11
+98U14*liste_contenu 20|23s14 30s14
+105U14*supp_fichier_dossier 20|42s14 109s14 111s14 365s14 371s14
+112U14*change_droits 20|121s11 385s14
+119U14*change_name 20|129s11 393s14
+126U14*archive_dir 20|93s11 377s14
+133V13*stockage_occupe{integer} 20|212s37 396s37
+139U14*copy_move 20|139s11 149s11 404s14 412s14
 X 28 system.ads
 67M9*Address
 X 37 s-memory.ads

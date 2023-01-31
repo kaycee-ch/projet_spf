@@ -70,7 +70,13 @@ package body sgf is
 
    procedure print_simpl (data : in T_info; indent : in INteger) is
    Begin
-      Put(data.name);
+      if not data.isFile then
+         Put("[");
+         Put(data.name);
+         Put("]");
+      else
+         Put(data.name);
+      end if;
       Put("     ");
    end print_simpl;
 
@@ -108,7 +114,7 @@ package body sgf is
       end loop;
       Put(pwd);
       New_Line;
-      end print_repo;
+   end print_repo;
 
 
 
@@ -148,7 +154,6 @@ package body sgf is
       tmp_ab : T_arbre;
       tmp_data : T_info;
       chemin_incorrect, isLast : Boolean := false;
-      chemin_invalide : EXCEPTION;
    Begin
 
       while not chemin_incorrect and not liste_cmd.est_vide(liste_cmd.get_next(tmp_path.chemin)) loop
@@ -188,25 +193,17 @@ package body sgf is
 
 
 
-
    procedure creer_fichier_dossier(sgf : in out T_sgf; path : in T_PATH; estFichier : in Boolean; existe : in Boolean) is
       data : T_info;
       old_path : T_path := repo_courant(sgf);
       tmp_path : T_PATH := path;
       tmp : T_info;
    Begin
-      -- je récuppère l'avant dernier mot du path => c'est le nom du dossier ou je dois créer mon fichier/dossier
       tmp.name := liste_cmd.get_contenu(path.chemin_inv);
       liste_cmd.enlever(tmp_path.chemin, tmp.name);
-      -- put(tmp.name);
-      -- je cherche le noeud de l'arbre correspondant au nom et j'y pointe le noeud_courant local à la procédure
       change_dir(sgf, tmp_path);
-      -- affiche(ab_tmp);
-      -- je récupère le dernier mot du path => c'est le nom du fichier/dossier que je crée
       data.name := liste_cmd.get_contenu(path.chemin_inv);
-      -- put(data.name);
       data.isFile := estFichier;
-      -- si le c'est un fichier et qu'il existe deja j'affiche le contenu
       if existe and then estFichier then
          Put_Line(data.contenu);
       end if;
@@ -302,8 +299,17 @@ package body sgf is
       end if;
       set_arbre(find(sgf.noeud_courant, tmp), tmp_noeud);
       if not ab_est_vide(tmp_noeud) then
-         remove(sgf.root, get_contenu(tmp_noeud));
-         sgf.taille := sgf.taille - get_contenu(tmp_noeud).taille;
+         if not get_contenu(tmp_noeud).isFile then
+            if get_contenu(tmp_noeud).droits = 111 then
+               remove(sgf.root, get_contenu(tmp_noeud));
+               sgf.taille := sgf.taille - get_contenu(tmp_noeud).taille;
+            else
+               raise droit_insuffisant;
+            end if;
+         else
+            remove(sgf.root, get_contenu(tmp_noeud));
+            sgf.taille := sgf.taille - get_contenu(tmp_noeud).taille;
+         end if;
       else
          raise chemin_invalide;
       end if;
@@ -379,7 +385,7 @@ package body sgf is
             raise chemin_invalide;
          end if;
       else
-         raise no_file;
+         raise no_folder;
       end if;
    end copy_move;
 

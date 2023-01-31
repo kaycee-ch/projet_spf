@@ -19,7 +19,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U sgf%b			sgf.adb			8a7f5610 NE OO PK IL
+U sgf%b			sgf.adb			9a149a4c NE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -34,14 +34,13 @@ Z p_liste_gen%s		p_liste_gen.adb		p_liste_gen.ali  ED
 W parser%s		parser.adb		parser.ali
 Z pile_gen%s		pile_gen.adb		pile_gen.ali  ED
 Z system%s		system.ads		system.ali
-Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.img_int%s	s-imgint.ads		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U sgf%s			sgf.ads			99aa0528 EE OO PK IL
+U sgf%s			sgf.ads			ab5c117a EE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -95,11 +94,11 @@ D p_arbre.ads		20230129143036 ad8a1ad9 p_arbre%s
 D p_arbre.adb		20230129143231 11e574e5 p_arbre%b
 D p_liste_gen.ads	20230127220056 bd955693 p_liste_gen%s
 D p_liste_gen.adb	20230127220105 55c5940e p_liste_gen%b
-D parser.ads		20230129155647 fbd468e0 parser%s
+D parser.ads		20230131165104 b7795368 parser%s
 D pile_gen.ads		20230124054314 7aaed308 pile_gen%s
 D pile_gen.adb		20230124054314 4b1b0ce8 pile_gen%b
-D sgf.ads		20230130192032 b668f63e sgf%s
-D sgf.adb		20230130192032 65ea7f6d sgf%b
+D sgf.ads		20230131174338 c833d9e4 sgf%s
+D sgf.adb		20230131174339 4777a763 sgf%b
 D system.ads		20210520051134 a2da961d system%s
 D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
@@ -192,76 +191,76 @@ G c Z s s [free sgf__p_pile 6 14 28_4]
 G c Z s b [print_simpl sgf 33 14 none]
 G c Z s b [print_enf_tree sgf 35 14 none]
 G c Z s b [print_all sgf 37 14 none]
-G c Z s s [affiche_enf_detR sgf__affiche_enf_detGP913 39 14 none]
+G c Z s s [affiche_enf_detR sgf__affiche_enf_detGP934 39 14 none]
 G c Z s s [affiche_enf_det sgf 39 14 none]
-G c Z s s [affiche_simplR sgf__affiche_simplGP997 41 14 none]
+G c Z s s [affiche_simplR sgf__affiche_simplGP1018 41 14 none]
 G c Z s s [affiche_simpl sgf 41 14 none]
-G c Z s s [affiche_enf_treeR sgf__affiche_enf_treeGP1081 43 14 none]
+G c Z s s [affiche_enf_treeR sgf__affiche_enf_treeGP1102 43 14 none]
 G c Z s s [affiche_enf_tree sgf 43 14 none]
-G c Z s s [affiche_allR sgf__affiche_allGP1172 45 14 none]
+G c Z s s [affiche_allR sgf__affiche_allGP1193 45 14 none]
 G c Z s s [affiche_all sgf 45 14 none]
 G c Z s b [is_equal sgf 48 13 none]
 G c Z s b [formatage_disque sgf 53 14 none]
 G c Z s b [repo_courant sgf 60 13 none]
-G c Z s b [print_repo sgf 69 14 none]
-G c Z s b [creer_fichier_dossier sgf 71 14 none]
-G c Z s b [change_dir sgf 89 14 none]
-G c Z s b [affiche_fichier sgf 95 14 none]
-G c Z s b [liste_contenu sgf 97 14 none]
-G c Z s b [supp_fichier_dossier sgf 111 14 none]
-G c Z s b [change_droits sgf 123 14 none]
-G c Z s b [change_name sgf 125 14 none]
-G c Z s b [archive_dir sgf 127 14 none]
-G c Z s b [test sgf 132 14 none]
-G c Z s b [stockage_occupe sgf 134 13 none]
-G c Z s b [copy_move sgf 136 14 none]
-G c Z s s [t_sgfDI sgf 140 9 none]
-G c Z s s [t_sgfDA sgf 140 9 none]
-G c Z s s [t_sgfDF sgf 140 9 none]
-G c Z s s [t_sgfIP sgf 140 9 none]
+G c Z s b [print_repo sgf 67 14 none]
+G c Z s b [creer_fichier_dossier sgf 74 14 none]
+G c Z s b [change_dir sgf 82 14 none]
+G c Z s b [affiche_fichier sgf 90 14 none]
+G c Z s b [liste_contenu sgf 98 14 none]
+G c Z s b [supp_fichier_dossier sgf 105 14 none]
+G c Z s b [change_droits sgf 112 14 none]
+G c Z s b [change_name sgf 119 14 none]
+G c Z s b [archive_dir sgf 126 14 none]
+G c Z s b [stockage_occupe sgf 133 13 none]
+G c Z s b [copy_move sgf 139 14 none]
+G c Z s b [test sgf 145 14 none]
+G c Z s s [t_sgfDI sgf 148 9 none]
+G c Z s s [t_sgfDA sgf 148 9 none]
+G c Z s s [t_sgfDF sgf 148 9 none]
+G c Z s s [t_sgfIP sgf 148 9 none]
+G r i none [s sgf 7 1 none] [file_gen standard 7 9 none]
 G r i none [s sgf 7 1 none] [p_arbre standard 8 9 none]
 G r i none [s sgf 7 1 none] [pile_gen standard 4 9 none]
 G r i none [s sgf 7 1 none] [p_liste_gen standard 5 9 none]
-G r i none [s sgf 7 1 none] [file_gen standard 7 9 none]
-G r s t_path [repo_courant sgf 60 13 none] [t_pathIP parser 14 9 none]
-G r c none [repo_courant sgf 60 13 none] [traiter_path parser 38 13 none]
-G r s t_path [creer_fichier_dossier sgf 71 14 none] [t_pathIP parser 14 9 none]
-G r c none [creer_fichier_dossier sgf 71 14 none] [traiter_path parser 38 13 none]
-G r c none [creer_fichier_dossier sgf 71 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [creer_fichier_dossier sgf 71 14 none] [enlever parser__liste_cmd 62 14 9_4]
-G r c none [creer_fichier_dossier sgf 71 14 none] [get_next parser__liste_cmd 70 13 9_4]
-G r c none [creer_fichier_dossier sgf 71 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [change_dir sgf 89 14 none] [get_next parser__liste_cmd 70 13 9_4]
-G r c none [change_dir sgf 89 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [change_dir sgf 89 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [change_dir sgf 89 14 none] [enlever parser__liste_cmd 62 14 9_4]
-G r c none [affiche_fichier sgf 95 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [liste_contenu sgf 97 14 none] [get_next parser__liste_cmd 70 13 9_4]
-G r c none [liste_contenu sgf 97 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [liste_contenu sgf 97 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [liste_contenu sgf 97 14 none] [enlever parser__liste_cmd 62 14 9_4]
-G r c none [supp_fichier_dossier sgf 111 14 none] [get_next parser__liste_cmd 70 13 9_4]
-G r c none [supp_fichier_dossier sgf 111 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r s t_path [change_droits sgf 123 14 none] [t_pathIP parser 14 9 none]
-G r c none [change_droits sgf 123 14 none] [traiter_path parser 38 13 none]
-G r c none [change_droits sgf 123 14 none] [get_next parser__liste_cmd 70 13 9_4]
-G r c none [change_droits sgf 123 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [change_droits sgf 123 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [change_droits sgf 123 14 none] [enlever parser__liste_cmd 62 14 9_4]
-G r s t_path [change_name sgf 125 14 none] [t_pathIP parser 14 9 none]
-G r c none [change_name sgf 125 14 none] [traiter_path parser 38 13 none]
-G r c none [change_name sgf 125 14 none] [get_next parser__liste_cmd 70 13 9_4]
-G r c none [change_name sgf 125 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [change_name sgf 125 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [change_name sgf 125 14 none] [enlever parser__liste_cmd 62 14 9_4]
-G r c none [archive_dir sgf 127 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r s t_path [test sgf 132 14 none] [t_pathIP parser 14 9 none]
-G r c none [test sgf 132 14 none] [traiter_path parser 38 13 none]
-G r c none [test sgf 132 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
-G r c none [test sgf 132 14 none] [enlever parser__liste_cmd 62 14 9_4]
-G r c none [test sgf 132 14 none] [get_next parser__liste_cmd 70 13 9_4]
-G r c none [test sgf 132 14 none] [est_vide parser__liste_cmd 15 13 9_4]
-G r c none [copy_move sgf 136 14 none] [get_contenu parser__liste_cmd 68 13 9_4]
+G r s t_path [repo_courant sgf 60 13 none] [t_pathIP parser 15 9 none]
+G r c none [repo_courant sgf 60 13 none] [traiter_path parser 57 13 none]
+G r s t_path [creer_fichier_dossier sgf 74 14 none] [t_pathIP parser 15 9 none]
+G r c none [creer_fichier_dossier sgf 74 14 none] [traiter_path parser 57 13 none]
+G r c none [creer_fichier_dossier sgf 74 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [creer_fichier_dossier sgf 74 14 none] [enlever parser__liste_cmd 62 14 10_4]
+G r c none [creer_fichier_dossier sgf 74 14 none] [get_next parser__liste_cmd 70 13 10_4]
+G r c none [creer_fichier_dossier sgf 74 14 none] [est_vide parser__liste_cmd 15 13 10_4]
+G r c none [change_dir sgf 82 14 none] [get_next parser__liste_cmd 70 13 10_4]
+G r c none [change_dir sgf 82 14 none] [est_vide parser__liste_cmd 15 13 10_4]
+G r c none [change_dir sgf 82 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [change_dir sgf 82 14 none] [enlever parser__liste_cmd 62 14 10_4]
+G r c none [affiche_fichier sgf 90 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [liste_contenu sgf 98 14 none] [get_next parser__liste_cmd 70 13 10_4]
+G r c none [liste_contenu sgf 98 14 none] [est_vide parser__liste_cmd 15 13 10_4]
+G r c none [liste_contenu sgf 98 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [liste_contenu sgf 98 14 none] [enlever parser__liste_cmd 62 14 10_4]
+G r c none [supp_fichier_dossier sgf 105 14 none] [get_next parser__liste_cmd 70 13 10_4]
+G r c none [supp_fichier_dossier sgf 105 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r s t_path [change_droits sgf 112 14 none] [t_pathIP parser 15 9 none]
+G r c none [change_droits sgf 112 14 none] [traiter_path parser 57 13 none]
+G r c none [change_droits sgf 112 14 none] [get_next parser__liste_cmd 70 13 10_4]
+G r c none [change_droits sgf 112 14 none] [est_vide parser__liste_cmd 15 13 10_4]
+G r c none [change_droits sgf 112 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [change_droits sgf 112 14 none] [enlever parser__liste_cmd 62 14 10_4]
+G r s t_path [change_name sgf 119 14 none] [t_pathIP parser 15 9 none]
+G r c none [change_name sgf 119 14 none] [traiter_path parser 57 13 none]
+G r c none [change_name sgf 119 14 none] [get_next parser__liste_cmd 70 13 10_4]
+G r c none [change_name sgf 119 14 none] [est_vide parser__liste_cmd 15 13 10_4]
+G r c none [change_name sgf 119 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [change_name sgf 119 14 none] [enlever parser__liste_cmd 62 14 10_4]
+G r c none [archive_dir sgf 126 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [copy_move sgf 139 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r s t_path [test sgf 145 14 none] [t_pathIP parser 15 9 none]
+G r c none [test sgf 145 14 none] [traiter_path parser 57 13 none]
+G r c none [test sgf 145 14 none] [get_contenu parser__liste_cmd 68 13 10_4]
+G r c none [test sgf 145 14 none] [enlever parser__liste_cmd 62 14 10_4]
+G r c none [test sgf 145 14 none] [get_next parser__liste_cmd 70 13 10_4]
+G r c none [test sgf 145 14 none] [est_vide parser__liste_cmd 15 13 10_4]
 X 1 ada.ads
 16K9*Ada 20e8 32|1r6 1r33 33|2r6 2r33 3r6 3r23 4r6 4r31
 X 6 a-inteio.ads
@@ -270,108 +269,114 @@ X 9 a-string.ads
 16K13*Strings 35e16 32|1r10 1r37 33|2r10 2r37
 X 12 a-strunb.ads
 83K21*Unbounded 765e26 32|1w18 1r45 33|2w18 2r45
-88R9*Unbounded_String<5|43R9> 744e15 32|14r14 18r17 28r46 125r75 136r76 143r13
-. 33|98r13 118r13 147r15 242r18 280r75 338r13 362r76 391r18
-93V13*Length{natural} 33|23s22 50s22 216s25
-104V13*To_Unbounded_String{88R9} 33|84s20 350s25 399s28 402s28 407s28 435s28
+88R9*Unbounded_String<5|43R9> 744e15 32|14r14 18r17 28r46 119r75 139r76 151r13
+. 33|104r13 124r13 153r15 239r18 277r75 344r13 368r76 397r18
+93V13*Length{natural} 33|23s22 50s22 213s25
+104V13*To_Unbounded_String{88R9} 33|90s20 356s25 405s28 408s28 413s28 441s28
 117V13*To_String{string} 33|41s13 59s13
-128U14*Append 33|107s10 128s10 350s13
-136U14*Append 33|106s10 127s10
-239V14*"="{boolean} 33|13s21 18s34 166s22
-245V14*"="{boolean} 33|158s19 160s22 166s65
+128U14*Append 33|113s10 134s10 356s13
+136U14*Append 33|112s10 133s10
+239V14*"="{boolean} 33|13s21 18s34 171s22
+245V14*"="{boolean} 33|163s19 165s22 171s65
 X 16 a-textio.ads
 58K13*Text_IO 725e16 33|3w10 3r27
-262U14*New_Line 33|43s7 66s7 110s7 261s7
-271U14*Skip_Line 33|215s42
-463U14*Put 33|29s10 31s10 33s13 36s13 38s13 53s7 60s7 62s7 64s7 74s7
-506U14*Put_Line 33|55s10 57s10 61s7 63s7 65s7 214s18
+262U14*New_Line 33|43s7 66s7 116s7 258s7
+271U14*Skip_Line 33|212s42
+463U14*Put 33|29s10 31s10 33s13 36s13 38s13 53s7 60s7 62s7 64s7 74s10 76s10
+. 80s7
+506U14*Put_Line 33|55s10 57s10 61s7 63s7 65s7 211s18
 X 18 a-tiunio.ads
 25K21*Unbounded_IO 61e29 33|1w14 1r40
-32U14*Put=34:42 33|42s7 73s7 109s7
-41U14*Put_Line=43:42 33|211s10 323s13
-57U14*Get_Line=59:42 33|215s10
+32U14*Put=34:42 33|42s7 75s10 78s10 115s7
+41U14*Put_Line=43:42 33|208s10 329s13
+57U14*Get_Line=59:42 33|212s10
 X 25 p_arbre.ads
 4+9 T_contenu 32|23r33
 6V18 is_equals{boolean} 32|23r54
 8k9*p_arbre 150e12 32|2w6 23r25 33|6w6
-12P9*T_arbre 32|48r30[23] 48r46[23] 141r14[23] 142r23[23] 33|16r30[32|23]
-. 16r46[32|23] 96r13[32|23] 116r13[32|23] 148r16[32|23] 243r19[32|23] 296r19[32|23]
-. 317r16[32|23] 339r19[32|23] 364r19[32|23] 365r14[32|23] 392r13[32|23]
-15U14*init 33|82s7[32|23]
-22U14*creer_racine 33|88s7[32|23]
-29U14*ajouter_enfants 33|228s10[32|23] 374s13[32|23]
-36V13*cherche_enfant{12P9[32|23]} 33|157s20[32|23]
-45V13*find{12P9[32|23]} 33|303s17[32|23] 320s17[32|23] 342s17[32|23] 368s20[32|23]
-. 371s20[32|23]
-54U14*remove 33|305s10[32|23] 376s16[32|23]
-68V13*get_contenu{32|13R9} 33|18s14[32|23] 18s36[32|23] 102s21[32|23] 123s21[32|23]
-. 166s24[32|23] 169s20[32|23] 272s15[32|23] 286s15[32|23] 305s27[32|23] 306s37[32|23]
-. 322s13[32|23] 323s22[32|23] 346s13[32|23] 349s20[32|23] 372s17[32|23]
-75U14*set_arbre 33|89s7[32|23] 159s13[32|23] 162s16[32|23] 164s16[32|23]
-. 167s13[32|23] 170s16[32|23] 303s7[32|23] 320s7[32|23] 342s7[32|23] 371s10[32|23]
-82V13*ab_est_vide{boolean} 33|101s17[32|23] 122s17[32|23] 161s20[32|23] 168s20[32|23]
-. 304s14[32|23] 321s14[32|23] 343s14[32|23] 369s14[32|23] 373s17[32|23]
-96V13*get_parent{12P9[32|23]} 33|103s17[32|23] 124s17[32|23] 161s32[32|23]
-. 162s26[32|23]
-104U14*modifier 33|226s10[32|23] 274s7[32|23] 288s7[32|23] 354s13[32|23]
-111U14*supp_enfants 33|355s13[32|23]
+12P9*T_arbre 32|48r30[23] 48r46[23] 149r14[23] 150r23[23] 33|16r30[32|23]
+. 16r46[32|23] 102r13[32|23] 122r13[32|23] 154r16[32|23] 240r19[32|23] 293r19[32|23]
+. 323r16[32|23] 345r19[32|23] 370r19[32|23] 371r14[32|23] 398r13[32|23]
+15U14*init 33|88s7[32|23]
+22U14*creer_racine 33|94s7[32|23]
+29U14*ajouter_enfants 33|225s10[32|23] 380s13[32|23]
+36V13*cherche_enfant{12P9[32|23]} 33|162s20[32|23]
+45V13*find{12P9[32|23]} 33|300s17[32|23] 326s17[32|23] 348s17[32|23] 374s20[32|23]
+. 377s20[32|23]
+54U14*remove 33|304s16[32|23] 310s13[32|23] 382s16[32|23]
+68V13*get_contenu{32|13R9} 33|18s14[32|23] 18s36[32|23] 108s21[32|23] 129s21[32|23]
+. 171s24[32|23] 174s20[32|23] 269s15[32|23] 283s15[32|23] 302s17[32|23] 303s16[32|23]
+. 304s33[32|23] 305s43[32|23] 310s30[32|23] 311s40[32|23] 328s13[32|23] 329s22[32|23]
+. 352s13[32|23] 355s20[32|23] 378s17[32|23]
+75U14*set_arbre 33|95s7[32|23] 164s13[32|23] 167s16[32|23] 169s16[32|23]
+. 172s13[32|23] 175s16[32|23] 300s7[32|23] 326s7[32|23] 348s7[32|23] 377s10[32|23]
+82V13*ab_est_vide{boolean} 33|107s17[32|23] 128s17[32|23] 166s20[32|23] 173s20[32|23]
+. 301s14[32|23] 327s14[32|23] 349s14[32|23] 375s14[32|23] 379s17[32|23]
+96V13*get_parent{12P9[32|23]} 33|109s17[32|23] 130s17[32|23] 166s32[32|23]
+. 167s26[32|23]
+104U14*modifier 33|223s10[32|23] 271s7[32|23] 285s7[32|23] 360s13[32|23]
+111U14*supp_enfants 33|361s13[32|23]
 119U22 afficher_noeud 32|43r56[23] 45r51[23]
 120u14*print_every 32|43r44[23] 45r39[23]
 127U22 afficher_noeud 32|39r54[23] 41r52[23]
 128u14*print_just 32|39r43[23] 41r41[23]
 X 27 p_liste_gen.ads
 7P9*T_liste
-15V13*est_vide{boolean} 33|154s52[29|9]
-62U14*enlever 33|177s20[29|9] 200s17[29|9]
-68V13*get_contenu{12|88R9} 33|155s29[29|9] 199s29[29|9] 206s30[29|9] 299s32[29|9]
-. 301s32[29|9] 319s29[29|9] 341s29[29|9] 370s32[29|9]
-70V13*get_next{7P9[29|9]} 33|154s71[29|9] 155s51[29|9] 299s54[29|9]
+15V13*est_vide{boolean} 33|159s52[29|10]
+62U14*enlever 33|182s20[29|10] 203s17[29|10]
+68V13*get_contenu{12|88R9} 33|160s29[29|10] 202s29[29|10] 205s30[29|10] 296s32[29|10]
+. 298s32[29|10] 325s29[29|10] 347s29[29|10] 376s32[29|10]
+70V13*get_next{7P9[29|10]} 33|159s71[29|10] 160s51[29|10] 296s54[29|10]
 X 29 parser.ads
-6K9*parser 42e11 32|3w6 3r18 33|5w6 5r18
-9K12*liste_cmd[27|5] 33|154r42 154r61 155r19 155r41 177r10 199r19 200r7 206r20
-. 299r22 299r44 301r22 319r19 341r19 370r22
-14R9*T_PATH 18e14 32|60r54 71r66 89r62 95r60 97r58 111r65 123r58 125r57 127r57
-. 136r54 33|115r53 119r18 145r62 146r18 192r66 194r18 195r18 240r58 266r58
-. 267r13 280r57 281r13 294r65 315r60 336r57 362r54 390r14
-15p7*chemin{27|7P9[9]} 33|154r89 155r69 177m37 200m34
-16p7*chemin_inv{27|7P9[9]} 33|199r46 206r47 299r68 301r49 319r46 341r46 370r49
-38V13*traiter_path{14R9} 33|130s19 399s15 402s15 407s15 435s15
+6K9*parser 65e11 32|3w6 3r18 33|5w6 5r18
+10K12*liste_cmd[27|5] 33|159r42 159r61 160r19 160r41 182r10 202r19 203r7
+. 205r20 296r22 296r44 298r22 325r19 347r19 376r22
+15R9*T_PATH 19e14 32|60r54 74r66 82r62 90r60 98r58 105r65 112r58 119r57 126r57
+. 139r54 33|121r53 125r18 151r62 152r18 196r66 198r18 199r18 237r58 263r58
+. 264r13 277r57 278r13 291r65 321r60 342r57 368r54 396r14
+16p7*chemin{27|7P9[10]} 33|159r89 160r69 182m37 203m34
+17p7*chemin_inv{27|7P9[10]} 33|202r46 205r47 296r68 298r49 325r46 347r46
+. 376r49
+57V13*traiter_path{15R9} 33|136s19 405s15 408s15 413s15 441s15
 X 30 pile_gen.ads
 2+9 un_type 32|28r35
 4k9*pile_gen 50e13 32|4w6 28r26
-5P9*pile 33|97r11[32|28] 117r11[32|28]
-7U14*creer_pile_vide 33|100s7[32|28] 121s7[32|28]
-13V13*est_vide{boolean} 33|105s17[32|28] 126s17[32|28]
-23V12*depiler{12|88R9} 33|107s22[32|28] 128s22[32|28]
-34U14*empiler 33|102s10[32|28] 123s10[32|28]
+5P9*pile 33|103r11[32|28] 123r11[32|28]
+7U14*creer_pile_vide 33|106s7[32|28] 127s7[32|28]
+13V13*est_vide{boolean} 33|111s17[32|28] 132s17[32|28]
+23V12*depiler{12|88R9} 33|113s22[32|28] 134s22[32|28]
+34U14*empiler 33|108s10[32|28] 129s10[32|28]
 X 32 sgf.ads
-7K9*sgf 140E9 147l5 147e8 33|8b14 454l5 454t8
-9X4*chemin_invalide 33|308r16 325r19 344r16 379r19
+7K9*sgf 148E9 155l5 155e8 33|8b14 460l5 460t8
+9X4*chemin_invalide 33|186r16 314r16 331r19 350r16 385r19
 10X4*arbre_vide
-11X4*stockage_plein 33|223r16
-11X20*tar_file 33|347r19
-11X30*no_file 33|382r16
-11X39*cannot_print 33|328r16
+11X4*stockage_plein 33|220r16
+11X20*tar_file 33|353r19
+11X30*no_folder 33|388r16
+11X41*cannot_print 33|334r16
+11X55*droit_insuffisant 33|307r22
 13R9*T_info 19e14 21r30 21r45 23r46 33r37 35r39 37r35 33|11r30 11r45 22r39
-. 49r34 71r37 80r14 149r18 193r14 196r13 268r14 282r14 295r13 316r13 337r19
-. 363r13
+. 49r34 71r37 86r14 155r18 197r14 200r13 265r14 279r14 292r13 322r13 343r19
+. 369r13
 14r7*name{12|88R9} 33|13r16 13r25 18r29 18r51 23r34 41r28 42r16 50r34 59r28
-. 73r16 84m12 102r38 123r38 156m19 166r46 199m11 200r46 206m12 287m12 299m14
-. 301m14 319m11 341m11 349r43 351m18 367m11 370m14
-15b7*isFile{boolean} 33|35r18 54r15 85m12 169r40 208m12 322r33 346r36 352m18
-16i7*droits{integer} 33|65r35 87m12 217m15 220m15 273m12
-17i7*taille{integer} 33|63r35 86m12 216m15 219m15 222r29 231r39 306r60 353m18
-18r7*contenu{12|88R9} 33|211r24 215m24 216r37 323r42
+. 75r19 78r19 90m12 108r38 129r38 161m19 171r46 202m11 203r46 205m12 284m12
+. 296m14 298m14 325m11 347m11 355r43 357m18 373m11 376m14
+15b7*isFile{boolean} 33|35r18 54r15 73r19 91m12 174r40 206m12 302r40 328r33
+. 352r36 358m18
+16i7*droits{integer} 33|65r35 93m12 214m15 217m15 270m12 303r39
+17i7*taille{integer} 33|63r35 92m12 213m15 216m15 219r29 228r39 305r66 311r63
+. 359m18
+18r7*contenu{12|88R9} 33|208r24 212m24 213r37 329r42
 21V13*cmp_name{boolean} 21>23 21>38 23r67 33|11b13 14l8 14t16
 21r23 x{13R9} 33|11b23 13r14
 21r38 y{13R9} 33|11b38 13r23
 23K12*P_sgf[25|8] 24r8 39r37 41r35 43r38 45r33
-26R9*T_sgf 53r45 60r40 69r34 71r49 89r38 95r43 97r41 111r48 123r41 125r40
-. 127r40 132r32 134r42 136r37 140c9 145e14 33|79r44 95r34 115r39 137r42 145r38
-. 192r49 240r41 266r41 280r40 294r48 315r43 336r40 362r37 389r33
+26R9*T_sgf 53r45 60r40 67r34 74r49 82r38 90r43 98r41 105r48 112r41 119r40
+. 126r40 133r42 139r37 145r32 148c9 153e14 33|85r44 101r34 121r39 143r42
+. 151r38 196r49 237r41 263r41 277r40 291r48 321r43 342r40 368r37 395r33
 28K12*P_pile[30|4] 29r8
-33U14*print_simpl 33>27 33>45 41r70 33|71b14 75l8 75t19
-33r27 data{13R9} 33|71b27 73r11
+33U14*print_simpl 33>27 33>45 41r70 33|71b14 81l8 81t19
+33r27 data{13R9} 33|71b27 73r14 75r14 78r14
 33i45 indent{integer} 33|71b45
 35U14*print_enf_tree 35>29 35>47 43r74 33|22b14 44l8 44t22
 35r29 data{13R9} 33|22b29 23r29 35r13 41r23 42r11
@@ -379,119 +384,121 @@ X 32 sgf.ads
 37U14*print_all 37>25 37>43 39r72 45r69 33|49b14 67l8 67t17
 37r25 data{13R9} 33|49b24 50r29 54r10 59r23 63r30 65r30
 37i43 indent{integer} 33|49b42
-39U14*affiche_enf_det[25|128] 33|255s13
-41U14*affiche_simpl[25|128] 33|257s13
-43U14*affiche_enf_tree[25|120] 33|251s13
-45U14*affiche_all[25|120] 33|249s13
+39U14*affiche_enf_det[25|128] 33|252s13
+41U14*affiche_simpl[25|128] 33|254s13
+43U14*affiche_enf_tree[25|120] 33|248s13
+45U14*affiche_all[25|120] 33|246s13
 48V13*is_equal{boolean} 48>23 48>39 33|16b13 19l8 19t16
 48p23 a{25|12P9[23]} 33|16b23 18r26
 48p39 b{25|12P9[23]} 33|16b39 18r48
-53U14*formatage_disque 53=32 33|79b14 90l8 90t24 395s7
-53r32 sgf{26R9} 33|79b31 82m12 82r12 83m7 88m20 88r20 89r17 89m27 89r27
-60V13*repo_courant{29|14R9} 60=27 33|115b13 132l8 132t20 194s28 270s14 284s14
-60r27 sgf{26R9} 33|115b26 116r24
-69U14*print_repo 69>25 33|95b14 111l11 111t21
-69r25 sgf{26R9} 33|95b25 96r24
-71U14*creer_fichier_dossier 71=36 71>56 71>74 71>99 33|192b14 232l8 232t29
-. 401s7 403s7 408s7
-71r36 sgf{26R9} 33|192b36 194m41 194r41 203m18 222r11 226m19 226r19 228m26
-. 228r26 230m18 231m7 231r21
-71r56 path{29|14R9} 33|192b56 195r28 199r41 206r42
-71b74 estFichier{boolean} 33|192b74 208r22 210r26 213r10
-71b99 existe{boolean} 33|192b99 210r10 225r10
-89U14*change_dir 89=25 89>45 33|145b14 183l8 183t18 203s7 230s7 246s7 271s7
-. 275s7 285s7 289s7 404s7
-89r25 sgf{26R9} 33|145b25 157r35 159r23 159m42 159r42 161r43 162r37 162m57
-. 162r57 164r26 164m45 164r45 166r36 167r23 167m33 167r33 170m34 170r34
-89r45 destination{29|14R9} 33|145b45 146r28
-95U14*affiche_fichier 95=30 95>50 33|315b14 330l8 330t23 409s7
-95r30 sgf{26R9} 33|315b30 320r22
-95r50 path{29|14R9} 33|315b50 319r41
-97U14*liste_contenu 97=28 97>48 97>66 97>89 33|240b14 262l8 262t21
-97r28 sgf{26R9} 33|240b28 243r30 246m18 249r25 251r30 255r29 257r27 260m7
-97r48 path{29|14R9} 33|240b48 246r23
-97b66 dir_fils{boolean} 33|240b66 247r10
-97b89 all_info{boolean} 33|240b89 248r13 254r13
-111U14*supp_fichier_dossier 111=35 111>55 111>73 33|294b14 310l8 310t28 411s7
-111r35 sgf{26R9} 33|294b35 303r22 305m17 305r17 306m10 306r24
-111r55 path{29|14R9} 33|294b55 299r63 301r44
-111b73 isFile{boolean} 33|294b73 298r14
-123U14*change_droits 123=28 123>48 123>66 33|266b14 276l8 276t21
-123r28 sgf{26R9} 33|266b28 270m27 270r27 271m18 272r27 274m16 274r16 275m18
-123r48 path{29|14R9} 33|266b48 271r23
-123i66 n{integer} 33|266b66 273r22
-125U14*change_name 125=27 125>47 125>65 33|280b14 290l8 290t19
-125r27 sgf{26R9} 33|280b27 284m27 284r27 285m18 286r27 288m16 288r16 289m18
-125r47 path{29|14R9} 33|280b47 285r23
-125r65 name{12|88R9} 33|280b65 287r20
-127U14*archive_dir 127=27 127>47 33|336b14 358l8 358t19
-127r27 sgf{26R9} 33|336b27 339r30 342r22
-127r47 path{29|14R9} 33|336b47 341r41
-132U14*test 132=19 33|389b14 452l8 452t12
-132r19 sgf{26R9} 33|389b20 395m24 401m29 403m29 404m18 408m29 409m23 411m28
-134V13*stockage_occupe{integer} 134=29 33|137b13 140l8 140t23
-134r29 sgf{26R9} 33|137b29 139r14
-136U14*copy_move 136=24 136>44 136=62 136>94 33|362b14 384l8 384t17
-136r24 sgf{26R9} 33|362b24 368r25 371r25 376m23 376r23
-136r44 path{29|14R9} 33|362b44 370r44
-136r62 name{12|88R9} 33|362b62 367r19
-136b94 move{boolean} 33|362b94 375r16
-141p7*root{25|12P9[23]} 33|82m16 88m24 89r21 166r40 167r27 305m21 320r26
-. 342r26 371r29
-142p7*noeud_courant{25|12P9[23]} 33|89m31 96r28 116r28 157r39 159r27 159m46
-. 161r47 162r41 162m61 164r30 164m49 167m37 170m38 226m23 228m30 243r34 249r29
-. 251r34 255r33 257r31 260m11 272r31 274m20 286r31 288m20 303r26 339r34 368r29
-. 376m27
-143r7*nom{12|88R9}
-144i7*taille{integer} 33|83m11 139r18 222r15 231m11 231r25 306m14 306r28
+53U14*formatage_disque 53=32 33|85b14 96l8 96t24 401s7
+53r32 sgf{26R9} 33|85b31 88m12 88r12 89m7 94m20 94r20 95r17 95m27 95r27
+60V13*repo_courant{29|15R9} 60=27 33|121b13 138l8 138t20 198s28 267s14 281s14
+60r27 sgf{26R9} 33|121b26 122r24
+67U14*print_repo 67>25 33|101b14 117l8 117t18
+67r25 sgf{26R9} 33|101b25 102r24
+74U14*creer_fichier_dossier 74=36 74>56 74>74 74>99 33|196b14 229l8 229t29
+. 407s7 409s7 414s7
+74r36 sgf{26R9} 33|196b36 198m41 198r41 204m18 219r11 223m19 223r19 225m26
+. 225r26 227m18 228m7 228r21
+74r56 path{29|15R9} 33|196b56 199r28 202r41 205r42
+74b74 estFichier{boolean} 33|196b74 206r22 207r26 210r10
+74b99 existe{boolean} 33|196b99 207r10 222r10
+82U14*change_dir 82=25 82>45 33|151b14 188l8 188t18 204s7 227s7 243s7 268s7
+. 272s7 282s7 286s7 410s7
+82r25 sgf{26R9} 33|151b25 162r35 164r23 164m42 164r42 166r43 167r37 167m57
+. 167r57 169r26 169m45 169r45 171r36 172r23 172m33 172r33 175m34 175r34
+82r45 destination{29|15R9} 33|151b45 152r28
+90U14*affiche_fichier 90=30 90>50 33|321b14 336l8 336t23 415s7
+90r30 sgf{26R9} 33|321b30 326r22
+90r50 path{29|15R9} 33|321b50 325r41
+98U14*liste_contenu 98=28 98>48 98>66 98>89 33|237b14 259l8 259t21
+98r28 sgf{26R9} 33|237b28 240r30 243m18 246r25 248r30 252r29 254r27 257m7
+98r48 path{29|15R9} 33|237b48 243r23
+98b66 dir_fils{boolean} 33|237b66 244r10
+98b89 all_info{boolean} 33|237b89 245r13 251r13
+105U14*supp_fichier_dossier 105=35 105>55 105>73 33|291b14 316l8 316t28 417s7
+105r35 sgf{26R9} 33|291b35 300r22 304m23 304r23 305m16 305r30 310m20 310r20
+. 311m13 311r27
+105r55 path{29|15R9} 33|291b55 296r63 298r44
+105b73 isFile{boolean} 33|291b73 295r14
+112U14*change_droits 112=28 112>48 112>66 33|263b14 273l8 273t21
+112r28 sgf{26R9} 33|263b28 267m27 267r27 268m18 269r27 271m16 271r16 272m18
+112r48 path{29|15R9} 33|263b48 268r23
+112i66 n{integer} 33|263b66 270r22
+119U14*change_name 119=27 119>47 119>65 33|277b14 287l8 287t19
+119r27 sgf{26R9} 33|277b27 281m27 281r27 282m18 283r27 285m16 285r16 286m18
+119r47 path{29|15R9} 33|277b47 282r23
+119r65 name{12|88R9} 33|277b65 284r20
+126U14*archive_dir 126=27 126>47 33|342b14 364l8 364t19
+126r27 sgf{26R9} 33|342b27 345r30 348r22
+126r47 path{29|15R9} 33|342b47 347r41
+133V13*stockage_occupe{integer} 133=29 33|143b13 146l8 146t23
+133r29 sgf{26R9} 33|143b29 145r14
+139U14*copy_move 139=24 139>44 139=62 139>94 33|368b14 390l8 390t17
+139r24 sgf{26R9} 33|368b24 374r25 377r25 382m23 382r23
+139r44 path{29|15R9} 33|368b44 376r44
+139r62 name{12|88R9} 33|368b62 373r19
+139b94 move{boolean} 33|368b94 381r16
+145U14*test 145=19 33|395b14 458l8 458t12
+145r19 sgf{26R9} 33|395b20 401m24 407m29 409m29 410m18 414m29 415m23 417m28
+149p7*root{25|12P9[23]} 33|88m16 94m24 95r21 171r40 172r27 304m27 310m24
+. 326r26 348r26 377r29
+150p7*noeud_courant{25|12P9[23]} 33|95m31 102r28 122r28 162r39 164r27 164m46
+. 166r47 167r41 167m61 169r30 169m49 172m37 175m38 223m23 225m30 240r34 246r29
+. 248r34 252r33 254r31 257m11 269r31 271m20 283r31 285m20 300r26 345r34 374r29
+. 382m27
+151r7*nom{12|88R9}
+152i7*taille{integer} 33|89m11 145r18 219r15 228m11 228r25 305m20 305r34
+. 311m17 311r31
 X 33 sgf.adb
 23i7 m{integer} 24r23
 24a7 tmp{string} 41m7
 32i14 i{integer}
 50i7 m{integer} 51r23
 51a7 tmp{string} 59m7 61r16
-80r7 data{32|13R9} 84m7 85m7 86m7 87m7 88r30
-96p7 tmp{25|12P9[32|23]} 101r29 102r33 103m10 103r28
-97p7 p{30|5P9[32|28]} 100m23 100r23 102m18 102r18 105r26 107m30 107r30
-98r7 pwd{12|88R9} 106m17 106r17 107m17 107r17 109r11
-116p7 tmp{25|12P9[32|23]} 122r29 123r33 124m10 124r28
-117p7 p{30|5P9[32|28]} 121m23 121r23 123m18 123r18 126r26 128m30 128r30
-118r7 pwd{12|88R9} 127m17 127r17 128m17 128r17 130r32
-119r7 pwd_path{29|14R9} 130m7 131r14
-146r7 tmp_path{29|14R9} 154r80 155r60 177m28 177r28
-147r7 first{12|88R9} 155m10 156r27 158r13 160r16 166r16 166r59 177r45
-148p7 tmp_ab{25|12P9[32|23]} 157m10 168r32 169r32 170r26
-149r7 tmp_data{32|13R9} 156m10 157r54
-150b7 chemin_incorrect{boolean} 154r17 172m16 175m13 180r10
-150b25 isLast{boolean}
-151X7 chemin_invalide 181r16
-193r7 data{32|13R9} 206m7 208m7 211r19 215m19 215r19 216m10 216r32 217m10
-. 219m10 220m10 222r24 226r38 228r45 231r34
-194r7 old_path{29|14R9} 230r23
-195r7 tmp_path{29|14R9} 200m25 200r25 203r23
-196r7 tmp{32|13R9} 199m7 200r42
-242r7 tmp_name{12|88R9}
-243p7 tmp_noeud{25|12P9[32|23]} 260r28
-267r7 tmp{29|14R9} 270m7 275r23
-268r7 data{32|13R9} 272m7 272r7 273m7 274r35
-281r7 tmp{29|14R9} 284m7 289r23
-282r7 data{32|13R9} 286m7 286r7 287m7 288r35
-295r7 tmp{32|13R9} 299m10 301m10 303r41
-296p7 tmp_noeud{25|12P9[32|23]} 303m47 303r47 304r26 305r39 306r49
-316r7 tmp{32|13R9} 319m7 320r32
-317p7 ab_tmp{25|12P9[32|23]} 320m38 320r38 321r26 322r25 323r34
-337r7 data{32|13R9} 351m13 352m13 353m13 354r33
-337r13 tmp{32|13R9} 341m7 342r32
-338r7 nom{12|88R9} 349m13 350m20 350r20 351r26
-339p7 tmp_noeud{25|12P9[32|23]} 342m38 342r38 343r26 346r25 349r32 354m22
-. 354r22 355m26 355r26
-363r7 tmp{32|13R9} 367m7 368r44 370m10 371r35 372m10 372r10 374r35 376r42
-364p7 tmp_noeud{25|12P9[32|23]} 368m7 369r26 372r29
-365p7 dest{25|12P9[32|23]} 371m41 371r41 373r29 374m29 374r29
-390r7 path{29|14R9} 399m7 401r34 402m7 403r34 404r23 407m7 408r34 409r28
-. 411r33 435m7
-391r7 path_str{12|88R9}
-392p7 tmp{25|12P9[32|23]}
+86r7 data{32|13R9} 90m7 91m7 92m7 93m7 94r30
+102p7 tmp{25|12P9[32|23]} 107r29 108r33 109m10 109r28
+103p7 p{30|5P9[32|28]} 106m23 106r23 108m18 108r18 111r26 113m30 113r30
+104r7 pwd{12|88R9} 112m17 112r17 113m17 113r17 115r11
+122p7 tmp{25|12P9[32|23]} 128r29 129r33 130m10 130r28
+123p7 p{30|5P9[32|28]} 127m23 127r23 129m18 129r18 132r26 134m30 134r30
+124r7 pwd{12|88R9} 133m17 133r17 134m17 134r17 136r32
+125r7 pwd_path{29|15R9} 136m7 137r14
+152r7 tmp_path{29|15R9} 159r80 160r60 182m28 182r28
+153r7 first{12|88R9} 160m10 161r27 163r13 165r16 171r16 171r59 182r45
+154p7 tmp_ab{25|12P9[32|23]} 162m10 173r32 174r32 175r26
+155r7 tmp_data{32|13R9} 161m10 162r54
+156b7 chemin_incorrect{boolean} 159r17 177m16 180m13 185r10
+156b25 isLast{boolean}
+197r7 data{32|13R9} 205m7 206m7 208r19 212m19 212r19 213m10 213r32 214m10
+. 216m10 217m10 219r24 223r38 225r45 228r34
+198r7 old_path{29|15R9} 227r23
+199r7 tmp_path{29|15R9} 203m25 203r25 204r23
+200r7 tmp{32|13R9} 202m7 203r42
+239r7 tmp_name{12|88R9}
+240p7 tmp_noeud{25|12P9[32|23]} 257r28
+264r7 tmp{29|15R9} 267m7 272r23
+265r7 data{32|13R9} 269m7 269r7 270m7 271r35
+278r7 tmp{29|15R9} 281m7 286r23
+279r7 data{32|13R9} 283m7 283r7 284m7 285r35
+292r7 tmp{32|13R9} 296m10 298m10 300r41
+293p7 tmp_noeud{25|12P9[32|23]} 300m47 300r47 301r26 302r29 303r28 304r45
+. 305r55 310r42 311r52
+322r7 tmp{32|13R9} 325m7 326r32
+323p7 ab_tmp{25|12P9[32|23]} 326m38 326r38 327r26 328r25 329r34
+343r7 data{32|13R9} 357m13 358m13 359m13 360r33
+343r13 tmp{32|13R9} 347m7 348r32
+344r7 nom{12|88R9} 355m13 356m20 356r20 357r26
+345p7 tmp_noeud{25|12P9[32|23]} 348m38 348r38 349r26 352r25 355r32 360m22
+. 360r22 361m26 361r26
+369r7 tmp{32|13R9} 373m7 374r44 376m10 377r35 378m10 378r10 380r35 382r42
+370p7 tmp_noeud{25|12P9[32|23]} 374m7 375r26 378r29
+371p7 dest{25|12P9[32|23]} 377m41 377r41 379r29 380m29 380r29
+396r7 path{29|15R9} 405m7 407r34 408m7 409r34 410r23 413m7 414r34 415r28
+. 417r33 441m7
+397r7 path_str{12|88R9}
+398p7 tmp{25|12P9[32|23]}
 X 34 system.ads
 67M9*Address
 X 43 s-memory.ads
@@ -501,5 +508,5 @@ X 43 s-memory.ads
 X 51 s-stalib.adb
 89U14 Break_Start 90i<c,__gnat_break_start>22
 X 60 text_io.ads
-24K9*Text_IO=24:29 33|1w6 1r32 214r10 215r34
+24K9*Text_IO=24:29 33|1w6 1r32 211r10 212r34
 

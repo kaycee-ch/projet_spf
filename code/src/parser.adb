@@ -8,6 +8,7 @@ package body parser is
 
 
    function i_char (phrase : in Unbounded_String; index : in out Integer; char : in Character) return Integer is
+      tmp : Integer := index;
    Begin
       while element(phrase, index) /= char and then index < length(phrase) loop
          index := index + 1;
@@ -41,11 +42,8 @@ package body parser is
       la_cmd : T_COMMAND;
       tmp, tmp1 : Unbounded_String;
    Begin
-      -- liste_mot := inverser_liste(liste_mot);
-      -- print(liste_mot);
       la_cmd.commande := get_contenu(liste_mot);
-      -- put(la_cmd.commande);
-      enlever(liste_mot, get_contenu(liste_mot));
+      enlever(liste_mot, get_contenu(liste_mot)); -- dans notre cas, le premier sera toujours la commande
       la_cmd.options := creer_liste_vide;
       la_cmd.arguments := creer_liste_vide;
 
@@ -69,17 +67,13 @@ package body parser is
    function parse_path(liste_mot : in T_liste) return T_PATH is
       le_path : T_PATH;
    Begin
-      -- put(get_contenu(liste_mot));
       if get_contenu(liste_mot) = "." or else get_contenu(liste_mot) = ".." then
          le_path.isAbsolute := True;
       else
          le_path.isAbsolute := False;
       end if;
       le_path.chemin := liste_mot;
-
-      -- print(le_path.chemin);
       le_path.chemin_inv := inverser_liste(liste_mot);
-      -- print(le_path.chemin_inv);
       return le_path;
    end parse_path;
 
@@ -106,14 +100,9 @@ package body parser is
       path : T_PATH;
       l, l2 : T_liste;
    Begin
-      -- Get_Line(phrase);
-      -- phrase := to_unbounded_string("/home/kaycee/./n7/../prog/");
       l := split(phrase, '/');
-      -- print(l2);
       path := parse_path(l);
-      -- print(path.chemin);
       ada.text_io.new_line;
-      -- print(path.chemin_inv);
       return path;
    end traiter_path;
 
@@ -124,9 +113,7 @@ package body parser is
    Begin
       l := split(phrase, ' ');
       cmd := parse_cmd(l);
-      -- print(cmd.options);
       ada.text_io.new_line;
-      -- print(cmd.arguments);
       return cmd;
    end traiter_cmd;
 

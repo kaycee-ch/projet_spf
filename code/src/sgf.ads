@@ -8,7 +8,7 @@ package sgf is
 
    chemin_invalide : EXCEPTION;
    arbre_vide : EXCEPTION;
-   stockage_plein, tar_file, no_file, cannot_print : EXCEPTION;
+   stockage_plein, tar_file, no_folder, cannot_print, droit_insuffisant : EXCEPTION;
 
    TYPE T_info is record
       name : Unbounded_String;
@@ -51,90 +51,98 @@ package sgf is
 
 
    procedure formatage_disque (sgf : in out T_sgf);
-   -- semantique : creation d'un SGF ne contenant que le dossier racine
+   -- semantique : creation d'un SGF ne contenant que le dossier racine, efface tout le contenu du sgf s'il y en a
    -- pre : none
-   -- post : le SGF est cree et le répertoire courant est root
+   -- post : sgf.root = sgf.noeud_courant = \
    -- exception : none
 
 
    function repo_courant (sgf : in out T_sgf) return T_path;
    -- semantique : obtention du repertoire de travail ou repertoire courant (pwd)
-   -- pre : arbre a ete initialise
+   -- pre : sgf initialisé
    -- post : none
    -- exception : none
 
 
-   -- exception : path_invalid : le chemin ne mene a aucun noeud de l'arbre
-
    procedure print_repo(sgf : in T_sgf);
+   -- semantique : impression du repertoire de travail ou repertoire courant (pwd)
+   -- pre : sgf initialisé
+   -- post : none
+   -- exception : none
+
 
    procedure creer_fichier_dossier(sgf : in out T_sgf; path : in T_PATH; estFichier : in Boolean; existe : in Boolean);
-   -- semantique : creation d'un fichier dans le dossier courant
-   -- pre : si le chemin est différent du cd, le path existe
-   -- post : fichier cree avec le nom name
-   -- exception : filename_unavailable : un fichier du meme nom existe deja dans le cd
-
-   -- semantique : creation d'un répertoire vide (mkdir)
-   -- pre : si le chemin est différent du cd, le path existe
-   -- post : dossier creer avec le nom name
-   -- exception : dirname_unavailable : un dossier du meme nom existe deja dans le cd
-
-   -- semantique : modification de la taille d'un fichier resultat de l'utilisation d'un éditeur de texte
-   -- pre : fusion avec creer_fichier et file_contenu vide ou pas ?
-   -- post :
-   -- exception :
+   -- semantique : creation d'un fichier ou dossier au path passé en paramètre
+   -- pre : sgf initialisé
+   -- post : none
+   -- exception : stockage_plein si le répertoire est déja à 10Go (idealement devrait aussi il y avoir name_unavailable si un fichier/dossier du meme nom existe déja dans le répertiire destination)
 
 
 
    procedure change_dir(sgf : in out T_sgf; destination : in T_PATH);
    -- semantique : changement du repertoire courant en précisant le chemin du nouveau répertoire courant (cd)
-   -- pre :
-   -- post :
-   -- exception
+   -- pre : sgf initialisé
+   -- post : repo_courant(sgf) = destination
+   -- exception : chemin_invalide si le chemin est invalide
+
+
 
    procedure affiche_fichier(sgf : in out T_sgf; path : in T_path);
+   -- semantique : affiche le contenu d'un fichier préexistant
+   -- pre : sgf initialisé
+   -- post : none
+   -- exception : cannot_print si le fichier n'existe pas
+
+
 
    procedure liste_contenu(sgf : in out T_sgf; path : in T_PATH; dir_fils : in Boolean; all_info : in Boolean) ;
-   --semantique : affichage du contenu, fichiers et repertoires, du repertoire designe par un chemin.
-
-   -- pre :
-   -- post :
-   -- exception :
-
-   -- semantique : affichage des fichiers et des repertoires du repertoire courant et de tous les fichiers et repertoires de tous les sous-repertoires (ls -r)
-   -- fusion avec liste_contenu_dir avec un booleén si on veut lister les fils des dossiers ?
-   -- pre :
-   -- post :
-   -- exception :
+   --semantique : affichage de plus ou moins d'infos concernant les fichiers/dossiers en fonction des arguments de l'utilisateur
+   -- pre : sgf initialisé
+   -- post : none
+   -- exception : none
 
 
    procedure supp_fichier_dossier(sgf : in out T_sgf; path : in T_PATH; isFile : in Boolean);
    -- semantique : suppression d'un fichier (rm)
-   -- pre : le noeud existe
-   -- post : le noeud n'est plus dans l'arbre
-   -- exception : droit_insufisant : l'utilisateur n'a pas les droits nécessaires pour cette action
-
-   -- semantique : suppression d'un repertoire qu'il soit vide ou non (rm -r)
-   -- pre : le noeud existe
-   -- post : le noeud n'est plus dans l'arbre
-   -- exception : droit_insufisant : l'utilisateur n'a pas les droits nécessaires pour cette action
+   -- pre : sgf initialise
+   -- post : none
+   -- exception : chemin_invalide si le fichier/dossier n'existe pas, droit_insufisant : le code permission du dossier ne permet pas sa suppression (il faut le code 111)
 
 
    procedure change_droits(sgf : in out T_sgf; path : in T_path; n : in Integer);
+   -- semantique : cette procedure permet la modification des droits d'un dossier (la suppression d'un dossier requiert les permissions 111)
+   -- pre : sgf initialisé
+   -- post : none
+   -- exception : none
+
 
    procedure change_name (sgf : in out T_SGF; path : in T_PATH; name : in Unbounded_String);
+   -- cette procedure permet la modifictaion du nom d'un dossier
+   -- pre : sgf initialise
+   -- post : none
+   -- exception : none (idealement name_unavailable si un dossier du meme nom existe deja dans le répertoire destination)
+
 
    procedure archive_dir (sgf : in out T_sgf; path : in T_PATH);
+   -- cette procedure permet la compression d'un dossier
+   -- pre : sgf initialise
+   -- post : none
+   -- exception : tar_file si ce n'est pas un dossier au bout du chemin
 
-   -- un unique fichier dont la taille est la somme des tailles des fichiers contenus dans ce repertoire et ses sous-repertoires (tar)
-
-
-   procedure test(sgf : in out T_sgf);
 
    function stockage_occupe(sgf : in out T_SGF) return Integer;
+   -- cette procedure permet de connaitre le stockage occupé du sgf
+   -- pre : sgf initialise
+   -- post : none
+   -- exception : none
 
    procedure copy_move(sgf : in out T_sgf; path : in T_path; name : in out Unbounded_String; move : in Boolean);
+   -- cette procedure permet le déplacement ou la copie d'un dossier du répertoire courant vers une destination
+   -- pre : sgf initialise
+   -- post : none
+   -- exception : chemin_invalide si ce n'est pa sun odssier au bour du chemin et no_folder s'il n'y a pas de dossier du nom indiqué dans le répertoire courant
 
+   procedure test(sgf : in out T_sgf);
 
 private
    TYPE T_sgf is record

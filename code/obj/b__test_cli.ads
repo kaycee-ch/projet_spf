@@ -40,7 +40,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#8456bf3e#;
+   u00001 : constant Version_32 := 16#c2fc5282#;
    pragma Export (C, u00001, "test_cliB");
    u00002 : constant Version_32 := 16#2e11c0b1#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -314,9 +314,9 @@ package ada_main is
    pragma Export (C, u00136, "system__file_ioS");
    u00137 : constant Version_32 := 16#5f450cb5#;
    pragma Export (C, u00137, "system__file_control_blockS");
-   u00138 : constant Version_32 := 16#05afaa73#;
+   u00138 : constant Version_32 := 16#47805d70#;
    pragma Export (C, u00138, "cliB");
-   u00139 : constant Version_32 := 16#e026493b#;
+   u00139 : constant Version_32 := 16#9e7d66e1#;
    pragma Export (C, u00139, "cliS");
    u00140 : constant Version_32 := 16#fe8205ec#;
    pragma Export (C, u00140, "ada__text_io__unbounded_ioS");
@@ -324,13 +324,13 @@ package ada_main is
    pragma Export (C, u00141, "ada__strings__unbounded__text_ioB");
    u00142 : constant Version_32 := 16#8b1e6ee0#;
    pragma Export (C, u00142, "ada__strings__unbounded__text_ioS");
-   u00143 : constant Version_32 := 16#e4339560#;
+   u00143 : constant Version_32 := 16#dbb3abde#;
    pragma Export (C, u00143, "ihmB");
-   u00144 : constant Version_32 := 16#ba081050#;
+   u00144 : constant Version_32 := 16#5666d08d#;
    pragma Export (C, u00144, "ihmS");
-   u00145 : constant Version_32 := 16#4a640a3b#;
+   u00145 : constant Version_32 := 16#094f7bb8#;
    pragma Export (C, u00145, "parserB");
-   u00146 : constant Version_32 := 16#115dcfc0#;
+   u00146 : constant Version_32 := 16#5df0f448#;
    pragma Export (C, u00146, "parserS");
    u00147 : constant Version_32 := 16#f64b89a4#;
    pragma Export (C, u00147, "ada__integer_text_ioB");
@@ -394,9 +394,9 @@ package ada_main is
    pragma Export (C, u00176, "system__storage_pools__subpools__finalizationB");
    u00177 : constant Version_32 := 16#8bd8fdc9#;
    pragma Export (C, u00177, "system__storage_pools__subpools__finalizationS");
-   u00178 : constant Version_32 := 16#8a7f5610#;
+   u00178 : constant Version_32 := 16#9a149a4c#;
    pragma Export (C, u00178, "sgfB");
-   u00179 : constant Version_32 := 16#99aa0528#;
+   u00179 : constant Version_32 := 16#ab5c117a#;
    pragma Export (C, u00179, "sgfS");
    u00180 : constant Version_32 := 16#61781288#;
    pragma Export (C, u00180, "file_genB");
